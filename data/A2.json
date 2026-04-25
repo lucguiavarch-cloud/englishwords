@@ -1,0 +1,5738 @@
+﻿[
+    {
+        "en":  "a",
+        "fr":  "un"
+    },
+    {
+        "en":  "about",
+        "fr":  "Ã  propos"
+    },
+    {
+        "en":  "above",
+        "fr":  "au-dessus de"
+    },
+    {
+        "en":  "address",
+        "fr":  "adresse"
+    },
+    {
+        "en":  "adjective",
+        "fr":  "adjectif"
+    },
+    {
+        "en":  "adult",
+        "fr":  "adulte"
+    },
+    {
+        "en":  "adverb",
+        "fr":  "adverbe"
+    },
+    {
+        "en":  "after",
+        "fr":  "aprÃ¨s"
+    },
+    {
+        "en":  "afternoon",
+        "fr":  "aprÃ¨s-midi"
+    },
+    {
+        "en":  "again",
+        "fr":  "encore"
+    },
+    {
+        "en":  "age",
+        "fr":  "Ã¢ge"
+    },
+    {
+        "en":  "all",
+        "fr":  "tous"
+    },
+    {
+        "en":  "alright",
+        "fr":  "TrÃ¨s bien"
+    },
+    {
+        "en":  "also",
+        "fr":  "aussi"
+    },
+    {
+        "en":  "always",
+        "fr":  "toujours"
+    },
+    {
+        "en":  "an",
+        "fr":  "un"
+    },
+    {
+        "en":  "and",
+        "fr":  "et"
+    },
+    {
+        "en":  "animal",
+        "fr":  "animal"
+    },
+    {
+        "en":  "answer",
+        "fr":  "rÃ©pondre"
+    },
+    {
+        "en":  "any",
+        "fr":  "n\u0027importe lequel"
+    },
+    {
+        "en":  "anything",
+        "fr":  "rien"
+    },
+    {
+        "en":  "apple",
+        "fr":  "pomme"
+    },
+    {
+        "en":  "april",
+        "fr":  "avril"
+    },
+    {
+        "en":  "arm",
+        "fr":  "bras"
+    },
+    {
+        "en":  "as",
+        "fr":  "comme"
+    },
+    {
+        "en":  "ask",
+        "fr":  "demander"
+    },
+    {
+        "en":  "at",
+        "fr":  "Ã"
+    },
+    {
+        "en":  "august",
+        "fr":  "aoÃ»t"
+    },
+    {
+        "en":  "baby",
+        "fr":  "bÃ©bÃ©"
+    },
+    {
+        "en":  "back",
+        "fr":  "dos"
+    },
+    {
+        "en":  "bad",
+        "fr":  "mauvais"
+    },
+    {
+        "en":  "bag",
+        "fr":  "sac"
+    },
+    {
+        "en":  "ball",
+        "fr":  "balle"
+    },
+    {
+        "en":  "banana",
+        "fr":  "banane"
+    },
+    {
+        "en":  "band",
+        "fr":  "groupe"
+    },
+    {
+        "en":  "bank",
+        "fr":  "banque"
+    },
+    {
+        "en":  "bar",
+        "fr":  "bar"
+    },
+    {
+        "en":  "basketball",
+        "fr":  "basket-ball"
+    },
+    {
+        "en":  "bath",
+        "fr":  "bain"
+    },
+    {
+        "en":  "bathroom",
+        "fr":  "salle de bain"
+    },
+    {
+        "en":  "be",
+        "fr":  "Ãªtre"
+    },
+    {
+        "en":  "beach",
+        "fr":  "plage"
+    },
+    {
+        "en":  "beard",
+        "fr":  "barbe"
+    },
+    {
+        "en":  "beautiful",
+        "fr":  "beau"
+    },
+    {
+        "en":  "because",
+        "fr":  "parce que"
+    },
+    {
+        "en":  "bed",
+        "fr":  "lit"
+    },
+    {
+        "en":  "bedroom",
+        "fr":  "chambre Ã  coucher"
+    },
+    {
+        "en":  "beer",
+        "fr":  "biÃ¨re"
+    },
+    {
+        "en":  "before",
+        "fr":  "avant"
+    },
+    {
+        "en":  "begin",
+        "fr":  "commencer"
+    },
+    {
+        "en":  "behind",
+        "fr":  "derriÃ¨re"
+    },
+    {
+        "en":  "below",
+        "fr":  "ci-dessous"
+    },
+    {
+        "en":  "best",
+        "fr":  "meilleur"
+    },
+    {
+        "en":  "better",
+        "fr":  "mieux"
+    },
+    {
+        "en":  "between",
+        "fr":  "entre"
+    },
+    {
+        "en":  "big",
+        "fr":  "grand"
+    },
+    {
+        "en":  "bird",
+        "fr":  "oiseau"
+    },
+    {
+        "en":  "birthday",
+        "fr":  "anniversaire"
+    },
+    {
+        "en":  "biscuit",
+        "fr":  "biscuit"
+    },
+    {
+        "en":  "black",
+        "fr":  "noir"
+    },
+    {
+        "en":  "blue",
+        "fr":  "bleu"
+    },
+    {
+        "en":  "board",
+        "fr":  "conseil"
+    },
+    {
+        "en":  "boat",
+        "fr":  "bateau"
+    },
+    {
+        "en":  "body",
+        "fr":  "corps"
+    },
+    {
+        "en":  "book",
+        "fr":  "livre"
+    },
+    {
+        "en":  "bored",
+        "fr":  "ennuyÃ©"
+    },
+    {
+        "en":  "boring",
+        "fr":  "ennuyeux"
+    },
+    {
+        "en":  "both",
+        "fr":  "les deux"
+    },
+    {
+        "en":  "bottom",
+        "fr":  "bas"
+    },
+    {
+        "en":  "box",
+        "fr":  "boÃ®te"
+    },
+    {
+        "en":  "boy",
+        "fr":  "garÃ§on"
+    },
+    {
+        "en":  "bread",
+        "fr":  "pain"
+    },
+    {
+        "en":  "breakfast",
+        "fr":  "petit-dÃ©jeuner"
+    },
+    {
+        "en":  "brother",
+        "fr":  "frÃ¨re"
+    },
+    {
+        "en":  "brown",
+        "fr":  "brun"
+    },
+    {
+        "en":  "bus",
+        "fr":  "bus"
+    },
+    {
+        "en":  "business",
+        "fr":  "entreprise"
+    },
+    {
+        "en":  "but",
+        "fr":  "mais"
+    },
+    {
+        "en":  "butter",
+        "fr":  "beurre"
+    },
+    {
+        "en":  "buy",
+        "fr":  "acheter"
+    },
+    {
+        "en":  "bye",
+        "fr":  "au revoir"
+    },
+    {
+        "en":  "cake",
+        "fr":  "gÃ¢teau"
+    },
+    {
+        "en":  "call",
+        "fr":  "appel"
+    },
+    {
+        "en":  "camera",
+        "fr":  "camÃ©ra"
+    },
+    {
+        "en":  "can2",
+        "fr":  "can2"
+    },
+    {
+        "en":  "cannot",
+        "fr":  "ne peut pas"
+    },
+    {
+        "en":  "car",
+        "fr":  "voiture"
+    },
+    {
+        "en":  "carry",
+        "fr":  "porter"
+    },
+    {
+        "en":  "cat",
+        "fr":  "chat"
+    },
+    {
+        "en":  "catch",
+        "fr":  "attraper"
+    },
+    {
+        "en":  "cd",
+        "fr":  "CD"
+    },
+    {
+        "en":  "chair",
+        "fr":  "chaise"
+    },
+    {
+        "en":  "change",
+        "fr":  "changement"
+    },
+    {
+        "en":  "cheap",
+        "fr":  "bon marchÃ©"
+    },
+    {
+        "en":  "cheese",
+        "fr":  "fromage"
+    },
+    {
+        "en":  "child",
+        "fr":  "enfant"
+    },
+    {
+        "en":  "chip",
+        "fr":  "Ã©brÃ©cher"
+    },
+    {
+        "en":  "chocolate",
+        "fr":  "chocolat"
+    },
+    {
+        "en":  "choose",
+        "fr":  "choisir"
+    },
+    {
+        "en":  "cinema",
+        "fr":  "cinÃ©ma"
+    },
+    {
+        "en":  "city",
+        "fr":  "ville"
+    },
+    {
+        "en":  "class",
+        "fr":  "classe"
+    },
+    {
+        "en":  "classroom",
+        "fr":  "classe"
+    },
+    {
+        "en":  "clean",
+        "fr":  "faire le mÃ©nage"
+    },
+    {
+        "en":  "clever",
+        "fr":  "intelligent"
+    },
+    {
+        "en":  "clock",
+        "fr":  "horloge"
+    },
+    {
+        "en":  "closed",
+        "fr":  "fermÃ©"
+    },
+    {
+        "en":  "clothes",
+        "fr":  "vÃªtements"
+    },
+    {
+        "en":  "coat",
+        "fr":  "manteau"
+    },
+    {
+        "en":  "coffee",
+        "fr":  "cafÃ©"
+    },
+    {
+        "en":  "cold",
+        "fr":  "froid"
+    },
+    {
+        "en":  "colour",
+        "fr":  "couleur"
+    },
+    {
+        "en":  "come",
+        "fr":  "viens"
+    },
+    {
+        "en":  "computer",
+        "fr":  "ordinateur"
+    },
+    {
+        "en":  "conversation",
+        "fr":  "conversation"
+    },
+    {
+        "en":  "cook",
+        "fr":  "cuisiner"
+    },
+    {
+        "en":  "country",
+        "fr":  "pays"
+    },
+    {
+        "en":  "course",
+        "fr":  "cours"
+    },
+    {
+        "en":  "cow",
+        "fr":  "vache"
+    },
+    {
+        "en":  "cross",
+        "fr":  "croix"
+    },
+    {
+        "en":  "cup",
+        "fr":  "tasse"
+    },
+    {
+        "en":  "dad",
+        "fr":  "papa"
+    },
+    {
+        "en":  "dance",
+        "fr":  "danse"
+    },
+    {
+        "en":  "dancing",
+        "fr":  "dansant"
+    },
+    {
+        "en":  "dark",
+        "fr":  "sombre"
+    },
+    {
+        "en":  "date",
+        "fr":  "date"
+    },
+    {
+        "en":  "daughter",
+        "fr":  "fille"
+    },
+    {
+        "en":  "day",
+        "fr":  "jour"
+    },
+    {
+        "en":  "dear",
+        "fr":  "cher"
+    },
+    {
+        "en":  "december",
+        "fr":  "dÃ©cembre"
+    },
+    {
+        "en":  "desk",
+        "fr":  "bureau"
+    },
+    {
+        "en":  "dictionary",
+        "fr":  "dictionnaire"
+    },
+    {
+        "en":  "die",
+        "fr":  "mourir"
+    },
+    {
+        "en":  "different",
+        "fr":  "diffÃ©rent"
+    },
+    {
+        "en":  "difficult",
+        "fr":  "difficile"
+    },
+    {
+        "en":  "dinner",
+        "fr":  "dÃ®ner"
+    },
+    {
+        "en":  "do",
+        "fr":  "faire"
+    },
+    {
+        "en":  "doctor",
+        "fr":  "mÃ©decin"
+    },
+    {
+        "en":  "dog",
+        "fr":  "chien"
+    },
+    {
+        "en":  "doll",
+        "fr":  "poupÃ©e"
+    },
+    {
+        "en":  "dollar",
+        "fr":  "dollar"
+    },
+    {
+        "en":  "door",
+        "fr":  "porte"
+    },
+    {
+        "en":  "down",
+        "fr":  "vers le bas"
+    },
+    {
+        "en":  "draw",
+        "fr":  "dessiner"
+    },
+    {
+        "en":  "dress",
+        "fr":  "robe"
+    },
+    {
+        "en":  "drink",
+        "fr":  "boire"
+    },
+    {
+        "en":  "drive",
+        "fr":  "conduire"
+    },
+    {
+        "en":  "driver",
+        "fr":  "conducteur"
+    },
+    {
+        "en":  "dvd",
+        "fr":  "DVD"
+    },
+    {
+        "en":  "each",
+        "fr":  "chaque"
+    },
+    {
+        "en":  "ear",
+        "fr":  "oreille"
+    },
+    {
+        "en":  "early",
+        "fr":  "tÃ´t"
+    },
+    {
+        "en":  "easy",
+        "fr":  "facile"
+    },
+    {
+        "en":  "eat",
+        "fr":  "manger"
+    },
+    {
+        "en":  "egg",
+        "fr":  "Å“uf"
+    },
+    {
+        "en":  "eight",
+        "fr":  "huit"
+    },
+    {
+        "en":  "eighteen",
+        "fr":  "dix-huit"
+    },
+    {
+        "en":  "eleven",
+        "fr":  "onze"
+    },
+    {
+        "en":  "en",
+        "fr":  "en"
+    },
+    {
+        "en":  "end",
+        "fr":  "fin"
+    },
+    {
+        "en":  "enjoy",
+        "fr":  "apprÃ©cier"
+    },
+    {
+        "en":  "evening",
+        "fr":  "soirÃ©e"
+    },
+    {
+        "en":  "every",
+        "fr":  "chaque"
+    },
+    {
+        "en":  "example",
+        "fr":  "exemple"
+    },
+    {
+        "en":  "excited",
+        "fr":  "excitÃ©"
+    },
+    {
+        "en":  "exciting",
+        "fr":  "passionnant"
+    },
+    {
+        "en":  "expensive",
+        "fr":  "cher"
+    },
+    {
+        "en":  "eye",
+        "fr":  "Å“il"
+    },
+    {
+        "en":  "face",
+        "fr":  "affronter"
+    },
+    {
+        "en":  "factory",
+        "fr":  "usine"
+    },
+    {
+        "en":  "family",
+        "fr":  "famille"
+    },
+    {
+        "en":  "famous",
+        "fr":  "cÃ©lÃ¨bre"
+    },
+    {
+        "en":  "farm",
+        "fr":  "ferme"
+    },
+    {
+        "en":  "fast",
+        "fr":  "rapide"
+    },
+    {
+        "en":  "fat",
+        "fr":  "graisse"
+    },
+    {
+        "en":  "father",
+        "fr":  "pÃ¨re"
+    },
+    {
+        "en":  "favourite",
+        "fr":  "prÃ©fÃ©rÃ©"
+    },
+    {
+        "en":  "february",
+        "fr":  "fÃ©vrier"
+    },
+    {
+        "en":  "feel",
+        "fr":  "sentir"
+    },
+    {
+        "en":  "fifteen",
+        "fr":  "quinze"
+    },
+    {
+        "en":  "film",
+        "fr":  "film"
+    },
+    {
+        "en":  "find",
+        "fr":  "trouver"
+    },
+    {
+        "en":  "fine",
+        "fr":  "bien"
+    },
+    {
+        "en":  "finish",
+        "fr":  "finition"
+    },
+    {
+        "en":  "first",
+        "fr":  "d\u0027abord"
+    },
+    {
+        "en":  "fish",
+        "fr":  "poisson"
+    },
+    {
+        "en":  "five",
+        "fr":  "cinq"
+    },
+    {
+        "en":  "flat",
+        "fr":  "plat"
+    },
+    {
+        "en":  "floor",
+        "fr":  "sol"
+    },
+    {
+        "en":  "flower",
+        "fr":  "fleur"
+    },
+    {
+        "en":  "fly",
+        "fr":  "voler"
+    },
+    {
+        "en":  "food",
+        "fr":  "nourriture"
+    },
+    {
+        "en":  "foot",
+        "fr":  "pied"
+    },
+    {
+        "en":  "football",
+        "fr":  "football"
+    },
+    {
+        "en":  "for",
+        "fr":  "pour"
+    },
+    {
+        "en":  "forget",
+        "fr":  "oublier"
+    },
+    {
+        "en":  "four",
+        "fr":  "quatre"
+    },
+    {
+        "en":  "fourteen",
+        "fr":  "quatorze"
+    },
+    {
+        "en":  "friday",
+        "fr":  "vendredi"
+    },
+    {
+        "en":  "friend",
+        "fr":  "ami"
+    },
+    {
+        "en":  "from",
+        "fr":  "depuis"
+    },
+    {
+        "en":  "fruit",
+        "fr":  "fruit"
+    },
+    {
+        "en":  "fun",
+        "fr":  "amusant"
+    },
+    {
+        "en":  "funny",
+        "fr":  "drÃ´le"
+    },
+    {
+        "en":  "game",
+        "fr":  "jeu"
+    },
+    {
+        "en":  "garden",
+        "fr":  "jardin"
+    },
+    {
+        "en":  "get",
+        "fr":  "obtenir"
+    },
+    {
+        "en":  "girl",
+        "fr":  "fille"
+    },
+    {
+        "en":  "give",
+        "fr":  "donner"
+    },
+    {
+        "en":  "glass",
+        "fr":  "verre"
+    },
+    {
+        "en":  "glasses",
+        "fr":  "lunettes"
+    },
+    {
+        "en":  "go",
+        "fr":  "aller"
+    },
+    {
+        "en":  "good",
+        "fr":  "bien"
+    },
+    {
+        "en":  "goodbye",
+        "fr":  "au revoir"
+    },
+    {
+        "en":  "grass",
+        "fr":  "herbe"
+    },
+    {
+        "en":  "great",
+        "fr":  "super"
+    },
+    {
+        "en":  "green",
+        "fr":  "vert"
+    },
+    {
+        "en":  "grey",
+        "fr":  "gris"
+    },
+    {
+        "en":  "group",
+        "fr":  "groupe"
+    },
+    {
+        "en":  "guitar",
+        "fr":  "guitare"
+    },
+    {
+        "en":  "hair",
+        "fr":  "cheveux"
+    },
+    {
+        "en":  "half",
+        "fr":  "moitiÃ©"
+    },
+    {
+        "en":  "hand",
+        "fr":  "main"
+    },
+    {
+        "en":  "happy",
+        "fr":  "heureux"
+    },
+    {
+        "en":  "hard",
+        "fr":  "dur"
+    },
+    {
+        "en":  "hat",
+        "fr":  "chapeau"
+    },
+    {
+        "en":  "have",
+        "fr":  "avoir"
+    },
+    {
+        "en":  "he",
+        "fr":  "il"
+    },
+    {
+        "en":  "head",
+        "fr":  "tÃªte"
+    },
+    {
+        "en":  "hear",
+        "fr":  "entendre"
+    },
+    {
+        "en":  "hello",
+        "fr":  "Bonjour"
+    },
+    {
+        "en":  "help",
+        "fr":  "aide"
+    },
+    {
+        "en":  "her",
+        "fr":  "son"
+    },
+    {
+        "en":  "here",
+        "fr":  "ici"
+    },
+    {
+        "en":  "hi",
+        "fr":  "Salut"
+    },
+    {
+        "en":  "him",
+        "fr":  "lui"
+    },
+    {
+        "en":  "his",
+        "fr":  "son"
+    },
+    {
+        "en":  "holiday",
+        "fr":  "vacances"
+    },
+    {
+        "en":  "home",
+        "fr":  "maison"
+    },
+    {
+        "en":  "homework",
+        "fr":  "devoirs"
+    },
+    {
+        "en":  "horse",
+        "fr":  "cheval"
+    },
+    {
+        "en":  "hospital",
+        "fr":  "hÃ´pital"
+    },
+    {
+        "en":  "hot",
+        "fr":  "chaud"
+    },
+    {
+        "en":  "hotel",
+        "fr":  "hÃ´tel"
+    },
+    {
+        "en":  "hour",
+        "fr":  "heure"
+    },
+    {
+        "en":  "how",
+        "fr":  "comment"
+    },
+    {
+        "en":  "hungry",
+        "fr":  "affamÃ©"
+    },
+    {
+        "en":  "husband",
+        "fr":  "mari"
+    },
+    {
+        "en":  "i",
+        "fr":  "je"
+    },
+    {
+        "en":  "important",
+        "fr":  "important"
+    },
+    {
+        "en":  "in",
+        "fr":  "dans"
+    },
+    {
+        "en":  "interesting",
+        "fr":  "intÃ©ressant"
+    },
+    {
+        "en":  "into",
+        "fr":  "dans"
+    },
+    {
+        "en":  "invite",
+        "fr":  "inviter"
+    },
+    {
+        "en":  "it",
+        "fr":  "il"
+    },
+    {
+        "en":  "its",
+        "fr":  "c\u0027est"
+    },
+    {
+        "en":  "jacket",
+        "fr":  "veste"
+    },
+    {
+        "en":  "january",
+        "fr":  "Janvier"
+    },
+    {
+        "en":  "jeans",
+        "fr":  "jeans"
+    },
+    {
+        "en":  "job",
+        "fr":  "emploi"
+    },
+    {
+        "en":  "juice",
+        "fr":  "jus"
+    },
+    {
+        "en":  "july",
+        "fr":  "juillet"
+    },
+    {
+        "en":  "june",
+        "fr":  "juin"
+    },
+    {
+        "en":  "key",
+        "fr":  "clÃ©"
+    },
+    {
+        "en":  "kick",
+        "fr":  "coup"
+    },
+    {
+        "en":  "kind",
+        "fr":  "gentil"
+    },
+    {
+        "en":  "kitchen",
+        "fr":  "cuisine"
+    },
+    {
+        "en":  "knife",
+        "fr":  "couteau"
+    },
+    {
+        "en":  "know",
+        "fr":  "savoir"
+    },
+    {
+        "en":  "language",
+        "fr":  "langue"
+    },
+    {
+        "en":  "last",
+        "fr":  "dernier"
+    },
+    {
+        "en":  "late",
+        "fr":  "en retard"
+    },
+    {
+        "en":  "later",
+        "fr":  "plus tard"
+    },
+    {
+        "en":  "learn",
+        "fr":  "apprendre"
+    },
+    {
+        "en":  "leave",
+        "fr":  "partir"
+    },
+    {
+        "en":  "leg",
+        "fr":  "jambe"
+    },
+    {
+        "en":  "lesson",
+        "fr":  "leÃ§on"
+    },
+    {
+        "en":  "letter",
+        "fr":  "lettre"
+    },
+    {
+        "en":  "life",
+        "fr":  "vie"
+    },
+    {
+        "en":  "light",
+        "fr":  "lumiÃ¨re"
+    },
+    {
+        "en":  "like",
+        "fr":  "comme"
+    },
+    {
+        "en":  "listen",
+        "fr":  "Ã©couter"
+    },
+    {
+        "en":  "little",
+        "fr":  "petit"
+    },
+    {
+        "en":  "long",
+        "fr":  "long"
+    },
+    {
+        "en":  "look",
+        "fr":  "regarder"
+    },
+    {
+        "en":  "lot",
+        "fr":  "parcelle"
+    },
+    {
+        "en":  "love",
+        "fr":  "amour"
+    },
+    {
+        "en":  "lunch",
+        "fr":  "dÃ©jeuner"
+    },
+    {
+        "en":  "make",
+        "fr":  "faire"
+    },
+    {
+        "en":  "man",
+        "fr":  "homme"
+    },
+    {
+        "en":  "many",
+        "fr":  "beaucoup"
+    },
+    {
+        "en":  "march",
+        "fr":  "mars"
+    },
+    {
+        "en":  "may",
+        "fr":  "peut"
+    },
+    {
+        "en":  "me",
+        "fr":  "moi"
+    },
+    {
+        "en":  "meal",
+        "fr":  "repas"
+    },
+    {
+        "en":  "meat",
+        "fr":  "viande"
+    },
+    {
+        "en":  "meet",
+        "fr":  "rencontrer"
+    },
+    {
+        "en":  "message",
+        "fr":  "message"
+    },
+    {
+        "en":  "milk",
+        "fr":  "lait"
+    },
+    {
+        "en":  "minute",
+        "fr":  "minute"
+    },
+    {
+        "en":  "miss",
+        "fr":  "manquer"
+    },
+    {
+        "en":  "mobile",
+        "fr":  "mobile"
+    },
+    {
+        "en":  "monday",
+        "fr":  "lundi"
+    },
+    {
+        "en":  "money",
+        "fr":  "argent"
+    },
+    {
+        "en":  "month",
+        "fr":  "mois"
+    },
+    {
+        "en":  "more",
+        "fr":  "plus"
+    },
+    {
+        "en":  "morning",
+        "fr":  "matin"
+    },
+    {
+        "en":  "mother",
+        "fr":  "mÃ¨re"
+    },
+    {
+        "en":  "mouth",
+        "fr":  "bouche"
+    },
+    {
+        "en":  "movie",
+        "fr":  "film"
+    },
+    {
+        "en":  "mr",
+        "fr":  "M."
+    },
+    {
+        "en":  "mrs",
+        "fr":  "Mme"
+    },
+    {
+        "en":  "much",
+        "fr":  "beaucoup"
+    },
+    {
+        "en":  "mum",
+        "fr":  "maman"
+    },
+    {
+        "en":  "museum",
+        "fr":  "musÃ©e"
+    },
+    {
+        "en":  "music",
+        "fr":  "musique"
+    },
+    {
+        "en":  "my",
+        "fr":  "mon"
+    },
+    {
+        "en":  "name",
+        "fr":  "nom"
+    },
+    {
+        "en":  "nationality",
+        "fr":  "nationalitÃ©"
+    },
+    {
+        "en":  "near",
+        "fr":  "prÃ¨s"
+    },
+    {
+        "en":  "need",
+        "fr":  "besoin"
+    },
+    {
+        "en":  "never",
+        "fr":  "jamais"
+    },
+    {
+        "en":  "new",
+        "fr":  "nouveau"
+    },
+    {
+        "en":  "newspaper",
+        "fr":  "journal"
+    },
+    {
+        "en":  "next",
+        "fr":  "suivant"
+    },
+    {
+        "en":  "nice",
+        "fr":  "bon"
+    },
+    {
+        "en":  "night",
+        "fr":  "nuit"
+    },
+    {
+        "en":  "nine",
+        "fr":  "neuf"
+    },
+    {
+        "en":  "nineteen",
+        "fr":  "dix-neuf"
+    },
+    {
+        "en":  "no",
+        "fr":  "Non"
+    },
+    {
+        "en":  "noise",
+        "fr":  "bruit"
+    },
+    {
+        "en":  "nose",
+        "fr":  "nez"
+    },
+    {
+        "en":  "not",
+        "fr":  "pas"
+    },
+    {
+        "en":  "note",
+        "fr":  "note"
+    },
+    {
+        "en":  "noun",
+        "fr":  "nom"
+    },
+    {
+        "en":  "november",
+        "fr":  "novembre"
+    },
+    {
+        "en":  "now",
+        "fr":  "maintenant"
+    },
+    {
+        "en":  "number",
+        "fr":  "nombre"
+    },
+    {
+        "en":  "october",
+        "fr":  "octobre"
+    },
+    {
+        "en":  "of",
+        "fr":  "de"
+    },
+    {
+        "en":  "often",
+        "fr":  "souvent"
+    },
+    {
+        "en":  "oh",
+        "fr":  "Oh"
+    },
+    {
+        "en":  "old",
+        "fr":  "vieux"
+    },
+    {
+        "en":  "on",
+        "fr":  "sur"
+    },
+    {
+        "en":  "one",
+        "fr":  "un"
+    },
+    {
+        "en":  "only",
+        "fr":  "seulement"
+    },
+    {
+        "en":  "open",
+        "fr":  "ouvrir"
+    },
+    {
+        "en":  "or",
+        "fr":  "ou"
+    },
+    {
+        "en":  "orange",
+        "fr":  "orange"
+    },
+    {
+        "en":  "other",
+        "fr":  "autre"
+    },
+    {
+        "en":  "our",
+        "fr":  "notre"
+    },
+    {
+        "en":  "page",
+        "fr":  "page"
+    },
+    {
+        "en":  "paint",
+        "fr":  "peinture"
+    },
+    {
+        "en":  "pair",
+        "fr":  "paire"
+    },
+    {
+        "en":  "paper",
+        "fr":  "papier"
+    },
+    {
+        "en":  "parent",
+        "fr":  "mÃ¨re"
+    },
+    {
+        "en":  "park",
+        "fr":  "parc"
+    },
+    {
+        "en":  "part",
+        "fr":  "partie"
+    },
+    {
+        "en":  "party",
+        "fr":  "faire la fÃªte"
+    },
+    {
+        "en":  "past",
+        "fr":  "passÃ©"
+    },
+    {
+        "en":  "pay",
+        "fr":  "payer"
+    },
+    {
+        "en":  "pen",
+        "fr":  "stylo"
+    },
+    {
+        "en":  "pencil",
+        "fr":  "crayon"
+    },
+    {
+        "en":  "people",
+        "fr":  "personnes"
+    },
+    {
+        "en":  "person",
+        "fr":  "personne"
+    },
+    {
+        "en":  "pet",
+        "fr":  "animal de compagnie"
+    },
+    {
+        "en":  "phone",
+        "fr":  "tÃ©lÃ©phone"
+    },
+    {
+        "en":  "photo",
+        "fr":  "photo"
+    },
+    {
+        "en":  "picnic",
+        "fr":  "pique-nique"
+    },
+    {
+        "en":  "picture",
+        "fr":  "image"
+    },
+    {
+        "en":  "pig",
+        "fr":  "cochon"
+    },
+    {
+        "en":  "pizza",
+        "fr":  "pizza"
+    },
+    {
+        "en":  "place",
+        "fr":  "lieu"
+    },
+    {
+        "en":  "plane",
+        "fr":  "avion"
+    },
+    {
+        "en":  "plant",
+        "fr":  "usine"
+    },
+    {
+        "en":  "plate",
+        "fr":  "plaque"
+    },
+    {
+        "en":  "play",
+        "fr":  "jouer"
+    },
+    {
+        "en":  "player",
+        "fr":  "joueur"
+    },
+    {
+        "en":  "please",
+        "fr":  "s\u0027il te plaÃ®t"
+    },
+    {
+        "en":  "poor",
+        "fr":  "pauvre"
+    },
+    {
+        "en":  "possible",
+        "fr":  "possible"
+    },
+    {
+        "en":  "potato",
+        "fr":  "pomme de terre"
+    },
+    {
+        "en":  "practise",
+        "fr":  "pratique"
+    },
+    {
+        "en":  "preposition",
+        "fr":  "prÃ©position"
+    },
+    {
+        "en":  "problem",
+        "fr":  "problÃ¨me"
+    },
+    {
+        "en":  "put",
+        "fr":  "mettre"
+    },
+    {
+        "en":  "quarter",
+        "fr":  "quart"
+    },
+    {
+        "en":  "question",
+        "fr":  "question"
+    },
+    {
+        "en":  "quick",
+        "fr":  "rapide"
+    },
+    {
+        "en":  "radio",
+        "fr":  "radio"
+    },
+    {
+        "en":  "rain",
+        "fr":  "pluie"
+    },
+    {
+        "en":  "read",
+        "fr":  "lire"
+    },
+    {
+        "en":  "reading",
+        "fr":  "en lisant"
+    },
+    {
+        "en":  "ready",
+        "fr":  "prÃªt"
+    },
+    {
+        "en":  "really",
+        "fr":  "vraiment"
+    },
+    {
+        "en":  "red",
+        "fr":  "rouge"
+    },
+    {
+        "en":  "remember",
+        "fr":  "souviens-toi"
+    },
+    {
+        "en":  "restaurant",
+        "fr":  "restaurant"
+    },
+    {
+        "en":  "rice",
+        "fr":  "riz"
+    },
+    {
+        "en":  "ride",
+        "fr":  "monter"
+    },
+    {
+        "en":  "right",
+        "fr":  "droite"
+    },
+    {
+        "en":  "river",
+        "fr":  "riviÃ¨re"
+    },
+    {
+        "en":  "road",
+        "fr":  "route"
+    },
+    {
+        "en":  "room",
+        "fr":  "chambre"
+    },
+    {
+        "en":  "run",
+        "fr":  "courir"
+    },
+    {
+        "en":  "sad",
+        "fr":  "triste"
+    },
+    {
+        "en":  "safe",
+        "fr":  "sÃ»r"
+    },
+    {
+        "en":  "salt",
+        "fr":  "sel"
+    },
+    {
+        "en":  "same",
+        "fr":  "mÃªme"
+    },
+    {
+        "en":  "sandwich",
+        "fr":  "sandwich"
+    },
+    {
+        "en":  "saturday",
+        "fr":  "Samedi"
+    },
+    {
+        "en":  "say",
+        "fr":  "dire"
+    },
+    {
+        "en":  "school",
+        "fr":  "Ã©cole"
+    },
+    {
+        "en":  "sea",
+        "fr":  "mer"
+    },
+    {
+        "en":  "second",
+        "fr":  "deuxiÃ¨me"
+    },
+    {
+        "en":  "see",
+        "fr":  "voir"
+    },
+    {
+        "en":  "send",
+        "fr":  "envoyer"
+    },
+    {
+        "en":  "sentence",
+        "fr":  "phrase"
+    },
+    {
+        "en":  "september",
+        "fr":  "septembre"
+    },
+    {
+        "en":  "seven",
+        "fr":  "Sept"
+    },
+    {
+        "en":  "seventeen",
+        "fr":  "dix-sept"
+    },
+    {
+        "en":  "she",
+        "fr":  "elle"
+    },
+    {
+        "en":  "sheep",
+        "fr":  "mouton"
+    },
+    {
+        "en":  "shirt",
+        "fr":  "chemise"
+    },
+    {
+        "en":  "shoe",
+        "fr":  "chaussure"
+    },
+    {
+        "en":  "shop",
+        "fr":  "boutique"
+    },
+    {
+        "en":  "shopping",
+        "fr":  "achats"
+    },
+    {
+        "en":  "short",
+        "fr":  "court"
+    },
+    {
+        "en":  "show",
+        "fr":  "montrer"
+    },
+    {
+        "en":  "shower",
+        "fr":  "douche"
+    },
+    {
+        "en":  "sing",
+        "fr":  "chanter"
+    },
+    {
+        "en":  "sister",
+        "fr":  "sÅ“ur"
+    },
+    {
+        "en":  "sit",
+        "fr":  "s\u0027asseoir"
+    },
+    {
+        "en":  "six",
+        "fr":  "six"
+    },
+    {
+        "en":  "sixteen",
+        "fr":  "seize"
+    },
+    {
+        "en":  "skirt",
+        "fr":  "jupe"
+    },
+    {
+        "en":  "sleep",
+        "fr":  "dormir"
+    },
+    {
+        "en":  "slim",
+        "fr":  "mince"
+    },
+    {
+        "en":  "slow",
+        "fr":  "lent"
+    },
+    {
+        "en":  "small",
+        "fr":  "petit"
+    },
+    {
+        "en":  "smoke",
+        "fr":  "fumÃ©e"
+    },
+    {
+        "en":  "smoking",
+        "fr":  "fumeur"
+    },
+    {
+        "en":  "snow",
+        "fr":  "neige"
+    },
+    {
+        "en":  "some",
+        "fr":  "quelques"
+    },
+    {
+        "en":  "something",
+        "fr":  "quelque chose"
+    },
+    {
+        "en":  "sometimes",
+        "fr":  "parfois"
+    },
+    {
+        "en":  "son",
+        "fr":  "fils"
+    },
+    {
+        "en":  "soon",
+        "fr":  "bientÃ´t"
+    },
+    {
+        "en":  "sorry",
+        "fr":  "DÃ©solÃ©"
+    },
+    {
+        "en":  "soup",
+        "fr":  "soupe"
+    },
+    {
+        "en":  "speak",
+        "fr":  "parler"
+    },
+    {
+        "en":  "sport",
+        "fr":  "sport"
+    },
+    {
+        "en":  "start",
+        "fr":  "commencer"
+    },
+    {
+        "en":  "station",
+        "fr":  "gare"
+    },
+    {
+        "en":  "stay",
+        "fr":  "rester"
+    },
+    {
+        "en":  "stop",
+        "fr":  "arrÃªt"
+    },
+    {
+        "en":  "street",
+        "fr":  "rue"
+    },
+    {
+        "en":  "student",
+        "fr":  "Ã©tudiant"
+    },
+    {
+        "en":  "study",
+        "fr":  "Ã©tude"
+    },
+    {
+        "en":  "sugar",
+        "fr":  "sucre"
+    },
+    {
+        "en":  "summer",
+        "fr":  "Ã©tÃ©"
+    },
+    {
+        "en":  "sun",
+        "fr":  "soleil"
+    },
+    {
+        "en":  "sunday",
+        "fr":  "dimanche"
+    },
+    {
+        "en":  "supermarket",
+        "fr":  "supermarchÃ©"
+    },
+    {
+        "en":  "sweet",
+        "fr":  "doux"
+    },
+    {
+        "en":  "swim",
+        "fr":  "nager"
+    },
+    {
+        "en":  "table",
+        "fr":  "tableau"
+    },
+    {
+        "en":  "take",
+        "fr":  "prendre"
+    },
+    {
+        "en":  "talk",
+        "fr":  "parler"
+    },
+    {
+        "en":  "tall",
+        "fr":  "grand"
+    },
+    {
+        "en":  "taxi",
+        "fr":  "Taxi"
+    },
+    {
+        "en":  "tea",
+        "fr":  "thÃ©"
+    },
+    {
+        "en":  "teach",
+        "fr":  "enseigner"
+    },
+    {
+        "en":  "teacher",
+        "fr":  "professeur"
+    },
+    {
+        "en":  "television",
+        "fr":  "tÃ©lÃ©vision"
+    },
+    {
+        "en":  "tell",
+        "fr":  "dire"
+    },
+    {
+        "en":  "ten",
+        "fr":  "dix"
+    },
+    {
+        "en":  "tennis",
+        "fr":  "tennis"
+    },
+    {
+        "en":  "test",
+        "fr":  "test"
+    },
+    {
+        "en":  "than",
+        "fr":  "que"
+    },
+    {
+        "en":  "thanks",
+        "fr":  "merci"
+    },
+    {
+        "en":  "that",
+        "fr":  "que"
+    },
+    {
+        "en":  "the",
+        "fr":  "le"
+    },
+    {
+        "en":  "their",
+        "fr":  "leur"
+    },
+    {
+        "en":  "them",
+        "fr":  "eux"
+    },
+    {
+        "en":  "then",
+        "fr":  "alors"
+    },
+    {
+        "en":  "there",
+        "fr":  "lÃ"
+    },
+    {
+        "en":  "these",
+        "fr":  "ces"
+    },
+    {
+        "en":  "they",
+        "fr":  "ils"
+    },
+    {
+        "en":  "thing",
+        "fr":  "chose"
+    },
+    {
+        "en":  "think",
+        "fr":  "pense"
+    },
+    {
+        "en":  "thirteen",
+        "fr":  "treize"
+    },
+    {
+        "en":  "this",
+        "fr":  "ce"
+    },
+    {
+        "en":  "those",
+        "fr":  "ceux"
+    },
+    {
+        "en":  "three",
+        "fr":  "trois"
+    },
+    {
+        "en":  "thursday",
+        "fr":  "Jeudi"
+    },
+    {
+        "en":  "ticket",
+        "fr":  "billet"
+    },
+    {
+        "en":  "time",
+        "fr":  "temps"
+    },
+    {
+        "en":  "tired",
+        "fr":  "fatiguÃ©"
+    },
+    {
+        "en":  "to",
+        "fr":  "Ã"
+    },
+    {
+        "en":  "today",
+        "fr":  "aujourd\u0027hui"
+    },
+    {
+        "en":  "together",
+        "fr":  "ensemble"
+    },
+    {
+        "en":  "toilet",
+        "fr":  "toilettes"
+    },
+    {
+        "en":  "tomato",
+        "fr":  "tomate"
+    },
+    {
+        "en":  "tomorrow",
+        "fr":  "demain"
+    },
+    {
+        "en":  "tonight",
+        "fr":  "ce soir"
+    },
+    {
+        "en":  "too",
+        "fr":  "aussi"
+    },
+    {
+        "en":  "tooth",
+        "fr":  "dent"
+    },
+    {
+        "en":  "town",
+        "fr":  "ville"
+    },
+    {
+        "en":  "train",
+        "fr":  "former"
+    },
+    {
+        "en":  "travel",
+        "fr":  "voyage"
+    },
+    {
+        "en":  "tree",
+        "fr":  "arbre"
+    },
+    {
+        "en":  "trousers",
+        "fr":  "pantalon"
+    },
+    {
+        "en":  "tuesday",
+        "fr":  "Mardi"
+    },
+    {
+        "en":  "tv",
+        "fr":  "TV"
+    },
+    {
+        "en":  "twelve",
+        "fr":  "douze"
+    },
+    {
+        "en":  "twenty",
+        "fr":  "vingt"
+    },
+    {
+        "en":  "two",
+        "fr":  "deux"
+    },
+    {
+        "en":  "under",
+        "fr":  "sous"
+    },
+    {
+        "en":  "understand",
+        "fr":  "comprendre"
+    },
+    {
+        "en":  "university",
+        "fr":  "universitÃ©"
+    },
+    {
+        "en":  "until",
+        "fr":  "jusqu\u0027Ã"
+    },
+    {
+        "en":  "up",
+        "fr":  "en haut"
+    },
+    {
+        "en":  "us",
+        "fr":  "nous"
+    },
+    {
+        "en":  "vegetable",
+        "fr":  "lÃ©gume"
+    },
+    {
+        "en":  "verb",
+        "fr":  "verbe"
+    },
+    {
+        "en":  "very",
+        "fr":  "trÃ¨s"
+    },
+    {
+        "en":  "village",
+        "fr":  "village"
+    },
+    {
+        "en":  "visit",
+        "fr":  "visite"
+    },
+    {
+        "en":  "wait",
+        "fr":  "attendez"
+    },
+    {
+        "en":  "waiter",
+        "fr":  "serveur"
+    },
+    {
+        "en":  "waitress",
+        "fr":  "serveuse"
+    },
+    {
+        "en":  "wake",
+        "fr":  "se rÃ©veiller"
+    },
+    {
+        "en":  "walk",
+        "fr":  "marcher"
+    },
+    {
+        "en":  "wall",
+        "fr":  "mur"
+    },
+    {
+        "en":  "want",
+        "fr":  "vouloir"
+    },
+    {
+        "en":  "warm",
+        "fr":  "chaud"
+    },
+    {
+        "en":  "wash",
+        "fr":  "laver"
+    },
+    {
+        "en":  "watch",
+        "fr":  "montre"
+    },
+    {
+        "en":  "water",
+        "fr":  "eau"
+    },
+    {
+        "en":  "we",
+        "fr":  "nous"
+    },
+    {
+        "en":  "wear",
+        "fr":  "porter"
+    },
+    {
+        "en":  "weather",
+        "fr":  "mÃ©tÃ©o"
+    },
+    {
+        "en":  "wednesday",
+        "fr":  "Mercredi"
+    },
+    {
+        "en":  "week",
+        "fr":  "semaine"
+    },
+    {
+        "en":  "weekend",
+        "fr":  "fin de semaine"
+    },
+    {
+        "en":  "well",
+        "fr":  "Bien"
+    },
+    {
+        "en":  "what",
+        "fr":  "quoi"
+    },
+    {
+        "en":  "when",
+        "fr":  "quand"
+    },
+    {
+        "en":  "where",
+        "fr":  "oÃ¹"
+    },
+    {
+        "en":  "which",
+        "fr":  "lequel"
+    },
+    {
+        "en":  "white",
+        "fr":  "blanc"
+    },
+    {
+        "en":  "who",
+        "fr":  "OMS"
+    },
+    {
+        "en":  "why",
+        "fr":  "pourquoi"
+    },
+    {
+        "en":  "wife",
+        "fr":  "Ã©pouse"
+    },
+    {
+        "en":  "will",
+        "fr":  "volontÃ©"
+    },
+    {
+        "en":  "wind1",
+        "fr":  "vent1"
+    },
+    {
+        "en":  "window",
+        "fr":  "fenÃªtre"
+    },
+    {
+        "en":  "wine",
+        "fr":  "vin"
+    },
+    {
+        "en":  "winter",
+        "fr":  "hiver"
+    },
+    {
+        "en":  "with",
+        "fr":  "avec"
+    },
+    {
+        "en":  "woman",
+        "fr":  "femme"
+    },
+    {
+        "en":  "work",
+        "fr":  "travail"
+    },
+    {
+        "en":  "world",
+        "fr":  "monde"
+    },
+    {
+        "en":  "worry",
+        "fr":  "inquiÃ©tude"
+    },
+    {
+        "en":  "would",
+        "fr":  "serait"
+    },
+    {
+        "en":  "write",
+        "fr":  "Ã©crire"
+    },
+    {
+        "en":  "writing",
+        "fr":  "en Ã©crivant"
+    },
+    {
+        "en":  "wrong",
+        "fr":  "faux"
+    },
+    {
+        "en":  "year",
+        "fr":  "annÃ©e"
+    },
+    {
+        "en":  "yellow",
+        "fr":  "jaune"
+    },
+    {
+        "en":  "yes",
+        "fr":  "Oui"
+    },
+    {
+        "en":  "yesterday",
+        "fr":  "hier"
+    },
+    {
+        "en":  "you",
+        "fr":  "toi"
+    },
+    {
+        "en":  "young",
+        "fr":  "jeune"
+    },
+    {
+        "en":  "your",
+        "fr":  "ton"
+    },
+    {
+        "en":  "zoo",
+        "fr":  "zoo"
+    },
+    {
+        "en":  "able",
+        "fr":  "capable"
+    },
+    {
+        "en":  "accident",
+        "fr":  "accident"
+    },
+    {
+        "en":  "across",
+        "fr":  "Ã  travers"
+    },
+    {
+        "en":  "activity",
+        "fr":  "activitÃ©"
+    },
+    {
+        "en":  "actor",
+        "fr":  "acteur"
+    },
+    {
+        "en":  "actually",
+        "fr":  "en fait"
+    },
+    {
+        "en":  "add",
+        "fr":  "ajouter"
+    },
+    {
+        "en":  "adjective",
+        "fr":  "adjectif"
+    },
+    {
+        "en":  "advanced",
+        "fr":  "avancÃ©"
+    },
+    {
+        "en":  "adventure",
+        "fr":  "aventure"
+    },
+    {
+        "en":  "adverb",
+        "fr":  "adverbe"
+    },
+    {
+        "en":  "advertisement",
+        "fr":  "publicitÃ©"
+    },
+    {
+        "en":  "advice",
+        "fr":  "conseil"
+    },
+    {
+        "en":  "aeroplane",
+        "fr":  "avion"
+    },
+    {
+        "en":  "afraid",
+        "fr":  "effrayÃ©"
+    },
+    {
+        "en":  "afterwards",
+        "fr":  "aprÃ¨s"
+    },
+    {
+        "en":  "against",
+        "fr":  "contre"
+    },
+    {
+        "en":  "aged",
+        "fr":  "Ã¢gÃ©"
+    },
+    {
+        "en":  "ago",
+        "fr":  "il y a"
+    },
+    {
+        "en":  "agree",
+        "fr":  "accepter"
+    },
+    {
+        "en":  "air",
+        "fr":  "air"
+    },
+    {
+        "en":  "airport",
+        "fr":  "aÃ©roport"
+    },
+    {
+        "en":  "album",
+        "fr":  "album"
+    },
+    {
+        "en":  "alcohol",
+        "fr":  "alcool"
+    },
+    {
+        "en":  "almost",
+        "fr":  "presque"
+    },
+    {
+        "en":  "alone",
+        "fr":  "seul"
+    },
+    {
+        "en":  "along",
+        "fr":  "le long de"
+    },
+    {
+        "en":  "already",
+        "fr":  "dÃ©jÃ"
+    },
+    {
+        "en":  "amazing",
+        "fr":  "incroyable"
+    },
+    {
+        "en":  "ambulance",
+        "fr":  "ambulance"
+    },
+    {
+        "en":  "among",
+        "fr":  "parmi"
+    },
+    {
+        "en":  "angry",
+        "fr":  "en colÃ¨re"
+    },
+    {
+        "en":  "another",
+        "fr":  "un autre"
+    },
+    {
+        "en":  "anybody",
+        "fr":  "personne"
+    },
+    {
+        "en":  "anymore",
+        "fr":  "plus"
+    },
+    {
+        "en":  "anyone",
+        "fr":  "n\u0027importe qui"
+    },
+    {
+        "en":  "anyway",
+        "fr":  "de toute faÃ§on"
+    },
+    {
+        "en":  "anywhere",
+        "fr":  "n\u0027importe oÃ¹"
+    },
+    {
+        "en":  "apartment",
+        "fr":  "appartement"
+    },
+    {
+        "en":  "appointment",
+        "fr":  "rendez-vous"
+    },
+    {
+        "en":  "area",
+        "fr":  "zone"
+    },
+    {
+        "en":  "armchair",
+        "fr":  "fauteuil"
+    },
+    {
+        "en":  "around",
+        "fr":  "autour"
+    },
+    {
+        "en":  "arrive",
+        "fr":  "arriver"
+    },
+    {
+        "en":  "art",
+        "fr":  "art"
+    },
+    {
+        "en":  "artist",
+        "fr":  "artiste"
+    },
+    {
+        "en":  "assistant",
+        "fr":  "assistant"
+    },
+    {
+        "en":  "attractive",
+        "fr":  "attractif"
+    },
+    {
+        "en":  "aunt",
+        "fr":  "tante"
+    },
+    {
+        "en":  "autumn",
+        "fr":  "automne"
+    },
+    {
+        "en":  "available",
+        "fr":  "disponible"
+    },
+    {
+        "en":  "away",
+        "fr":  "loin"
+    },
+    {
+        "en":  "awesome",
+        "fr":  "gÃ©nial"
+    },
+    {
+        "en":  "badly",
+        "fr":  "gravement"
+    },
+    {
+        "en":  "badminton",
+        "fr":  "badminton"
+    },
+    {
+        "en":  "bake",
+        "fr":  "cuire"
+    },
+    {
+        "en":  "balloon",
+        "fr":  "ballon"
+    },
+    {
+        "en":  "barbecue",
+        "fr":  "barbecue"
+    },
+    {
+        "en":  "baseball",
+        "fr":  "base-ball"
+    },
+    {
+        "en":  "bat",
+        "fr":  "batte"
+    },
+    {
+        "en":  "battery",
+        "fr":  "batterie"
+    },
+    {
+        "en":  "bean",
+        "fr":  "haricot"
+    },
+    {
+        "en":  "bear",
+        "fr":  "ours"
+    },
+    {
+        "en":  "become",
+        "fr":  "devenir"
+    },
+    {
+        "en":  "beginner",
+        "fr":  "dÃ©butant"
+    },
+    {
+        "en":  "beginning",
+        "fr":  "dÃ©but"
+    },
+    {
+        "en":  "believe",
+        "fr":  "croire"
+    },
+    {
+        "en":  "belong",
+        "fr":  "appartenir"
+    },
+    {
+        "en":  "belt",
+        "fr":  "ceinture"
+    },
+    {
+        "en":  "beside",
+        "fr":  "Ã  cÃ´tÃ© de"
+    },
+    {
+        "en":  "bicycle",
+        "fr":  "vÃ©lo"
+    },
+    {
+        "en":  "bike",
+        "fr":  "vÃ©lo"
+    },
+    {
+        "en":  "bill",
+        "fr":  "facture"
+    },
+    {
+        "en":  "biology",
+        "fr":  "biologie"
+    },
+    {
+        "en":  "bit",
+        "fr":  "peu"
+    },
+    {
+        "en":  "blackboard",
+        "fr":  "tableau noir"
+    },
+    {
+        "en":  "blanket",
+        "fr":  "couverture"
+    },
+    {
+        "en":  "blood",
+        "fr":  "sang"
+    },
+    {
+        "en":  "boil",
+        "fr":  "bouillir"
+    },
+    {
+        "en":  "boiled",
+        "fr":  "bouilli"
+    },
+    {
+        "en":  "bookcase",
+        "fr":  "bibliothÃ¨que"
+    },
+    {
+        "en":  "bookshelf",
+        "fr":  "bibliothÃ¨que"
+    },
+    {
+        "en":  "bookshop",
+        "fr":  "librairie"
+    },
+    {
+        "en":  "boot",
+        "fr":  "botte"
+    },
+    {
+        "en":  "born",
+        "fr":  "nÃ©"
+    },
+    {
+        "en":  "borrow",
+        "fr":  "emprunter"
+    },
+    {
+        "en":  "boss",
+        "fr":  "chef"
+    },
+    {
+        "en":  "bother",
+        "fr":  "dÃ©ranger"
+    },
+    {
+        "en":  "bottle",
+        "fr":  "bouteille"
+    },
+    {
+        "en":  "bowl",
+        "fr":  "bol"
+    },
+    {
+        "en":  "boyfriend",
+        "fr":  "petit ami"
+    },
+    {
+        "en":  "brain",
+        "fr":  "cerveau"
+    },
+    {
+        "en":  "break",
+        "fr":  "casser"
+    },
+    {
+        "en":  "bridge",
+        "fr":  "pont"
+    },
+    {
+        "en":  "bright",
+        "fr":  "brillant"
+    },
+    {
+        "en":  "brilliant",
+        "fr":  "brillant"
+    },
+    {
+        "en":  "bring",
+        "fr":  "apporter"
+    },
+    {
+        "en":  "broken",
+        "fr":  "cassÃ©"
+    },
+    {
+        "en":  "brush",
+        "fr":  "brosse"
+    },
+    {
+        "en":  "build",
+        "fr":  "construire"
+    },
+    {
+        "en":  "building",
+        "fr":  "bÃ¢timent"
+    },
+    {
+        "en":  "burger",
+        "fr":  "burger"
+    },
+    {
+        "en":  "businessman",
+        "fr":  "homme d\u0027affaires"
+    },
+    {
+        "en":  "businesswoman",
+        "fr":  "femme d\u0027affaires"
+    },
+    {
+        "en":  "busy",
+        "fr":  "occupÃ©"
+    },
+    {
+        "en":  "by",
+        "fr":  "par"
+    },
+    {
+        "en":  "calendar",
+        "fr":  "calendrier"
+    },
+    {
+        "en":  "camp",
+        "fr":  "camp"
+    },
+    {
+        "en":  "camping",
+        "fr":  "camping"
+    },
+    {
+        "en":  "can1",
+        "fr":  "can1"
+    },
+    {
+        "en":  "cap",
+        "fr":  "capuchon"
+    },
+    {
+        "en":  "capital",
+        "fr":  "capital"
+    },
+    {
+        "en":  "card",
+        "fr":  "carte"
+    },
+    {
+        "en":  "care",
+        "fr":  "soins"
+    },
+    {
+        "en":  "careful",
+        "fr":  "prudent"
+    },
+    {
+        "en":  "carefully",
+        "fr":  "soigneusement"
+    },
+    {
+        "en":  "carpet",
+        "fr":  "tapis"
+    },
+    {
+        "en":  "carrot",
+        "fr":  "carotte"
+    },
+    {
+        "en":  "cartoon",
+        "fr":  "dessin animÃ©"
+    },
+    {
+        "en":  "case",
+        "fr":  "cas"
+    },
+    {
+        "en":  "cash",
+        "fr":  "espÃ¨ces"
+    },
+    {
+        "en":  "castle",
+        "fr":  "chÃ¢teau"
+    },
+    {
+        "en":  "cathedral",
+        "fr":  "cathÃ©drale"
+    },
+    {
+        "en":  "ceiling",
+        "fr":  "plafond"
+    },
+    {
+        "en":  "cent",
+        "fr":  "cent"
+    },
+    {
+        "en":  "centimetre",
+        "fr":  "centimÃ¨tre"
+    },
+    {
+        "en":  "centre",
+        "fr":  "centre"
+    },
+    {
+        "en":  "century",
+        "fr":  "siÃ¨cle"
+    },
+    {
+        "en":  "cereal",
+        "fr":  "cÃ©rÃ©ale"
+    },
+    {
+        "en":  "certainly",
+        "fr":  "certainement"
+    },
+    {
+        "en":  "chain",
+        "fr":  "chaÃ®ne"
+    },
+    {
+        "en":  "champagne",
+        "fr":  "Champagne"
+    },
+    {
+        "en":  "channel",
+        "fr":  "canal"
+    },
+    {
+        "en":  "chat",
+        "fr":  "chat"
+    },
+    {
+        "en":  "check",
+        "fr":  "vÃ©rifier"
+    },
+    {
+        "en":  "chef",
+        "fr":  "cuisinier"
+    },
+    {
+        "en":  "chemist",
+        "fr":  "chimiste"
+    },
+    {
+        "en":  "chemistry",
+        "fr":  "chimie"
+    },
+    {
+        "en":  "cheque",
+        "fr":  "vÃ©rifier"
+    },
+    {
+        "en":  "chess",
+        "fr":  "Ã©checs"
+    },
+    {
+        "en":  "chicken",
+        "fr":  "poulet"
+    },
+    {
+        "en":  "chilli",
+        "fr":  "piment"
+    },
+    {
+        "en":  "church",
+        "fr":  "Ã©glise"
+    },
+    {
+        "en":  "cigarette",
+        "fr":  "cigarette"
+    },
+    {
+        "en":  "circle",
+        "fr":  "cercle"
+    },
+    {
+        "en":  "classical",
+        "fr":  "classique"
+    },
+    {
+        "en":  "classmate",
+        "fr":  "camarade de classe"
+    },
+    {
+        "en":  "cleaner",
+        "fr":  "nettoyeur"
+    },
+    {
+        "en":  "clear",
+        "fr":  "clair"
+    },
+    {
+        "en":  "clearly",
+        "fr":  "clairement"
+    },
+    {
+        "en":  "click",
+        "fr":  "cliquez"
+    },
+    {
+        "en":  "climb",
+        "fr":  "grimper"
+    },
+    {
+        "en":  "climbing",
+        "fr":  "escalade"
+    },
+    {
+        "en":  "cloud",
+        "fr":  "nuage"
+    },
+    {
+        "en":  "cloudy",
+        "fr":  "nuageux"
+    },
+    {
+        "en":  "clown",
+        "fr":  "clown"
+    },
+    {
+        "en":  "club",
+        "fr":  "club"
+    },
+    {
+        "en":  "coach",
+        "fr":  "entraÃ®neur"
+    },
+    {
+        "en":  "cola",
+        "fr":  "cola"
+    },
+    {
+        "en":  "colleague",
+        "fr":  "collÃ¨gue"
+    },
+    {
+        "en":  "collect",
+        "fr":  "collecter"
+    },
+    {
+        "en":  "college",
+        "fr":  "collÃ¨ge"
+    },
+    {
+        "en":  "comb",
+        "fr":  "peigne"
+    },
+    {
+        "en":  "comfortable",
+        "fr":  "confortable"
+    },
+    {
+        "en":  "comic",
+        "fr":  "comique"
+    },
+    {
+        "en":  "company",
+        "fr":  "entreprise"
+    },
+    {
+        "en":  "comparative",
+        "fr":  "comparatif"
+    },
+    {
+        "en":  "competition",
+        "fr":  "concours"
+    },
+    {
+        "en":  "complete",
+        "fr":  "complet"
+    },
+    {
+        "en":  "concert",
+        "fr":  "concert"
+    },
+    {
+        "en":  "congratulations",
+        "fr":  "FÃ©licitations"
+    },
+    {
+        "en":  "contact",
+        "fr":  "contact"
+    },
+    {
+        "en":  "cooker",
+        "fr":  "cuisiniÃ¨re"
+    },
+    {
+        "en":  "cooking",
+        "fr":  "cuisson"
+    },
+    {
+        "en":  "cool",
+        "fr":  "cool"
+    },
+    {
+        "en":  "copy",
+        "fr":  "copie"
+    },
+    {
+        "en":  "corner",
+        "fr":  "coin"
+    },
+    {
+        "en":  "correct",
+        "fr":  "correct"
+    },
+    {
+        "en":  "cost",
+        "fr":  "coÃ»t"
+    },
+    {
+        "en":  "could",
+        "fr":  "pourrait"
+    },
+    {
+        "en":  "countryside",
+        "fr":  "campagne"
+    },
+    {
+        "en":  "cousin",
+        "fr":  "cousin"
+    },
+    {
+        "en":  "cover",
+        "fr":  "couverture"
+    },
+    {
+        "en":  "crazy",
+        "fr":  "fou"
+    },
+    {
+        "en":  "cream",
+        "fr":  "crÃ¨me"
+    },
+    {
+        "en":  "cricket",
+        "fr":  "cricket"
+    },
+    {
+        "en":  "crisp",
+        "fr":  "croustillant"
+    },
+    {
+        "en":  "crowd",
+        "fr":  "foule"
+    },
+    {
+        "en":  "crowded",
+        "fr":  "bondÃ©"
+    },
+    {
+        "en":  "cry",
+        "fr":  "pleurer"
+    },
+    {
+        "en":  "cupboard",
+        "fr":  "placard"
+    },
+    {
+        "en":  "curry",
+        "fr":  "curry"
+    },
+    {
+        "en":  "curtain",
+        "fr":  "rideau"
+    },
+    {
+        "en":  "customer",
+        "fr":  "client"
+    },
+    {
+        "en":  "cut",
+        "fr":  "couper"
+    },
+    {
+        "en":  "cycling",
+        "fr":  "vÃ©lo"
+    },
+    {
+        "en":  "daily",
+        "fr":  "tous les jours"
+    },
+    {
+        "en":  "dancer",
+        "fr":  "danseur"
+    },
+    {
+        "en":  "danger",
+        "fr":  "danger"
+    },
+    {
+        "en":  "dangerous",
+        "fr":  "dangereux"
+    },
+    {
+        "en":  "dead",
+        "fr":  "mort"
+    },
+    {
+        "en":  "decide",
+        "fr":  "dÃ©cider"
+    },
+    {
+        "en":  "deep",
+        "fr":  "profond"
+    },
+    {
+        "en":  "degree",
+        "fr":  "degrÃ©"
+    },
+    {
+        "en":  "delay",
+        "fr":  "retard"
+    },
+    {
+        "en":  "dentist",
+        "fr":  "dentiste"
+    },
+    {
+        "en":  "department",
+        "fr":  "dÃ©partement"
+    },
+    {
+        "en":  "describe",
+        "fr":  "dÃ©crire"
+    },
+    {
+        "en":  "desert",
+        "fr":  "dÃ©sert"
+    },
+    {
+        "en":  "dessert",
+        "fr":  "dessert"
+    },
+    {
+        "en":  "detail",
+        "fr":  "dÃ©tail"
+    },
+    {
+        "en":  "diary",
+        "fr":  "agenda"
+    },
+    {
+        "en":  "difference",
+        "fr":  "diffÃ©rence"
+    },
+    {
+        "en":  "digital",
+        "fr":  "numÃ©rique"
+    },
+    {
+        "en":  "dinosaur",
+        "fr":  "dinosaure"
+    },
+    {
+        "en":  "diploma",
+        "fr":  "diplÃ´me"
+    },
+    {
+        "en":  "directions",
+        "fr":  "instructions"
+    },
+    {
+        "en":  "dirty",
+        "fr":  "sale"
+    },
+    {
+        "en":  "disco",
+        "fr":  "disco"
+    },
+    {
+        "en":  "discount",
+        "fr":  "rabais"
+    },
+    {
+        "en":  "discuss",
+        "fr":  "discuter"
+    },
+    {
+        "en":  "dish",
+        "fr":  "plat"
+    },
+    {
+        "en":  "document",
+        "fr":  "document"
+    },
+    {
+        "en":  "double",
+        "fr":  "double"
+    },
+    {
+        "en":  "dr",
+        "fr":  "docteur"
+    },
+    {
+        "en":  "drawer",
+        "fr":  "tiroir"
+    },
+    {
+        "en":  "drawing",
+        "fr":  "dessin"
+    },
+    {
+        "en":  "dream",
+        "fr":  "rÃªve"
+    },
+    {
+        "en":  "dressed",
+        "fr":  "habillÃ©"
+    },
+    {
+        "en":  "drum",
+        "fr":  "tambour"
+    },
+    {
+        "en":  "dry",
+        "fr":  "sec"
+    },
+    {
+        "en":  "duck",
+        "fr":  "canard"
+    },
+    {
+        "en":  "during",
+        "fr":  "pendant"
+    },
+    {
+        "en":  "earn",
+        "fr":  "gagner"
+    },
+    {
+        "en":  "earring",
+        "fr":  "boucle"
+    },
+    {
+        "en":  "easily",
+        "fr":  "facilement"
+    },
+    {
+        "en":  "eighth",
+        "fr":  "huitiÃ¨me"
+    },
+    {
+        "en":  "eighty",
+        "fr":  "quatre-vingts"
+    },
+    {
+        "en":  "electric",
+        "fr":  "Ã©lectrique"
+    },
+    {
+        "en":  "electricity",
+        "fr":  "Ã©lectricitÃ©"
+    },
+    {
+        "en":  "elephant",
+        "fr":  "Ã©lÃ©phant"
+    },
+    {
+        "en":  "else",
+        "fr":  "autre"
+    },
+    {
+        "en":  "empty",
+        "fr":  "vide"
+    },
+    {
+        "en":  "engine",
+        "fr":  "moteur"
+    },
+    {
+        "en":  "engineer",
+        "fr":  "ingÃ©nieur"
+    },
+    {
+        "en":  "enough",
+        "fr":  "assez"
+    },
+    {
+        "en":  "enter",
+        "fr":  "entrer"
+    },
+    {
+        "en":  "entrance",
+        "fr":  "entrÃ©e"
+    },
+    {
+        "en":  "envelope",
+        "fr":  "enveloppe"
+    },
+    {
+        "en":  "especially",
+        "fr":  "en particulier"
+    },
+    {
+        "en":  "even",
+        "fr":  "mÃªme"
+    },
+    {
+        "en":  "ever",
+        "fr":  "jamais"
+    },
+    {
+        "en":  "everybody",
+        "fr":  "tout le monde"
+    },
+    {
+        "en":  "everyone",
+        "fr":  "tout le monde"
+    },
+    {
+        "en":  "everything",
+        "fr":  "tout"
+    },
+    {
+        "en":  "everywhere",
+        "fr":  "partout"
+    },
+    {
+        "en":  "exactly",
+        "fr":  "exactement"
+    },
+    {
+        "en":  "exam",
+        "fr":  "examen"
+    },
+    {
+        "en":  "examination",
+        "fr":  "examen"
+    },
+    {
+        "en":  "excellent",
+        "fr":  "excellent"
+    },
+    {
+        "en":  "except",
+        "fr":  "sauf"
+    },
+    {
+        "en":  "exercise",
+        "fr":  "exercice"
+    },
+    {
+        "en":  "exit",
+        "fr":  "sortie"
+    },
+    {
+        "en":  "explain",
+        "fr":  "expliquer"
+    },
+    {
+        "en":  "extra",
+        "fr":  "supplÃ©mentaire"
+    },
+    {
+        "en":  "fact",
+        "fr":  "fait"
+    },
+    {
+        "en":  "fail",
+        "fr":  "Ã©chouer"
+    },
+    {
+        "en":  "fair",
+        "fr":  "Ã©quitable"
+    },
+    {
+        "en":  "fall",
+        "fr":  "automne"
+    },
+    {
+        "en":  "fan",
+        "fr":  "ventilateur"
+    },
+    {
+        "en":  "fantastic",
+        "fr":  "fantastique"
+    },
+    {
+        "en":  "far",
+        "fr":  "loin"
+    },
+    {
+        "en":  "farmer",
+        "fr":  "fermier"
+    },
+    {
+        "en":  "fashion",
+        "fr":  "mode"
+    },
+    {
+        "en":  "few",
+        "fr":  "peu"
+    },
+    {
+        "en":  "field",
+        "fr":  "champ"
+    },
+    {
+        "en":  "fifth",
+        "fr":  "cinquiÃ¨me"
+    },
+    {
+        "en":  "fifty",
+        "fr":  "cinquante"
+    },
+    {
+        "en":  "file",
+        "fr":  "dÃ©poser"
+    },
+    {
+        "en":  "fill",
+        "fr":  "remplir"
+    },
+    {
+        "en":  "final",
+        "fr":  "final"
+    },
+    {
+        "en":  "finally",
+        "fr":  "enfin"
+    },
+    {
+        "en":  "finger",
+        "fr":  "doigt"
+    },
+    {
+        "en":  "fire",
+        "fr":  "feu"
+    },
+    {
+        "en":  "fishing",
+        "fr":  "pÃªche"
+    },
+    {
+        "en":  "fit",
+        "fr":  "ajuster"
+    },
+    {
+        "en":  "flight",
+        "fr":  "vol"
+    },
+    {
+        "en":  "fog",
+        "fr":  "brouillard"
+    },
+    {
+        "en":  "foggy",
+        "fr":  "brumeux"
+    },
+    {
+        "en":  "folder",
+        "fr":  "dossier"
+    },
+    {
+        "en":  "follow",
+        "fr":  "suivre"
+    },
+    {
+        "en":  "footballer",
+        "fr":  "footballeur"
+    },
+    {
+        "en":  "foreign",
+        "fr":  "Ã©tranger"
+    },
+    {
+        "en":  "forest",
+        "fr":  "forÃªt"
+    },
+    {
+        "en":  "fork",
+        "fr":  "fourchette"
+    },
+    {
+        "en":  "form",
+        "fr":  "formulaire"
+    },
+    {
+        "en":  "forty",
+        "fr":  "quarante"
+    },
+    {
+        "en":  "fourth",
+        "fr":  "quatriÃ¨me"
+    },
+    {
+        "en":  "free",
+        "fr":  "gratuit"
+    },
+    {
+        "en":  "fresh",
+        "fr":  "frais"
+    },
+    {
+        "en":  "fridge",
+        "fr":  "rÃ©frigÃ©rateur"
+    },
+    {
+        "en":  "fried",
+        "fr":  "frit"
+    },
+    {
+        "en":  "friendly",
+        "fr":  "amical"
+    },
+    {
+        "en":  "front",
+        "fr":  "devant"
+    },
+    {
+        "en":  "full",
+        "fr":  "complet"
+    },
+    {
+        "en":  "furniture",
+        "fr":  "meubles"
+    },
+    {
+        "en":  "further",
+        "fr":  "plus loin"
+    },
+    {
+        "en":  "future",
+        "fr":  "avenir"
+    },
+    {
+        "en":  "garage",
+        "fr":  "garage"
+    },
+    {
+        "en":  "garlic",
+        "fr":  "ail"
+    },
+    {
+        "en":  "gas",
+        "fr":  "gaz"
+    },
+    {
+        "en":  "gate",
+        "fr":  "grille"
+    },
+    {
+        "en":  "geography",
+        "fr":  "gÃ©ographie"
+    },
+    {
+        "en":  "gift",
+        "fr":  "cadeau"
+    },
+    {
+        "en":  "girlfriend",
+        "fr":  "petite amie"
+    },
+    {
+        "en":  "glad",
+        "fr":  "content"
+    },
+    {
+        "en":  "glove",
+        "fr":  "gant"
+    },
+    {
+        "en":  "goal",
+        "fr":  "but"
+    },
+    {
+        "en":  "god",
+        "fr":  "Dieu"
+    },
+    {
+        "en":  "gold",
+        "fr":  "or"
+    },
+    {
+        "en":  "golden",
+        "fr":  "dorÃ©"
+    },
+    {
+        "en":  "golf",
+        "fr":  "golf"
+    },
+    {
+        "en":  "grammar",
+        "fr":  "grammaire"
+    },
+    {
+        "en":  "grandchild",
+        "fr":  "petit enfant"
+    },
+    {
+        "en":  "granddaughter",
+        "fr":  "petite fille"
+    },
+    {
+        "en":  "grandfather",
+        "fr":  "grand-pÃ¨re"
+    },
+    {
+        "en":  "grandma",
+        "fr":  "grand-mÃ¨re"
+    },
+    {
+        "en":  "grandmother",
+        "fr":  "grand-mÃ¨re"
+    },
+    {
+        "en":  "grandpa",
+        "fr":  "grand-pÃ¨re"
+    },
+    {
+        "en":  "grandparent",
+        "fr":  "grand-parent"
+    },
+    {
+        "en":  "grandson",
+        "fr":  "petit fils"
+    },
+    {
+        "en":  "granny",
+        "fr":  "mamie"
+    },
+    {
+        "en":  "grape",
+        "fr":  "raisin"
+    },
+    {
+        "en":  "grilled",
+        "fr":  "grillÃ©"
+    },
+    {
+        "en":  "grow",
+        "fr":  "grandir"
+    },
+    {
+        "en":  "guess",
+        "fr":  "deviner"
+    },
+    {
+        "en":  "guest",
+        "fr":  "invitÃ©"
+    },
+    {
+        "en":  "guide",
+        "fr":  "guide"
+    },
+    {
+        "en":  "guidebook",
+        "fr":  "guide"
+    },
+    {
+        "en":  "guy",
+        "fr":  "gars"
+    },
+    {
+        "en":  "hall",
+        "fr":  "salle"
+    },
+    {
+        "en":  "ham",
+        "fr":  "jambon"
+    },
+    {
+        "en":  "handbag",
+        "fr":  "sac Ã  main"
+    },
+    {
+        "en":  "happen",
+        "fr":  "arriver"
+    },
+    {
+        "en":  "hate",
+        "fr":  "dÃ©tester"
+    },
+    {
+        "en":  "headache",
+        "fr":  "mal de tÃªte"
+    },
+    {
+        "en":  "headteacher",
+        "fr":  "professeur principal"
+    },
+    {
+        "en":  "health",
+        "fr":  "santÃ©"
+    },
+    {
+        "en":  "healthy",
+        "fr":  "en bonne santÃ©"
+    },
+    {
+        "en":  "heart",
+        "fr":  "cÅ“ur"
+    },
+    {
+        "en":  "heating",
+        "fr":  "chauffage"
+    },
+    {
+        "en":  "heavy",
+        "fr":  "lourd"
+    },
+    {
+        "en":  "helicopter",
+        "fr":  "hÃ©licoptÃ¨re"
+    },
+    {
+        "en":  "hers",
+        "fr":  "la sienne"
+    },
+    {
+        "en":  "herself",
+        "fr":  "se"
+    },
+    {
+        "en":  "hey",
+        "fr":  "HÃ©"
+    },
+    {
+        "en":  "high",
+        "fr":  "haut"
+    },
+    {
+        "en":  "hill",
+        "fr":  "colline"
+    },
+    {
+        "en":  "himself",
+        "fr":  "se"
+    },
+    {
+        "en":  "history",
+        "fr":  "histoire"
+    },
+    {
+        "en":  "hit",
+        "fr":  "frapper"
+    },
+    {
+        "en":  "hobby",
+        "fr":  "passe-temps"
+    },
+    {
+        "en":  "hockey",
+        "fr":  "hockey"
+    },
+    {
+        "en":  "hold",
+        "fr":  "prise"
+    },
+    {
+        "en":  "honey",
+        "fr":  "Miel"
+    },
+    {
+        "en":  "hope",
+        "fr":  "espoir"
+    },
+    {
+        "en":  "horrible",
+        "fr":  "horrible"
+    },
+    {
+        "en":  "housewife",
+        "fr":  "mÃ©nagÃ¨re"
+    },
+    {
+        "en":  "however",
+        "fr":  "cependant"
+    },
+    {
+        "en":  "hundred",
+        "fr":  "cent"
+    },
+    {
+        "en":  "hurry",
+        "fr":  "dÃ©pÃªchez-vous"
+    },
+    {
+        "en":  "hurt",
+        "fr":  "blesser"
+    },
+    {
+        "en":  "ice",
+        "fr":  "glace"
+    },
+    {
+        "en":  "id",
+        "fr":  "identifiant"
+    },
+    {
+        "en":  "idea",
+        "fr":  "idÃ©e"
+    },
+    {
+        "en":  "identification",
+        "fr":  "identification"
+    },
+    {
+        "en":  "if",
+        "fr":  "si"
+    },
+    {
+        "en":  "ill",
+        "fr":  "je vais"
+    },
+    {
+        "en":  "immediately",
+        "fr":  "immÃ©diatement"
+    },
+    {
+        "en":  "improve",
+        "fr":  "amÃ©liorer"
+    },
+    {
+        "en":  "include",
+        "fr":  "inclure"
+    },
+    {
+        "en":  "including",
+        "fr":  "y compris"
+    },
+    {
+        "en":  "indoor",
+        "fr":  "intÃ©rieur"
+    },
+    {
+        "en":  "information",
+        "fr":  "information"
+    },
+    {
+        "en":  "insect",
+        "fr":  "insecte"
+    },
+    {
+        "en":  "instead",
+        "fr":  "plutÃ´t"
+    },
+    {
+        "en":  "instruction",
+        "fr":  "instruction"
+    },
+    {
+        "en":  "instrument",
+        "fr":  "instrument"
+    },
+    {
+        "en":  "interested",
+        "fr":  "intÃ©ressÃ©"
+    },
+    {
+        "en":  "international",
+        "fr":  "international"
+    },
+    {
+        "en":  "invitation",
+        "fr":  "invitation"
+    },
+    {
+        "en":  "island",
+        "fr":  "Ã®le"
+    },
+    {
+        "en":  "it",
+        "fr":  "il"
+    },
+    {
+        "en":  "itself",
+        "fr":  "lui-mÃªme"
+    },
+    {
+        "en":  "jam",
+        "fr":  "Confiture"
+    },
+    {
+        "en":  "jazz",
+        "fr":  "jazz"
+    },
+    {
+        "en":  "jewellery",
+        "fr":  "bijoux"
+    },
+    {
+        "en":  "join",
+        "fr":  "rejoindre"
+    },
+    {
+        "en":  "journey",
+        "fr":  "voyage"
+    },
+    {
+        "en":  "jump",
+        "fr":  "saut"
+    },
+    {
+        "en":  "jumper",
+        "fr":  "cavalier"
+    },
+    {
+        "en":  "just",
+        "fr":  "juste"
+    },
+    {
+        "en":  "keep",
+        "fr":  "garder"
+    },
+    {
+        "en":  "keyboard",
+        "fr":  "clavier"
+    },
+    {
+        "en":  "kid",
+        "fr":  "enfant"
+    },
+    {
+        "en":  "kill",
+        "fr":  "tuer"
+    },
+    {
+        "en":  "kilo",
+        "fr":  "kilo"
+    },
+    {
+        "en":  "kilogram",
+        "fr":  "kilogramme"
+    },
+    {
+        "en":  "kilometre",
+        "fr":  "kilomÃ¨tre"
+    },
+    {
+        "en":  "king",
+        "fr":  "roi"
+    },
+    {
+        "en":  "kiss",
+        "fr":  "baiser"
+    },
+    {
+        "en":  "kit",
+        "fr":  "trousse"
+    },
+    {
+        "en":  "kite",
+        "fr":  "cerf-volant"
+    },
+    {
+        "en":  "lake",
+        "fr":  "lac"
+    },
+    {
+        "en":  "lamp",
+        "fr":  "lampe"
+    },
+    {
+        "en":  "laptop",
+        "fr":  "ordinateur portable"
+    },
+    {
+        "en":  "large",
+        "fr":  "grand"
+    },
+    {
+        "en":  "latest",
+        "fr":  "dernier"
+    },
+    {
+        "en":  "laugh",
+        "fr":  "rire"
+    },
+    {
+        "en":  "lazy",
+        "fr":  "paresseux"
+    },
+    {
+        "en":  "least",
+        "fr":  "moins"
+    },
+    {
+        "en":  "leather",
+        "fr":  "cuir"
+    },
+    {
+        "en":  "left",
+        "fr":  "gauche"
+    },
+    {
+        "en":  "lemon",
+        "fr":  "citron"
+    },
+    {
+        "en":  "lemonade",
+        "fr":  "limonade"
+    },
+    {
+        "en":  "lend",
+        "fr":  "prÃªter"
+    },
+    {
+        "en":  "less",
+        "fr":  "moins"
+    },
+    {
+        "en":  "let",
+        "fr":  "laisser"
+    },
+    {
+        "en":  "level",
+        "fr":  "niveau"
+    },
+    {
+        "en":  "library",
+        "fr":  "bibliothÃ¨que"
+    },
+    {
+        "en":  "licence",
+        "fr":  "licence"
+    },
+    {
+        "en":  "lie1",
+        "fr":  "mensonge1"
+    },
+    {
+        "en":  "lift",
+        "fr":  "ascenseur"
+    },
+    {
+        "en":  "line",
+        "fr":  "doubler"
+    },
+    {
+        "en":  "lion",
+        "fr":  "lion"
+    },
+    {
+        "en":  "list",
+        "fr":  "liste"
+    },
+    {
+        "en":  "litre",
+        "fr":  "litre"
+    },
+    {
+        "en":  "lose",
+        "fr":  "perdre"
+    },
+    {
+        "en":  "lost",
+        "fr":  "perdu"
+    },
+    {
+        "en":  "loud",
+        "fr":  "fort"
+    },
+    {
+        "en":  "lovely",
+        "fr":  "beau"
+    },
+    {
+        "en":  "low",
+        "fr":  "faible"
+    },
+    {
+        "en":  "luck",
+        "fr":  "chance"
+    },
+    {
+        "en":  "lucky",
+        "fr":  "chanceux"
+    },
+    {
+        "en":  "luggage",
+        "fr":  "bagage"
+    },
+    {
+        "en":  "lunchtime",
+        "fr":  "l\u0027heure du dÃ©jeuner"
+    },
+    {
+        "en":  "machine",
+        "fr":  "machine"
+    },
+    {
+        "en":  "mad",
+        "fr":  "fou"
+    },
+    {
+        "en":  "magazine",
+        "fr":  "revue"
+    },
+    {
+        "en":  "magic",
+        "fr":  "magie"
+    },
+    {
+        "en":  "mail",
+        "fr":  "mail"
+    },
+    {
+        "en":  "manager",
+        "fr":  "directeur"
+    },
+    {
+        "en":  "mango",
+        "fr":  "mangue"
+    },
+    {
+        "en":  "map",
+        "fr":  "carte"
+    },
+    {
+        "en":  "mark",
+        "fr":  "marque"
+    },
+    {
+        "en":  "market",
+        "fr":  "marchÃ©"
+    },
+    {
+        "en":  "married",
+        "fr":  "mariÃ©"
+    },
+    {
+        "en":  "match",
+        "fr":  "correspondre"
+    },
+    {
+        "en":  "maths",
+        "fr":  "mathÃ©matiques"
+    },
+    {
+        "en":  "matter",
+        "fr":  "matiÃ¨re"
+    },
+    {
+        "en":  "may",
+        "fr":  "peut"
+    },
+    {
+        "en":  "maybe",
+        "fr":  "peut Ãªtre"
+    },
+    {
+        "en":  "mean",
+        "fr":  "signifier"
+    },
+    {
+        "en":  "mechanic",
+        "fr":  "mÃ©canicien"
+    },
+    {
+        "en":  "medicine",
+        "fr":  "mÃ©decine"
+    },
+    {
+        "en":  "meeting",
+        "fr":  "rÃ©union"
+    },
+    {
+        "en":  "melon",
+        "fr":  "melon"
+    },
+    {
+        "en":  "member",
+        "fr":  "membre"
+    },
+    {
+        "en":  "memory",
+        "fr":  "mÃ©moire"
+    },
+    {
+        "en":  "menu",
+        "fr":  "menu"
+    },
+    {
+        "en":  "metre",
+        "fr":  "mÃ¨tre"
+    },
+    {
+        "en":  "midday",
+        "fr":  "midi"
+    },
+    {
+        "en":  "middle",
+        "fr":  "milieu"
+    },
+    {
+        "en":  "midnight",
+        "fr":  "minuit"
+    },
+    {
+        "en":  "might",
+        "fr":  "pourrait"
+    },
+    {
+        "en":  "million",
+        "fr":  "million"
+    },
+    {
+        "en":  "mind",
+        "fr":  "esprit"
+    },
+    {
+        "en":  "mine",
+        "fr":  "le mien"
+    },
+    {
+        "en":  "minus",
+        "fr":  "moins"
+    },
+    {
+        "en":  "mirror",
+        "fr":  "miroir"
+    },
+    {
+        "en":  "miss",
+        "fr":  "manquer"
+    },
+    {
+        "en":  "missing",
+        "fr":  "manquant"
+    },
+    {
+        "en":  "mistake",
+        "fr":  "erreur"
+    },
+    {
+        "en":  "mix",
+        "fr":  "mÃ©langer"
+    },
+    {
+        "en":  "model",
+        "fr":  "modÃ¨le"
+    },
+    {
+        "en":  "modern",
+        "fr":  "moderne"
+    },
+    {
+        "en":  "moment",
+        "fr":  "moment"
+    },
+    {
+        "en":  "monkey",
+        "fr":  "singe"
+    },
+    {
+        "en":  "moon",
+        "fr":  "lune"
+    },
+    {
+        "en":  "mosque",
+        "fr":  "mosquÃ©e"
+    },
+    {
+        "en":  "most",
+        "fr":  "la plupart"
+    },
+    {
+        "en":  "motorbike",
+        "fr":  "moto"
+    },
+    {
+        "en":  "motorway",
+        "fr":  "autoroute"
+    },
+    {
+        "en":  "mountain",
+        "fr":  "montagne"
+    },
+    {
+        "en":  "mouse",
+        "fr":  "souris"
+    },
+    {
+        "en":  "move",
+        "fr":  "se dÃ©placer"
+    },
+    {
+        "en":  "ms",
+        "fr":  "MS"
+    },
+    {
+        "en":  "mug",
+        "fr":  "tasse"
+    },
+    {
+        "en":  "mushroom",
+        "fr":  "champignon"
+    },
+    {
+        "en":  "musical",
+        "fr":  "musical"
+    },
+    {
+        "en":  "must",
+        "fr":  "doit"
+    },
+    {
+        "en":  "myself",
+        "fr":  "moi-mÃªme"
+    },
+    {
+        "en":  "national",
+        "fr":  "national"
+    },
+    {
+        "en":  "nature",
+        "fr":  "nature"
+    },
+    {
+        "en":  "nearly",
+        "fr":  "presque"
+    },
+    {
+        "en":  "neck",
+        "fr":  "cou"
+    },
+    {
+        "en":  "necklace",
+        "fr":  "collier"
+    },
+    {
+        "en":  "negative",
+        "fr":  "nÃ©gatif"
+    },
+    {
+        "en":  "neighbour",
+        "fr":  "voisin"
+    },
+    {
+        "en":  "net",
+        "fr":  "filet"
+    },
+    {
+        "en":  "news",
+        "fr":  "nouvelles"
+    },
+    {
+        "en":  "ninety",
+        "fr":  "quatre-vingt-dix"
+    },
+    {
+        "en":  "ninth",
+        "fr":  "neuviÃ¨me"
+    },
+    {
+        "en":  "nobody",
+        "fr":  "personne"
+    },
+    {
+        "en":  "noisy",
+        "fr":  "bruyant"
+    },
+    {
+        "en":  "noon",
+        "fr":  "midi"
+    },
+    {
+        "en":  "normal",
+        "fr":  "normale"
+    },
+    {
+        "en":  "notebook",
+        "fr":  "carnet de notes"
+    },
+    {
+        "en":  "nothing",
+        "fr":  "rien"
+    },
+    {
+        "en":  "notice",
+        "fr":  "avis"
+    },
+    {
+        "en":  "noun",
+        "fr":  "nom"
+    },
+    {
+        "en":  "nurse",
+        "fr":  "infirmiÃ¨re"
+    },
+    {
+        "en":  "occupation",
+        "fr":  "profession"
+    },
+    {
+        "en":  "off",
+        "fr":  "dÃ©sactivÃ©"
+    },
+    {
+        "en":  "offer",
+        "fr":  "offre"
+    },
+    {
+        "en":  "office",
+        "fr":  "bureau"
+    },
+    {
+        "en":  "oil",
+        "fr":  "huile"
+    },
+    {
+        "en":  "omelette",
+        "fr":  "omelette"
+    },
+    {
+        "en":  "once",
+        "fr":  "une fois"
+    },
+    {
+        "en":  "onion",
+        "fr":  "oignon"
+    },
+    {
+        "en":  "opera",
+        "fr":  "opÃ©ra"
+    },
+    {
+        "en":  "opposite",
+        "fr":  "opposÃ©"
+    },
+    {
+        "en":  "order",
+        "fr":  "commande"
+    },
+    {
+        "en":  "ours",
+        "fr":  "la nÃ´tre"
+    },
+    {
+        "en":  "ourselves",
+        "fr":  "nous-mÃªmes"
+    },
+    {
+        "en":  "out",
+        "fr":  "dehors"
+    },
+    {
+        "en":  "over",
+        "fr":  "sur"
+    },
+    {
+        "en":  "own",
+        "fr":  "propre"
+    },
+    {
+        "en":  "pack",
+        "fr":  "paquet"
+    },
+    {
+        "en":  "pain",
+        "fr":  "douleur"
+    },
+    {
+        "en":  "painter",
+        "fr":  "peintre"
+    },
+    {
+        "en":  "painting",
+        "fr":  "peinture"
+    },
+    {
+        "en":  "pale",
+        "fr":  "pÃ¢le"
+    },
+    {
+        "en":  "pardon",
+        "fr":  "pardon"
+    },
+    {
+        "en":  "partner",
+        "fr":  "partenaire"
+    },
+    {
+        "en":  "pass",
+        "fr":  "passer"
+    },
+    {
+        "en":  "passenger",
+        "fr":  "passager"
+    },
+    {
+        "en":  "passport",
+        "fr":  "passeport"
+    },
+    {
+        "en":  "pasta",
+        "fr":  "pÃ¢tes"
+    },
+    {
+        "en":  "path",
+        "fr":  "chemin"
+    },
+    {
+        "en":  "pc",
+        "fr":  "PC"
+    },
+    {
+        "en":  "pear",
+        "fr":  "poire"
+    },
+    {
+        "en":  "pence",
+        "fr":  "pence"
+    },
+    {
+        "en":  "penfriend",
+        "fr":  "correspondant"
+    },
+    {
+        "en":  "pepper",
+        "fr":  "poivre"
+    },
+    {
+        "en":  "per",
+        "fr":  "par"
+    },
+    {
+        "en":  "perfume",
+        "fr":  "parfum"
+    },
+    {
+        "en":  "perhaps",
+        "fr":  "peut-Ãªtre"
+    },
+    {
+        "en":  "petrol",
+        "fr":  "essence"
+    },
+    {
+        "en":  "photograph",
+        "fr":  "photographier"
+    },
+    {
+        "en":  "photographer",
+        "fr":  "photographe"
+    },
+    {
+        "en":  "photography",
+        "fr":  "photographie"
+    },
+    {
+        "en":  "physics",
+        "fr":  "physique"
+    },
+    {
+        "en":  "piano",
+        "fr":  "piano"
+    },
+    {
+        "en":  "pick",
+        "fr":  "prendre"
+    },
+    {
+        "en":  "piece",
+        "fr":  "morceau"
+    },
+    {
+        "en":  "pillow",
+        "fr":  "oreiller"
+    },
+    {
+        "en":  "pilot",
+        "fr":  "pilote"
+    },
+    {
+        "en":  "pink",
+        "fr":  "rose"
+    },
+    {
+        "en":  "pity",
+        "fr":  "pitiÃ©"
+    },
+    {
+        "en":  "plan",
+        "fr":  "plan"
+    },
+    {
+        "en":  "plastic",
+        "fr":  "plastique"
+    },
+    {
+        "en":  "platform",
+        "fr":  "plate-forme"
+    },
+    {
+        "en":  "playground",
+        "fr":  "aire de jeux"
+    },
+    {
+        "en":  "pleasant",
+        "fr":  "agrÃ©able"
+    },
+    {
+        "en":  "pleased",
+        "fr":  "heureux"
+    },
+    {
+        "en":  "plural",
+        "fr":  "pluriel"
+    },
+    {
+        "en":  "plus",
+        "fr":  "plus"
+    },
+    {
+        "en":  "pocket",
+        "fr":  "poche"
+    },
+    {
+        "en":  "point",
+        "fr":  "indiquer"
+    },
+    {
+        "en":  "police",
+        "fr":  "police"
+    },
+    {
+        "en":  "policeman",
+        "fr":  "policier"
+    },
+    {
+        "en":  "policewoman",
+        "fr":  "femme policier"
+    },
+    {
+        "en":  "polite",
+        "fr":  "poli"
+    },
+    {
+        "en":  "pool",
+        "fr":  "piscine"
+    },
+    {
+        "en":  "pop",
+        "fr":  "populaire"
+    },
+    {
+        "en":  "popular",
+        "fr":  "populaire"
+    },
+    {
+        "en":  "possibly",
+        "fr":  "peut-Ãªtre"
+    },
+    {
+        "en":  "post",
+        "fr":  "poste"
+    },
+    {
+        "en":  "postcard",
+        "fr":  "carte postale"
+    },
+    {
+        "en":  "poster",
+        "fr":  "affiche"
+    },
+    {
+        "en":  "pound",
+        "fr":  "livre"
+    },
+    {
+        "en":  "practice",
+        "fr":  "pratique"
+    },
+    {
+        "en":  "pray",
+        "fr":  "prier"
+    },
+    {
+        "en":  "prefer",
+        "fr":  "prÃ©fÃ©rer"
+    },
+    {
+        "en":  "prepare",
+        "fr":  "prÃ©parer"
+    },
+    {
+        "en":  "pretty",
+        "fr":  "joli"
+    },
+    {
+        "en":  "price",
+        "fr":  "prix"
+    },
+    {
+        "en":  "print",
+        "fr":  "imprimer"
+    },
+    {
+        "en":  "printer",
+        "fr":  "imprimante"
+    },
+    {
+        "en":  "prize",
+        "fr":  "prix"
+    },
+    {
+        "en":  "probably",
+        "fr":  "probablement"
+    },
+    {
+        "en":  "program",
+        "fr":  "programme"
+    },
+    {
+        "en":  "programme",
+        "fr":  "programme"
+    },
+    {
+        "en":  "project",
+        "fr":  "projet"
+    },
+    {
+        "en":  "pub",
+        "fr":  "pub"
+    },
+    {
+        "en":  "pull",
+        "fr":  "tirer"
+    },
+    {
+        "en":  "pupil",
+        "fr":  "Ã©lÃ¨ve"
+    },
+    {
+        "en":  "purple",
+        "fr":  "violet"
+    },
+    {
+        "en":  "purse",
+        "fr":  "bourse"
+    },
+    {
+        "en":  "push",
+        "fr":  "pousser"
+    },
+    {
+        "en":  "puzzle",
+        "fr":  "puzzle"
+    },
+    {
+        "en":  "queen",
+        "fr":  "reine"
+    },
+    {
+        "en":  "quickly",
+        "fr":  "rapidement"
+    },
+    {
+        "en":  "quiet",
+        "fr":  "calme"
+    },
+    {
+        "en":  "quite",
+        "fr":  "assez"
+    },
+    {
+        "en":  "quiz",
+        "fr":  "questionnaire"
+    },
+    {
+        "en":  "rabbit",
+        "fr":  "lapin"
+    },
+    {
+        "en":  "race",
+        "fr":  "course"
+    },
+    {
+        "en":  "racket",
+        "fr":  "raquette"
+    },
+    {
+        "en":  "railway",
+        "fr":  "chemin de fer"
+    },
+    {
+        "en":  "raincoat",
+        "fr":  "impermÃ©able"
+    },
+    {
+        "en":  "rap",
+        "fr":  "rap"
+    },
+    {
+        "en":  "rat",
+        "fr":  "rat"
+    },
+    {
+        "en":  "real",
+        "fr":  "rÃ©el"
+    },
+    {
+        "en":  "reason",
+        "fr":  "raison"
+    },
+    {
+        "en":  "receipt",
+        "fr":  "reÃ§u"
+    },
+    {
+        "en":  "receive",
+        "fr":  "recevoir"
+    },
+    {
+        "en":  "receptionist",
+        "fr":  "rÃ©ceptionniste"
+    },
+    {
+        "en":  "rent",
+        "fr":  "louer"
+    },
+    {
+        "en":  "repair",
+        "fr":  "rÃ©paration"
+    },
+    {
+        "en":  "repeat",
+        "fr":  "rÃ©pÃ©ter"
+    },
+    {
+        "en":  "rest",
+        "fr":  "repos"
+    },
+    {
+        "en":  "return",
+        "fr":  "retour"
+    },
+    {
+        "en":  "rich",
+        "fr":  "riche"
+    },
+    {
+        "en":  "ring",
+        "fr":  "anneau"
+    },
+    {
+        "en":  "roast",
+        "fr":  "rÃ´ti"
+    },
+    {
+        "en":  "rock",
+        "fr":  "rocher"
+    },
+    {
+        "en":  "roof",
+        "fr":  "toit"
+    },
+    {
+        "en":  "round",
+        "fr":  "rond"
+    },
+    {
+        "en":  "roundabout",
+        "fr":  "rond-point"
+    },
+    {
+        "en":  "rubber",
+        "fr":  "caoutchouc"
+    },
+    {
+        "en":  "rugby",
+        "fr":  "rugby"
+    },
+    {
+        "en":  "ruler",
+        "fr":  "rÃ¨gle"
+    },
+    {
+        "en":  "runner",
+        "fr":  "coureur"
+    },
+    {
+        "en":  "running",
+        "fr":  "en cours d\u0027exÃ©cution"
+    },
+    {
+        "en":  "sailing",
+        "fr":  "voile"
+    },
+    {
+        "en":  "salad",
+        "fr":  "salade"
+    },
+    {
+        "en":  "sale",
+        "fr":  "vente"
+    },
+    {
+        "en":  "salesperson",
+        "fr":  "vendeur"
+    },
+    {
+        "en":  "sauce",
+        "fr":  "sauce"
+    },
+    {
+        "en":  "sausage",
+        "fr":  "saucisse"
+    },
+    {
+        "en":  "save",
+        "fr":  "sauvegarder"
+    },
+    {
+        "en":  "scarf",
+        "fr":  "foulard"
+    },
+    {
+        "en":  "schoolchild",
+        "fr":  "Ã©colier"
+    },
+    {
+        "en":  "science",
+        "fr":  "science"
+    },
+    {
+        "en":  "scissors",
+        "fr":  "ciseaux"
+    },
+    {
+        "en":  "scooter",
+        "fr":  "scooter"
+    },
+    {
+        "en":  "screen",
+        "fr":  "Ã©cran"
+    },
+    {
+        "en":  "seat",
+        "fr":  "siÃ¨ge"
+    },
+    {
+        "en":  "secretary",
+        "fr":  "secrÃ©taire"
+    },
+    {
+        "en":  "sell",
+        "fr":  "vendre"
+    },
+    {
+        "en":  "serve",
+        "fr":  "servir"
+    },
+    {
+        "en":  "set",
+        "fr":  "ensemble"
+    },
+    {
+        "en":  "seventh",
+        "fr":  "septiÃ¨me"
+    },
+    {
+        "en":  "seventy",
+        "fr":  "soixante-dix"
+    },
+    {
+        "en":  "several",
+        "fr":  "plusieurs"
+    },
+    {
+        "en":  "shall",
+        "fr":  "devoir"
+    },
+    {
+        "en":  "shame",
+        "fr":  "honte"
+    },
+    {
+        "en":  "shampoo",
+        "fr":  "shampooing"
+    },
+    {
+        "en":  "share",
+        "fr":  "partager"
+    },
+    {
+        "en":  "sheet",
+        "fr":  "feuille"
+    },
+    {
+        "en":  "shelf",
+        "fr":  "Ã©tagÃ¨re"
+    },
+    {
+        "en":  "ship",
+        "fr":  "bateau"
+    },
+    {
+        "en":  "shorts",
+        "fr":  "shorts"
+    },
+    {
+        "en":  "should",
+        "fr":  "devrait"
+    },
+    {
+        "en":  "shout",
+        "fr":  "crier"
+    },
+    {
+        "en":  "shut",
+        "fr":  "fermer"
+    },
+    {
+        "en":  "sick",
+        "fr":  "malade"
+    },
+    {
+        "en":  "side",
+        "fr":  "cÃ´tÃ©"
+    },
+    {
+        "en":  "sightseeing",
+        "fr":  "touristique"
+    },
+    {
+        "en":  "sign",
+        "fr":  "signe"
+    },
+    {
+        "en":  "silver",
+        "fr":  "argent"
+    },
+    {
+        "en":  "simple",
+        "fr":  "simple"
+    },
+    {
+        "en":  "since",
+        "fr":  "depuis"
+    },
+    {
+        "en":  "singer",
+        "fr":  "chanteur"
+    },
+    {
+        "en":  "singing",
+        "fr":  "chant"
+    },
+    {
+        "en":  "single",
+        "fr":  "cÃ©libataire"
+    },
+    {
+        "en":  "singular",
+        "fr":  "singulier"
+    },
+    {
+        "en":  "sink",
+        "fr":  "couler"
+    },
+    {
+        "en":  "site",
+        "fr":  "site"
+    },
+    {
+        "en":  "sixth",
+        "fr":  "sixiÃ¨me"
+    },
+    {
+        "en":  "sixty",
+        "fr":  "soixante"
+    },
+    {
+        "en":  "size",
+        "fr":  "taille"
+    },
+    {
+        "en":  "skate",
+        "fr":  "patin"
+    },
+    {
+        "en":  "skateboard",
+        "fr":  "skateboard"
+    },
+    {
+        "en":  "skateboarding",
+        "fr":  "skateboard"
+    },
+    {
+        "en":  "skating",
+        "fr":  "patinage"
+    },
+    {
+        "en":  "skiing",
+        "fr":  "ski"
+    },
+    {
+        "en":  "sky",
+        "fr":  "ciel"
+    },
+    {
+        "en":  "slice",
+        "fr":  "tranche"
+    },
+    {
+        "en":  "slowly",
+        "fr":  "lentement"
+    },
+    {
+        "en":  "snack",
+        "fr":  "collation"
+    },
+    {
+        "en":  "snake",
+        "fr":  "serpent"
+    },
+    {
+        "en":  "snowboarding",
+        "fr":  "snowboard"
+    },
+    {
+        "en":  "so",
+        "fr":  "donc"
+    },
+    {
+        "en":  "soap",
+        "fr":  "savon"
+    },
+    {
+        "en":  "sock",
+        "fr":  "chaussette"
+    },
+    {
+        "en":  "sofa",
+        "fr":  "canapÃ©"
+    },
+    {
+        "en":  "soft",
+        "fr":  "doux"
+    },
+    {
+        "en":  "software",
+        "fr":  "logiciel"
+    },
+    {
+        "en":  "somebody",
+        "fr":  "quelqu\u0027un"
+    },
+    {
+        "en":  "someone",
+        "fr":  "quelqu\u0027un"
+    },
+    {
+        "en":  "somewhere",
+        "fr":  "quelque part"
+    },
+    {
+        "en":  "song",
+        "fr":  "chanson"
+    },
+    {
+        "en":  "sort",
+        "fr":  "trier"
+    },
+    {
+        "en":  "soul",
+        "fr":  "Ã¢me"
+    },
+    {
+        "en":  "sound",
+        "fr":  "son"
+    },
+    {
+        "en":  "space",
+        "fr":  "espace"
+    },
+    {
+        "en":  "spare",
+        "fr":  "de rechange"
+    },
+    {
+        "en":  "speaker",
+        "fr":  "confÃ©rencier"
+    },
+    {
+        "en":  "special",
+        "fr":  "spÃ©cial"
+    },
+    {
+        "en":  "spell",
+        "fr":  "Ã©peler"
+    },
+    {
+        "en":  "spelling",
+        "fr":  "orthographe"
+    },
+    {
+        "en":  "spend",
+        "fr":  "dÃ©penser"
+    },
+    {
+        "en":  "spoon",
+        "fr":  "cuillÃ¨re"
+    },
+    {
+        "en":  "spring",
+        "fr":  "printemps"
+    },
+    {
+        "en":  "square",
+        "fr":  "carrÃ©"
+    },
+    {
+        "en":  "stadium",
+        "fr":  "stade"
+    },
+    {
+        "en":  "staff",
+        "fr":  "personnel"
+    },
+    {
+        "en":  "stage",
+        "fr":  "scÃ¨ne"
+    },
+    {
+        "en":  "stairs",
+        "fr":  "escaliers"
+    },
+    {
+        "en":  "stamp",
+        "fr":  "timbre"
+    },
+    {
+        "en":  "stand",
+        "fr":  "rester"
+    },
+    {
+        "en":  "star",
+        "fr":  "Ã©toile"
+    },
+    {
+        "en":  "steak",
+        "fr":  "steak"
+    },
+    {
+        "en":  "steal",
+        "fr":  "voler"
+    },
+    {
+        "en":  "still",
+        "fr":  "toujours"
+    },
+    {
+        "en":  "stomach",
+        "fr":  "estomac"
+    },
+    {
+        "en":  "storm",
+        "fr":  "tempÃªte"
+    },
+    {
+        "en":  "story",
+        "fr":  "histoire"
+    },
+    {
+        "en":  "straight",
+        "fr":  "droit"
+    },
+    {
+        "en":  "strange",
+        "fr":  "Ã©trange"
+    },
+    {
+        "en":  "strong",
+        "fr":  "fort"
+    },
+    {
+        "en":  "such",
+        "fr":  "tel"
+    },
+    {
+        "en":  "suit",
+        "fr":  "costume"
+    },
+    {
+        "en":  "suitcase",
+        "fr":  "valise"
+    },
+    {
+        "en":  "sunglasses",
+        "fr":  "lunettes de soleil"
+    },
+    {
+        "en":  "sunny",
+        "fr":  "ensoleillÃ©"
+    },
+    {
+        "en":  "superlative",
+        "fr":  "superlatif"
+    },
+    {
+        "en":  "supper",
+        "fr":  "souper"
+    },
+    {
+        "en":  "suppose",
+        "fr":  "supposer"
+    },
+    {
+        "en":  "sure",
+        "fr":  "bien sÃ»r"
+    },
+    {
+        "en":  "surf",
+        "fr":  "surf"
+    },
+    {
+        "en":  "surfing",
+        "fr":  "surf"
+    },
+    {
+        "en":  "surname",
+        "fr":  "nom de famille"
+    },
+    {
+        "en":  "surprise",
+        "fr":  "surprendre"
+    },
+    {
+        "en":  "surprised",
+        "fr":  "surpris"
+    },
+    {
+        "en":  "sweater",
+        "fr":  "pull-over"
+    },
+    {
+        "en":  "sweets",
+        "fr":  "bonbons"
+    },
+    {
+        "en":  "swimming",
+        "fr":  "natation"
+    },
+    {
+        "en":  "team",
+        "fr":  "Ã©quipe"
+    },
+    {
+        "en":  "teenager",
+        "fr":  "adolescent"
+    },
+    {
+        "en":  "telephone",
+        "fr":  "tÃ©lÃ©phone"
+    },
+    {
+        "en":  "temperature",
+        "fr":  "tempÃ©rature"
+    },
+    {
+        "en":  "term",
+        "fr":  "terme"
+    },
+    {
+        "en":  "terrible",
+        "fr":  "terrible"
+    },
+    {
+        "en":  "text",
+        "fr":  "texte"
+    },
+    {
+        "en":  "textbook",
+        "fr":  "manuel"
+    },
+    {
+        "en":  "thank",
+        "fr":  "remercier"
+    },
+    {
+        "en":  "theatre",
+        "fr":  "thÃ©Ã¢tre"
+    },
+    {
+        "en":  "theirs",
+        "fr":  "la leur"
+    },
+    {
+        "en":  "themselves",
+        "fr":  "eux-mÃªmes"
+    },
+    {
+        "en":  "thin",
+        "fr":  "mince"
+    },
+    {
+        "en":  "third",
+        "fr":  "troisiÃ¨me"
+    },
+    {
+        "en":  "thirsty",
+        "fr":  "soif"
+    },
+    {
+        "en":  "thirty",
+        "fr":  "trente"
+    },
+    {
+        "en":  "thousand",
+        "fr":  "mille"
+    },
+    {
+        "en":  "through",
+        "fr":  "Ã  travers"
+    },
+    {
+        "en":  "throw",
+        "fr":  "lancer"
+    },
+    {
+        "en":  "thunderstorm",
+        "fr":  "orage"
+    },
+    {
+        "en":  "tidy",
+        "fr":  "rangÃ©"
+    },
+    {
+        "en":  "tie",
+        "fr":  "cravate"
+    },
+    {
+        "en":  "tights",
+        "fr":  "collants"
+    },
+    {
+        "en":  "till",
+        "fr":  "jusqu\u0027Ã"
+    },
+    {
+        "en":  "timetable",
+        "fr":  "calendrier"
+    },
+    {
+        "en":  "toast",
+        "fr":  "griller"
+    },
+    {
+        "en":  "toe",
+        "fr":  "orteil"
+    },
+    {
+        "en":  "toothache",
+        "fr":  "mal aux dents"
+    },
+    {
+        "en":  "toothbrush",
+        "fr":  "brosse Ã  dents"
+    },
+    {
+        "en":  "top",
+        "fr":  "haut"
+    },
+    {
+        "en":  "tour",
+        "fr":  "tournÃ©e"
+    },
+    {
+        "en":  "tourist",
+        "fr":  "touristique"
+    },
+    {
+        "en":  "towel",
+        "fr":  "serviette"
+    },
+    {
+        "en":  "toy",
+        "fr":  "jouet"
+    },
+    {
+        "en":  "traffic",
+        "fr":  "trafic"
+    },
+    {
+        "en":  "trainer",
+        "fr":  "entraÃ®neur"
+    },
+    {
+        "en":  "tram",
+        "fr":  "tram"
+    },
+    {
+        "en":  "trip",
+        "fr":  "voyage"
+    },
+    {
+        "en":  "TRUE",
+        "fr":  "VRAI"
+    },
+    {
+        "en":  "try",
+        "fr":  "essayer"
+    },
+    {
+        "en":  "tune",
+        "fr":  "rÃ©gler"
+    },
+    {
+        "en":  "turn",
+        "fr":  "tourner"
+    },
+    {
+        "en":  "twice",
+        "fr":  "deux fois"
+    },
+    {
+        "en":  "type",
+        "fr":  "taper"
+    },
+    {
+        "en":  "tyre",
+        "fr":  "pneu"
+    },
+    {
+        "en":  "umbrella",
+        "fr":  "parapluie"
+    },
+    {
+        "en":  "uncle",
+        "fr":  "oncle"
+    },
+    {
+        "en":  "unfortunately",
+        "fr":  "malheureusement"
+    },
+    {
+        "en":  "unhappy",
+        "fr":  "malheureux"
+    },
+    {
+        "en":  "uniform",
+        "fr":  "uniforme"
+    },
+    {
+        "en":  "unusual",
+        "fr":  "inhabituel"
+    },
+    {
+        "en":  "upset",
+        "fr":  "bouleversÃ©"
+    },
+    {
+        "en":  "useful",
+        "fr":  "utile"
+    },
+    {
+        "en":  "usual",
+        "fr":  "habituel"
+    },
+    {
+        "en":  "usually",
+        "fr":  "gÃ©nÃ©ralement"
+    },
+    {
+        "en":  "variety",
+        "fr":  "variÃ©tÃ©"
+    },
+    {
+        "en":  "various",
+        "fr":  "divers"
+    },
+    {
+        "en":  "verb",
+        "fr":  "verbe"
+    },
+    {
+        "en":  "video",
+        "fr":  "vidÃ©o"
+    },
+    {
+        "en":  "view",
+        "fr":  "voir"
+    },
+    {
+        "en":  "violin",
+        "fr":  "violon"
+    },
+    {
+        "en":  "visitor",
+        "fr":  "visiteur"
+    },
+    {
+        "en":  "vocabulary",
+        "fr":  "vocabulaire"
+    },
+    {
+        "en":  "volleyball",
+        "fr":  "volley-ball"
+    },
+    {
+        "en":  "walking",
+        "fr":  "marche"
+    },
+    {
+        "en":  "wallet",
+        "fr":  "portefeuille"
+    },
+    {
+        "en":  "war",
+        "fr":  "guerre"
+    },
+    {
+        "en":  "way",
+        "fr":  "chemin"
+    },
+    {
+        "en":  "web",
+        "fr":  "web"
+    },
+    {
+        "en":  "weekday",
+        "fr":  "jour de la semaine"
+    },
+    {
+        "en":  "weekly",
+        "fr":  "hebdomadaire"
+    },
+    {
+        "en":  "welcome",
+        "fr":  "accueillir"
+    },
+    {
+        "en":  "wet",
+        "fr":  "mouillÃ©"
+    },
+    {
+        "en":  "wheel",
+        "fr":  "roue"
+    },
+    {
+        "en":  "while",
+        "fr":  "alors que"
+    },
+    {
+        "en":  "whole",
+        "fr":  "entier"
+    },
+    {
+        "en":  "wide",
+        "fr":  "large"
+    },
+    {
+        "en":  "wild",
+        "fr":  "sauvage"
+    },
+    {
+        "en":  "win",
+        "fr":  "gagner"
+    },
+    {
+        "en":  "windy",
+        "fr":  "venteux"
+    },
+    {
+        "en":  "winner",
+        "fr":  "gagnant"
+    },
+    {
+        "en":  "wish",
+        "fr":  "souhait"
+    },
+    {
+        "en":  "without",
+        "fr":  "sans"
+    },
+    {
+        "en":  "wonderful",
+        "fr":  "merveilleux"
+    },
+    {
+        "en":  "wood",
+        "fr":  "bois"
+    },
+    {
+        "en":  "wooden",
+        "fr":  "en bois"
+    },
+    {
+        "en":  "wool",
+        "fr":  "laine"
+    },
+    {
+        "en":  "worker",
+        "fr":  "travailleur"
+    },
+    {
+        "en":  "worried",
+        "fr":  "inquiet"
+    },
+    {
+        "en":  "worse",
+        "fr":  "pire"
+    },
+    {
+        "en":  "worst",
+        "fr":  "pire"
+    },
+    {
+        "en":  "wow",
+        "fr":  "Ouah"
+    },
+    {
+        "en":  "yet",
+        "fr":  "encore"
+    },
+    {
+        "en":  "yours",
+        "fr":  "le vÃ´tre"
+    },
+    {
+        "en":  "yourself",
+        "fr":  "toi-mÃªme"
+    },
+    {
+        "en":  "zero",
+        "fr":  "zÃ©ro"
+    }
+]
