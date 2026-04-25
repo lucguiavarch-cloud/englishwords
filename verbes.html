@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Irregular Verbs Master 🇬🇧</title>
+    <style>
+        :root {
+            --primary: #4a90e2; --success: #2ecc71; --danger: #e74c3c;
+            --dark: #2c3e50; --light: #f4f7f6; --accent: #f39c12; --violet: #9b59b6; --pink: #f06292;
+        }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--light); display: flex; justify-content: center; padding: 20px; }
+        .container { width: 100%; max-width: 850px; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        
+        /* Barre des 4 Streaks */
+        .streak-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px; position: relative; }
+        .s-badge { position: relative; padding: 10px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; font-weight: bold; border: 2px solid transparent; text-align: center; cursor: help; }
+        .s-days { background: #fff3e0; color: #e65100; border-color: #ffb74d; }
+        .s-perfect { background: #e8f5e9; color: #2e7d32; border-color: #81c784; }
+        .s-volume { background: #f3e5f5; color: #7b1fa2; border-color: #ce93d8; }
+        .s-shield { background: #e1f5fe; color: #0277bd; border-color: #4fc3f7; transition: 0.3s; opacity: 0.4; }
+        .s-shield.active { opacity: 1; box-shadow: 0 0 10px rgba(79, 195, 247, 0.5); }
+        
+        .tooltip { visibility: hidden; width: 180px; background-color: rgba(44, 62, 80, 0.95); color: #fff; text-align: center; border-radius: 8px; padding: 10px; position: absolute; z-index: 100; top: 110%; left: 50%; transform: translateX(-50%); font-size: 11px; font-weight: normal; opacity: 0; transition: 0.3s; pointer-events: none; }
+        .s-badge:hover .tooltip { visibility: visible; opacity: 1; }
+
+        .levels-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 5px; margin-bottom: 20px; background: #2c3e50; padding: 12px; border-radius: 10px; color: white; }
+        .level-box { padding: 5px; border-radius: 6px; background: rgba(255,255,255,0.1); text-align: center; }
+        .level-count { display: block; font-size: 18px; font-weight: bold; color: var(--success); }
+        .level-label { font-size: 9px; text-transform: uppercase; }
+
+        .eval-mini { display: flex; justify-content: space-between; align-items: center; background: #f0f4f8; padding: 8px 12px; border-radius: 8px; margin-bottom: 15px; font-size: 13px; border: 1px solid #d1d9e6; }
+        .eval-progress-container { flex-grow: 1; height: 6px; background: #ddd; margin: 0 12px; border-radius: 3px; overflow: hidden; }
+        .eval-progress-bar { height: 100%; background: var(--success); width: 0%; }
+
+        .quiz-section { text-align: center; padding: 30px; border: 2px dashed #ddd; border-radius: 15px; margin-bottom: 20px; position: relative; }
+        .mode-indicator { position: absolute; top: 10px; left: 10px; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: bold; text-transform: uppercase; background: #eee; }
+        .word-to-translate { font-size: 38px; font-weight: bold; color: var(--dark); margin-bottom: 5px; }
+        .format-hint { font-size: 14px; color: #666; margin-bottom: 20px; font-style: italic; }
+        
+        input[type="text"] { width: 85%; padding: 15px; font-size: 20px; border: 2px solid #ddd; border-radius: 10px; text-align: center; outline: none; transition: 0.3s; }
+        input[type="text"]:focus { border-color: var(--primary); box-shadow: 0 0 8px rgba(74, 144, 226, 0.2); }
+
+        button { padding: 10px 15px; cursor: pointer; border: none; border-radius: 6px; font-weight: bold; color: white; }
+        .btn-add { background: var(--success); width: 100%; margin-bottom: 10px; }
+        .reservoir-section { background: #fffafb; border: 1px solid #ffd1df; padding: 12px; border-radius: 10px; margin-bottom: 20px; }
+        .word-tag { background: white; border: 1px solid #f06292; color: #c2185b; padding: 3px 8px; border-radius: 12px; font-size: 11px; margin-right: 5px; }
+		.container { position: relative; padding-top: 60px; } /* On laisse de la place en haut */
+
+	.btn-index {
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		text-decoration: none;
+		background: #f8f9fa;
+		color: #2c3e50;
+		padding: 8px 15px;
+		border-radius: 10px;
+		font-size: 13px;
+		font-weight: bold;
+		border: 1px solid #eee;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+		transition: 0.2s;
+	}
+
+	.btn-index:hover {
+		background: white;
+		box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+		transform: translateY(-1px);
+	}
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="index.html" class="btn-index">🏠 INDEX</a>
+
+    <div style="font-size: 12px; color: #bdc3c7; font-weight: bold; letter-spacing: 2px;">
+        ENGLISH LEARNING HUB
+    </div>
+</nav>
+<div class="container">
+    <div class="streak-bar">
+        <div class="s-badge s-days">
+            <span id="stk-days">0</span><span class="s-label">Jours 🔥</span>
+            <div class="tooltip">Travaille chaque jour pour maintenir ta série.</div>
+        </div>
+        <div class="s-badge s-perfect">
+            <span id="stk-perf">0</span><span class="s-label">Précision 🎯</span>
+            <div class="tooltip">Bonnes réponses d'affilée (les 3 formes correctes).</div>
+        </div>
+        <div class="s-badge s-volume">
+            <span id="stk-vol">0/5</span><span class="s-label">Effort ⚡</span>
+            <div class="vol-progress" style="width:100%; height:4px; background:rgba(0,0,0,0.1); margin-top:5px;"><div class="vol-bar" id="vol-bar" style="height:100%; background:var(--violet); width:0%;"></div></div>
+            <div class="tooltip">Objectif : 5 verbes par jour.</div>
+        </div>
+        <div class="s-badge s-shield" id="stk-shield">
+            <span id="shield-txt">OFF</span><span class="s-label">Nettoyage 🛡️</span>
+            <div class="tooltip">Actif quand tu as corrigé toutes tes erreurs.</div>
+        </div>
+    </div>
+
+    <div class="levels-grid">
+        <div class="level-box"><span class="level-count" id="lv0">0</span><span class="level-label">Nouv.</span></div>
+        <div class="level-box"><span class="level-count" id="lv1">0</span><span class="level-label">1 J</span></div>
+        <div class="level-box"><span class="level-count" id="lv2">0</span><span class="level-label">3 J</span></div>
+        <div class="level-box"><span class="level-count" id="lv3">0</span><span class="level-label">7 J</span></div>
+        <div class="level-box"><span class="level-count" id="lv4">0</span><span class="level-label">30 J</span></div>
+        <div class="level-box" style="background: var(--success);"><span class="level-count" id="lv5" style="color:white">0</span><span class="level-label" style="color:white">Acquis</span></div>
+    </div>
+
+    <div class="eval-mini">
+        <div id="score-final" style="font-weight:bold">0.0/20</div>
+        <div class="eval-progress-container"><div class="eval-progress-bar" id="progress-bar-eval"></div></div>
+        <button onclick="toggleTestMode()" id="btn-test-ui" style="display:none; background:var(--primary); font-size:10px; padding:5px;">TEST ACQUIS 🧠</button>
+    </div>
+
+    <div class="quiz-section">
+        <div id="mode-tag" class="mode-indicator">---</div>
+        <div id="quiz-content">
+            <div class="word-to-translate" id="current-word">Chargement...</div>
+            <div class="format-hint">Tape : Infinitif, Prétérit, Participe Passé</div>
+            <input type="text" id="user-input" placeholder="ex: go, went, gone" autocomplete="off">
+            <div id="feedback" style="margin-top:15px; font-weight:bold; min-height: 2.4em; font-size: 18px;"></div>
+        </div>
+        <div id="congrats-msg" style="display:none;">
+            <h2>Verbes maîtrisés ! 🎉</h2>
+            <p>Plus de révisions pour le moment. Reviens demain !</p>
+        </div>
+    </div>
+
+    <div class="reservoir-section" id="reservoir-ui" style="display:none;">
+        <div style="font-size:12px; font-weight:bold; color:var(--pink)">Verbes à revoir (<span id="reservoir-count">0</span>)</div>
+        <div id="reservoir-list" style="margin-top:8px;"></div>
+    </div>
+
+    <div class="admin-section">
+        <textarea id="bulk-input" rows="2" placeholder="Saisie : Aller, go, went, gone (un par ligne)"></textarea>
+        <button class="btn-add" onclick="importVerbs()">📥 Ajouter les verbes</button>
+        <div style="display:flex; gap:10px;">
+            <button onclick="exportJSON()" style="background:var(--violet)">💾 Sauvegarder</button>
+            <button onclick="document.getElementById('fLoader').click()" style="background:var(--primary)">📂 Charger</button>
+            <input type="file" id="fLoader" style="display:none" onchange="importJSON(event)">
+            <button onclick="resetAll()" style="background:var(--danger)">🗑️ Reset</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const KEY = 'EM_VERBS_V17';
+    const VOL_GOAL = 5;
+    let dictionary = JSON.parse(localStorage.getItem(KEY)) || [];
+    let stats = JSON.parse(localStorage.getItem(KEY+'_STATS')) || { days: 0, perfect: 0, dailyCount: 0, lastDate: null };
+    let currentWord = null;
+    let isTestMode = false;
+
+	// --- FONCTION AUDIO ---
+    function speak(text) {
+        // Annule les voix en cours
+        window.speechSynthesis.cancel();
+        const msg = new SpeechSynthesisUtterance(text);
+        msg.lang = 'en-GB'; // Accent British (ou 'en-US')
+        msg.rate = 0.9;     // Vitesse légèrement ralentie pour bien entendre
+        window.speechSynthesis.speak(msg);
+    }
+
+    function speakCurrent() {
+        if(currentWord) speak(`${currentWord.en}, ${currentWord.pt}, ${currentWord.pp}`);
+    }
+	//
+    function save() {
+        localStorage.setItem(KEY, JSON.stringify(dictionary));
+        localStorage.setItem(KEY+'_STATS', JSON.stringify(stats));
+        updateUI();
+    }
+
+    function updateUI() {
+        let pts = 0; let total = Math.max(dictionary.length, 1);
+        for(let i=0; i<=5; i++) {
+            const count = dictionary.filter(w => w.level === i).length;
+            document.getElementById('lv'+i).innerText = count;
+            pts += (count * i);
+        }
+        document.getElementById('score-final').innerText = `${((pts/(total*5))*20).toFixed(1)}/20`;
+        document.getElementById('progress-bar-eval').style.width = ((pts/(total*5))*100) + "%";
+        document.getElementById('btn-test-ui').style.display = dictionary.filter(w => w.level === 5).length > 0 ? 'block' : 'none';
+        document.getElementById('stk-days').innerText = stats.days;
+        document.getElementById('stk-perf').innerText = stats.perfect;
+        const volPercent = Math.min((stats.dailyCount / VOL_GOAL) * 100, 100);
+        document.getElementById('stk-vol').innerText = `${stats.dailyCount}/${VOL_GOAL}`;
+        document.getElementById('vol-bar').style.width = volPercent + "%";
+        
+        const failed = dictionary.filter(w => w.level === 0 && w.isFailed);
+        const shield = document.getElementById('stk-shield');
+        if(failed.length > 0) {
+            document.getElementById('reservoir-ui').style.display = 'block';
+            document.getElementById('reservoir-count').innerText = failed.length;
+            document.getElementById('reservoir-list').innerHTML = failed.map(w => `<span class="word-tag">${w.fr}</span>`).join('');
+            shield.classList.remove('active'); document.getElementById('shield-txt').innerText = "OFF";
+        } else {
+            document.getElementById('reservoir-ui').style.display = 'none';
+            if(dictionary.length > 0) { shield.classList.add('active'); document.getElementById('shield-txt').innerText = "CLEAN"; }
+        }
+    }
+
+    function getNextWord() {
+    const now = new Date();
+    // On met l'heure à zéro pour comparer uniquement le calendrier
+    const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const mode = document.getElementById('mode-tag');
+    let pool = [];
+
+    if(isTestMode) {
+        pool = dictionary.filter(w => w.level === 5);
+        mode.innerText = "Test Acquis"; mode.style.background = "#e1f5fe";
+    } else {
+        // Changement ici : on compare avec todayStart
+        let revs = dictionary.filter(w => w.level >= 1 && w.level <= 4 && new Date(w.nextReview) <= now);
+        let cons = dictionary.filter(w => w.level === 0 && w.isFailed);
+        let news = dictionary.filter(w => w.level === 0 && !w.isFailed);
+        
+        if(revs.length) { pool = revs; mode.innerText = "Révision"; }
+        else if(cons.length) { pool = cons; mode.innerText = "Consolidation"; }
+        else if(news.length) { pool = news; mode.innerText = "Nouveau"; }
+    }
+
+    if(!pool.length) {
+        document.getElementById('quiz-content').style.display = 'none';
+        document.getElementById('congrats-msg').style.display = 'block';
+        return;
+    }
+
+    currentWord = pool[Math.floor(Math.random()*pool.length)];
+    document.getElementById('quiz-content').style.display = 'block';
+    document.getElementById('congrats-msg').style.display = 'none';
+    document.getElementById('current-word').innerText = currentWord.fr;
+    document.getElementById('user-input').value = "";
+    document.getElementById('user-input').focus();
+}
+
+    function handleAnswer() {
+        const input = document.getElementById('user-input').value.trim().toLowerCase();
+        const fb = document.getElementById('feedback');
+        if(!currentWord) return;
+
+        // On nettoie la réponse : suppression des espaces inutiles autour des virgules
+        const userForms = input.split(',').map(f => f.trim());
+        const correctForms = [currentWord.en, currentWord.pt, currentWord.pp].map(f => f.toLowerCase().trim());
+        
+        const isCorrect = userForms.length === 3 && userForms.every((val, index) => val === correctForms[index]);
+
+        if(isCorrect) {
+            fb.innerHTML = "<span style='color:var(--success)'>Excellent ! ✅</span><br><small style='color:gray; font-weight:normal'>"+correctForms.join(' - ')+"</small>";
+            speakCurrent();// PRONONCIATION AUTOMATIQUE
+            if(!isTestMode) {
+                currentWord.level++;
+                currentWord.isFailed = false;
+                let d = new Date(); d.setDate(d.getDate() + [0, 1, 3, 7, 30, 90][currentWord.level]);
+                currentWord.nextReview = d.toISOString();
+                stats.perfect++;
+                stats.dailyCount++;
+                if(stats.dailyCount === VOL_GOAL) stats.days++;
+            }
+        } else {
+            fb.innerHTML = `<span style='color:var(--danger)'>Attention ! ❌</span><br><span style='font-size:14px; color:var(--dark)'>La réponse était : <b>${correctForms.join(', ')}</b></span>`;
+			speakCurrent();// PRONONCIATION AUTOMATIQUE
+            if(!isTestMode) {
+                currentWord.level = 0; currentWord.isFailed = true;
+                stats.perfect = 0;
+            } else {
+                currentWord.level = 4;
+                isTestMode = false;
+            }
+        }
+        save();
+        setTimeout(() => { fb.innerHTML = ""; getNextWord(); }, 7500);
+    }
+
+    function importVerbs() {
+        const lines = document.getElementById('bulk-input').value.split('\n');
+        lines.forEach(l => {
+            const p = l.split(',');
+            if(p.length === 4) {
+                dictionary.push({
+                    fr: p[0].trim(), en: p[1].trim(), pt: p[2].trim(), pp: p[3].trim(),
+                    level: 0, isFailed: false, nextReview: new Date().toISOString()
+                });
+            }
+        });
+        document.getElementById('bulk-input').value = ""; save(); getNextWord();
+    }
+
+    function toggleTestMode() { isTestMode = !isTestMode; getNextWord(); }
+    function exportJSON() {
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(new Blob([JSON.stringify(dictionary)], {type:"application/json"}));
+        a.download = "verbes_irreguliers.json"; a.click();
+    }
+    function importJSON(e) {
+        const r = new FileReader();
+        r.onload = (f) => { dictionary = JSON.parse(f.target.result); save(); location.reload(); };
+        r.readAsText(e.target.files[0]);
+    }
+    function resetAll() { if(confirm("Effacer tout ?")) { localStorage.clear(); location.reload(); } }
+    document.getElementById('user-input').addEventListener('keypress', (e) => { if(e.key === 'Enter') handleAnswer(); });
+    
+    // Init Date
+    const today = new Date().toLocaleDateString();
+    if(stats.lastDate !== today) {
+        const yest = new Date(); yest.setDate(yest.getDate()-1);
+        if(stats.lastDate !== yest.toLocaleDateString()) stats.days = 0;
+        stats.dailyCount = 0; stats.lastDate = today; save();
+    }
+    updateUI(); getNextWord();
+</script>
+</body>
+</html>
