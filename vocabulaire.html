@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+    <title>English Master 🎓</title>
+    <link rel="stylesheet" href="vocabulaire.css">
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+
+<div class="container">
+    <a href="tuto-anglais.html" target="_blank" class="tuto-link">❓ Aide / Tuto</a>
+
+    <div class="session-info">
+        👤 Partie en cours : <span id="current-session-display" class="session-name">Session Locale</span>
+    </div>
+
+    <div class="header-stats">
+        <div class="stat-card">
+            <span class="stat-val" id="timer" style="color:var(--accent)">10:00</span>
+            <select id="time-limit" class="time-selector">
+                <option value="5">5 min</option>
+                <option value="10" selected>10 min</option>
+                <option value="15">15 min</option>
+            </select>
+        </div>
+        <div class="stat-card">
+            <span class="stat-val" id="stk-perf" style="color:var(--success)">0</span>
+            <span class="stat-label">Combo</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-val" id="stk-total">0</span>
+            <span class="stat-label">Total</span>
+        </div>
+        <div class="stat-card">
+			<span class="stat-val" id="mastery-score" style="color:var(--gold)">0%</span>
+			<span class="stat-label">Maîtrise</span>
+		</div>
+		<div class="stat-card" style="grid-column: span 4; background: var(--dark);">
+    <div style="display:flex; justify-content: space-between; font-size: 10px; margin-bottom: 5px;">
+        <span>NIVEAU DU JOUEUR : <b id="player-lvl">1</b></span>
+        <span id="xp-text">0 / 100 XP</span>
+    </div>
+    <div style="width: 100%; height: 8px; background: #444; border-radius: 4px; overflow: hidden;">
+        <div id="xp-bar" style="width: 0%; height: 100%; background: var(--gold); transition: 0.3s;"></div>
+    </div>
+</div>
+    </div>
+
+    <div class="dashboard-grid">
+        <div class="badges-section">
+            <div class="badge-title">🎯 Combo (mots justes enchainés) </div>
+            	<div class="badge-group">
+					<div class="badge" id="bc-2" data-title="combo x2 - Petit combo">🎖</div>
+					<div class="badge" id="bc-3" data-title="combo x3 - Combo moyen">🥉</div>
+					<div class="badge" id="bc-5" data-title="combo x5 - Grand combo">🥈</div>
+					<div class="badge" id="bc-10" data-title="combo x10 - Méga combo">🥇</div>
+					<div class="badge" id="bc-20" data-title="combo x20 - Combo Légendaire">🏆</div>
+				</div>
+			
+
+			
+            <div class="badge-title">📈 Effort (Mots justes par session)</div>
+            <div class="badge-group">
+                <div class="badge" id="bv-5" data-title=" 5 mots justes (l'effort commence)">🥚</div>
+                <div class="badge" id="bv-10" data-title="10 mots justes (l'habitude se forme)">🐣</div>
+				<div class="badge" id="bv-30" data-title="30 mots justes (tu prends de la hauteur)">🐥</div>
+                <div class="badge" id="bv-50" data-title="50 mots justes (tu maîtrises tes mots)">🐓</div>
+                <div class="badge" id="bv-100" data-title="100 mots justes (effort légendaire, rien ne t'arrête)">🦖</div>
+            </div>
+			<div class="badge-title">☀️ Regularité (enchainement de jour d'apprentissage)</div>
+			<div class="badge-group">
+				<div class="badge" id="bd-1" data-label="1J">🌑</div>
+				<div class="badge" id="bd-3" data-label="3J">🌒</div>
+				<div class="badge" id="bd-5" data-label="5J">🌓</div>
+				<div class="badge" id="bd-7" data-label="7J">🌔</div>
+				<div class="badge" id="bd-15" data-label="15J">🌕</div>
+				<div class="badge" id="bd-30" data-label="30J">☀️</div>
+			</div>
+        </div>
+        <div class="levels-grid" id="levels-display"></div>
+    </div>
+
+    <div class="quiz-section" id="quiz-box">
+        <div id="mode-tag" class="mode-indicator">MODE</div>
+        <div class="word-to-translate" id="current-word">---</div>
+        <input type="text" id="user-input" placeholder="Tape ici..." autocomplete="off">
+        <div id="feedback"></div>
+    </div>
+	<div class="perks-container" style="margin-top: 10px; display: flex; justify-content: center; gap: 10px;">
+    <button id="btn-hint" class="bg-violet" style="font-size: 12px;">💡 Indice (<span id="count-hint">0</span>)</button>
+    <button id="btn-shield" class="bg-primary" style="font-size: 12px;">🛡️ Bouclier (<span id="count-shield">0</span>)</button>
+</div>
+
+    <div class="reservoir-section" id="reservoir-ui" style="display:none;">
+        <div style="font-size:11px; font-weight:bold; color:var(--pink); margin-bottom:5px;">À CORRIGER :</div>
+        <div id="reservoir-list"></div>
+    </div>
+
+    <div class="admin-panel">
+        <div class="button-group">
+            <button id="btn-add" class="bg-success">➕ Ajouter des mots</button>
+            <button id="btn-export" class="bg-violet">💾 Exporter</button>
+            <button id="btn-import-trigger" class="bg-primary">📂 Importer</button>
+            <input type="file" id="fLoader" style="display:none">
+            <button id="btn-reset" class="bg-danger">🗑️ Reset</button>
+			<div style="display: flex; gap: 5px; align-items: center;">
+    <select id="skin-selector" style="padding: 8px; border-radius: var(--radius-btn); background: var(--bg-card); color: var(--text-card); border: 2px solid var(--primary); font-weight: bold; cursor: pointer;">
+    </select>
+    <button id="btn-apply-skin" class="bg-accent" style="border: 2px solid var(--text-light);">🎨 Appliquer</button>
+</div>
+        </div>
+    </div>
+
+   <div id="wordModal" class="modal">
+    <div class="modal-content">
+        <h2>Ajouter de nouveaux mots</h2>
+        
+        <div class="presets-container" style="background: #f8f9fa; padding: 15px; border-radius: 12px; border: 1px solid #e9ecef; margin-bottom: 15px;">
+            <p style="margin-top: 0; font-weight: bold; color: #495057; font-size: 0.85em; text-align: center;">
+                📥 Charger un pack (Niveaux CECRL)
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">
+                <button type="button" onclick="loadPreset('A1')" class="btn-preset">A1</button>
+                <button type="button" onclick="loadPreset('A2')" class="btn-preset">A2</button>
+                <button type="button" onclick="loadPreset('B1')" class="btn-preset">B1</button>
+                <button type="button" onclick="loadPreset('B2')" class="btn-preset">B2</button>
+                <button type="button" onclick="loadPreset('C1')" class="btn-preset">C1</button>
+                <button type="button" onclick="loadPreset('C2')" class="btn-preset">C2</button>
+            </div>
+        </div>
+
+        <p style="font-size: 0.9em; margin-bottom: 5px;">Format : <b>Anglais, Français</b></p>
+        <textarea id="bulk-input" placeholder="Exemple:&#10;Apple, Pomme&#10;House, Maison" style="height: 150px;"></textarea>
+
+        <div class="modal-buttons" style="margin-top: 15px;">
+            <button id="btn-modal-valid" class="bg-success">✅ Valider</button>
+            <button id="btn-modal-close" class="bg-danger">Annuler</button>
+        </div>
+    </div>
+</div>
+<div id="celebration-overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:3000; flex-direction:column; align-items:center; justify-content:center; color:white; text-align:center; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);">
+    
+    <div id="celebration-icon" style="font-size:130px; margin-bottom:10px; filter: drop-shadow(0 0 30px var(--gold));"></div>
+    
+    <h2 id="celebration-title" style="font-size:40px; margin:0; text-transform:uppercase; letter-spacing:4px; color:var(--gold);"></h2>
+    
+    <p id="celebration-name" style="font-size:25px; margin:10px 0; color:white; font-weight:bold;"></p>
+    
+    <p id="celebration-subtitle" style="font-size:16px; color:#aaa; text-transform:uppercase;"></p>
+</div>
+</div>
+
+<script src="vocabulaire.js"></script>
+</body>
+</html>

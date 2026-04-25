@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<a href="vocabulaire.html" class="card vocab">
+    <title>English Learning Words</title>
+    <style>
+    :root {
+        --primary: #4a90e2;
+        --secondary: #9b59b6;
+        --bbc-red: #bb1919;
+        --reading-orange: #e67e22;
+        --dark: #2c3e50;
+        --light: #f4f7f6;
+        --white: #ffffff;
+    }
+
+    body {
+        font-family: 'Segoe UI', system-ui, sans-serif;
+        background: var(--light);
+        margin: 0;
+        padding: 20px;
+        color: var(--dark);
+    }
+
+    .hub-container {
+        max-width: 600px; /* Plus étroit pour un look appli */
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .subtitle {
+        text-align: center;
+        color: #7f8c8d;
+        margin-bottom: 30px;
+        font-size: 1rem;
+    }
+
+    .cards-grid {
+        display: flex;
+        flex-direction: column; /* Liste verticale sur mobile */
+        gap: 15px;
+    }
+
+    .card {
+        background: var(--white);
+        border-radius: 16px;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        transition: transform 0.2s;
+        text-decoration: none;
+        color: inherit;
+        display: grid;
+        grid-template-columns: 60px 1fr; /* Icône à gauche, texte à droite */
+        align-items: center;
+        border: 2px solid transparent;
+    }
+
+    .card:active { transform: scale(0.98); } /* Effet de pression sur mobile */
+
+    .icon {
+        font-size: 35px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-content { padding-left: 10px; }
+
+    h2 {
+        margin: 0;
+        font-size: 1.1rem;
+    }
+
+    p {
+        color: #666;
+        font-size: 0.85rem;
+        margin: 5px 0 0 0;
+        line-height: 1.3;
+    }
+
+    /* Bordures de couleurs au clic/hover */
+    .card.vocab:hover, .card.vocab:active { border-color: var(--primary); }
+    .card.verbs:hover, .card.verbs:active { border-color: var(--secondary); }
+    .card.video:hover, .card.video:active { border-color: var(--bbc-red); }
+    .card.reading:hover, .card.reading:active { border-color: var(--reading-orange); }
+
+    .footer-info {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 0.75rem;
+        color: #bdc3c7;
+    }
+</style>
+</head>
+<body>
+
+<div class="hub-container">
+    <h1>English Hub</h1>
+    <p class="subtitle">Prêt pour ta dose d'anglais ?</p>
+
+    <div class="cards-grid">
+        <a href="vocabulaire.html" class="card vocab">
+            <div class="icon">📚</div>
+            <div class="card-content">
+                <h2>Vocabulaire</h2>
+                <p>Lexique thématique et Masteries.</p>
+            </div>
+        </a>
+
+        <a href="verbes.html" class="card verbs">
+            <div class="icon">⚡</div>
+            <div class="card-content">
+                <h2>Verbes Irréguliers</h2>
+                <p>Les 3 formes sans hésiter.</p>
+            </div>
+        </a>
+
+        <a href="https://www.bbc.co.uk/learningenglish/english/features/6-minute-english" target="_blank" class="card video">
+            <div class="icon">📺</div>
+            <div class="card-content">
+                <h2>BBC Learning</h2>
+                <p>Immersion audio de 6 minutes.</p>
+            </div>
+        </a>
+
+        <a href="https://www.newsinlevels.com/" target="_blank" class="card reading">
+            <div class="icon">📰</div>
+            <div class="card-content">
+                <h2>Daily Reading</h2>
+                <p>L'actualité adaptée à ton niveau.</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="footer-info">
+        Statistiques sauvegardées localement.
+    </div>
+</div>
+
+</body>
+</html>
