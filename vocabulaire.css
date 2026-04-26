@@ -216,15 +216,6 @@ body {
 .level-count { display: block; font-size: 18px; font-weight: bold; color: var(--success); }
 .level-label { font-size: 8px; text-transform: uppercase; }
 
-/* Styles dynamiques des badges */
-.badge.in-progress { filter: grayscale(0.5); opacity: 1; }
-.badge.unlocked { 
-    filter: grayscale(0) opacity(1); 
-    border-color: var(--gold); 
-    background: var(--gold) !important; 
-    animation: pulse-dino 2s infinite;
-}
-.badge:not(.in-progress):not(.unlocked) { filter: grayscale(1); opacity: 0.3; }
 
 .armed-pulse {
     animation: shield-glow 1s infinite alternate;
@@ -420,9 +411,11 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
     from { transform: scale(1); filter: brightness(1); }
     to { transform: scale(1.05); filter: brightness(1.3); }
 }
-
 /* =========================================
-   📱 L'INTERFACE MOBILE ULTIME
+   📱 RÉINVENTION SMARTPHONE (Uniquement < 600px)
+   ========================================= */
+/* =========================================
+   📱 L'INTERFACE MOBILE ULTIME (Inspirée de ton schéma)
    ========================================= */
 @media (max-width: 600px) {
     /* Cache les éléments non essentiels sur mobile */
