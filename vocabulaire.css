@@ -493,7 +493,23 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
     .button-group button { font-size: 11px; padding: 8px; flex: 1; }
 }
 
-
+/* =========================================
+   🏆 GRIMOIRE DES BADGES (MODALE)
+   ========================================= */
+.badges-grid-full {
+    display: grid;
+    /* Crée des colonnes automatiques de 60px minimum */
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    background: var(--bg-dark);
+    border-radius: var(--radius-card);
+    border: 2px inset var(--border-main);
+    /* Permet de scroller si tu as beaucoup de badges plus tard */
+    max-height: 50vh;
+    overflow-y: auto;
+    justify-items: center; /* Centre les badges dans leurs cases */
+}
 
 /* =========================================
    ✨ EFFET MACHINE À SOUS (SCORE FLOTTANT)
@@ -514,6 +530,11 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
     0% { opacity: 1; transform: translate(-50%, -50%) scale(0.5); }
     20% { transform: translate(-50%, -80%) scale(1.2); } /* Le "Pop" */
     100% { opacity: 0; transform: translate(-50%, -150%) scale(1); } /* L'envol */
+	
+	
+	
+	
+	
 }
 /* =========================================
    9. LA GALERIE DE SKINS (THEMES)

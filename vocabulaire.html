@@ -51,38 +51,20 @@
     </div>
 
     <div class="dashboard-grid">
-        <div class="badges-section">
-            <div class="badge-title">🎯 Combo (mots justes enchainés) </div>
-            	<div class="badge-group">
-					<div class="badge" id="bc-2" data-title="combo x2 - Petit combo">🎖</div>
-					<div class="badge" id="bc-3" data-title="combo x3 - Combo moyen">🥉</div>
-					<div class="badge" id="bc-5" data-title="combo x5 - Grand combo">🥈</div>
-					<div class="badge" id="bc-10" data-title="combo x10 - Méga combo">🥇</div>
-					<div class="badge" id="bc-20" data-title="combo x20 - Combo Légendaire">🏆</div>
-				</div>
-			
-
-			
-            <div class="badge-title">📈 Effort (Mots justes par session)</div>
-            <div class="badge-group">
-                <div class="badge" id="bv-5" data-title=" 5 mots justes (l'effort commence)">🥚</div>
-                <div class="badge" id="bv-10" data-title="10 mots justes (l'habitude se forme)">🐣</div>
-				<div class="badge" id="bv-30" data-title="30 mots justes (tu prends de la hauteur)">🐥</div>
-                <div class="badge" id="bv-50" data-title="50 mots justes (tu maîtrises tes mots)">🐓</div>
-                <div class="badge" id="bv-100" data-title="100 mots justes (effort légendaire, rien ne t'arrête)">🦖</div>
+    <div class="badges-section" id="next-objectives">
+        <div class="badge-title">🎯 Prochains Objectifs</div>
+        
+        <div class="badge-group" id="objective-slots">
             </div>
-			<div class="badge-title">☀️ Regularité (enchainement de jour d'apprentissage)</div>
-			<div class="badge-group">
-				<div class="badge" id="bd-1" data-label="1J">🌑</div>
-				<div class="badge" id="bd-3" data-label="3J">🌒</div>
-				<div class="badge" id="bd-5" data-label="5J">🌓</div>
-				<div class="badge" id="bd-7" data-label="7J">🌔</div>
-				<div class="badge" id="bd-15" data-label="15J">🌕</div>
-				<div class="badge" id="bd-30" data-label="30J">☀️</div>
-			</div>
-        </div>
-        <div class="levels-grid" id="levels-display"></div>
+
+        <button id="btn-show-collection" class="btn-preset-solid" style="width: 100%; margin-top: 15px;">
+            🏆 Voir mon Grimoire
+        </button>
     </div>
+
+    <div class="levels-grid" id="levels-display">
+        </div>
+</div>
 
     	<div class="quiz-section" id="quiz-box">
     <div id="mode-tag" class="mode-indicator">MODE</div>
@@ -156,7 +138,22 @@
     <p id="celebration-subtitle" style="font-size:16px; color:#aaa; text-transform:uppercase;"></p>
 </div>
 </div>
-
+<div id="modal-collection" class="modal">
+    <div class="modal-content" style="max-width: 600px;">
+        <h2 style="margin-top: 0; color: var(--gold);">🏆 Grimoire des Succès</h2>
+        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 20px;">
+            Débloque ces badges en réalisant de grandes performances !
+        </p>
+        
+        <div class="badges-grid-full" id="full-badges-list">
+            </div>
+        
+        <div class="modal-buttons" style="margin-top: 20px;">
+            <button id="btn-close-collection" class="bg-danger">Fermer le Grimoire</button>
+        </div>
+    </div>
+</div>
 <script src="vocabulaire.js"></script>
+
 </body>
 </html>

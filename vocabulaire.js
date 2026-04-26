@@ -244,6 +244,7 @@ function speak(text) {
 }
 
 /* --- MISE À JOUR DE L'INTERFACE --- */
+/* --- MISE À JOUR DE L'INTERFACE --- */
 function updateUI() {
     const elCombo = document.getElementById('stk-perf');
     const elTotal = document.getElementById('stk-total');
@@ -278,25 +279,11 @@ function updateUI() {
         }).join('');
     }
 
-    updateProgressBadge('bc-2', stats.maxCombo, 2);
-    updateProgressBadge('bc-3', stats.maxCombo, 3);
-    updateProgressBadge('bc-5', stats.maxCombo, 5);
-    updateProgressBadge('bc-10', stats.maxCombo, 10);
-    updateProgressBadge('bc-20', stats.maxCombo, 20);
+    // 🌟 LA MAGIE OPÈRE ICI : On appelle le NOUVEAU système de badges
+    // On utilise stats.maxCombo pour que tu gardes tes badges même si tu perds ton combo !
+    updateBadgeSystem(stats.maxCombo, stats.dailyTotal);
 
-    updateProgressBadge('bv-5', stats.dailyTotal, 5);
-    updateProgressBadge('bv-10', stats.dailyTotal, 10);
-    updateProgressBadge('bv-30', stats.dailyTotal, 30);
-    updateProgressBadge('bv-50', stats.dailyTotal, 50);
-    updateProgressBadge('bv-100', stats.dailyTotal, 100);
-
-    updateProgressBadge('bd-1', stats.flames, 1);
-    updateProgressBadge('bd-3', stats.flames, 3);
-    updateProgressBadge('bd-5', stats.flames, 5);
-    updateProgressBadge('bd-7', stats.flames, 7);
-    updateProgressBadge('bd-15', stats.flames, 15);
-    updateProgressBadge('bd-30', stats.flames, 30);
-    
+    // Réservoir de mots ratés
     const failed = dictionary.filter(w => w.level === 0 && w.isFailed);
     const reservoir = document.getElementById('reservoir-ui');
     if (reservoir) {
@@ -307,6 +294,7 @@ function updateUI() {
         }
     }
 
+    // Mise à jour de l'XP et du Joueur
     document.getElementById('player-lvl').innerText = stats.playerLevel;
     const xpReq = stats.playerLevel * 100;
     const xpPercent = (stats.xp / xpReq) * 100;
@@ -401,7 +389,7 @@ function handleAnswer() {
     if (distance === 0 || (distance === 1 && target.length > 3)) {
         sessionCombo++;
         stats.dailyTotal++;
-        
+        spawnFloatingText("+10 XP", "var(--success)");
         if (stats.dailyTotal % 10 === 0 && stats.dailyTotal !== 0) {
             let bonusPalier = stats.dailyTotal; 
             addXP(bonusPalier);
@@ -717,6 +705,28 @@ async function processCelebrationQueue() {
     isCelebrationRunning = false;
     processCelebrationQueue(); 
 }
+/* --- EFFETS VISUELS --- */
+function spawnFloatingText(text, color) {
+    const input = document.getElementById('user-input');
+    const rect = input.getBoundingClientRect();
+    
+    const floatEl = document.createElement('div');
+    floatEl.className = 'floating-text';
+    floatEl.innerText = text;
+    floatEl.style.color = color || 'var(--success)';
+    
+    // On le positionne pile au centre du champ de texte
+    floatEl.style.left = `${rect.left + rect.width / 2 + window.scrollX}px`;
+    floatEl.style.top = `${rect.top + window.scrollY}px`;
+    
+    document.body.appendChild(floatEl);
+    
+    // Le texte s'auto-détruit après 1 seconde (fin de l'animation)
+    setTimeout(() => floatEl.remove(), 1000);
+}
+
+
+
 
 /* --- MOTEUR AUDIO --- */
 function getAudioCtx() {
@@ -778,6 +788,108 @@ function getLevenshteinDistance(a, b) {
         }
     }
     return matrix[b.length][a.length];
+}
+
+
+// --- GESTION DE LA MODALE GRIMOIRE ---
+const modalCollection = document.getElementById('modal-collection');
+const btnShowCollection = document.getElementById('btn-show-collection');
+const btnCloseCollection = document.getElementById('btn-close-collection');
+
+// Ouvrir la modale
+btnShowCollection.addEventListener('click', () => {
+    modalCollection.style.display = 'block';
+});
+
+// Fermer la modale via le bouton rouge
+btnCloseCollection.addEventListener('click', () => {
+    modalCollection.style.display = 'none';
+});
+
+// Fermer la modale si on clique en dehors du cadre
+window.addEventListener('click', (event) => {
+    if (event.target == modalCollection) {
+        modalCollection.style.display = 'none';
+    }
+});
+
+// =========================================
+// 🏆 SYSTÈME DE BADGES ET GRIMOIRE
+// =========================================
+
+// 1. La base de données de tous tes badges
+const gameBadges = [
+    // Catégorie : Combos (les suites de bonnes réponses)
+    { id: 'c5', type: 'combo', target: 5, icon: '🔥', name: 'Chauffe', desc: '5 mots de suite' },
+    { id: 'c10', type: 'combo', target: 10, icon: '⚡', name: 'Éclair', desc: '10 mots de suite' },
+    { id: 'c20', type: 'combo', target: 20, icon: '☄️', name: 'Météore', desc: '20 mots de suite' },
+    { id: 'c50', type: 'combo', target: 50, icon: '☢️', name: 'Nucléaire', desc: '50 mots de suite' },
+    
+    // Catégorie : Total de mots appris
+    { id: 'w10', type: 'words', target: 10, icon: '🌱', name: 'Graine', desc: '10 mots justes' },
+    { id: 'w50', type: 'words', target: 50, icon: '🌿', name: 'Pousse', desc: '50 mots justes' },
+    { id: 'w100', type: 'words', target: 100, icon: '🌳', name: 'Arbre', desc: '100 mots justes' },
+    { id: 'w500', type: 'words', target: 500, icon: '👑', name: 'Légende', desc: '500 mots justes' }
+];
+
+// 2. La fonction qui met à jour l'affichage
+function updateBadgeSystem(currentStreak, totalScore) {
+    const objectiveSlots = document.getElementById('objective-slots');
+    const fullBadgesList = document.getElementById('full-badges-list');
+    
+    // Si les éléments HTML n'existent pas encore, on arrête pour éviter un bug
+    if (!objectiveSlots || !fullBadgesList) return;
+
+    // On vide les affichages
+    objectiveSlots.innerHTML = '';
+    fullBadgesList.innerHTML = '';
+
+    let nextComboBadge = null;
+    let nextWordsBadge = null;
+
+    // On parcourt tous les badges
+    gameBadges.forEach(badge => {
+        // A. Déterminer si le joueur a débloqué ce badge
+        let isUnlocked = false;
+        if (badge.type === 'combo' && currentStreak >= badge.target) isUnlocked = true;
+        if (badge.type === 'words' && totalScore >= badge.target) isUnlocked = true;
+
+        // B. Ajouter au Grimoire complet (tous les badges y vont)
+        // Note: s'il est débloqué, on lui met la classe "unlocked" pour l'effet de verre/or
+        const grimoireHTML = `
+            <div style="display:flex; flex-direction:column; align-items:center; gap:5px;">
+                <div class="badge ${isUnlocked ? 'unlocked' : ''}" title="${badge.desc}">
+                    ${badge.icon}
+                </div>
+                <div style="font-size: 8px; color: var(--text-muted);">${badge.name}</div>
+            </div>
+        `;
+        fullBadgesList.innerHTML += grimoireHTML;
+
+        // C. Identifier le PROCHAIN objectif (le premier qu'on n'a pas encore)
+        if (!isUnlocked) {
+            if (badge.type === 'combo' && !nextComboBadge) nextComboBadge = badge;
+            if (badge.type === 'words' && !nextWordsBadge) nextWordsBadge = badge;
+        }
+    });
+
+    // D. Afficher les prochains objectifs dans l'écran principal (à gauche)
+    const createObjectiveHTML = (badge) => `
+        <div style="display:flex; flex-direction:column; align-items:center;">
+            <div class="badge in-progress" title="${badge.desc}">
+                ${badge.icon}
+            </div>
+            <div class="badge-title" style="margin-top:4px;">${badge.target} restants</div>
+        </div>
+    `;
+
+    if (nextComboBadge) objectiveSlots.innerHTML += createObjectiveHTML(nextComboBadge);
+    if (nextWordsBadge) objectiveSlots.innerHTML += createObjectiveHTML(nextWordsBadge);
+
+    // Message spécial si tout est terminé
+    if (!nextComboBadge && !nextWordsBadge) {
+        objectiveSlots.innerHTML = `<div style="font-size: 11px; color: var(--gold); text-align: center;">Toutes les quêtes sont terminées ! 🏆</div>`;
+    }
 }
 
 })(); // Fin de l'application
