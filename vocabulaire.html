@@ -28,7 +28,7 @@
 	
         <div class="badges-section" id="next-objectives">
 					<div id="reviser-container" style="margin-top: 15px; display: none;">
-    <div style="font-size: 7px; color: var(--text-muted); text-transform: uppercase; font-weight: bold; margin-bottom: 2px; text-align: center;">Mots à réviser</div>
+    <div style="font-size: 7px; color: var(--text-muted); text-transform: uppercase; font-weight: bold; margin-bottom: 2px; text-align: center;">Mots à consolider</div>
     <button id="btn-open-reservoir" class="badge" style="width: 40px; height: 40px; background: var(--bg-dark); border: 1px solid var(--pink); color: var(--pink); cursor: pointer; margin: 0 auto; display: flex; flex-direction: column; font-size: 14px; font-weight: bold;">
         <span id="reservoir-count">0</span>
     </button>
@@ -41,12 +41,13 @@
         <div class="levels-container">
             <div class="xp-mini-stat">
                 <div style="display:flex; justify-content: space-between; font-size: 10px;">
-                    <span>LVL <b id="player-lvl">1</b></span>
+                    <span>LVL:<b id="player-lvl">1</b></span>
                     <span id="xp-text">0/100 XP</span>
                 </div>
-                <div class="xp-bar-bg"><div id="xp-bar"></div></div>
             </div>
             <div class="levels-grid" id="levels-display"></div>
+			<div style="text-align: center; font-size: 14px; font-weight: bold; color: var(--gold); margin-top: 10px;">Objectif final</div>
+			<div id="elMastery" style="text-align: center; font-size: 14px; font-weight: bold; color: var(--gold); margin-top: 10px;">0%</div>
         </div>
     </div>
 
@@ -145,7 +146,17 @@
     </div>
 </div>
 
-
+<div id="modal-level-details" class="modal">
+    <div class="modal-content" style="max-width: 500px;">
+        <h2 id="level-modal-title" style="color: var(--primary); margin-top: 0; font-size: 1.2rem;"></h2>
+        <p style="font-size: 11px; color: var(--text-muted); margin-bottom: 15px;">Mots actuellement à ce stade de mémorisation :</p>
+        
+        <div id="level-words-list" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 15px 0; max-height: 300px; overflow-y: auto; padding: 10px; background: var(--bg-alt); border-radius: 10px; border: 1px inset var(--border-main);">
+        </div>
+        
+        <button onclick="document.getElementById('modal-level-details').style.display='none'" class="bg-danger">Fermer</button>
+    </div>
+</div>
 
 <script src="vocabulaire.js"></script>
 

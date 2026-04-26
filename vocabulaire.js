@@ -1,29 +1,28 @@
 // On ouvre la bulle protectrice (IIFE)
 (() => {
 
-/* --- CONFIGURATION ET ÉTAT GLOBAL --- */
+/* =========================================================
+   VARIABLES
+   ========================================================= */
 const KEY = 'EM_ULTIMATE_TIME_V1';
 
 let dictionary = JSON.parse(localStorage.getItem(KEY)) || [];
 
 const defaultStats = {
-    flames: 0,
-    lastDate: null,
-    lastFlameDate: null,
-    owner: "Session Locale",
-    xp: 0,
-    playerLevel: 1,
-    shields: 3, 
-    hints: 5,
-    currentTheme: 'clair' // <-- Sauvegarde du skin
+  flames: 0,
+  lastDate: null,
+  lastFlameDate: null,
+  owner: "Session Locale",
+  xp: 0,
+  playerLevel: 1,
+  shields: 3,
+  hints: 5,
+  currentTheme: 'clair',
+  streakDays: 1
 };
 
 const savedStats = JSON.parse(localStorage.getItem(KEY + '_STATS')) || {};
-
-let stats = { 
-    ...defaultStats, 
-    ...savedStats 
-};
+let stats = { ...defaultStats, ...savedStats };
 
 stats.xp = parseInt(stats.xp) || 0;
 stats.playerLevel = parseInt(stats.playerLevel) || 1;
@@ -31,111 +30,165 @@ stats.shields = parseInt(stats.shields);
 if (isNaN(stats.shields)) stats.shields = 3;
 stats.hints = parseInt(stats.hints);
 if (isNaN(stats.hints)) stats.hints = 5;
+stats.streakDays = parseInt(stats.streakDays);
+if (isNaN(stats.streakDays) || stats.streakDays < 1) stats.streakDays = 1;
 
 let celebrationQueue = [];
 let isCelebrationRunning = false;
-let isShieldArmed = false; 
+let isShieldArmed = false;
 let currentWord = null;
 let sessionCombo = 0;
-let timeLeft = 10 * 60; 
+let timeLeft = 10 * 60;
 let timerActive = false;
-let timerInterval = null;
+let sessionMasterWords = 0; 
+let sessionAlmostMasterWords = 0;
+
 const today = new Date().toDateString();
 
-if (stats.lastDate !== today) {
-    const lastVisit = new Date(stats.lastDate);
-    const yesterday = new Date();
-    yesterday.setDate(yesterday.getDate() - 1);
-	stats.maxCombo = 0;
-	stats.dailyTotal = 0;
-    if (lastVisit.toDateString() === yesterday.toDateString()) {
-        stats.flames = (stats.flames || 0) + 1;
-    } else {
-        stats.flames = 0;
-    }
-    stats.dailyTotal = 0; 
-    stats.lastDate = today;
-    save();
-}
+// Pour déclencher un flash quand un objectif "change" (nouveau badge à viser)
+let lastObjectiveComboId = null;
+let lastObjectiveWordsId = null;
 
-/* ==========================================
-   🎨 MOTEUR DE SKINS (NOUVEAU)
-   ========================================== */
+// Pour déclencher un flash quand un mot tombe dans une boîte de niveau
+let pendingLevelFlash = null;
+let pendingMasterFireworks = false;
+
+// (supprimé) flash dans la modale grimoire: on flashe seulement dans la badges-section
+
+/* =========================================================
+   JEU (badges)
+   ========================================================= */
+const gameBadges = [
+  // Catégorie : Combos (les suites de bonnes réponses)
+  { id: 'c2', type: 'combo', target: 2, icon: '🎖', name: 'Combox2', desc: '2 mots de suite' },
+  { id: 'c3', type: 'combo', target: 3, icon: '🥉', name: 'Combox3', desc: '3 mots de suite' },
+  { id: 'c5', type: 'combo', target: 5, icon: '🥈', name: 'Combox5', desc: '5 mots de suite' },
+  { id: 'c10', type: 'combo', target: 10, icon: '🥇️', name: 'Combox10', desc: '10 mots de suite' },
+  { id: 'c20', type: 'combo', target: 20, icon: '🏆', name: 'Combox20', desc: '20 mots de suite' },
+
+  // Catégorie : Total de mots justes
+  { id: 'w5', type: 'words', target: 5, icon: '🥚', name: '5 mots justes', desc: '5 mots justes' },
+  { id: 'w10', type: 'words', target: 10, icon: '🐣', name: '10 mots justes', desc: '10 mots justes' },
+  { id: 'w30', type: 'words', target: 30, icon: '🐥', name: '30 mots justes', desc: '30 mots justes' },
+  { id: 'w50', type: 'words', target: 50, icon: '🐓', name: '50 mots justes', desc: '50 mots justes' },
+  { id: 'w100', type: 'words', target: 100, icon: '🦖', name: '100 mots justes', desc: '100 mots justes' }
+];
+
+/* =========================================================
+   UI (skins)
+   ========================================================= */
 const SKIN_CATALOG = {
-    "Classiques": [
-        { id: "clair", name: "Thème : Base (Clair)" },
-        { id: "skin-dark", name: "Thème : Grimoire (Sombre)" }
-    ],
-    "Tour du Monde": [
-        { id: "skin-ghibli", name: "🇯🇵 Studio Ghibli" },
-        { id: "skin-british", name: "🇬🇧 So British" },
-        { id: "skin-canadian", name: "🇨🇦 Cabane au Canada" },
-        { id: "skin-american", name: "🇺🇸 Retro Diner 50s" }
-    ],
-    "Vibes & Folies": [
-        { id: "skin-rap-fr", name: "🎤 Rap Français" },
-        { id: "skin-barbie", name: "💅 Barbiecore" },
-        { id: "skin-win95", name: "💾 Windows 95" },
-        { id: "skin-cyberpunk", name: "🦾 Cyberpunk" },
-        { id: "skin-arcade", name: "👾 Retro Arcade" }
-    ]
+  "Classiques": [
+    { id: "clair", name: "Thème : Base (Clair)" },
+    { id: "skin-dark", name: "Thème : Grimoire (Sombre)" }
+  ],
+  "Tour du Monde": [
+    { id: "skin-ghibli", name: "🇯🇵 Studio Ghibli" },
+    { id: "skin-british", name: "🇬🇧 So British" },
+    { id: "skin-canadian", name: "🇨🇦 Cabane au Canada" },
+    { id: "skin-american", name: "🇺🇸 Retro Diner 50s" }
+  ],
+  "Vibes & Folies": [
+    { id: "skin-rap-fr", name: "🎤 Rap Français" },
+    { id: "skin-barbie", name: "💅 Barbiecore" },
+    { id: "skin-win95", name: "💾 Windows 95" },
+    { id: "skin-cyberpunk", name: "🦾 Cyberpunk" },
+    { id: "skin-arcade", name: "👾 Retro Arcade" }
+  ]
 };
 
+/* =========================================================
+   VARIABLES (rotation journalière)
+   ========================================================= */
+if (stats.lastDate !== today) {
+  const lastVisit = new Date(stats.lastDate);
+  const yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);
 
-/* --- INITIALISATION DES ÉCOUTEURS D'ÉVÉNEMENTS --- */
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('time-limit').addEventListener('change', resetTimer);
-    document.getElementById('btn-add').addEventListener('click', openModal);
-    document.getElementById('btn-export').addEventListener('click', exportJSON);
-    document.getElementById('btn-import-trigger').addEventListener('click', () => document.getElementById('fLoader').click());
-    document.getElementById('fLoader').addEventListener('change', importJSON);
-    document.getElementById('btn-reset').addEventListener('click', resetAll);
-    document.getElementById('btn-modal-valid').addEventListener('click', importMassive);
-    document.getElementById('btn-modal-close').addEventListener('click', closeModal);
-    const btnOpenReservoir = document.getElementById('btn-open-reservoir');
-const modalReservoir = document.getElementById('modal-reservoir');
+  stats.maxCombo = 0;
+  stats.dailyTotal = 0;
 
-if (btnOpenReservoir) {
-    btnOpenReservoir.addEventListener('click', () => {
-        modalReservoir.style.display = 'block';
-    });
+  const isConsecutive = lastVisit.toDateString() === yesterday.toDateString();
+  if (isConsecutive) {
+    // Compat: on conserve flames, mais on pilote le vrai compteur via streakDays
+    stats.flames = (stats.flames || 0) + 1;
+    stats.streakDays = (parseInt(stats.streakDays) || 1) + 1;
+
+    // Bonus d'indices au démarrage si série >= 2 jours
+    if (stats.streakDays >= 2) {
+      stats.hints += 3;
+      triggerCelebration('streak', '🔥', `${stats.streakDays} jours consécutifs`);
+    }
+  } else {
+    stats.flames = 0;
+    stats.streakDays = 1;
+  }
+
+  stats.dailyTotal = 0;
+  stats.lastDate = today;
+  save();
 }
-    document.getElementById('btn-shield').addEventListener('click', toggleShield);
-    const btnHint = document.getElementById('btn-hint');
-    if (btnHint) btnHint.addEventListener('click', useHint); 
-    
-    document.getElementById('user-input').addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') handleAnswer();
+
+/* =========================================================
+   UI (init + listeners)
+   ========================================================= */
+document.addEventListener('DOMContentLoaded', () => {
+  const timeLimit = document.getElementById('time-limit');
+  if (timeLimit) timeLimit.addEventListener('change', resetTimer);
+
+  const btnAdd = document.getElementById('btn-add');
+  if (btnAdd) btnAdd.addEventListener('click', openModal);
+
+  const btnExport = document.getElementById('btn-export');
+  if (btnExport) btnExport.addEventListener('click', exportJSON);
+
+  const btnImportTrigger = document.getElementById('btn-import-trigger');
+  const fileLoader = document.getElementById('fLoader');
+  if (btnImportTrigger && fileLoader) btnImportTrigger.addEventListener('click', () => fileLoader.click());
+  if (fileLoader) fileLoader.addEventListener('change', importJSON);
+
+  const btnReset = document.getElementById('btn-reset');
+  if (btnReset) btnReset.addEventListener('click', resetAll);
+
+  const btnModalValid = document.getElementById('btn-modal-valid');
+  if (btnModalValid) btnModalValid.addEventListener('click', importMassive);
+
+  const btnModalClose = document.getElementById('btn-modal-close');
+  if (btnModalClose) btnModalClose.addEventListener('click', closeModal);
+
+  const btnOpenReservoir = document.getElementById('btn-open-reservoir');
+  const modalReservoir = document.getElementById('modal-reservoir');
+  if (btnOpenReservoir && modalReservoir) {
+    btnOpenReservoir.addEventListener('click', () => {
+      modalReservoir.style.display = 'block';
     });
-    
-    window.onclick = (event) => {
-        if (event.target == document.getElementById('wordModal')) closeModal();
-    };
+  }
 
-    initSkins(); // Lancement du moteur de skins !
-    updateUI();
-    getNextWord();
-    updateTimerDisplay();
-    startInterval();
+  const btnShield = document.getElementById('btn-shield');
+  if (btnShield) btnShield.addEventListener('click', toggleShield);
+
+  const btnHint = document.getElementById('btn-hint');
+  if (btnHint) btnHint.addEventListener('click', useHint);
+
+  const userInput = document.getElementById('user-input');
+  if (userInput) {
+    userInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') handleAnswer();
+    });
+  }
+
+  window.addEventListener('click', (event) => {
+    const wordModal = document.getElementById('wordModal');
+    if (wordModal && event.target === wordModal) closeModal();
+  });
+
+  initSkins();
+  initCollectionModal();
+  updateUI();
+  getNextWord();
+  updateTimerDisplay();
+  startInterval();
 });
-
-
-//La base de données de tous tes badges
-const gameBadges = [
-    // Catégorie : Combos (les suites de bonnes réponses)
-    { id: 'c2', type: 'combo', target: 2, icon: '🎖', name: 'Combox2', desc: '2 mots de suite' },
-    { id: 'c3', type: 'combo', target: 3, icon: '🥉', name: 'Combox3', desc: '3 mots de suite' },
-    { id: 'c5', type: 'combo', target: 5, icon: '🥈', name: 'Combox5', desc: '5 mots de suite' },
-    { id: 'c10', type: 'combo', target: 10, icon: '🥇️', name: 'Combox10', desc: '10 mots de suite' },
-	{ id: 'c20', type: 'combo', target: 20, icon: '🏆', name: 'Combox20', desc: '20 mots de suite' },
-    
-    // Catégorie : Total de mots justes
-    { id: 'w10', type: 'words', target: 5, icon: '🥚', name: '5 mots justes', desc: '5 mots justes' },
-    { id: 'w50', type: 'words', target: 10, icon: '🐣', name: '10 mots justes', desc: '10 mots justes' },
-    { id: 'w100', type: 'words', target: 30, icon: '🐥', name: '30 mots justes', desc: '30 mots justes' },
-    { id: 'w500', type: 'words', target: 50, icon: '🐓', name: '50 mots justes', desc: '50 mots justes' },
-	{ id: 'w500', type: 'words', target: 100, icon: '🦖', name: '100 mots justes', desc: '100 mots justes' }
-];
 
 /* --- GESTION DU TEMPS --- */
 function resetTimer() {
@@ -171,12 +224,28 @@ function startInterval() {
                 }
 
                 save(); 
+				
+				// --- Bilan de la session ---
+				let recapHTML = `Bonus de concentration : +${bonusXP} XP`;
+				// Si tu as fait progresser au moins un mot, on affiche le bilan détaillé
+                if (sessionMasterWords > 0 || sessionAlmostMasterWords > 0) {
+                    recapHTML = `<div style="margin-top:10px; font-size:18px;">
+                        <span style="color:var(--gold)">♔ ${sessionMasterWords} nouveaux Master</span><br>
+                        <span style="color:var(--primary)">★ ${sessionAlmostMasterWords} mots en ancrage (niv 4 à 6)</span>
+                    </div>`;
+                }			
+				
+               // 1. On lance TOUJOURS le bilan du chrono en premier
+                triggerCelebration('focus', '⏳', `<span style="font-size:20px">+${bonusXP} XP BONUS</span>`, recapHTML);
 
+                // 2. SI on a passé un niveau, la file d'attente lancera le Level Up juste après !
                 if (leveledUp) {
                     triggerCelebration('level', '🌟', `NIVEAU ${stats.playerLevel}`);
-                } else {
-                    triggerCelebration('focus', '⏳', `+${bonusXP} XP BONUS`);
                 }
+				
+				// On réinitialise les compteurs pour le prochain chrono
+                sessionMasterWords = 0;
+                sessionAlmostMasterWords = 0;
                 resetTimer();
             }
         }
@@ -244,7 +313,9 @@ function initSkins() {
 }
 
 
-/* --- SYNTHÈSE VOCALE AMÉLIORÉE --- */
+/* =========================================================
+   AUDIO (synthèse vocale)
+   ========================================================= */
 function speak(text) {
     if (!text) return;
     
@@ -272,112 +343,149 @@ function speak(text) {
     window.speechSynthesis.speak(msg);
 }
 
-/* --- MISE À JOUR DE L'INTERFACE --- */
-/* --- MISE À JOUR DE L'INTERFACE --- */
-function updateUI() {
-    const elCombo = document.getElementById('stk-perf');
-    const elTotal = document.getElementById('stk-total');
-    const elOwner = document.getElementById('current-session-display');
-    const elMastery = document.getElementById('mastery-score');
 
-    if (elCombo) elCombo.innerText = sessionCombo;
-    if (elTotal) elTotal.innerText = stats.dailyTotal;
+/* =========================================================
+   UI
+   ========================================================= */
+function updateUI() {
+    const elOwner = document.getElementById('current-session-display');
+    const elMastery = document.getElementById('elMastery');
+
     if (elOwner) elOwner.innerText = stats.owner;
 
-    if (elMastery) {
+    // ✅ gestion du mastery-score !
+   if (elMastery) {
         const totalWords = dictionary.length;
-        const masterWords = dictionary.filter(w => w.level === 7).length;
-        const masteryPercent = totalWords > 0 ? Math.round((masterWords / totalWords) * 100) : 0;
-        elMastery.innerText = masteryPercent + "%";
+        
+        if (totalWords > 0) {
+            // 1. On additionne les points de chaque mot (niveau 0 = 0pt, niveau 7 = 7pts)
+            const totalPoints = dictionary.reduce((sum, w) => sum + (w.level || 0), 0);
+            
+            // 2. Le score max possible est le nombre de mots x 7
+            const maxPossiblePoints = totalWords * 7;
+            
+            // 3. On calcule le pourcentage global de progression
+            const weightedPercent = Math.round((totalPoints / maxPossiblePoints) * 100);
+            
+            elMastery.innerText = weightedPercent + "%";
+        } else {
+            elMastery.innerText = "0%";
+        }
     }
 
-    const levelsDisplay = document.getElementById('levels-display');
+   const levelsDisplay = document.getElementById('levels-display');
     if (levelsDisplay && Array.isArray(dictionary)) {
-        const labels = ['Nouv', '1J', '3J', '5J', '7J', '15J', '30J', 'Master'];
         
-        levelsDisplay.innerHTML = labels.map((l, i) => {
+        // ✅ On définit la configuration avec les symboles 
+        const rarityConfig = [
+            { symbol: '○' },
+            { symbol: '●' },
+            { symbol: '●●' },
+            { symbol: '●●●' },
+            { symbol: '★' },
+            { symbol: '★★' },
+            { symbol: '★★★' },
+            { symbol: '♔♔♔' } // La couronne monochrome
+        ];
+        
+        levelsDisplay.innerHTML = rarityConfig.map((cfg, i) => {
             const isMaster = (i === 7);
             const count = dictionary.filter(w => w.level === i).length;
             
             return `
                 <div class="level-box ${isMaster && count > 0 ? 'has-mastery shiny-effect' : ''}" 
-                     style="${isMaster ? 'background:var(--success)' : ''}">
+                     style="${isMaster ? 'background:var(--success)' : ''}; cursor:pointer;"
+                     data-level="${i}"
+                     onclick="openLevelModal(${i})">
                     <span class="level-count">${count}</span>
-                    <span class="level-label">${l}</span>
+                    <span class="level-label" style="color:var(--gold); font-size: 8px;">${cfg.symbol}</span>
                 </div>`;
         }).join('');
+
+        if (pendingLevelFlash !== null) {
+            const target = levelsDisplay.querySelector(`.level-box[data-level="${pendingLevelFlash}"]`);
+            pendingLevelFlash = null;
+            if (target) {
+                target.classList.remove('level-flash');
+                void target.offsetWidth;
+                target.classList.add('level-flash');
+                setTimeout(() => target.classList.remove('level-flash'), 650);
+            }
+        }
+
+        if (pendingMasterFireworks) {
+            pendingMasterFireworks = false;
+            const masterBox = levelsDisplay.querySelector(`.level-box[data-level="7"]`);
+            if (masterBox) {
+                masterBox.classList.remove('master-fireworks');
+                void masterBox.offsetWidth;
+                masterBox.classList.add('master-fireworks');
+                setTimeout(() => masterBox.classList.remove('master-fireworks'), 1300);
+            }
+        }
     }
 
     // 🌟 LA MAGIE OPÈRE ICI : On appelle le NOUVEAU système de badges
     // On utilise stats.maxCombo pour que tu gardes tes badges même si tu perds ton combo !
-    updateBadgeSystem(stats.maxCombo, stats.dailyTotal);
+    // Objectifs combo: basé sur le combo ACTUEL (retombe à 0 si série brisée)
+    // Déblocage badges combo (grimoire): basé sur le combo MAX historique
+    updateBadgeSystem(sessionCombo, stats.maxCombo, stats.dailyTotal);
 
     // Mise à jour de l'indicateur de révision
-const failedWords = dictionary.filter(w => w.level === 0 && w.isFailed);
-const reviserContainer = document.getElementById('reviser-container');
-const reservoirCount = document.getElementById('reservoir-count');
+    //const failedWords = dictionary.filter(w => w.level === 0 && w.isFailed);
+	const failedWords = dictionary.filter(w => w.isFailed);
+    const reviserContainer = document.getElementById('reviser-container');
+    const reservoirCount = document.getElementById('reservoir-count');
 
-if (failedWords.length > 0) {
-    reviserContainer.style.display = 'block';
-    reservoirCount.innerText = failedWords.length;
-    
-    // Remplissage de la liste dans la modale (au cas où elle est ouverte)
-    const listModal = document.getElementById('reservoir-list-modal');
-    if (listModal) {
-        listModal.innerHTML = failedWords.map(w => `<span class="word-tag">${w.fr}</span>`).join('');
+    if (reviserContainer && reservoirCount && failedWords.length > 0) {
+        reviserContainer.style.display = 'block';
+        reservoirCount.innerText = failedWords.length;
+        
+        // Remplissage de la liste dans la modale (au cas où elle est ouverte)
+        const listModal = document.getElementById('reservoir-list-modal');
+        if (listModal) {
+            listModal.innerHTML = failedWords.map(w => `<span class="word-tag">${w.fr}</span>`).join('');
+        }
+    } else if (reviserContainer) {
+        reviserContainer.style.display = 'none';
     }
-} else {
-    reviserContainer.style.display = 'none';
-}
 
     // Mise à jour de l'XP et du Joueur
-    document.getElementById('player-lvl').innerText = stats.playerLevel;
+    const elPlayerLvl = document.getElementById('player-lvl');
+    if (elPlayerLvl) elPlayerLvl.innerText = stats.playerLevel;
     const xpReq = stats.playerLevel * 100;
-    const xpPercent = (stats.xp / xpReq) * 100;
-    document.getElementById('xp-bar').style.width = `${xpPercent}%`;
-    document.getElementById('xp-text').innerText = `${stats.xp} / ${xpReq} XP`;
+    // (pas de barre XP dans vocabulaire.html)
+    const elXpText = document.getElementById('xp-text');
+    if (elXpText) elXpText.innerText = `${stats.xp} / ${xpReq} XP`;
 
-    document.getElementById('count-hint').innerText = stats.hints;
-    document.getElementById('count-shield').innerText = stats.shields;
+    const elHint = document.getElementById('count-hint');
+    if (elHint) elHint.innerText = stats.hints;
+    const elShield = document.getElementById('count-shield');
+    if (elShield) elShield.innerText = stats.shields;
 }
 
-function updateProgressBadge(id, current, target) {
-    const el = document.getElementById(id);
-    if (!el) return;
 
-    const percent = Math.min(Math.round((current / target) * 100), 100);
 
-    if (percent >= 100) {
-        if (!el.classList.contains('unlocked')) {
-            el.classList.add('unlocked');
-            el.style.background = "var(--gold)"; 
-			addXP(25);
-            triggerCelebration('badge', el.innerText, el.getAttribute('data-label'));
-        }
-    } else {
-        el.classList.remove('unlocked');
-        if (percent > 0) {
-            el.classList.add('in-progress');
-            el.style.background = `linear-gradient(to top, var(--violet) ${percent}%, #eee ${percent}%)`;
-        } else {
-            el.style.background = "#eee"; 
-        }
-    }
-}
 
+// (supprimé) updateProgressBadge: non utilisé
 function save() {
     localStorage.setItem(KEY, JSON.stringify(dictionary));
     localStorage.setItem(KEY + '_STATS', JSON.stringify(stats));
     updateUI();
 }
 
-/* --- LOGIQUE DU JEU --- */
+/* =========================================================
+   JEU
+   ========================================================= */
 function getNextWord() {
     const now = new Date();
     const modeTag = document.getElementById('mode-tag');
 
-    let reviews = dictionary.filter(w => w.level >= 1 && w.level < 7 && new Date(w.nextReview) <= now);
-    let consolidation = dictionary.filter(w => w.level === 0 && w.isFailed);
+	// On ajoute "!w.isFailed" pour ne pas mélanger les révisions et la consolidation
+	let reviews = dictionary.filter(w => w.level >= 1 && w.level < 7 && new Date(w.nextReview) <= now && !w.isFailed);
+
+	// La consolidation aspire TOUS les mots échoués, peu importe le niveau
+	let consolidation = dictionary.filter(w => w.isFailed);
     let discovery = dictionary.filter(w => w.level === 0 && !w.isFailed);
 
     let pool = [];
@@ -418,7 +526,6 @@ function handleAnswer() {
     const target = currentWord.en.toLowerCase();
     const fb = document.getElementById('feedback');
     const box = document.getElementById('quiz-box');
-    const comboCard = document.getElementById('stk-perf').closest('.stat-card');
 
     const distance = getLevenshteinDistance(input, target);
 
@@ -439,6 +546,7 @@ function handleAnswer() {
             addXP(25); 
             stats.shields++; 
             triggerCelebration('badge', '🛡️', `COMBO ${sessionCombo} : BOUCLIER !`);
+            spawnFloatingTextFromElement(document.getElementById('btn-shield'), '+1', 'var(--text-light)');
         }
 
         if (sessionCombo > stats.maxCombo) stats.maxCombo = sessionCombo;
@@ -448,10 +556,16 @@ function handleAnswer() {
         const oldLevel = currentWord.level;
         currentWord.level = Math.min(currentWord.level + 1, 7);
         currentWord.isFailed = false;
-
-        comboCard.classList.remove('flash-combo');
-        void comboCard.offsetWidth; 
-        comboCard.classList.add('flash-combo');
+		
+		if (oldLevel !== currentWord.level) {
+            if (currentWord.level === 7) {
+                sessionMasterWords++;
+            } else if (currentWord.level >= 4 && currentWord.level <= 6) {
+                sessionAlmostMasterWords++;
+            }
+        }
+				
+        if (currentWord.level !== oldLevel) pendingLevelFlash = currentWord.level;
 
         if (distance === 1) {
             fb.innerHTML = `<span style="color:var(--accent)">PRESQUE ! </span> <small>(Correction: ${currentWord.en})</small>`;
@@ -463,7 +577,8 @@ function handleAnswer() {
 
         if (oldLevel === 6 && currentWord.level === 7) {
             addXP(50); 
-            triggerCelebration('master', '🏆', currentWord.en.toUpperCase());
+            // Pas de modale: feu d'artifice local sur la boîte Master
+            pendingMasterFireworks = true;
         }
 
         let d = new Date();
@@ -492,8 +607,10 @@ function handleAnswer() {
                 <span style="color:var(--danger)">${currentWord.en}</span>
             `;
             
+            const oldLevel = currentWord.level;
             currentWord.level = Math.max(0, currentWord.level - 1);
             currentWord.isFailed = true;
+            if (currentWord.level !== oldLevel) pendingLevelFlash = currentWord.level;
             let d = new Date();
             d.setDate(d.getDate() + 1); 
             currentWord.nextReview = d.toISOString();
@@ -508,8 +625,10 @@ function handleAnswer() {
             fb.innerHTML = `<span style="color:var(--danger)">${currentWord.en}</span>`;
             speak(currentWord.en);
 
+            const oldLevel = currentWord.level;
             currentWord.level = Math.max(0, currentWord.level - 1);
             currentWord.isFailed = true;
+            if (currentWord.level !== oldLevel) pendingLevelFlash = currentWord.level;
 
             let d = new Date();
             d.setDate(d.getDate() + 1); 
@@ -542,6 +661,7 @@ function addXP(amount) {
 
         triggerCelebration('badge', '✨', `NIVEAU ${stats.playerLevel} !`);
         setTimeout(() => triggerCelebration('badge', '🛡️', "BOUCLIER OBTENU !"), 3500); 
+        spawnFloatingTextFromElement(document.getElementById('btn-shield'), '+1', 'var(--text-light)');
     }
     save();
 }
@@ -578,7 +698,9 @@ function useHint() {
     }
 }
 
-/* --- FONCTIONS ADMIN --- */
+/* =========================================================
+   ADMIN
+   ========================================================= */
 function openModal() { document.getElementById('wordModal').style.display = "block"; document.getElementById('bulk-input').focus(); }
 function closeModal() { document.getElementById('wordModal').style.display = "none"; }
 
@@ -618,7 +740,8 @@ function exportJSON() {
         playerLevel: isNaN(parseInt(stats.playerLevel)) ? 1 : parseInt(stats.playerLevel),
         shields: isNaN(parseInt(stats.shields)) ? 3 : parseInt(stats.shields),
         hints: isNaN(parseInt(stats.hints)) ? 5 : parseInt(stats.hints),
-        currentTheme: stats.currentTheme || 'clair'
+        currentTheme: stats.currentTheme || 'clair',
+        streakDays: isNaN(parseInt(stats.streakDays)) ? 1 : Math.max(1, parseInt(stats.streakDays))
     };
 
     stats = cleanStats;
@@ -690,15 +813,18 @@ function resetAll() {
     }
 }
 
-function triggerCelebration(type, icon, mainText) {
-    celebrationQueue.push({ type, icon, mainText });
+function triggerCelebration(type, icon, mainText,customSubtitle = null) {
+    // Désactivé: pas de modale (overlay) pour les badges et bonus de palier (tous les 10 mots)
+    // On garde les célébrations importantes: master / level / focus
+    if (type === 'badge') return;
+    celebrationQueue.push({ type, icon, mainText,customSubtitle });
     processCelebrationQueue();
 }
 
 async function processCelebrationQueue() {
     if (isCelebrationRunning || celebrationQueue.length === 0) return;
     isCelebrationRunning = true;
-    const { type, icon, mainText } = celebrationQueue.shift(); 
+    const { type, icon, mainText, customSubtitle } = celebrationQueue.shift();
     const overlay = document.getElementById('celebration-overlay');
     const iconEl = document.getElementById('celebration-icon');
     const titleEl = document.getElementById('celebration-title');
@@ -714,6 +840,12 @@ async function processCelebrationQueue() {
         iconEl.style.filter = "drop-shadow(0 0 30px var(--success))";
         subEl.innerText = "Niveau Master Atteint (+50 XP)";
         iconEl.classList.add('mastery-pulse');
+    } else if (type === 'streak') {
+        titleEl.innerText = "SÉRIE !";
+        titleEl.style.color = "var(--gold)";
+        iconEl.style.filter = "drop-shadow(0 0 30px var(--gold))";
+        subEl.innerText = "+3 indices";
+        iconEl.classList.add('badge-pop');
     } else if (type === 'level') {
         titleEl.innerText = "LEVEL UP !";
         titleEl.style.color = "var(--primary)";
@@ -731,12 +863,16 @@ async function processCelebrationQueue() {
         subEl.innerText = "Récompense débloquée";
         iconEl.classList.add('badge-pop');
     }
+	
+	if (customSubtitle) {
+        subEl.innerHTML = customSubtitle;
+    }
 
     iconEl.innerText = icon;
-    nameEl.innerText = mainText;
+    nameEl.innerHTML = mainText;
     playEpicSound();
     overlay.style.display = 'flex';
-    await new Promise(resolve => setTimeout(resolve, 3000));
+await new Promise(resolve => setTimeout(resolve, 3500)); // J'ai mis 3.5s pour te laisser lire le bilan
     overlay.style.display = 'none';
     isCelebrationRunning = false;
     processCelebrationQueue(); 
@@ -761,10 +897,25 @@ function spawnFloatingText(text, color) {
     setTimeout(() => floatEl.remove(), 1000);
 }
 
+function spawnFloatingTextFromElement(anchorEl, text, color) {
+    if (!anchorEl) return;
+    const rect = anchorEl.getBoundingClientRect();
+    const floatEl = document.createElement('div');
+    floatEl.className = 'floating-text shield-plus';
+    floatEl.innerText = text;
+    floatEl.style.color = color || 'var(--gold)';
+    floatEl.style.left = `${rect.left + rect.width / 2 + window.scrollX}px`;
+    floatEl.style.top = `${rect.top + window.scrollY}px`;
+    document.body.appendChild(floatEl);
+    setTimeout(() => floatEl.remove(), 1000);
+}
 
 
 
-/* --- MOTEUR AUDIO --- */
+
+/* =========================================================
+   AUDIO (effets)
+   ========================================================= */
 function getAudioCtx() {
     if (!window.myAudioCtx) window.myAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
     if (window.myAudioCtx.state === 'suspended') window.myAudioCtx.resume();
@@ -828,26 +979,31 @@ function getLevenshteinDistance(a, b) {
 
 
 // --- GESTION DE LA MODALE GRIMOIRE ---
-const modalCollection = document.getElementById('modal-collection');
-const btnShowCollection = document.getElementById('btn-show-collection');
-const btnCloseCollection = document.getElementById('btn-close-collection');
+function initCollectionModal() {
+    const modalCollection = document.getElementById('modal-collection');
+    const btnShowCollection = document.getElementById('btn-show-collection');
+    const btnCloseCollection = document.getElementById('btn-close-collection');
 
-// Ouvrir la modale
-btnShowCollection.addEventListener('click', () => {
-    modalCollection.style.display = 'block';
-});
+    if (!modalCollection) return;
 
-// Fermer la modale via le bouton rouge
-btnCloseCollection.addEventListener('click', () => {
-    modalCollection.style.display = 'none';
-});
-
-// Fermer la modale si on clique en dehors du cadre
-window.addEventListener('click', (event) => {
-    if (event.target == modalCollection) {
-        modalCollection.style.display = 'none';
+    if (btnShowCollection) {
+        btnShowCollection.addEventListener('click', () => {
+            modalCollection.style.display = 'block';
+        });
     }
-});
+
+    if (btnCloseCollection) {
+        btnCloseCollection.addEventListener('click', () => {
+            modalCollection.style.display = 'none';
+        });
+    }
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modalCollection) {
+            modalCollection.style.display = 'none';
+        }
+    });
+}
 
 // =========================================
 // 🏆 SYSTÈME DE BADGES ET GRIMOIRE
@@ -855,8 +1011,7 @@ window.addEventListener('click', (event) => {
 
 
 
-// 2. La fonction qui met à jour l'affichage
-function updateBadgeSystem(currentStreak, totalScore) {
+function updateBadgeSystem(currentCombo, maxCombo, totalScore) {
     const objectiveSlots = document.getElementById('objective-slots');
     const fullBadgesList = document.getElementById('full-badges-list');
     
@@ -868,15 +1023,14 @@ function updateBadgeSystem(currentStreak, totalScore) {
     let nextComboBadge = null;
     let nextWordsBadge = null;
 
-    // 1. On traite tous les badges
+    // 1. Traitement du Grimoire (Affichage statique de tous les badges)
     gameBadges.forEach(badge => {
-        let isUnlocked = false;
-        if (badge.type === 'combo' && currentStreak >= badge.target) isUnlocked = true;
-        if (badge.type === 'words' && totalScore >= badge.target) isUnlocked = true;
+        let isUnlocked = (badge.type === 'combo' && maxCombo >= badge.target) || 
+                         (badge.type === 'words' && totalScore >= badge.target);
 
         const grimoireHTML = `
             <div style="display:flex; flex-direction:column; align-items:center; gap:5px;">
-                <div class="badge ${isUnlocked ? 'unlocked' : ''}" title="${badge.desc}">
+                <div class="badge ${isUnlocked ? 'unlocked' : ''}" data-badge-id="${badge.id}" title="${badge.desc}">
                     ${badge.icon}
                 </div>
                 <div style="font-size: 8px; color: var(--text-muted);">${badge.name}</div>
@@ -884,34 +1038,99 @@ function updateBadgeSystem(currentStreak, totalScore) {
         `;
         fullBadgesList.innerHTML += grimoireHTML;
 
+        // Identification des prochains badges à afficher en objectifs
         if (!isUnlocked) {
             if (badge.type === 'combo' && !nextComboBadge) nextComboBadge = badge;
             if (badge.type === 'words' && !nextWordsBadge) nextWordsBadge = badge;
         }
     });
 
-    // 2. LA FONCTION UNIQUE (Déclarée une seule fois ici)
-    const createObjectiveHTML = (badge, currentVal) => `
-        <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
-            <div style="font-size: 8px; color: var(--text-muted); text-transform: uppercase; font-weight: bold; margin-bottom: 2px;">
-                ${badge.type === 'combo' ? 'Combo Max' : 'Total Mots'}
-            </div>
-            <div class="badge in-progress" title="${badge.desc}">
-                ${badge.icon}
-            </div>
-            <div class="objective-progress-text">
-                ${currentVal} / ${badge.target}
-            </div>
-        </div>
-    `;
+    const prevComboId = lastObjectiveComboId;
+    const prevWordsId = lastObjectiveWordsId;
 
-    // 3. Affichage des objectifs
-    if (nextComboBadge) objectiveSlots.innerHTML += createObjectiveHTML(nextComboBadge, currentStreak);
+    // 2. Fonction de création des Objectifs
+    const createObjectiveHTML = (badge, currentVal) => {
+        // Détermine si l'objectif vient d'être atteint
+        const isCompleted = currentVal >= badge.target;
+        
+        // Si complété : on met 'unlocked', sinon : 'in-progress'
+        const statusClass = isCompleted ? 'unlocked' : 'in-progress';
+
+        return `
+            <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
+                <div style="font-size: 8px; color: var(--text-muted); text-transform: uppercase; font-weight: bold; margin-bottom: 2px;">
+                    ${badge.name}
+                </div>
+                <div class="badge ${statusClass}" data-badge-id="${badge.id}" title="${badge.desc}">
+                    ${badge.icon}
+                </div>
+                <div class="objective-progress-text">
+                    ${currentVal} / ${badge.target}
+                </div>
+            </div>
+        `;
+    };
+
+    // 3. Affichage des slots d'objectifs
+    if (nextComboBadge) objectiveSlots.innerHTML += createObjectiveHTML(nextComboBadge, currentCombo);
     if (nextWordsBadge) objectiveSlots.innerHTML += createObjectiveHTML(nextWordsBadge, totalScore);
 
+    // Flash quand le badge d'objectif change (nouveau badge à viser)
+    lastObjectiveComboId = nextComboBadge ? nextComboBadge.id : null;
+    lastObjectiveWordsId = nextWordsBadge ? nextWordsBadge.id : null;
+
+    const flashIfChanged = (prevId, nextId) => {
+        if (!prevId || !nextId || prevId === nextId) return;
+        const el = objectiveSlots.querySelector(`.badge[data-badge-id="${nextId}"]`);
+        if (!el) return;
+        el.classList.remove('objective-flash');
+        void el.offsetWidth; // relance animation
+        el.classList.add('objective-flash');
+        setTimeout(() => el.classList.remove('objective-flash'), 700);
+    };
+    flashIfChanged(prevComboId, lastObjectiveComboId);
+    flashIfChanged(prevWordsId, lastObjectiveWordsId);
+
+    // Si plus aucun badge n'est disponible (tout est débloqué)
     if (!nextComboBadge && !nextWordsBadge) {
         objectiveSlots.innerHTML = `<div style="font-size: 11px; color: var(--gold); text-align: center;">Toutes les quêtes sont terminées ! 🏆</div>`;
     }
 }
+
+
+function openLevelModal(levelIndex) {
+    // On remplace les lettres par les symboles d'étoiles et de progression
+    const rarityConfig = [
+        { symbol: '○', name: 'Nouveau (à apprendre)' },
+        { symbol: '●', name: 'Initié (Court terme)' },
+        { symbol: '●●', name: 'Commun (Encodage)' },
+        { symbol: '●●●', name: 'Rare (Répétition)' },
+        { symbol: '★', name: 'Épique (Intermédiaire)' },
+        { symbol: '★★', name: 'Légendaire (Long terme)' },
+        { symbol: '★★★', name: 'Mythique (Automatisme)' },
+        { symbol: '♔♔♔', name: 'Maître Absolu (Permanent)' }
+    ];
+
+    const modal = document.getElementById('modal-level-details');
+    const title = document.getElementById('level-modal-title');
+    const list = document.getElementById('level-words-list');
+    
+    // On récupère les mots du dictionnaire correspondant au niveau cliqué
+    const words = dictionary.filter(w => w.level === levelIndex);
+    
+    // Mise à jour du titre : on affiche le symbole + le nom (ex: "★★★ Épique")
+    title.innerHTML = `<span style="color:var(--gold); margin-right:10px;">${rarityConfig[levelIndex].symbol}</span>${rarityConfig[levelIndex].name}`;
+    
+    // Affichage de la liste des mots
+    list.innerHTML = words.length > 0 
+        ? words.map(w => `<div class="word-tag" style="border-color:var(--primary); color:var(--text-card); cursor:default;">${w.en}</div>`).join('')
+        : '<p style="color:var(--text-muted); font-size:12px;">Aucun mot à ce stade pour le moment.</p>';
+    
+    modal.style.display = 'block';
+}
+
+
+// On rend la fonction accessible au clic HTML
+window.openLevelModal = openLevelModal;
 
 })(); // Fin de l'application
