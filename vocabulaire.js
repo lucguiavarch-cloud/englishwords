@@ -860,25 +860,20 @@ function updateBadgeSystem(currentStreak, totalScore) {
     const objectiveSlots = document.getElementById('objective-slots');
     const fullBadgesList = document.getElementById('full-badges-list');
     
-    // Si les éléments HTML n'existent pas encore, on arrête pour éviter un bug
     if (!objectiveSlots || !fullBadgesList) return;
 
-    // On vide les affichages
     objectiveSlots.innerHTML = '';
     fullBadgesList.innerHTML = '';
 
     let nextComboBadge = null;
     let nextWordsBadge = null;
 
-    // On parcourt tous les badges
+    // 1. On traite tous les badges
     gameBadges.forEach(badge => {
-        // A. Déterminer si le joueur a débloqué ce badge
         let isUnlocked = false;
         if (badge.type === 'combo' && currentStreak >= badge.target) isUnlocked = true;
         if (badge.type === 'words' && totalScore >= badge.target) isUnlocked = true;
 
-        // B. Ajouter au Grimoire complet (tous les badges y vont)
-        // Note: s'il est débloqué, on lui met la classe "unlocked" pour l'effet de verre/or
         const grimoireHTML = `
             <div style="display:flex; flex-direction:column; align-items:center; gap:5px;">
                 <div class="badge ${isUnlocked ? 'unlocked' : ''}" title="${badge.desc}">
@@ -889,34 +884,31 @@ function updateBadgeSystem(currentStreak, totalScore) {
         `;
         fullBadgesList.innerHTML += grimoireHTML;
 
-        // C. Identifier le PROCHAIN objectif (le premier qu'on n'a pas encore)
         if (!isUnlocked) {
             if (badge.type === 'combo' && !nextComboBadge) nextComboBadge = badge;
             if (badge.type === 'words' && !nextWordsBadge) nextWordsBadge = badge;
         }
     });
 
-    // D. Afficher les prochains objectifs dans l'écran principal (à gauche)
-    const createObjectiveHTML = (badge) => `
-    <div style="display:flex; flex-direction:column; align-items:center; margin-bottom: 10px;">
-        <div style="font-size: 7px; color: var(--text-muted); text-transform: uppercase; font-weight: bold; margin-bottom: 2px; text-align: center; line-height: 1;">
-            ${badge.name}
+    // 2. LA FONCTION UNIQUE (Déclarée une seule fois ici)
+    const createObjectiveHTML = (badge, currentVal) => `
+        <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
+            <div style="font-size: 8px; color: var(--text-muted); text-transform: uppercase; font-weight: bold; margin-bottom: 2px;">
+                ${badge.type === 'combo' ? 'Combo Max' : 'Total Mots'}
+            </div>
+            <div class="badge in-progress" title="${badge.desc}">
+                ${badge.icon}
+            </div>
+            <div class="objective-progress-text">
+                ${currentVal} / ${badge.target}
+            </div>
         </div>
-        
-        <div class="badge in-progress" title="${badge.desc}">
-            ${badge.icon}
-        </div>
-        
-        <div class="badge-title" style="margin-top:4px; font-size: 9px;">
-            ${badge.target} restants
-        </div>
-    </div>
-`;
+    `;
 
-    if (nextComboBadge) objectiveSlots.innerHTML += createObjectiveHTML(nextComboBadge);
-    if (nextWordsBadge) objectiveSlots.innerHTML += createObjectiveHTML(nextWordsBadge);
+    // 3. Affichage des objectifs
+    if (nextComboBadge) objectiveSlots.innerHTML += createObjectiveHTML(nextComboBadge, currentStreak);
+    if (nextWordsBadge) objectiveSlots.innerHTML += createObjectiveHTML(nextWordsBadge, totalScore);
 
-    // Message spécial si tout est terminé
     if (!nextComboBadge && !nextWordsBadge) {
         objectiveSlots.innerHTML = `<div style="font-size: 11px; color: var(--gold); text-align: center;">Toutes les quêtes sont terminées ! 🏆</div>`;
     }

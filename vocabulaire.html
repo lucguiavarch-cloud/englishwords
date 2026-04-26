@@ -15,62 +15,40 @@
     <a href="tuto-anglais.html" target="_blank" class="tuto-link">❓ Aide / Tuto</a>
 
     <div class="session-info">
-        👤 Partie en cours : <span id="current-session-display" class="session-name">Session Locale</span>
-    </div>
-
-    <div class="header-stats">
-        <div class="stat-card">
-            <span class="stat-val" id="timer" style="color:var(--accent)">10:00</span>
-            <select id="time-limit" class="time-selector">
-                <option value="5">5 min</option>
-                <option value="10" selected>10 min</option>
-                <option value="15">15 min</option>
-            </select>
-        </div>
-        <div class="stat-card">
-            <span class="stat-val" id="stk-perf" style="color:var(--success)">0</span>
-            <span class="stat-label">Combo</span>
-        </div>
-        <div class="stat-card">
-            <span class="stat-val" id="stk-total">0</span>
-            <span class="stat-label">Total</span>
-        </div>
-        <div class="stat-card">
-			<span class="stat-val" id="mastery-score" style="color:var(--gold)">0%</span>
-			<span class="stat-label">Maîtrise</span>
-		</div>
-		<div class="stat-card" style="grid-column: span 4; background: var(--dark);">
-    <div style="display:flex; justify-content: space-between; font-size: 10px; margin-bottom: 5px;">
-        <span>JOUEUR : <b id="player-lvl">1</b></span>
-        <span id="xp-text">0 / 100 XP</span>
-    </div>
-    <div style="width: 100%; height: 4px; background: #444; border-radius: 2px; overflow: hidden;">
-        <div id="xp-bar" style="width: 0%; height: 100%; background: var(--gold); transition: 0.3s;"></div>
-    </div>
-</div>
+        👤 <span id="current-session-display">Session Locale</span> | ⏳ <span id="timer">10:00</span>
+        <select id="time-limit" class="time-selector" style="margin-left:5px">
+            <option value="5">5 min</option>
+            <option value="10" selected>10 min</option>
+            <option value="15">15 min</option>
+        </select>
     </div>
 
     <div class="dashboard-grid">
-    <div class="badges-section" id="next-objectives">
-			<div id="reviser-container" style="margin-top: 15px; display: none;">
+	
+	
+        <div class="badges-section" id="next-objectives">
+					<div id="reviser-container" style="margin-top: 15px; display: none;">
     <div style="font-size: 7px; color: var(--text-muted); text-transform: uppercase; font-weight: bold; margin-bottom: 2px; text-align: center;">Mots à réviser</div>
     <button id="btn-open-reservoir" class="badge" style="width: 40px; height: 40px; background: var(--bg-dark); border: 1px solid var(--pink); color: var(--pink); cursor: pointer; margin: 0 auto; display: flex; flex-direction: column; font-size: 14px; font-weight: bold;">
         <span id="reservoir-count">0</span>
     </button>
 </div>
-        <button id="btn-show-collection" class="btn-preset-solid" style="width: 100%; margin-top: 15px;">
-            🏆 Voir mon Grimoire
-        </button>
-        <div class="badge-title">🎯 Prochains Objectifs</div>
-        <div class="badge-group" id="objective-slots">
-            </div>
-
-
-    </div>
-
-    <div class="levels-grid" id="levels-display">
+            <div class="badge-title">🎯 OBJECTIFS</div>
+            <div class="badge-group" id="objective-slots"></div>
+            <button id="btn-show-collection" class="btn-preset-solid" style="width: 100%; margin-top: 10px;">🏆 Grimoire</button>
         </div>
-</div>
+
+        <div class="levels-container">
+            <div class="xp-mini-stat">
+                <div style="display:flex; justify-content: space-between; font-size: 10px;">
+                    <span>LVL <b id="player-lvl">1</b></span>
+                    <span id="xp-text">0/100 XP</span>
+                </div>
+                <div class="xp-bar-bg"><div id="xp-bar"></div></div>
+            </div>
+            <div class="levels-grid" id="levels-display"></div>
+        </div>
+    </div>
 
     	<div class="quiz-section" id="quiz-box">
     <div id="mode-tag" class="mode-indicator">MODE</div>

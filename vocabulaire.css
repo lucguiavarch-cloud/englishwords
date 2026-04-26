@@ -111,35 +111,66 @@ body {
 /* =========================================
    3. STATISTIQUES
    ========================================= */
-.header-stats { 
-    display: grid; 
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 10px; 
-    margin: 20px 0; 
+/* .header-stats {  */
+    /* display: grid;  */
+    /* grid-template-columns: repeat(4, 1fr);  */
+    /* gap: 10px;  */
+    /* margin: 20px 0;  */
+/* } */
+
+/* .stat-card {  */
+    /* background: var(--bg-dark);  */
+    /* color: var(--text-light);  */
+    /* padding: 10px;  */
+    /* border-radius: var(--radius-card);  */
+    /* text-align: center;  */
+    /* transition: background 0.3s ease; */
+/* } */
+
+/* .stat-val { font-size: 22px; font-weight: bold; display: block; } */
+/* .stat-label { font-size: 9px; text-transform: uppercase; color: var(--text-muted); } */
+
+/* .time-selector {  */
+    /* margin-top: 5px; font-size: 10px; border: none;  */
+    /* background: var(--glass-medium); color: var(--text-light);  */
+    /* border-radius: 4PX; outline: none;  */
+    /* padding: 2px 5px; */
+/* } */
+/* .time-selector option { */
+    /* color: var(--text-card);  */
+    /* background: var(--bg-card); */
+/* } */
+
+/* Supprimer l'ancien header-stats du CSS ou le laisser vide */
+.header-stats { display: none; }
+
+/* Nouvelle zone XP compacte */
+.xp-mini-stat {
+    background: var(--bg-dark);
+    padding: 8px;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid var(--glass-medium);
+}
+.xp-bar-bg { width: 100%; height: 4px; background: #444; border-radius: 2px; overflow: hidden; margin-top: 4px; }
+#xp-bar { width: 0%; height: 100%; background: var(--gold); transition: 0.3s; }
+
+/* Ajustement des colonnes */
+.dashboard-grid { 
+    grid-template-columns: 1fr 1.2fr; 
+    margin-top: 40px; /* Espace pour le bouton tuto */
 }
 
-.stat-card { 
-    background: var(--bg-dark); 
-    color: var(--text-light); 
-    padding: 10px; 
-    border-radius: var(--radius-card); 
-    text-align: center; 
-    transition: background 0.3s ease;
+/* Texte sous les badges d'objectif */
+.objective-progress-text {
+    font-size: 11px;
+    font-weight: bold;
+    color: var(--text-main);
+    margin-top: 5px;
 }
 
-.stat-val { font-size: 22px; font-weight: bold; display: block; }
-.stat-label { font-size: 9px; text-transform: uppercase; color: var(--text-muted); }
 
-.time-selector { 
-    margin-top: 5px; font-size: 10px; border: none; 
-    background: var(--glass-medium); color: var(--text-light); 
-    border-radius: 4PX; outline: none; 
-    padding: 2px 5px;
-}
-.time-selector option {
-    color: var(--text-card); 
-    background: var(--bg-card);
-}
+
+
 
 /* =========================================
    4. BADGES ET NIVEAUX
@@ -410,8 +441,8 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
     .container {
         padding: 5px;
         display: grid;
-        /* Grille : Badges(45px) | Quiz(1fr) | Niveaux(45px) */
-        grid-template-columns: 55px 1fr 45px; 
+        /* Grille : Badges(60px) | Quiz(1fr) | Niveaux(55px) */
+        grid-template-columns: 60px 1fr 55px; 
         grid-template-areas: 
             "hud hud hud"
             "badges quiz niveaux"
@@ -431,30 +462,12 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
     .stat-label, .time-selector { display: none; }
     .stat-val { font-size: 13px; }
 
-    /* 🎮 ZONE QUIZ (AU CENTRE) */
-    .quiz-section { 
-        grid-area: quiz; 
-        padding: 10px 5px; 
-        display: flex; 
-        flex-direction: column; 
-        justify-content: center;
-        min-height: 250px;
-    }
-    .word-to-translate { font-size: 24px; margin-bottom: 10px; }
-    input[type="text"] {
-        width: 95% !important; /* Presque toute la largeur de la colonne centrale */
-        font-size: 22px;
-        margin: 0 auto 10px auto !important;
-        padding: 10px;
-    }
-    .action-controls-container { display: grid !important; grid-template-columns: 1fr; gap: 5px; }
-    .action-controls-container button { height: 40px; font-size: 11px; }
-
-    /* 🏆 COLONNE GAUCHE (BADGES / GRIMOIRE) */
+    /* --- CASSURE DU PARENT POUR LA GRILLE --- */
     .dashboard-grid { 
-        display: contents; /* On casse le parent pour placer les enfants dans la grille principale */
+        display: contents; /* Laisse les enfants rejoindre la grille principale */
     }
 
+    /* 🏆 COLONNE GAUCHE (BADGES / RÉVISIONS) */
     .badges-section {
         grid-area: badges;
         display: flex !important;
@@ -465,7 +478,6 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
         border: none;
     }
 
-    /* On transforme le groupe de badges en colonne */
     #objective-slots {
         display: flex;
         flex-direction: column;
@@ -479,29 +491,53 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
         margin: 0 auto;
     }
 
-    /* Le bouton Grimoire devient une petite boîte en bas de la colonne gauche */
+    .objective-progress-text { font-size: 9px; }
+
     #btn-show-collection {
-        width: 40px;
-        height: 40px;
-        padding: 0 !important;
-        font-size: 0 !important; /* Cache le texte */
-        background: var(--bg-dark) !important;
-        border: 1px solid var(--gold);
-        border-radius: 8px;
-        margin: 5px auto 0;
-        display: flex;
-        align-items: center;
+        width: 40px; height: 40px; padding: 0 !important; font-size: 0 !important; 
+        background: var(--bg-dark) !important; border: 1px solid var(--gold);
+        border-radius: 8px; margin: 5px auto 0; display: flex;
+        align-items: center; justify-content: center;
+    }
+    #btn-show-collection::before { content: "🏆"; font-size: 18px; }
+
+    /* 🎮 ZONE QUIZ (AU CENTRE) */
+    .quiz-section { 
+        grid-area: quiz; 
+        padding: 10px 5px; 
+        display: flex; 
+        flex-direction: column; 
         justify-content: center;
+        min-height: 250px;
+        margin-bottom: 5px;
     }
-
-    #btn-show-collection::before {
-        content: "🏆";
-        font-size: 18px;
+    .word-to-translate { font-size: 24px; margin-bottom: 10px; }
+    input[type="text"] {
+        width: 95% !important; 
+        font-size: 22px;
+        margin: 0 auto 10px auto !important;
+        padding: 10px;
     }
+    .action-controls-container { display: grid !important; grid-template-columns: 1fr; gap: 5px; }
+    .action-controls-container button { height: 40px; font-size: 11px; }
 
-    /* 📊 COLONNE DROITE (NIVEAUX) */
-    .levels-grid {
+    /* 📊 COLONNE DROITE (XP ET NIVEAUX) */
+    .levels-container {
         grid-area: niveaux;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .xp-mini-stat {
+        padding: 4px;
+        border-radius: 6px;
+    }
+    .xp-mini-stat span {
+        font-size: 7px !important;
+    }
+
+    .levels-grid {
         display: flex !important;
         flex-direction: column;
         gap: 4px;
@@ -510,14 +546,9 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
     }
 
     .level-box { 
-        width: 40px;
-        height: 40px;
-        padding: 0;
-        font-size: 8px; 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background: var(--bg-dark);
+        width: 45px; height: 40px; padding: 0; font-size: 8px; 
+        display: flex; flex-direction: column; justify-content: center;
+        background: var(--bg-dark); margin: 0 auto;
     }
     .level-count { font-size: 12px; line-height: 1; }
     .level-label { font-size: 7px; }
@@ -525,7 +556,7 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
     /* 🛠️ ADMIN EN BAS */
     .admin-panel { grid-area: admin; }
     .button-group button { font-size: 10px; }
-}
+}/*================================================
 
 /* =========================================
    🏆 GRIMOIRE DES BADGES (MODALE)
