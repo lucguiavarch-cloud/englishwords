@@ -454,9 +454,17 @@ function updateUI() {
     const elPlayerLvl = document.getElementById('player-lvl');
     if (elPlayerLvl) elPlayerLvl.innerText = stats.playerLevel;
     const xpReq = stats.playerLevel * 100;
-    // (pas de barre XP dans vocabulaire.html)
-    const elXpText = document.getElementById('xp-text');
-    if (elXpText) elXpText.innerText = `${stats.xp} / ${xpReq} XP`;
+const xpPercent = (stats.xp / xpReq) * 100;
+
+const elXpBar = document.getElementById('xp-bar');
+if (elXpBar) {
+    elXpBar.style.width = `${xpPercent}%`;
+}
+
+const elXpText = document.getElementById('xp-text');
+if (elXpText) {
+    elXpText.innerText = `${stats.xp} / ${xpReq} XP`;
+}
 
     const elHint = document.getElementById('count-hint');
     if (elHint) elHint.innerText = stats.hints;
