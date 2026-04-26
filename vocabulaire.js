@@ -81,6 +81,109 @@ const SKIN_CATALOG = {
     ]
 };
 
+
+/* --- INITIALISATION DES ÉCOUTEURS D'ÉVÉNEMENTS --- */
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('time-limit').addEventListener('change', resetTimer);
+    document.getElementById('btn-add').addEventListener('click', openModal);
+    document.getElementById('btn-export').addEventListener('click', exportJSON);
+    document.getElementById('btn-import-trigger').addEventListener('click', () => document.getElementById('fLoader').click());
+    document.getElementById('fLoader').addEventListener('change', importJSON);
+    document.getElementById('btn-reset').addEventListener('click', resetAll);
+    document.getElementById('btn-modal-valid').addEventListener('click', importMassive);
+    document.getElementById('btn-modal-close').addEventListener('click', closeModal);
+    const btnOpenReservoir = document.getElementById('btn-open-reservoir');
+const modalReservoir = document.getElementById('modal-reservoir');
+
+if (btnOpenReservoir) {
+    btnOpenReservoir.addEventListener('click', () => {
+        modalReservoir.style.display = 'block';
+    });
+}
+    document.getElementById('btn-shield').addEventListener('click', toggleShield);
+    const btnHint = document.getElementById('btn-hint');
+    if (btnHint) btnHint.addEventListener('click', useHint); 
+    
+    document.getElementById('user-input').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') handleAnswer();
+    });
+    
+    window.onclick = (event) => {
+        if (event.target == document.getElementById('wordModal')) closeModal();
+    };
+
+    initSkins(); // Lancement du moteur de skins !
+    updateUI();
+    getNextWord();
+    updateTimerDisplay();
+    startInterval();
+});
+
+
+//La base de données de tous tes badges
+const gameBadges = [
+    // Catégorie : Combos (les suites de bonnes réponses)
+    { id: 'c2', type: 'combo', target: 2, icon: '🎖', name: 'Combox2', desc: '2 mots de suite' },
+    { id: 'c3', type: 'combo', target: 3, icon: '🥉', name: 'Combox3', desc: '3 mots de suite' },
+    { id: 'c5', type: 'combo', target: 5, icon: '🥈', name: 'Combox5', desc: '5 mots de suite' },
+    { id: 'c10', type: 'combo', target: 10, icon: '🥇️', name: 'Combox10', desc: '10 mots de suite' },
+	{ id: 'c20', type: 'combo', target: 20, icon: '🏆', name: 'Combox20', desc: '20 mots de suite' },
+    
+    // Catégorie : Total de mots justes
+    { id: 'w10', type: 'words', target: 5, icon: '🥚', name: '5 mots justes', desc: '5 mots justes' },
+    { id: 'w50', type: 'words', target: 10, icon: '🐣', name: '10 mots justes', desc: '10 mots justes' },
+    { id: 'w100', type: 'words', target: 30, icon: '🐥', name: '30 mots justes', desc: '30 mots justes' },
+    { id: 'w500', type: 'words', target: 50, icon: '🐓', name: '50 mots justes', desc: '50 mots justes' },
+	{ id: 'w500', type: 'words', target: 100, icon: '🦖', name: '100 mots justes', desc: '100 mots justes' }
+];
+
+/* --- GESTION DU TEMPS --- */
+function resetTimer() {
+    timeLeft = parseInt(document.getElementById('time-limit').value) * 60;
+    updateTimerDisplay();
+    timerActive = false;
+}
+
+function updateTimerDisplay() {
+    const m = Math.floor(timeLeft / 60);
+    const s = timeLeft % 60;
+    document.getElementById('timer').innerText = `${m}:${s < 10 ? '0' : ''}${s}`;
+}
+
+function startInterval() {
+    setInterval(() => {
+        if (timerActive && timeLeft > 0) {
+            timeLeft--;
+            updateTimerDisplay();
+            
+            if (timeLeft === 0) {
+                timerActive = false;
+                const bonusXP = 50;
+                stats.xp += bonusXP;
+
+                const nextLevelXP = stats.playerLevel * 100;
+                let leveledUp = false;
+                
+                if (stats.xp >= nextLevelXP) {
+                    stats.xp -= nextLevelXP;
+                    stats.playerLevel++;
+                    leveledUp = true;
+                }
+
+                save(); 
+
+                if (leveledUp) {
+                    triggerCelebration('level', '🌟', `NIVEAU ${stats.playerLevel}`);
+                } else {
+                    triggerCelebration('focus', '⏳', `+${bonusXP} XP BONUS`);
+                }
+                resetTimer();
+            }
+        }
+    }, 1000);
+}
+
+
 function applySkin(skinId) {
     document.body.className = document.body.className.split(' ').filter(c => !c.startsWith('skin-')).join(' ');
     if (skinId && skinId !== 'clair') {
@@ -139,81 +242,7 @@ function initSkins() {
         console.warn("⚠️ Bouton 'btn-apply-skin' introuvable dans le HTML.");
     }
 }
-/* --- INITIALISATION DES ÉCOUTEURS D'ÉVÉNEMENTS --- */
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('time-limit').addEventListener('change', resetTimer);
-    document.getElementById('btn-add').addEventListener('click', openModal);
-    document.getElementById('btn-export').addEventListener('click', exportJSON);
-    document.getElementById('btn-import-trigger').addEventListener('click', () => document.getElementById('fLoader').click());
-    document.getElementById('fLoader').addEventListener('change', importJSON);
-    document.getElementById('btn-reset').addEventListener('click', resetAll);
-    document.getElementById('btn-modal-valid').addEventListener('click', importMassive);
-    document.getElementById('btn-modal-close').addEventListener('click', closeModal);
-    
-    document.getElementById('btn-shield').addEventListener('click', toggleShield);
-    const btnHint = document.getElementById('btn-hint');
-    if (btnHint) btnHint.addEventListener('click', useHint); 
-    
-    document.getElementById('user-input').addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') handleAnswer();
-    });
-    
-    window.onclick = (event) => {
-        if (event.target == document.getElementById('wordModal')) closeModal();
-    };
 
-    initSkins(); // Lancement du moteur de skins !
-    updateUI();
-    getNextWord();
-    updateTimerDisplay();
-    startInterval();
-});
-
-/* --- GESTION DU TEMPS --- */
-function resetTimer() {
-    timeLeft = parseInt(document.getElementById('time-limit').value) * 60;
-    updateTimerDisplay();
-    timerActive = false;
-}
-
-function updateTimerDisplay() {
-    const m = Math.floor(timeLeft / 60);
-    const s = timeLeft % 60;
-    document.getElementById('timer').innerText = `${m}:${s < 10 ? '0' : ''}${s}`;
-}
-
-function startInterval() {
-    setInterval(() => {
-        if (timerActive && timeLeft > 0) {
-            timeLeft--;
-            updateTimerDisplay();
-            
-            if (timeLeft === 0) {
-                timerActive = false;
-                const bonusXP = 50;
-                stats.xp += bonusXP;
-
-                const nextLevelXP = stats.playerLevel * 100;
-                let leveledUp = false;
-                
-                if (stats.xp >= nextLevelXP) {
-                    stats.xp -= nextLevelXP;
-                    stats.playerLevel++;
-                    leveledUp = true;
-                }
-
-                save(); 
-
-                if (leveledUp) {
-                    triggerCelebration('level', '🌟', `NIVEAU ${stats.playerLevel}`);
-                } else {
-                    triggerCelebration('focus', '⏳', `+${bonusXP} XP BONUS`);
-                }
-                resetTimer();
-            }
-        }
-    }, 1000);
-}
 
 /* --- SYNTHÈSE VOCALE AMÉLIORÉE --- */
 function speak(text) {
@@ -283,16 +312,23 @@ function updateUI() {
     // On utilise stats.maxCombo pour que tu gardes tes badges même si tu perds ton combo !
     updateBadgeSystem(stats.maxCombo, stats.dailyTotal);
 
-    // Réservoir de mots ratés
-    const failed = dictionary.filter(w => w.level === 0 && w.isFailed);
-    const reservoir = document.getElementById('reservoir-ui');
-    if (reservoir) {
-        reservoir.style.display = failed.length > 0 ? 'block' : 'none';
-        const resList = document.getElementById('reservoir-list');
-        if (resList) {
-            resList.innerHTML = failed.map(w => `<span class="word-tag">${w.fr}</span>`).join('');
-        }
+    // Mise à jour de l'indicateur de révision
+const failedWords = dictionary.filter(w => w.level === 0 && w.isFailed);
+const reviserContainer = document.getElementById('reviser-container');
+const reservoirCount = document.getElementById('reservoir-count');
+
+if (failedWords.length > 0) {
+    reviserContainer.style.display = 'block';
+    reservoirCount.innerText = failedWords.length;
+    
+    // Remplissage de la liste dans la modale (au cas où elle est ouverte)
+    const listModal = document.getElementById('reservoir-list-modal');
+    if (listModal) {
+        listModal.innerHTML = failedWords.map(w => `<span class="word-tag">${w.fr}</span>`).join('');
     }
+} else {
+    reviserContainer.style.display = 'none';
+}
 
     // Mise à jour de l'XP et du Joueur
     document.getElementById('player-lvl').innerText = stats.playerLevel;
@@ -817,20 +853,7 @@ window.addEventListener('click', (event) => {
 // 🏆 SYSTÈME DE BADGES ET GRIMOIRE
 // =========================================
 
-// 1. La base de données de tous tes badges
-const gameBadges = [
-    // Catégorie : Combos (les suites de bonnes réponses)
-    { id: 'c5', type: 'combo', target: 5, icon: '🔥', name: 'Chauffe', desc: '5 mots de suite' },
-    { id: 'c10', type: 'combo', target: 10, icon: '⚡', name: 'Éclair', desc: '10 mots de suite' },
-    { id: 'c20', type: 'combo', target: 20, icon: '☄️', name: 'Météore', desc: '20 mots de suite' },
-    { id: 'c50', type: 'combo', target: 50, icon: '☢️', name: 'Nucléaire', desc: '50 mots de suite' },
-    
-    // Catégorie : Total de mots appris
-    { id: 'w10', type: 'words', target: 10, icon: '🌱', name: 'Graine', desc: '10 mots justes' },
-    { id: 'w50', type: 'words', target: 50, icon: '🌿', name: 'Pousse', desc: '50 mots justes' },
-    { id: 'w100', type: 'words', target: 100, icon: '🌳', name: 'Arbre', desc: '100 mots justes' },
-    { id: 'w500', type: 'words', target: 500, icon: '👑', name: 'Légende', desc: '500 mots justes' }
-];
+
 
 // 2. La fonction qui met à jour l'affichage
 function updateBadgeSystem(currentStreak, totalScore) {
@@ -875,13 +898,20 @@ function updateBadgeSystem(currentStreak, totalScore) {
 
     // D. Afficher les prochains objectifs dans l'écran principal (à gauche)
     const createObjectiveHTML = (badge) => `
-        <div style="display:flex; flex-direction:column; align-items:center;">
-            <div class="badge in-progress" title="${badge.desc}">
-                ${badge.icon}
-            </div>
-            <div class="badge-title" style="margin-top:4px;">${badge.target} restants</div>
+    <div style="display:flex; flex-direction:column; align-items:center; margin-bottom: 10px;">
+        <div style="font-size: 7px; color: var(--text-muted); text-transform: uppercase; font-weight: bold; margin-bottom: 2px; text-align: center; line-height: 1;">
+            ${badge.name}
         </div>
-    `;
+        
+        <div class="badge in-progress" title="${badge.desc}">
+            ${badge.icon}
+        </div>
+        
+        <div class="badge-title" style="margin-top:4px; font-size: 9px;">
+            ${badge.target} restants
+        </div>
+    </div>
+`;
 
     if (nextComboBadge) objectiveSlots.innerHTML += createObjectiveHTML(nextComboBadge);
     if (nextWordsBadge) objectiveSlots.innerHTML += createObjectiveHTML(nextWordsBadge);

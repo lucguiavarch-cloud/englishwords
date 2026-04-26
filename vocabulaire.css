@@ -228,10 +228,19 @@ body {
 }
 
 input[type="text"] { 
-    width: 80%; padding: 15px; font-size: 28px; 
-    background: var(--bg-card); color: var(--text-card);
-    border: 3px solid var(--border-main); border-radius: var(--radius-card); 
-    text-align: center; outline-color: var(--primary); 
+    display: block !important;
+    width: 90%;            /* On laisse un peu d'espace sur les côtés */
+    max-width: 500px;
+    margin: 0 auto 20px auto !important; /* Centre horizontalement avec AUTO */
+    padding: 15px; 
+    font-size: 28px; 
+    background: var(--bg-card); 
+    color: var(--text-card);
+    border: 3px solid var(--border-main); 
+    border-radius: var(--radius-card); 
+    text-align: center; 
+    outline-color: var(--primary);
+    box-sizing: border-box; /* IMPORTANT : empêche le champ de dépasser du cadre */
 }
 
 #feedback { margin-top:15px; min-height: 40px; font-weight: bold; font-size: 18px; }
@@ -325,7 +334,7 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
 .flash-master { animation: flash-green 0.8s ease-out; }
 .flash-combo { animation: flash-blue 0.5s ease-out; }
 
-/* 🔴 CORRECTION : Utilisation des variables pour les flashs */
+/* Utilisation des variables pour les flashs */
 @keyframes flash-green {
     0% { background-color: var(--success); transform: scale(1); }
     50% { background-color: var(--text-light); transform: scale(1.1); } /* Le flash sera blanc/lumineux selon le thème */
@@ -393,104 +402,129 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
     to { transform: scale(1.05); filter: brightness(1.3); }
 }
 /* =========================================
-   📱 RÉINVENTION SMARTPHONE (Uniquement < 600px)
-   ========================================= */
-/* =========================================
-   📱 L'INTERFACE MOBILE ULTIME (Inspirée de ton schéma)
+   📱 INTERFACE MOBILE : DOUBLE COLONNE
    ========================================= */
 @media (max-width: 600px) {
-    /* Cache les éléments non essentiels sur mobile */
-    .tuto-link, .session-info, .badges-section { display: none !important; }
+    .tuto-link, .session-info { display: none !important; }
 
     .container {
         padding: 5px;
-        background: transparent;
-        box-shadow: none;
         display: grid;
-        /* La magie est ici : 1 colonne large pour le quiz, 1 fine pour les niveaux */
-        grid-template-columns: 1fr 45px; 
+        /* Grille : Badges(45px) | Quiz(1fr) | Niveaux(45px) */
+        grid-template-columns: 55px 1fr 45px; 
         grid-template-areas: 
-            "hud hud"
-            "quiz niveaux"
-            "admin admin";
-        gap: 8px;
+            "hud hud hud"
+            "badges quiz niveaux"
+            "admin admin admin";
+        gap: 5px;
     }
 
-    /* 🎯 1. LE HUD (Chrono, Combo, Total, Niveau) EN HAUT */
-    .header-stats {
-        grid-area: hud;
-        display: flex !important;
-        justify-content: space-between;
-        align-items: center;
+    /* 🎯 HUD EN HAUT */
+    .header-stats { 
+        grid-area: hud; 
+        display: flex !important; 
+        justify-content: space-around; 
+        padding: 8px; 
         background: var(--bg-dark);
-        padding: 8px 15px;
-        border-radius: 12px;
-        margin: 0;
+        border-radius: 10px;
     }
-    
-    .stat-card { background: transparent; padding: 0; display: flex; gap: 5px; align-items: center; }
-    .stat-val { font-size: 14px; }
-    .stat-label { display: none; /* On cache le texte pour faire pro */ }
-    .time-selector { display: none; }
-    .stat-card[style*="grid-column"] { display: none; /* Cache la grosse barre d'XP PC */ }
+    .stat-label, .time-selector { display: none; }
+    .stat-val { font-size: 13px; }
 
-    /* 🎮 2. LA ZONE DE JEU CENTRALE */
-    .quiz-section {
-        grid-area: quiz;
-        margin: 0;
-        padding: 15px 10px;
-        border-width: 2px;
+    /* 🎮 ZONE QUIZ (AU CENTRE) */
+    .quiz-section { 
+        grid-area: quiz; 
+        padding: 10px 5px; 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center;
+        min-height: 250px;
+    }
+    .word-to-translate { font-size: 24px; margin-bottom: 10px; }
+    input[type="text"] {
+        width: 95% !important; /* Presque toute la largeur de la colonne centrale */
+        font-size: 22px;
+        margin: 0 auto 10px auto !important;
+        padding: 10px;
+    }
+    .action-controls-container { display: grid !important; grid-template-columns: 1fr; gap: 5px; }
+    .action-controls-container button { height: 40px; font-size: 11px; }
+
+    /* 🏆 COLONNE GAUCHE (BADGES / GRIMOIRE) */
+    .dashboard-grid { 
+        display: contents; /* On casse le parent pour placer les enfants dans la grille principale */
+    }
+
+    .badges-section {
+        grid-area: badges;
+        display: flex !important;
+        flex-direction: column;
+        gap: 5px;
+        padding: 0 !important;
+        background: transparent;
+        border: none;
+    }
+
+    /* On transforme le groupe de badges en colonne */
+    #objective-slots {
         display: flex;
         flex-direction: column;
+        gap: 5px;
+    }
+
+    .badge { 
+        width: 40px !important; 
+        height: 40px !important; 
+        font-size: 18px; 
+        margin: 0 auto;
+    }
+
+    /* Le bouton Grimoire devient une petite boîte en bas de la colonne gauche */
+    #btn-show-collection {
+        width: 40px;
+        height: 40px;
+        padding: 0 !important;
+        font-size: 0 !important; /* Cache le texte */
+        background: var(--bg-dark) !important;
+        border: 1px solid var(--gold);
+        border-radius: 8px;
+        margin: 5px auto 0;
+        display: flex;
+        align-items: center;
         justify-content: center;
     }
 
-    .word-to-translate { font-size: 32px; margin-bottom: 10px; }
-    input[type="text"] { width: 100%; font-size: 20px; padding: 12px; margin-bottom: 10px; box-sizing: border-box;}
-
-    .action-controls-container {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
-        margin-top: 5px;
+    #btn-show-collection::before {
+        content: "🏆";
+        font-size: 18px;
     }
 
-    .action-controls-container button { height: 45px; font-size: 13px; border-radius: 10px; }
-
-    /* 📊 3. LA COLONNE VERTICALE DE NIVEAUX (Sur la droite) */
-    .dashboard-grid {
-        grid-area: niveaux;
-        display: block; /* Annule la grille PC */
-        margin: 0;
-    }
-
+    /* 📊 COLONNE DROITE (NIVEAUX) */
     .levels-grid {
+        grid-area: niveaux;
         display: flex !important;
-        flex-direction: column; /* Empile de haut en bas ! */
+        flex-direction: column;
         gap: 4px;
-        padding: 4px;
-        background: var(--bg-dark);
-        border-radius: 10px;
-        height: 100%;
-        justify-content: space-between;
+        padding: 0;
+        background: transparent;
     }
 
-    .level-box {
-        padding: 4px 0;
-        border-radius: 6px;
-        font-size: 10px;
+    .level-box { 
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        font-size: 8px; 
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: center;
+        background: var(--bg-dark);
     }
-
-    .level-count { font-size: 13px; }
+    .level-count { font-size: 12px; line-height: 1; }
     .level-label { font-size: 7px; }
 
-    /* 🛠️ 4. BOUTONS ADMIN EN BAS */
-    .admin-panel { grid-area: admin; padding: 5px; }
-    .button-group { gap: 5px; }
-    .button-group button { font-size: 11px; padding: 8px; flex: 1; }
+    /* 🛠️ ADMIN EN BAS */
+    .admin-panel { grid-area: admin; }
+    .button-group button { font-size: 10px; }
 }
 
 /* =========================================
