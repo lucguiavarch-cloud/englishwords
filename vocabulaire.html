@@ -14,19 +14,23 @@
 <div class="container">
     <a href="tuto-anglais.html" target="_blank" class="tuto-link">❓ Aide / Tuto</a>
 
-    <div class="session-info">
-        👤 <span id="current-session-display">Session Locale</span> | ⏳ <span id="timer">10:00</span>
-        <select id="time-limit" class="time-selector" style="margin-left:5px">
-            <option value="5">5 min</option>
-            <option value="10" selected>10 min</option>
-            <option value="15">15 min</option>
-        </select>
-    </div>
-
     <div class="dashboard-grid">
 	
 	
         <div class="badges-section" id="next-objectives">
+            <div class="session-info">
+                <div class="session-pill" title="Nom de session">
+                    👤 <span id="current-session-display">Session Locale</span>
+                </div>
+                <div class="timer-pill" title="Cliquer pour changer la durée">
+                    ⏳ <span id="timer">10:00</span>
+                </div>
+                <select id="time-limit" class="time-selector" aria-label="Durée du chrono">
+                    <option value="5">5 min</option>
+                    <option value="10" selected>10 min</option>
+                    <option value="15">15 min</option>
+                </select>
+            </div>
 					<div id="reviser-container" style="margin-top: 15px; display: none;">
     <div style="font-size: 7px; color: var(--text-muted); text-transform: uppercase; font-weight: bold; margin-bottom: 2px; text-align: center;">Mots à consolider</div>
     <button id="btn-open-reservoir" class="badge" style="width: 40px; height: 40px; background: var(--bg-dark); border: 1px solid var(--pink); color: var(--pink); cursor: pointer; margin: 0 auto; display: flex; flex-direction: column; font-size: 14px; font-weight: bold;">
@@ -155,6 +159,23 @@
         </div>
         
         <button onclick="document.getElementById('modal-level-details').style.display='none'" class="bg-danger">Fermer</button>
+    </div>
+</div>
+
+<div id="modal-timer" class="modal">
+    <div class="modal-content" style="max-width: 360px;">
+        <h2 style="margin-top: 0; color: var(--gold);">⏳ Chrono</h2>
+        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 15px;">
+            Choisis une durée (ça réinitialise le chrono).
+        </p>
+        <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap;">
+            <button type="button" class="btn-timer-choice bg-primary" data-min="5">5 min</button>
+            <button type="button" class="btn-timer-choice bg-primary" data-min="10">10 min</button>
+            <button type="button" class="btn-timer-choice bg-primary" data-min="15">15 min</button>
+        </div>
+        <div class="modal-buttons" style="margin-top: 16px;">
+            <button id="btn-close-timer" class="bg-danger" type="button">Fermer</button>
+        </div>
     </div>
 </div>
 

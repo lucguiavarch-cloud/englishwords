@@ -49,6 +49,9 @@ const today = new Date().toDateString();
 let lastObjectiveComboId = null;
 let lastObjectiveWordsId = null;
 
+// Pour déclencher un flash unique + pop texte quand un badge est gagné
+let lastUnlockedBadgeIds = new Set();
+
 // Pour déclencher un flash quand un mot tombe dans une boîte de niveau
 let pendingLevelFlash = null;
 let pendingMasterFireworks = false;
@@ -60,11 +63,11 @@ let pendingMasterFireworks = false;
    ========================================================= */
 const gameBadges = [
   // Catégorie : Combos (les suites de bonnes réponses)
-  { id: 'c2', type: 'combo', target: 2, icon: '🎖', name: 'Combox2', desc: '2 mots de suite' },
-  { id: 'c3', type: 'combo', target: 3, icon: '🥉', name: 'Combox3', desc: '3 mots de suite' },
-  { id: 'c5', type: 'combo', target: 5, icon: '🥈', name: 'Combox5', desc: '5 mots de suite' },
-  { id: 'c10', type: 'combo', target: 10, icon: '🥇️', name: 'Combox10', desc: '10 mots de suite' },
-  { id: 'c20', type: 'combo', target: 20, icon: '🏆', name: 'Combox20', desc: '20 mots de suite' },
+  { id: 'c2', type: 'combo', target: 2, icon: '🎖', name: 'Combo x2', desc: '2 mots de suite' },
+  { id: 'c3', type: 'combo', target: 3, icon: '🥉', name: 'Combo x3', desc: '3 mots de suite' },
+  { id: 'c5', type: 'combo', target: 5, icon: '🥈', name: 'Combo x5', desc: '5 mots de suite' },
+  { id: 'c10', type: 'combo', target: 10, icon: '🥇️', name: 'Combo x10', desc: '10 mots de suite' },
+  { id: 'c20', type: 'combo', target: 20, icon: '🏆', name: 'Combo x20', desc: '20 mots de suite' },
 
   // Catégorie : Total de mots justes
   { id: 'w5', type: 'words', target: 5, icon: '🥚', name: '5 mots justes', desc: '5 mots justes' },
@@ -82,17 +85,9 @@ const SKIN_CATALOG = {
     { id: "clair", name: "Thème : Base (Clair)" },
     { id: "skin-dark", name: "Thème : Grimoire (Sombre)" }
   ],
-  "Tour du Monde": [
-    { id: "skin-ghibli", name: "🇯🇵 Studio Ghibli" },
-    { id: "skin-british", name: "🇬🇧 So British" },
-    { id: "skin-canadian", name: "🇨🇦 Cabane au Canada" },
-    { id: "skin-american", name: "🇺🇸 Retro Diner 50s" }
-  ],
-  "Vibes & Folies": [
-    { id: "skin-rap-fr", name: "🎤 Rap Français" },
+  "Skins": [
     { id: "skin-barbie", name: "💅 Barbiecore" },
-    { id: "skin-win95", name: "💾 Windows 95" },
-    { id: "skin-cyberpunk", name: "🦾 Cyberpunk" },
+    { id: "skin-american", name: "🇺🇸 Retro Diner 50s" },
     { id: "skin-arcade", name: "👾 Retro Arcade" }
   ]
 };
@@ -135,6 +130,44 @@ if (stats.lastDate !== today) {
 document.addEventListener('DOMContentLoaded', () => {
   const timeLimit = document.getElementById('time-limit');
   if (timeLimit) timeLimit.addEventListener('change', resetTimer);
+
+  // Mobile/UX: clic sur le chrono -> modale choix durée
+  const timerEl = document.getElementById('timer');
+  const timerModal = document.getElementById('modal-timer');
+  const btnCloseTimer = document.getElementById('btn-close-timer');
+
+  const closeTimerModal = () => {
+    if (timerModal) timerModal.style.display = 'none';
+  };
+
+  const openTimerModal = () => {
+    if (!timerModal) return;
+    timerModal.style.display = 'block';
+  };
+
+  if (timerEl) {
+    timerEl.style.cursor = 'pointer';
+    timerEl.title = "Changer la durée du chrono";
+    timerEl.addEventListener('click', openTimerModal);
+  }
+
+  if (btnCloseTimer) btnCloseTimer.addEventListener('click', closeTimerModal);
+
+  if (timerModal) {
+    timerModal.addEventListener('click', (e) => {
+      if (e.target === timerModal) closeTimerModal();
+    });
+
+    timerModal.querySelectorAll('.btn-timer-choice').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const minutes = parseInt(btn.getAttribute('data-min'));
+        if (!timeLimit || !minutes || isNaN(minutes)) return;
+        timeLimit.value = String(minutes);
+        resetTimer();
+        closeTimerModal();
+      });
+    });
+  }
 
   const btnAdd = document.getElementById('btn-add');
   if (btnAdd) btnAdd.addEventListener('click', openModal);
@@ -1031,10 +1064,20 @@ function updateBadgeSystem(currentCombo, maxCombo, totalScore) {
     let nextComboBadge = null;
     let nextWordsBadge = null;
 
+    const newlyUnlockedBadges = [];
+    const unlockedNowIds = new Set();
+
     // 1. Traitement du Grimoire (Affichage statique de tous les badges)
     gameBadges.forEach(badge => {
         let isUnlocked = (badge.type === 'combo' && maxCombo >= badge.target) || 
                          (badge.type === 'words' && totalScore >= badge.target);
+
+        if (isUnlocked) {
+            unlockedNowIds.add(badge.id);
+            if (!lastUnlockedBadgeIds.has(badge.id)) {
+                newlyUnlockedBadges.push(badge);
+            }
+        }
 
         const grimoireHTML = `
             <div style="display:flex; flex-direction:column; align-items:center; gap:5px;">
@@ -1066,14 +1109,9 @@ function updateBadgeSystem(currentCombo, maxCombo, totalScore) {
 
         return `
             <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
-                <div style="font-size: 8px; color: var(--text-muted); text-transform: uppercase; font-weight: bold; margin-bottom: 2px;">
-                    ${badge.name}
-                </div>
-                <div class="badge ${statusClass}" data-badge-id="${badge.id}" title="${badge.desc}">
+                <div class="objective-badge-name">${badge.name}</div>
+                <div class="badge ${statusClass}" data-badge-id="${badge.id}" title="${badge.name} — ${badge.desc}">
                     ${badge.icon}
-                </div>
-                <div class="objective-progress-text">
-                    ${currentVal} / ${badge.target}
                 </div>
             </div>
         `;
@@ -1098,6 +1136,26 @@ function updateBadgeSystem(currentCombo, maxCombo, totalScore) {
     };
     flashIfChanged(prevComboId, lastObjectiveComboId);
     flashIfChanged(prevWordsId, lastObjectiveWordsId);
+
+    // Flash unique + texte pop quand un badge vient d'être gagné
+    if (newlyUnlockedBadges.length) {
+        const anchor = document.getElementById('next-objectives') || objectiveSlots;
+        newlyUnlockedBadges.forEach((badge) => {
+            // 1) Pop texte dans la zone objectifs
+            spawnFloatingTextFromElement(anchor, `${badge.icon} ${badge.name} débloqué !`, 'var(--gold)');
+
+            // 2) Flash unique sur le badge dans le grimoire (liste)
+            const grimoireEl = fullBadgesList.querySelector(`.badge[data-badge-id="${badge.id}"]`);
+            if (grimoireEl) {
+                grimoireEl.classList.remove('badge-just-won');
+                void grimoireEl.offsetWidth; // relance animation
+                grimoireEl.classList.add('badge-just-won');
+                setTimeout(() => grimoireEl.classList.remove('badge-just-won'), 850);
+            }
+        });
+    }
+
+    lastUnlockedBadgeIds = unlockedNowIds;
 
     // Si plus aucun badge n'est disponible (tout est débloqué)
     if (!nextComboBadge && !nextWordsBadge) {

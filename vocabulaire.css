@@ -1,6 +1,10 @@
 /* =========================================
    1. LE MOTEUR DE THÈMES (VARIABLES)
    ========================================= */
+
+/* ✅ Anti-débordement global (mobile/desktop) */
+*, *::before, *::after { box-sizing: border-box; }
+
 :root {
     /* 🎨 Couleurs d'action pures (Intouchables) */
     --primary: #4a90e2;
@@ -96,6 +100,7 @@ body {
     padding: 25px; 
     border-radius: var(--radius-container); 
     box-shadow: 0 15px 35px var(--shadow-main); 
+    overflow: hidden;
     transition: background 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -150,7 +155,16 @@ body {
     padding: 8px;
     border-radius: 10px 10px 0 0;
     border-bottom: 1px solid var(--glass-medium);
+    /* Lisibilité garantie (quel que soit le thème) */
+    color: var(--text-light);
 }
+.xp-mini-stat span,
+.xp-mini-stat b,
+.xp-mini-stat #xp-text,
+.xp-mini-stat #player-lvl {
+    color: var(--text-light) !important;
+}
+.xp-mini-stat #xp-text { opacity: 0.9; }
 .xp-bar-bg { width: 100%; height: 4px; background: #444; border-radius: 2px; overflow: hidden; margin-top: 4px; }
 #xp-bar { width: 0%; height: 100%; background: var(--gold); transition: 0.3s; }
 
@@ -181,6 +195,18 @@ body {
 .badge-group { display: flex; justify-content: center; gap: 8px; margin-bottom: 10px; }
 .badge-title { font-size: 10px; font-weight: bold; text-align: center; margin-bottom: 5px; }
 
+/* Nom simple au-dessus des badges d'objectifs */
+.objective-badge-name{
+    font-size: 9px;
+    line-height: 1.15;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 4px;
+}
+
 /* ✅ LE BLOC BADGE DÉFINITIF (Verre + Animation) */
 .badge { 
     width: 45px; height: 45px; 
@@ -207,7 +233,9 @@ body {
     transform: scale(1.1) rotate(5deg);
     filter: grayscale(0);
     box-shadow: 0 0 15px var(--gold);
-    animation: badge-sparkle 1.8s ease-in-out infinite;
+    /* IMPORTANT:
+       Pas d'animation infinie ici (sinon ça "clignote" en permanence dans la zone objectifs).
+       Le "flash" au gain est géré via une classe temporaire. */
 }
 
 /* Scintillement doré (sans toucher au transform, pour garder la rotation) */
@@ -370,13 +398,18 @@ body {
     animation: badge-shimmer 1s ease-in-out 3; /* Scintille 3 fois */
 }
 
-/* L'effet de scintillement/flash quand le badge est gagné */
+/* Flash unique quand un badge est gagné */
 .badge.badge-just-won {
-    /* IMPORTANT: ne pas écraser l'animation de .badge.unlocked */
-    animation: objective-flash 0.6s ease-out 1, badge-sparkle 1.8s ease-in-out infinite;
+    animation: badge-earned-flash 0.75s ease-out 1;
     border: 2px solid var(--gold) !important;
     box-shadow: 0 0 20px var(--gold);
     z-index: 10;
+}
+
+@keyframes badge-earned-flash {
+    0% { filter: brightness(1); transform: scale(1.1) rotate(5deg); box-shadow: 0 0 12px var(--gold); }
+    35% { filter: brightness(2.2) drop-shadow(0 0 18px var(--gold)); transform: scale(1.25) rotate(5deg); box-shadow: 0 0 40px var(--gold); }
+    100% { filter: brightness(1); transform: scale(1.1) rotate(5deg); box-shadow: 0 0 15px var(--gold); }
 }
 
 @keyframes badge-glow-pulse {
@@ -507,7 +540,67 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
 /* =========================================
    8. ANIMATIONS ET KEYFRAMES
    ========================================= */
-.session-info { text-align: center; margin-bottom: 10px; font-size: 12px; font-weight: bold; color: var(--text-card); opacity: 0.8; }
+.session-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: stretch;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--text-card);
+    opacity: 0.95;
+}
+
+/* Desktop: le bloc reste DANS la colonne gauche (pas d'absolu => pas de chevauchement) */
+@media (min-width: 601px) {
+    .session-info {
+        position: static;
+        transform: none;
+        margin: 0 0 12px 0;
+        padding: 0;
+        background: transparent;
+        border: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+}
+
+.session-pill,
+.timer-pill{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 7px 10px;
+    border-radius: 12px;
+    background: var(--bg-dark);
+    color: var(--text-light);
+    border: 1px solid var(--glass-medium);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.session-pill{
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.timer-pill{
+    font-variant-numeric: tabular-nums;
+    cursor: pointer;
+    user-select: none;
+}
+
+.timer-pill #timer{
+    min-width: 54px;
+    text-align: center;
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
 .session-name { background: var(--gold); color: #000; padding: 2px 10px; border-radius: 10px; margin-left: 5px; }
 
 .shake { animation: shake 0.4s; }
@@ -587,7 +680,31 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
    📱 INTERFACE MOBILE : DOUBLE COLONNE
    ========================================= */
 @media (max-width: 600px) {
-    .tuto-link, .session-info { display: none !important; }
+    .tuto-link { display: none !important; }
+
+    /* ✅ HUD mobile: nom de session + chrono (clic = modale) */
+    .session-info {
+        display: flex !important;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+        padding: 0;
+        margin: 0 0 6px 0;
+        position: static;
+        top: auto;
+        z-index: auto;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
+    /* En mobile: on masque le select natif (remplacé par modale) */
+    .session-info .time-selector { display: none !important; }
+
+    .session-pill, .timer-pill{
+        /* "HUD" propre + compatible */
+        background: rgba(0, 0, 0, 0.22);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+    }
 
     .container {
         padding: 5px;
@@ -610,7 +727,7 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
         background: var(--bg-dark);
         border-radius: 10px;
     }
-    .stat-label, .time-selector { display: none; }
+    .stat-label { display: none; }
     .stat-val { font-size: 13px; }
 
     /* --- CASSURE DU PARENT POUR LA GRILLE --- */
@@ -777,203 +894,101 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
    9. LA GALERIE DE SKINS (THEMES)
    ========================================= */
 
-/* 🇯🇵 STUDIO GHIBLI (Doux & Nature) */
-body.skin-ghibli {
-    --bg-main: #e0f7fa;
-    --bg-card: #ffffff;
-    --bg-alt: #f1f8e9;
-    --bg-dark: #33691e;
-    --bg-hover: #e8f5e9;
-    --bg-reservoir: #e0f2f1;
-    --primary: #4caf50;
-    --success: #8bc34a;
-    --danger: #ff7043;
-    --accent: #29b6f6;
-    --gold: #ffca28;
-    --text-main: #37474f;
-    --text-card: #2e3b32;
-    --text-light: #ffffff;
-    --border-main: #c8e6c9;
-    --border-reservoir: #81c784;
-    --radius-container: 30px;
-    --radius-card: 20px;
-    --radius-btn: 15px;
-    --font-main: 'Trebuchet MS', sans-serif;
-}
-
-/* 🎤 RAP FRANÇAIS (Urbain & Bling) */
-body.skin-rap-fr {
-    --bg-main: #121212;
-    --bg-card: #1e1e1e;
-    --bg-alt: #2a2a2a;
-    --bg-dark: #000000;
-    --bg-hover: #333333;
-    --bg-reservoir: #1e1e1e;
-    --primary: #d4af37; /* Or */
-    --success: #00ff88;
-    --danger: #ff003c;
-    --accent: #ffffff;
-    --gold: #d4af37;
-    --text-main: #ffffff;
-    --text-card: #e0e0e0;
-    --text-light: #ffffff;
-    --border-main: #333333;
-    --border-reservoir: #d4af37;
-    --radius-container: 10px;
-    --radius-card: 5px;
-    --font-main: 'Impact', sans-serif;
-}
-
-/* 🇬🇧 SO BRITISH (Élégant & Traditionnel) */
-body.skin-british {
-    --bg-main: #1b262c;
-    --bg-card: #f4f1ea;
-    --bg-alt: #e8e3d8;
-    --bg-dark: #0f171e;
-    --bg-hover: #dfd8c8;
-    --bg-reservoir: #f4f1ea;
-    --primary: #8b0000; /* Rouge Cabine */
-    --success: #1e4d2b;
-    --danger: #d9534f;
-    --accent: #003366;
-    --gold: #c5a059;
-    --text-main: #f4f1ea;
-    --text-card: #2c3e50;
-    --text-light: #ffffff;
-    --border-main: #c5a059;
-    --border-reservoir: #8b0000;
-    --radius-container: 8px;
-    --radius-card: 4px;
-    --font-main: 'Georgia', serif;
-}
-
-/* 🇨🇦 CANADIAN (Bûcheron & Sirop d'Érable) */
-body.skin-canadian {
-    --bg-main: #ffffff;
-    --bg-card: #fdf5e6;
-    --bg-alt: #f5deb3;
-    --bg-dark: #8b4513;
-    --bg-hover: #ffdab9;
-    --bg-reservoir: #fff5ee;
-    --primary: #d32f2f;
-    --success: #2e7d32;
-    --danger: #c62828;
-    --accent: #d32f2f;
-    --gold: #f57f17;
-    --text-main: #3e2723;
-    --text-card: #4e342e;
-    --text-light: #ffffff;
-    --border-main: #d7ccc8;
-    --border-reservoir: #d32f2f;
-    --radius-container: 12px;
-    --font-main: 'Verdana', sans-serif;
-}
-
 /* 🍔 AMERICAN DINER (Retro 50s) */
 body.skin-american {
-    --bg-main: #ffcce6;
+    --bg-main: #ffd6ea;
     --bg-card: #ffffff;
-    --bg-alt: #ccffcc;
+    --bg-alt: #e9fff0;
     --bg-dark: #1a1a1a;
-    --bg-hover: #f0f0f0;
-    --bg-reservoir: #e6f7ff;
-    --primary: #ff0055;
-    --success: #00cc66;
-    --danger: #ff3300;
-    --accent: #00ccff;
+    --bg-hover: #f3f3f3;
+    --bg-reservoir: #eef9ff;
+
+    --primary: #ff2d7a;
+    --success: #00c26a;
+    --danger: #ff3b30;
+    --accent: #00b7ff;
+    --violet: #7c4dff;
+    --pink: #ff5aa5;
     --gold: #ffcc00;
-    --text-main: #1a1a1a;
-    --text-card: #1a1a1a;
+
+    --text-main: #141414;
+    --text-card: #141414;
+    --text-muted: #6b7280;
     --text-light: #ffffff;
-    --border-main: #ff0055;
-    --border-reservoir: #00ccff;
-    --radius-container: 40px;
-    --font-main: 'Arial Rounded MT Bold', sans-serif;
+
+    --border-main: rgba(20, 20, 20, 0.18);
+    --border-reservoir: rgba(0, 183, 255, 0.55);
+
+    --radius-container: 28px;
+    --radius-card: 14px;
+    --radius-btn: 10px;
+    --shadow-main: rgba(0, 0, 0, 0.12);
+
+    --font-main: 'Arial Rounded MT Bold', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* 💅 BARBIECORE (Plastique & Rose) */
 body.skin-barbie {
-    --bg-main: #ff69b4;
-    --bg-card: #fff0f5;
-    --bg-alt: #ffb6c1;
-    --bg-dark: #c71585;
-    --bg-hover: #ffc0cb;
-    --bg-reservoir: #ffe4e1;
+    --bg-main: #ff5fb2;
+    --bg-card: #fff6fb;
+    --bg-alt: #ffd1e3;
+    --bg-dark: #4b0b2e;
+    --bg-hover: #ffe3ef;
+    --bg-reservoir: #fff2f8;
+
     --primary: #ff1493;
-    --success: #00fa9a;
-    --danger: #ff0000;
-    --accent: #9400d3;
-    --gold: #ffb6c1;
+    --success: #00d68f;
+    --danger: #ff2d2d;
+    --accent: #7c4dff;
+    --violet: #7c4dff;
+    --pink: #ff5aa5;
+    --gold: #ffd34d;
+
     --text-main: #ffffff;
-    --text-card: #c71585;
+    --text-card: #2b0a1b;
+    --text-muted: #6b0f41;
     --text-light: #ffffff;
-    --border-main: #ff1493;
-    --border-reservoir: #9400d3;
-    --radius-container: 50px;
-    --radius-card: 30px;
-    --font-main: 'Comic Sans MS', cursive;
-}
 
-/* 💾 WINDOWS 95 (Rétro PC) */
-body.skin-win95 {
-    --bg-main: #008080;
-    --bg-card: #c0c0c0;
-    --bg-alt: #dfdfdf;
-    --bg-dark: #000080;
-    --bg-hover: #ffffff;
-    --bg-reservoir: #c0c0c0;
-    --primary: #000080;
-    --success: #008000;
-    --danger: #ff0000;
-    --accent: #ffff00;
-    --gold: #ffff00;
-    --text-main: #000000;
-    --text-card: #000000;
-    --text-light: #ffffff;
-    --border-main: #ffffff;
-    --border-reservoir: #808080;
-    --shadow-main: 2px 2px 0px #000000;
-    --radius-container: 0px;
-    --radius-card: 0px;
-    --radius-btn: 0px;
-    --font-main: 'Tahoma', sans-serif;
-}
+    --border-main: rgba(43, 10, 27, 0.18);
+    --border-reservoir: rgba(124, 77, 255, 0.55);
 
-/* 🦾 CYBERPUNK (Néon & Contraste) */
-body.skin-cyberpunk {
-    --bg-main: #f3e600;
-    --bg-card: #111111;
-    --bg-alt: #222222;
-    --bg-dark: #000000;
-    --bg-hover: #333333;
-    --bg-reservoir: #111111;
-    --primary: #00f0ff;
-    --success: #39ff14;
-    --danger: #ff003c;
-    --accent: #f3e600;
-    --gold: #ff003c;
-    --text-main: #111111;
-    --text-card: #ffffff;
-    --text-muted: #aaaaaa;
-    --text-light: #f3e600;
-    --border-main: #333333;
-    --border-reservoir: #00f0ff;
-    --radius-container: 0px;
-    --font-main: 'Impact', sans-serif;
+    --radius-container: 34px;
+    --radius-card: 18px;
+    --radius-btn: 12px;
+    --shadow-main: rgba(0, 0, 0, 0.14);
+
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* 👾 RETRO ARCADE */
 body.skin-arcade {
     --bg-main: #000000;
-    --bg-card: #111111;
-    --bg-alt: #222222;
-    --bg-dark: #000000;
+    --bg-card: #0b0b12;
+    --bg-alt: #111122;
+    --bg-dark: #06060b;
     --bg-hover: #333333;
+    --bg-reservoir: #0b0b12;
+
     --primary: #ff00ff;
-    --success: #00ff00;
-    --text-main: #00ff00;
+    --success: #00ff66;
+    --danger: #ff3355;
+    --accent: #00f0ff;
+    --violet: #a855f7;
+    --pink: #ff00ff;
+    --gold: #ffe600;
+
+    --text-main: #e7ff33;
     --text-card: #ffffff;
-    --border-main: #00ff00;
-    --radius-container: 0px;
+    --text-muted: rgba(255, 255, 255, 0.7);
+    --text-light: #ffffff;
+
+    --border-main: rgba(0, 255, 102, 0.55);
+    --border-reservoir: rgba(0, 240, 255, 0.55);
+
+    --radius-container: 14px;
+    --radius-card: 12px;
+    --radius-btn: 10px;
+    --shadow-main: rgba(0, 0, 0, 0.55);
+
     --font-main: 'Press Start 2P', cursive;
 }
