@@ -24,12 +24,6 @@
             --radius:16px;
             --shadow:rgba(0,0,0,0.35);
             --font:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-            /* Fluid type */
-            --h1: clamp(18px, 2.2vw, 26px);
-            --h2: clamp(12px, 1.4vw, 14px);
-            --p: clamp(12px, 1.25vw, 14px);
-            --small: clamp(11px, 1.1vw, 12px);
         }
 
         *{ box-sizing:border-box; }
@@ -42,17 +36,17 @@
                 radial-gradient(900px 700px at 105% 15%, rgba(240,98,146,0.25), transparent 55%),
                 radial-gradient(1000px 900px at 45% 120%, rgba(255,211,77,0.18), transparent 55%),
                 var(--bg-main);
-            padding: clamp(14px, 3.5vw, 28px);
+            padding:24px;
         }
 
-        .wrap{ max-width:980px; margin:0 auto; }
+        .wrap{ max-width:900px; margin:0 auto; }
 
         .hero{
             background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
             border:1px solid var(--border);
             border-radius:calc(var(--radius) + 6px);
             box-shadow:0 18px 60px var(--shadow);
-            padding: clamp(14px, 2.8vw, 24px);
+            padding:22px 18px;
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
         }
@@ -79,14 +73,14 @@
         }
         h1{
             margin:0;
-            font-size: var(--h1);
+            font-size:22px;
             letter-spacing:0.2px;
         }
         .subtitle{
             margin:0;
             color:var(--muted);
             line-height:1.5;
-            font-size: var(--p);
+            font-size:13px;
         }
 
         .grid{
@@ -95,23 +89,20 @@
             gap:12px;
             margin-top:14px;
         }
-        @media (min-width: 720px){
-            .grid{ grid-template-columns: 1.15fr 1fr; gap:14px; }
-        }
-        @media (min-width: 1100px){
-            .grid{ gap:16px; }
+        @media (min-width: 820px){
+            .grid{ grid-template-columns: 1.2fr 1fr; }
         }
 
         .card{
             background: var(--bg-card);
             border:1px solid var(--border);
             border-radius: var(--radius);
-            padding: clamp(12px, 2.2vw, 16px);
+            padding:14px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.18);
         }
         .card h2{
             margin:0 0 10px 0;
-            font-size: var(--h2);
+            font-size:14px;
             letter-spacing:0.3px;
             text-transform:uppercase;
             color:rgba(234,242,255,0.88);
@@ -149,10 +140,10 @@
         .txt b{ display:block; margin-bottom:2px; }
         .txt{
             color: rgba(234,242,255,0.90);
-            font-size: var(--p);
+            font-size:13px;
             line-height:1.45;
         }
-        .txt small{ color: var(--muted); font-size: var(--small); }
+        .txt small{ color: var(--muted); font-size:12px; }
 
         .pill-row{
             display:flex;
@@ -165,7 +156,7 @@
             background: rgba(255,255,255,0.05);
             border-radius:999px;
             padding:6px 10px;
-            font-size: var(--small);
+            font-size:12px;
             color:rgba(234,242,255,0.88);
             display:inline-flex;
             gap:8px;
@@ -185,17 +176,14 @@
             gap:10px;
             flex-wrap:wrap;
             margin-top:14px;
-            justify-content: center;
+            justify-content: space-between;
             align-items:center;
-        }
-        @media (min-width: 560px){
-            .cta{ justify-content: space-between; }
         }
         .btn{
             appearance:none;
             border:none;
             cursor:pointer;
-            padding: 10px 14px;
+            padding:10px 14px;
             border-radius: 12px;
             font-weight:900;
             letter-spacing:0.2px;
@@ -215,37 +203,29 @@
         }
         .note{
             color: var(--muted);
-            font-size: var(--small);
+            font-size:12px;
             line-height:1.4;
             max-width: 520px;
-        }
-
-        /* Très petits écrans: rendre les items plus compacts */
-        @media (max-width: 360px){
-            .item{ padding: 9px; }
-            .ico{ width:28px; height:28px; border-radius:9px; }
-            .pill{ padding:5px 8px; }
-            .badge{ font-size: 11px; padding: 5px 9px; }
-        }
-
-        /* Desktop large: améliorer la lisibilité */
-        @media (min-width: 1100px){
-            .wrap{ max-width: 1080px; }
-            .hero{ padding: 26px; }
         }
     </style>
 </head>
 <body>
     <div class="wrap">
         <div class="hero">
+		<div class="cta">
+                <a class="btn" href="#" onclick="window.close(); return false;">🎮 Retour au jeu</a>
+                <a class="btn secondary" href="vocabulaire.html">Ouvrir le jeu</a>
+            </div>
             <div class="title">
-                <span class="badge">🎓 English Master</span>
+
                 <h1>Tutoriel — règles & gameplay</h1>
             </div>
+			
             <p class="subtitle">
-                Le but est simple : faire monter tes mots en niveau, au niveau <b> Master</b>. Un mot “Master” (niveau 7) est considéré comme acquis et stocké dans la mémoire à long terme. 
-                Tout se sauvegarde automatiquement sur ton appareil.
+                Le but est simple : Faire monter tes mots en niveau jusqu'au niveau  “Master” (niveau 7). L’objectif global mesure ton avancée sur l’ensemble du dictionnaire.
+                    </p>
             </p>
+
             <div class="grid">
                 <section class="card">
                     <h2>Démarrer une session</h2>
@@ -273,25 +253,7 @@
                         </li>
                     </ul>
                 </section>
-				<section class="card">
-                    <h2>Progression d’un mot (niveaux)</h2>
-                    <p class="subtitle" style="margin-top:0">
-                        Chaque bonne réponse <b>fait monter le mot d’un niveau</b>. Une erreur le <b>fait redescendre d’un niveau</b>
-                        et le place dans le réservoir (à consolider).
-                    </p>
-                    <div class="pill-row">
-                        <span class="pill">○ Nouveau</span>
-                        <span class="pill">● Initié</span>
-                        <span class="pill">●● Encodage</span>
-                        <span class="pill">●●● Répétition</span>
-                        <span class="pill">★ Intermédiaire</span>
-                        <span class="pill">★★ Long terme</span>
-                        <span class="pill">★★★ Automatisme</span>
-                        <span class="pill">♔♔♔ Master</span>
-                    </div>
-                    <div class="hr"></div>
-                    
-                </section>
+
                 <section class="card">
                     <h2>Les 3 modes de mots</h2>
                     <ul class="list">
@@ -321,7 +283,25 @@
             </div>
 
             <div class="grid">
-               
+                <section class="card">
+                    <h2>Progression d’un mot (niveaux)</h2>
+                    <p class="subtitle" style="margin-top:0">
+                        Chaque bonne réponse <b>fait monter le mot d’un niveau</b>. Une erreur le <b>fait redescendre d’un niveau</b>
+                        et le place dans le réservoir (à consolider).
+                    </p>
+                    <div class="pill-row">
+                        <span class="pill">○ Nouveau</span>
+                        <span class="pill">● Initié</span>
+                        <span class="pill">●● Encodage</span>
+                        <span class="pill">●●● Répétition</span>
+                        <span class="pill">★ Intermédiaire</span>
+                        <span class="pill">★★ Long terme</span>
+                        <span class="pill">★★★ Automatisme</span>
+                        <span class="pill">♔♔♔ Master</span>
+                    </div>
+                    <div class="hr"></div>
+                  
+                </section>
 
                 <section class="card">
                     <h2>Combo, XP, indices & bouclier</h2>
@@ -388,10 +368,7 @@
                 </section>
             </div>
 
-            <div class="cta">
-                <a class="btn" href="#" onclick="window.close(); return false;">🎮 Retour au jeu</a>
-                <a class="btn secondary" href="vocabulaire.html">Ouvrir le jeu</a>
-            </div>
+
             <p class="note">
                 Astuce : si tu veux une progression rapide, utilise le réservoir (mots ratés) et cherche des sessions courtes mais régulières.
             </p>

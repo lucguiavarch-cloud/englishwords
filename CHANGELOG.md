@@ -1,5 +1,37 @@
 # Changelog
 
+## v4.5 — 29/04/2026
+
+### Thème
+- **Thème par défaut** : **Grimoire (Sombre)** (`skin-dark`) à la place du thème clair pour les nouvelles sessions / valeurs manquantes.
+- Repli **`stats.currentTheme`** (init du sélecteur, export) aligné sur **`skin-dark`**.
+
+### Données (vocabulaire CECRL)
+- Correction d’**encodage** (mojibake UTF-8 / Latin-1) sur les champs **`fr`** des listes **A1 à C2** (`data/*.json`).
+- Script **`scripts/fix-json-encoding.mjs`** : traiter tout le dossier par défaut, ou cibler des fichiers (`node scripts/fix-json-encoding.mjs B1 C2`).
+
+## v4.4 — 28/04/2026
+
+### Feedback jeu (mot validé)
+- **Plus de texte flottant** à chaque bon mot (moins envahissant). Conservé : **`pendingLevelFlash`** sur la case de niveau à droite, sons et message dans la zone feedback.
+- L’effet « machine à sous » ne s’applique plus qu’au **déblocage d’un badge** (voir ci-dessous).
+
+### Objectifs (slots)
+- **Compteurs dynamiques** sous chaque badge d’objectif : `sessionCombo / cible` (combo) et `mots justes du jour / cible` (words).
+- Remplacement de l’ancien **flash** de changement d’objectif par une apparition **élastique** (classe **`new-objective-bounce`**) + **arpège bref** (`playNewObjectiveTargetSound`) quand la cible change.
+- **Combo perdu** (erreur sans bouclier) : `sessionCombo` à 0, **`updateBadgeSystem`** appelé tout de suite, **vibration rouge** sur le compteur combo (`counter-reset-shake`).
+- Nettoyage : suppression de `lastObjectiveComboId` / `lastObjectiveWordsId`, de `flashIfChanged`, et des styles **`objective-flash`**.
+
+### Badges — feedback déblocage
+- Appel type **`spawnFloatingText(… DÉBLOQUÉ !, var(--gold), opts)`** : **jitter** aléatoire **±30 px** / **±20 px** ; si **plusieurs badges** en une fois, **décalage 300 ms** entre chaque popup + flash grimoire associé.
+- **`spawnFloatingText`** : paramètre optionnel **`{ maxJitterX, maxJitterY }`** ; élément retiré du DOM après **800 ms**.
+
+### Texte flottant (animation)
+- **`floatUp` en 0,8 s** (disparition rapide) + **dérive horizontale** légère dans les keyframes ; lueur conservée. Variante **+1 bouclier** (`shield-plus`) alignée sur **0,8 s** ; **`spawnFloatingTextFromElement`** supprime le nœud à **800 ms** aussi.
+
+### Mobile — lien Aide / Tuto
+- Lien **❓ Aide** dans la **zone admin** (avec import / thème) ; sur **≤600px**, grille **quiz pleine largeur en haut**, puis colonnes objectifs / niveaux, puis **admin**.
+
 ## v4.3 — 27/04/2026
 
 ### Badges / Objectifs

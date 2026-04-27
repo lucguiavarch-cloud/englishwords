@@ -17,7 +17,7 @@ const defaultStats = {
   playerLevel: 1,
   shields: 3,
   hints: 5,
-  currentTheme: 'clair',
+  currentTheme: 'skin-dark',
   streakDays: 1
 };
 
@@ -45,9 +45,9 @@ let sessionAlmostMasterWords = 0;
 
 const today = new Date().toDateString();
 
-// Pour déclencher un flash quand un objectif "change" (nouveau badge à viser)
-let lastObjectiveComboId = null;
-let lastObjectiveWordsId = null;
+/** Dernières cibles affichées dans les slots objectifs (détection changement de quête). */
+let objectivePrevComboBadgeId = null;
+let objectivePrevWordsBadgeId = null;
 
 // Pour déclencher un flash unique + pop texte quand un badge est gagné
 let lastUnlockedBadgeIds = new Set();
@@ -318,7 +318,7 @@ function initSkins() {
     }
 
     // 3. On sélectionne visuellement le thème actuel sauvegardé
-    const savedSkin = stats.currentTheme || 'clair';
+    const savedSkin = stats.currentTheme || 'skin-dark';
     selector.value = savedSkin;
     
     // 4. On l'applique au chargement de la page
@@ -573,7 +573,6 @@ function handleAnswer() {
     if (distance === 0 || (distance === 1 && target.length > 3)) {
         sessionCombo++;
         stats.dailyTotal++;
-        spawnFloatingText("+10 XP", "var(--success)");
         if (stats.dailyTotal % 10 === 0 && stats.dailyTotal !== 0) {
             let bonusPalier = stats.dailyTotal; 
             addXP(bonusPalier);
@@ -661,6 +660,15 @@ function handleAnswer() {
         } else {
             sessionCombo = 0;
             playErrorSound();
+
+            updateBadgeSystem(sessionCombo, stats.maxCombo, stats.dailyTotal);
+            const comboCounter = document.querySelector('#objective-slots .objective-counter[data-objective-type="combo"]');
+            if (comboCounter) {
+                comboCounter.classList.remove('counter-reset-shake');
+                void comboCounter.offsetWidth;
+                comboCounter.classList.add('counter-reset-shake');
+                comboCounter.addEventListener('animationend', () => comboCounter.classList.remove('counter-reset-shake'), { once: true });
+            }
 
             box.classList.add('shake');
             fb.innerHTML = `<span style="color:var(--danger)">${currentWord.en}</span>`;
@@ -781,7 +789,7 @@ function exportJSON() {
         playerLevel: isNaN(parseInt(stats.playerLevel)) ? 1 : parseInt(stats.playerLevel),
         shields: isNaN(parseInt(stats.shields)) ? 3 : parseInt(stats.shields),
         hints: isNaN(parseInt(stats.hints)) ? 5 : parseInt(stats.hints),
-        currentTheme: stats.currentTheme || 'clair',
+        currentTheme: stats.currentTheme || 'skin-dark',
         streakDays: isNaN(parseInt(stats.streakDays)) ? 1 : Math.max(1, parseInt(stats.streakDays))
     };
 
@@ -919,23 +927,32 @@ await new Promise(resolve => setTimeout(resolve, 3500)); // J'ai mis 3.5s pour t
     processCelebrationQueue(); 
 }
 /* --- EFFETS VISUELS --- */
-function spawnFloatingText(text, color) {
+/**
+ * Texte flottant centré sur le champ de saisie.
+ * @param {string} text
+ * @param {string} [color]
+ * @param {{ maxJitterX?: number, maxJitterY?: number }} [opts] — décalage aléatoire ±max depuis le centre (px)
+ */
+function spawnFloatingText(text, color, opts) {
     const input = document.getElementById('user-input');
+    if (!input) return;
+
     const rect = input.getBoundingClientRect();
-    
+    const o = opts || {};
+    const jx = typeof o.maxJitterX === 'number' ? (Math.random() * 2 - 1) * o.maxJitterX : 0;
+    const jy = typeof o.maxJitterY === 'number' ? (Math.random() * 2 - 1) * o.maxJitterY : 0;
+
     const floatEl = document.createElement('div');
     floatEl.className = 'floating-text';
     floatEl.innerText = text;
     floatEl.style.color = color || 'var(--success)';
-    
-    // On le positionne pile au centre du champ de texte
-    floatEl.style.left = `${rect.left + rect.width / 2 + window.scrollX}px`;
-    floatEl.style.top = `${rect.top + window.scrollY}px`;
-    
+
+    floatEl.style.left = `${rect.left + rect.width / 2 + window.scrollX + jx}px`;
+    floatEl.style.top = `${rect.top + window.scrollY + jy}px`;
+
     document.body.appendChild(floatEl);
-    
-    // Le texte s'auto-détruit après 1 seconde (fin de l'animation)
-    setTimeout(() => floatEl.remove(), 1000);
+
+    setTimeout(() => floatEl.remove(), 800);
 }
 
 function spawnFloatingTextFromElement(anchorEl, text, color) {
@@ -948,7 +965,7 @@ function spawnFloatingTextFromElement(anchorEl, text, color) {
     floatEl.style.left = `${rect.left + rect.width / 2 + window.scrollX}px`;
     floatEl.style.top = `${rect.top + window.scrollY}px`;
     document.body.appendChild(floatEl);
-    setTimeout(() => floatEl.remove(), 1000);
+    setTimeout(() => floatEl.remove(), 800);
 }
 
 
@@ -977,6 +994,13 @@ function playTone(frequency, type, duration, vol = 0.1) {
         oscillator.start();
         oscillator.stop(ctx.currentTime + duration);
     } catch(e) { }
+}
+
+/** Arpège bref montant quand la cible d'objectif change. */
+function playNewObjectiveTargetSound() {
+    playTone(392, 'sine', 0.11, 0.09);
+    setTimeout(() => playTone(523.25, 'sine', 0.11, 0.09), 70);
+    setTimeout(() => playTone(659.25, 'sine', 0.14, 0.09), 140);
 }
 
 function playSuccessSound(comboCount) {
@@ -1058,6 +1082,9 @@ function updateBadgeSystem(currentCombo, maxCombo, totalScore) {
     
     if (!objectiveSlots || !fullBadgesList) return;
 
+    const prevComboSlotId = objectivePrevComboBadgeId;
+    const prevWordsSlotId = objectivePrevWordsBadgeId;
+
     objectiveSlots.innerHTML = '';
     fullBadgesList.innerHTML = '';
 
@@ -1096,23 +1123,19 @@ function updateBadgeSystem(currentCombo, maxCombo, totalScore) {
         }
     });
 
-    const prevComboId = lastObjectiveComboId;
-    const prevWordsId = lastObjectiveWordsId;
-
     // 2. Fonction de création des Objectifs
-    const createObjectiveHTML = (badge, currentVal) => {
-        // Détermine si l'objectif vient d'être atteint
-        const isCompleted = currentVal >= badge.target;
-        
-        // Si complété : on met 'unlocked', sinon : 'in-progress'
+    const createObjectiveHTML = (badge, progressVal) => {
+        const isCompleted = progressVal >= badge.target;
         const statusClass = isCompleted ? 'unlocked' : 'in-progress';
+        const counterText = `${progressVal} / ${badge.target}`;
 
         return `
             <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
                 <div class="objective-badge-name">${badge.name}</div>
-                <div class="badge ${statusClass}" data-badge-id="${badge.id}" title="${badge.name} — ${badge.desc}">
+                <div class="badge ${statusClass}" data-badge-id="${badge.id}" data-objective-type="${badge.type}" title="${badge.name} — ${badge.desc}">
                     ${badge.icon}
                 </div>
+                <div class="objective-counter" data-objective-type="${badge.type}" aria-live="polite">${counterText}</div>
             </div>
         `;
     };
@@ -1121,37 +1144,39 @@ function updateBadgeSystem(currentCombo, maxCombo, totalScore) {
     if (nextComboBadge) objectiveSlots.innerHTML += createObjectiveHTML(nextComboBadge, currentCombo);
     if (nextWordsBadge) objectiveSlots.innerHTML += createObjectiveHTML(nextWordsBadge, totalScore);
 
-    // Flash quand le badge d'objectif change (nouveau badge à viser)
-    lastObjectiveComboId = nextComboBadge ? nextComboBadge.id : null;
-    lastObjectiveWordsId = nextWordsBadge ? nextWordsBadge.id : null;
+    objectivePrevComboBadgeId = nextComboBadge ? nextComboBadge.id : null;
+    objectivePrevWordsBadgeId = nextWordsBadge ? nextWordsBadge.id : null;
 
-    const flashIfChanged = (prevId, nextId) => {
-        if (!prevId || !nextId || prevId === nextId) return;
-        const el = objectiveSlots.querySelector(`.badge[data-badge-id="${nextId}"]`);
-        if (!el) return;
-        el.classList.remove('objective-flash');
-        void el.offsetWidth; // relance animation
-        el.classList.add('objective-flash');
-        setTimeout(() => el.classList.remove('objective-flash'), 700);
+    const triggerNewObjectiveBounce = (prevSlotId, nextSlotId) => {
+        if (!prevSlotId || !nextSlotId || prevSlotId === nextSlotId) return;
+        const badgeEl = objectiveSlots.querySelector(`.badge[data-badge-id="${nextSlotId}"]`);
+        if (!badgeEl) return;
+        badgeEl.classList.remove('new-objective-bounce');
+        void badgeEl.offsetWidth;
+        badgeEl.classList.add('new-objective-bounce');
+        playNewObjectiveTargetSound();
+        badgeEl.addEventListener('animationend', () => badgeEl.classList.remove('new-objective-bounce'), { once: true });
     };
-    flashIfChanged(prevComboId, lastObjectiveComboId);
-    flashIfChanged(prevWordsId, lastObjectiveWordsId);
 
-    // Flash unique + texte pop quand un badge vient d'être gagné
+    triggerNewObjectiveBounce(prevComboSlotId, objectivePrevComboBadgeId);
+    triggerNewObjectiveBounce(prevWordsSlotId, objectivePrevWordsBadgeId);
+
     if (newlyUnlockedBadges.length) {
-        const anchor = document.getElementById('next-objectives') || objectiveSlots;
-        newlyUnlockedBadges.forEach((badge) => {
-            // 1) Pop texte dans la zone objectifs
-            spawnFloatingTextFromElement(anchor, `${badge.icon} ${badge.name} débloqué !`, 'var(--gold)');
+        newlyUnlockedBadges.forEach((badge, i) => {
+            setTimeout(() => {
+                spawnFloatingText(`${badge.icon} ${badge.name} DÉBLOQUÉ !`, 'var(--gold)', {
+                    maxJitterX: 30,
+                    maxJitterY: 20
+                });
 
-            // 2) Flash unique sur le badge dans le grimoire (liste)
-            const grimoireEl = fullBadgesList.querySelector(`.badge[data-badge-id="${badge.id}"]`);
-            if (grimoireEl) {
-                grimoireEl.classList.remove('badge-just-won');
-                void grimoireEl.offsetWidth; // relance animation
-                grimoireEl.classList.add('badge-just-won');
-                setTimeout(() => grimoireEl.classList.remove('badge-just-won'), 850);
-            }
+                const grimoireEl = fullBadgesList.querySelector(`.badge[data-badge-id="${badge.id}"]`);
+                if (grimoireEl) {
+                    grimoireEl.classList.remove('badge-just-won');
+                    void grimoireEl.offsetWidth;
+                    grimoireEl.classList.add('badge-just-won');
+                    setTimeout(() => grimoireEl.classList.remove('badge-just-won'), 850);
+                }
+            }, i * 300);
         });
     }
 
