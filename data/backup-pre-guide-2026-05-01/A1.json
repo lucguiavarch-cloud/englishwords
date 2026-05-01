@@ -1,0 +1,2310 @@
+[
+    {
+        "en": "a",
+        "fr": "un"
+    },
+    {
+        "en": "about",
+        "fr": "à propos"
+    },
+    {
+        "en": "above",
+        "fr": "au-dessus de"
+    },
+    {
+        "en": "address",
+        "fr": "adresse"
+    },
+    {
+        "en": "adjective",
+        "fr": "adjectif"
+    },
+    {
+        "en": "adult",
+        "fr": "adulte"
+    },
+    {
+        "en": "adverb",
+        "fr": "adverbe"
+    },
+    {
+        "en": "after",
+        "fr": "après"
+    },
+    {
+        "en": "afternoon",
+        "fr": "après-midi"
+    },
+    {
+        "en": "again",
+        "fr": "encore"
+    },
+    {
+        "en": "age",
+        "fr": "âge"
+    },
+    {
+        "en": "all",
+        "fr": "tous"
+    },
+    {
+        "en": "alright",
+        "fr": "très bien"
+    },
+    {
+        "en": "also",
+        "fr": "aussi"
+    },
+    {
+        "en": "always",
+        "fr": "toujours"
+    },
+    {
+        "en": "an",
+        "fr": "un"
+    },
+    {
+        "en": "and",
+        "fr": "et"
+    },
+    {
+        "en": "animal",
+        "fr": "animal"
+    },
+    {
+        "en": "answer",
+        "fr": "répondre"
+    },
+    {
+        "en": "any",
+        "fr": "n'importe lequel"
+    },
+    {
+        "en": "anything",
+        "fr": "rien"
+    },
+    {
+        "en": "apple",
+        "fr": "pomme"
+    },
+    {
+        "en": "april",
+        "fr": "avril"
+    },
+    {
+        "en": "arm",
+        "fr": "bras"
+    },
+    {
+        "en": "as",
+        "fr": "comme"
+    },
+    {
+        "en": "ask",
+        "fr": "demander"
+    },
+    {
+        "en": "at",
+        "fr": "à"
+    },
+    {
+        "en": "august",
+        "fr": "août"
+    },
+    {
+        "en": "baby",
+        "fr": "bébé"
+    },
+    {
+        "en": "back",
+        "fr": "dos"
+    },
+    {
+        "en": "bad",
+        "fr": "mauvais"
+    },
+    {
+        "en": "bag",
+        "fr": "sac"
+    },
+    {
+        "en": "ball",
+        "fr": "balle"
+    },
+    {
+        "en": "banana",
+        "fr": "banane"
+    },
+    {
+        "en": "band",
+        "fr": "groupe"
+    },
+    {
+        "en": "bank",
+        "fr": "banque"
+    },
+    {
+        "en": "bar",
+        "fr": "bar"
+    },
+    {
+        "en": "basketball",
+        "fr": "basket-ball"
+    },
+    {
+        "en": "bath",
+        "fr": "bain"
+    },
+    {
+        "en": "bathroom",
+        "fr": "salle de bain"
+    },
+    {
+        "en": "be",
+        "fr": "être"
+    },
+    {
+        "en": "beach",
+        "fr": "plage"
+    },
+    {
+        "en": "beard",
+        "fr": "barbe"
+    },
+    {
+        "en": "beautiful",
+        "fr": "beau"
+    },
+    {
+        "en": "because",
+        "fr": "parce que"
+    },
+    {
+        "en": "bed",
+        "fr": "lit"
+    },
+    {
+        "en": "bedroom",
+        "fr": "chambre à coucher"
+    },
+    {
+        "en": "beer",
+        "fr": "bière"
+    },
+    {
+        "en": "before",
+        "fr": "avant"
+    },
+    {
+        "en": "begin",
+        "fr": "commencer"
+    },
+    {
+        "en": "behind",
+        "fr": "derrière"
+    },
+    {
+        "en": "below",
+        "fr": "ci-dessous"
+    },
+    {
+        "en": "best",
+        "fr": "meilleur"
+    },
+    {
+        "en": "better",
+        "fr": "mieux"
+    },
+    {
+        "en": "between",
+        "fr": "entre"
+    },
+    {
+        "en": "big",
+        "fr": "grand"
+    },
+    {
+        "en": "bird",
+        "fr": "oiseau"
+    },
+    {
+        "en": "birthday",
+        "fr": "anniversaire"
+    },
+    {
+        "en": "biscuit",
+        "fr": "biscuit"
+    },
+    {
+        "en": "black",
+        "fr": "noir"
+    },
+    {
+        "en": "blue",
+        "fr": "bleu"
+    },
+    {
+        "en": "board",
+        "fr": "conseil"
+    },
+    {
+        "en": "boat",
+        "fr": "bateau"
+    },
+    {
+        "en": "body",
+        "fr": "corps"
+    },
+    {
+        "en": "book",
+        "fr": "livre"
+    },
+    {
+        "en": "bored",
+        "fr": "ennuyé"
+    },
+    {
+        "en": "boring",
+        "fr": "ennuyeux"
+    },
+    {
+        "en": "both",
+        "fr": "les deux"
+    },
+    {
+        "en": "bottom",
+        "fr": "bas"
+    },
+    {
+        "en": "box",
+        "fr": "boîte"
+    },
+    {
+        "en": "boy",
+        "fr": "garçon"
+    },
+    {
+        "en": "bread",
+        "fr": "pain"
+    },
+    {
+        "en": "breakfast",
+        "fr": "petit-déjeuner"
+    },
+    {
+        "en": "brother",
+        "fr": "frère"
+    },
+    {
+        "en": "brown",
+        "fr": "brun"
+    },
+    {
+        "en": "bus",
+        "fr": "bus"
+    },
+    {
+        "en": "business",
+        "fr": "entreprise"
+    },
+    {
+        "en": "but",
+        "fr": "mais"
+    },
+    {
+        "en": "butter",
+        "fr": "beurre"
+    },
+    {
+        "en": "buy",
+        "fr": "acheter"
+    },
+    {
+        "en": "bye",
+        "fr": "au revoir"
+    },
+    {
+        "en": "cake",
+        "fr": "gâteau"
+    },
+    {
+        "en": "call",
+        "fr": "appel"
+    },
+    {
+        "en": "camera",
+        "fr": "caméra"
+    },
+    {
+        "en": "can2",
+        "fr": "can2"
+    },
+    {
+        "en": "cannot",
+        "fr": "ne peut pas"
+    },
+    {
+        "en": "car",
+        "fr": "voiture"
+    },
+    {
+        "en": "carry",
+        "fr": "porter"
+    },
+    {
+        "en": "cat",
+        "fr": "chat"
+    },
+    {
+        "en": "catch",
+        "fr": "attraper"
+    },
+    {
+        "en": "cd",
+        "fr": "CD"
+    },
+    {
+        "en": "chair",
+        "fr": "chaise"
+    },
+    {
+        "en": "change",
+        "fr": "changement"
+    },
+    {
+        "en": "cheap",
+        "fr": "bon marché"
+    },
+    {
+        "en": "cheese",
+        "fr": "fromage"
+    },
+    {
+        "en": "child",
+        "fr": "enfant"
+    },
+    {
+        "en": "chip",
+        "fr": "ébrécher"
+    },
+    {
+        "en": "chocolate",
+        "fr": "chocolat"
+    },
+    {
+        "en": "choose",
+        "fr": "choisir"
+    },
+    {
+        "en": "cinema",
+        "fr": "cinéma"
+    },
+    {
+        "en": "city",
+        "fr": "ville"
+    },
+    {
+        "en": "class",
+        "fr": "classe"
+    },
+    {
+        "en": "classroom",
+        "fr": "classe"
+    },
+    {
+        "en": "clean",
+        "fr": "faire le ménage"
+    },
+    {
+        "en": "clever",
+        "fr": "intelligent"
+    },
+    {
+        "en": "clock",
+        "fr": "horloge"
+    },
+    {
+        "en": "closed",
+        "fr": "fermé"
+    },
+    {
+        "en": "clothes",
+        "fr": "vêtements"
+    },
+    {
+        "en": "coat",
+        "fr": "manteau"
+    },
+    {
+        "en": "coffee",
+        "fr": "café"
+    },
+    {
+        "en": "cold",
+        "fr": "froid"
+    },
+    {
+        "en": "colour",
+        "fr": "couleur"
+    },
+    {
+        "en": "come",
+        "fr": "viens"
+    },
+    {
+        "en": "computer",
+        "fr": "ordinateur"
+    },
+    {
+        "en": "conversation",
+        "fr": "conversation"
+    },
+    {
+        "en": "cook",
+        "fr": "cuisiner"
+    },
+    {
+        "en": "country",
+        "fr": "pays"
+    },
+    {
+        "en": "course",
+        "fr": "cours"
+    },
+    {
+        "en": "cow",
+        "fr": "vache"
+    },
+    {
+        "en": "cross",
+        "fr": "croix"
+    },
+    {
+        "en": "cup",
+        "fr": "tasse"
+    },
+    {
+        "en": "dad",
+        "fr": "papa"
+    },
+    {
+        "en": "dance",
+        "fr": "danse"
+    },
+    {
+        "en": "dancing",
+        "fr": "dansant"
+    },
+    {
+        "en": "dark",
+        "fr": "sombre"
+    },
+    {
+        "en": "date",
+        "fr": "date"
+    },
+    {
+        "en": "daughter",
+        "fr": "fille"
+    },
+    {
+        "en": "day",
+        "fr": "jour"
+    },
+    {
+        "en": "dear",
+        "fr": "cher"
+    },
+    {
+        "en": "december",
+        "fr": "décembre"
+    },
+    {
+        "en": "desk",
+        "fr": "bureau"
+    },
+    {
+        "en": "dictionary",
+        "fr": "dictionnaire"
+    },
+    {
+        "en": "die",
+        "fr": "mourir"
+    },
+    {
+        "en": "different",
+        "fr": "différent"
+    },
+    {
+        "en": "difficult",
+        "fr": "difficile"
+    },
+    {
+        "en": "dinner",
+        "fr": "dîner"
+    },
+    {
+        "en": "do",
+        "fr": "faire"
+    },
+    {
+        "en": "doctor",
+        "fr": "médecin"
+    },
+    {
+        "en": "dog",
+        "fr": "chien"
+    },
+    {
+        "en": "doll",
+        "fr": "poupée"
+    },
+    {
+        "en": "dollar",
+        "fr": "dollar"
+    },
+    {
+        "en": "door",
+        "fr": "porte"
+    },
+    {
+        "en": "down",
+        "fr": "vers le bas"
+    },
+    {
+        "en": "draw",
+        "fr": "dessiner"
+    },
+    {
+        "en": "dress",
+        "fr": "robe"
+    },
+    {
+        "en": "drink",
+        "fr": "boire"
+    },
+    {
+        "en": "drive",
+        "fr": "conduire"
+    },
+    {
+        "en": "driver",
+        "fr": "conducteur"
+    },
+    {
+        "en": "dvd",
+        "fr": "DVD"
+    },
+    {
+        "en": "each",
+        "fr": "chaque"
+    },
+    {
+        "en": "ear",
+        "fr": "oreille"
+    },
+    {
+        "en": "early",
+        "fr": "tôt"
+    },
+    {
+        "en": "easy",
+        "fr": "facile"
+    },
+    {
+        "en": "eat",
+        "fr": "manger"
+    },
+    {
+        "en": "egg",
+        "fr": "œuf"
+    },
+    {
+        "en": "eight",
+        "fr": "huit"
+    },
+    {
+        "en": "eighteen",
+        "fr": "dix-huit"
+    },
+    {
+        "en": "eleven",
+        "fr": "onze"
+    },
+    {
+        "en": "en",
+        "fr": "en"
+    },
+    {
+        "en": "end",
+        "fr": "fin"
+    },
+    {
+        "en": "enjoy",
+        "fr": "apprécier"
+    },
+    {
+        "en": "evening",
+        "fr": "soirée"
+    },
+    {
+        "en": "every",
+        "fr": "chaque"
+    },
+    {
+        "en": "example",
+        "fr": "exemple"
+    },
+    {
+        "en": "excited",
+        "fr": "excité"
+    },
+    {
+        "en": "exciting",
+        "fr": "passionnant"
+    },
+    {
+        "en": "expensive",
+        "fr": "cher"
+    },
+    {
+        "en": "eye",
+        "fr": "œil"
+    },
+    {
+        "en": "face",
+        "fr": "affronter"
+    },
+    {
+        "en": "factory",
+        "fr": "usine"
+    },
+    {
+        "en": "family",
+        "fr": "famille"
+    },
+    {
+        "en": "famous",
+        "fr": "célèbre"
+    },
+    {
+        "en": "farm",
+        "fr": "ferme"
+    },
+    {
+        "en": "fast",
+        "fr": "rapide"
+    },
+    {
+        "en": "fat",
+        "fr": "graisse"
+    },
+    {
+        "en": "father",
+        "fr": "père"
+    },
+    {
+        "en": "favourite",
+        "fr": "préféré"
+    },
+    {
+        "en": "february",
+        "fr": "février"
+    },
+    {
+        "en": "feel",
+        "fr": "sentir"
+    },
+    {
+        "en": "fifteen",
+        "fr": "quinze"
+    },
+    {
+        "en": "film",
+        "fr": "film"
+    },
+    {
+        "en": "find",
+        "fr": "trouver"
+    },
+    {
+        "en": "fine",
+        "fr": "bien"
+    },
+    {
+        "en": "finish",
+        "fr": "finition"
+    },
+    {
+        "en": "first",
+        "fr": "d'abord"
+    },
+    {
+        "en": "fish",
+        "fr": "poisson"
+    },
+    {
+        "en": "five",
+        "fr": "cinq"
+    },
+    {
+        "en": "flat",
+        "fr": "plat"
+    },
+    {
+        "en": "floor",
+        "fr": "sol"
+    },
+    {
+        "en": "flower",
+        "fr": "fleur"
+    },
+    {
+        "en": "fly",
+        "fr": "voler"
+    },
+    {
+        "en": "food",
+        "fr": "nourriture"
+    },
+    {
+        "en": "foot",
+        "fr": "pied"
+    },
+    {
+        "en": "football",
+        "fr": "football"
+    },
+    {
+        "en": "for",
+        "fr": "pour"
+    },
+    {
+        "en": "forget",
+        "fr": "oublier"
+    },
+    {
+        "en": "four",
+        "fr": "quatre"
+    },
+    {
+        "en": "fourteen",
+        "fr": "quatorze"
+    },
+    {
+        "en": "friday",
+        "fr": "vendredi"
+    },
+    {
+        "en": "friend",
+        "fr": "ami"
+    },
+    {
+        "en": "from",
+        "fr": "depuis"
+    },
+    {
+        "en": "fruit",
+        "fr": "fruit"
+    },
+    {
+        "en": "fun",
+        "fr": "amusant"
+    },
+    {
+        "en": "funny",
+        "fr": "drôle"
+    },
+    {
+        "en": "game",
+        "fr": "jeu"
+    },
+    {
+        "en": "garden",
+        "fr": "jardin"
+    },
+    {
+        "en": "get",
+        "fr": "obtenir"
+    },
+    {
+        "en": "girl",
+        "fr": "fille"
+    },
+    {
+        "en": "give",
+        "fr": "donner"
+    },
+    {
+        "en": "glass",
+        "fr": "verre"
+    },
+    {
+        "en": "glasses",
+        "fr": "lunettes"
+    },
+    {
+        "en": "go",
+        "fr": "aller"
+    },
+    {
+        "en": "good",
+        "fr": "bien"
+    },
+    {
+        "en": "goodbye",
+        "fr": "au revoir"
+    },
+    {
+        "en": "grass",
+        "fr": "herbe"
+    },
+    {
+        "en": "great",
+        "fr": "super"
+    },
+    {
+        "en": "green",
+        "fr": "vert"
+    },
+    {
+        "en": "grey",
+        "fr": "gris"
+    },
+    {
+        "en": "group",
+        "fr": "groupe"
+    },
+    {
+        "en": "guitar",
+        "fr": "guitare"
+    },
+    {
+        "en": "hair",
+        "fr": "cheveux"
+    },
+    {
+        "en": "half",
+        "fr": "moitié"
+    },
+    {
+        "en": "hand",
+        "fr": "main"
+    },
+    {
+        "en": "happy",
+        "fr": "heureux"
+    },
+    {
+        "en": "hard",
+        "fr": "dur"
+    },
+    {
+        "en": "hat",
+        "fr": "chapeau"
+    },
+    {
+        "en": "have",
+        "fr": "avoir"
+    },
+    {
+        "en": "he",
+        "fr": "il"
+    },
+    {
+        "en": "head",
+        "fr": "tête"
+    },
+    {
+        "en": "hear",
+        "fr": "entendre"
+    },
+    {
+        "en": "hello",
+        "fr": "Bonjour"
+    },
+    {
+        "en": "help",
+        "fr": "aide"
+    },
+    {
+        "en": "her",
+        "fr": "son"
+    },
+    {
+        "en": "here",
+        "fr": "ici"
+    },
+    {
+        "en": "hi",
+        "fr": "Salut"
+    },
+    {
+        "en": "him",
+        "fr": "lui"
+    },
+    {
+        "en": "his",
+        "fr": "son"
+    },
+    {
+        "en": "holiday",
+        "fr": "vacances"
+    },
+    {
+        "en": "home",
+        "fr": "maison"
+    },
+    {
+        "en": "homework",
+        "fr": "devoirs"
+    },
+    {
+        "en": "horse",
+        "fr": "cheval"
+    },
+    {
+        "en": "hospital",
+        "fr": "hôpital"
+    },
+    {
+        "en": "hot",
+        "fr": "chaud"
+    },
+    {
+        "en": "hotel",
+        "fr": "hôtel"
+    },
+    {
+        "en": "hour",
+        "fr": "heure"
+    },
+    {
+        "en": "how",
+        "fr": "comment"
+    },
+    {
+        "en": "hungry",
+        "fr": "affamé"
+    },
+    {
+        "en": "husband",
+        "fr": "mari"
+    },
+    {
+        "en": "i",
+        "fr": "je"
+    },
+    {
+        "en": "important",
+        "fr": "important"
+    },
+    {
+        "en": "in",
+        "fr": "dans"
+    },
+    {
+        "en": "interesting",
+        "fr": "intéressant"
+    },
+    {
+        "en": "into",
+        "fr": "dans"
+    },
+    {
+        "en": "invite",
+        "fr": "inviter"
+    },
+    {
+        "en": "it",
+        "fr": "il"
+    },
+    {
+        "en": "its",
+        "fr": "c'est"
+    },
+    {
+        "en": "jacket",
+        "fr": "veste"
+    },
+    {
+        "en": "january",
+        "fr": "Janvier"
+    },
+    {
+        "en": "jeans",
+        "fr": "jeans"
+    },
+    {
+        "en": "job",
+        "fr": "emploi"
+    },
+    {
+        "en": "juice",
+        "fr": "jus"
+    },
+    {
+        "en": "july",
+        "fr": "juillet"
+    },
+    {
+        "en": "june",
+        "fr": "juin"
+    },
+    {
+        "en": "key",
+        "fr": "clé"
+    },
+    {
+        "en": "kick",
+        "fr": "coup"
+    },
+    {
+        "en": "kind",
+        "fr": "gentil"
+    },
+    {
+        "en": "kitchen",
+        "fr": "cuisine"
+    },
+    {
+        "en": "knife",
+        "fr": "couteau"
+    },
+    {
+        "en": "know",
+        "fr": "savoir"
+    },
+    {
+        "en": "language",
+        "fr": "langue"
+    },
+    {
+        "en": "last",
+        "fr": "dernier"
+    },
+    {
+        "en": "late",
+        "fr": "en retard"
+    },
+    {
+        "en": "later",
+        "fr": "plus tard"
+    },
+    {
+        "en": "learn",
+        "fr": "apprendre"
+    },
+    {
+        "en": "leave",
+        "fr": "partir"
+    },
+    {
+        "en": "leg",
+        "fr": "jambe"
+    },
+    {
+        "en": "lesson",
+        "fr": "leçon"
+    },
+    {
+        "en": "letter",
+        "fr": "lettre"
+    },
+    {
+        "en": "life",
+        "fr": "vie"
+    },
+    {
+        "en": "light",
+        "fr": "lumière"
+    },
+    {
+        "en": "like",
+        "fr": "comme"
+    },
+    {
+        "en": "listen",
+        "fr": "écouter"
+    },
+    {
+        "en": "little",
+        "fr": "petit"
+    },
+    {
+        "en": "long",
+        "fr": "long"
+    },
+    {
+        "en": "look",
+        "fr": "regarder"
+    },
+    {
+        "en": "lot",
+        "fr": "parcelle"
+    },
+    {
+        "en": "love",
+        "fr": "amour"
+    },
+    {
+        "en": "lunch",
+        "fr": "déjeuner"
+    },
+    {
+        "en": "make",
+        "fr": "faire"
+    },
+    {
+        "en": "man",
+        "fr": "homme"
+    },
+    {
+        "en": "many",
+        "fr": "beaucoup"
+    },
+    {
+        "en": "march",
+        "fr": "mars"
+    },
+    {
+        "en": "may",
+        "fr": "peut"
+    },
+    {
+        "en": "me",
+        "fr": "moi"
+    },
+    {
+        "en": "meal",
+        "fr": "repas"
+    },
+    {
+        "en": "meat",
+        "fr": "viande"
+    },
+    {
+        "en": "meet",
+        "fr": "rencontrer"
+    },
+    {
+        "en": "message",
+        "fr": "message"
+    },
+    {
+        "en": "milk",
+        "fr": "lait"
+    },
+    {
+        "en": "minute",
+        "fr": "minute"
+    },
+    {
+        "en": "miss",
+        "fr": "manquer"
+    },
+    {
+        "en": "mobile",
+        "fr": "mobile"
+    },
+    {
+        "en": "monday",
+        "fr": "lundi"
+    },
+    {
+        "en": "money",
+        "fr": "argent"
+    },
+    {
+        "en": "month",
+        "fr": "mois"
+    },
+    {
+        "en": "more",
+        "fr": "plus"
+    },
+    {
+        "en": "morning",
+        "fr": "matin"
+    },
+    {
+        "en": "mother",
+        "fr": "mère"
+    },
+    {
+        "en": "mouth",
+        "fr": "bouche"
+    },
+    {
+        "en": "movie",
+        "fr": "film"
+    },
+    {
+        "en": "mr",
+        "fr": "M."
+    },
+    {
+        "en": "mrs",
+        "fr": "Mme"
+    },
+    {
+        "en": "much",
+        "fr": "beaucoup"
+    },
+    {
+        "en": "mum",
+        "fr": "maman"
+    },
+    {
+        "en": "museum",
+        "fr": "musée"
+    },
+    {
+        "en": "music",
+        "fr": "musique"
+    },
+    {
+        "en": "my",
+        "fr": "mon"
+    },
+    {
+        "en": "name",
+        "fr": "nom"
+    },
+    {
+        "en": "nationality",
+        "fr": "nationalité"
+    },
+    {
+        "en": "near",
+        "fr": "près"
+    },
+    {
+        "en": "need",
+        "fr": "besoin"
+    },
+    {
+        "en": "never",
+        "fr": "jamais"
+    },
+    {
+        "en": "new",
+        "fr": "nouveau"
+    },
+    {
+        "en": "newspaper",
+        "fr": "journal"
+    },
+    {
+        "en": "next",
+        "fr": "suivant"
+    },
+    {
+        "en": "nice",
+        "fr": "bon"
+    },
+    {
+        "en": "night",
+        "fr": "nuit"
+    },
+    {
+        "en": "nine",
+        "fr": "neuf"
+    },
+    {
+        "en": "nineteen",
+        "fr": "dix-neuf"
+    },
+    {
+        "en": "no",
+        "fr": "Non"
+    },
+    {
+        "en": "noise",
+        "fr": "bruit"
+    },
+    {
+        "en": "nose",
+        "fr": "nez"
+    },
+    {
+        "en": "not",
+        "fr": "pas"
+    },
+    {
+        "en": "note",
+        "fr": "note"
+    },
+    {
+        "en": "noun",
+        "fr": "nom"
+    },
+    {
+        "en": "november",
+        "fr": "novembre"
+    },
+    {
+        "en": "now",
+        "fr": "maintenant"
+    },
+    {
+        "en": "number",
+        "fr": "nombre"
+    },
+    {
+        "en": "october",
+        "fr": "octobre"
+    },
+    {
+        "en": "of",
+        "fr": "de"
+    },
+    {
+        "en": "often",
+        "fr": "souvent"
+    },
+    {
+        "en": "oh",
+        "fr": "Oh"
+    },
+    {
+        "en": "old",
+        "fr": "vieux"
+    },
+    {
+        "en": "on",
+        "fr": "sur"
+    },
+    {
+        "en": "one",
+        "fr": "un"
+    },
+    {
+        "en": "only",
+        "fr": "seulement"
+    },
+    {
+        "en": "open",
+        "fr": "ouvrir"
+    },
+    {
+        "en": "or",
+        "fr": "ou"
+    },
+    {
+        "en": "orange",
+        "fr": "orange"
+    },
+    {
+        "en": "other",
+        "fr": "autre"
+    },
+    {
+        "en": "our",
+        "fr": "notre"
+    },
+    {
+        "en": "page",
+        "fr": "page"
+    },
+    {
+        "en": "paint",
+        "fr": "peinture"
+    },
+    {
+        "en": "pair",
+        "fr": "paire"
+    },
+    {
+        "en": "paper",
+        "fr": "papier"
+    },
+    {
+        "en": "parent",
+        "fr": "mère"
+    },
+    {
+        "en": "park",
+        "fr": "parc"
+    },
+    {
+        "en": "part",
+        "fr": "partie"
+    },
+    {
+        "en": "party",
+        "fr": "faire la fête"
+    },
+    {
+        "en": "past",
+        "fr": "passé"
+    },
+    {
+        "en": "pay",
+        "fr": "payer"
+    },
+    {
+        "en": "pen",
+        "fr": "stylo"
+    },
+    {
+        "en": "pencil",
+        "fr": "crayon"
+    },
+    {
+        "en": "people",
+        "fr": "personnes"
+    },
+    {
+        "en": "person",
+        "fr": "personne"
+    },
+    {
+        "en": "pet",
+        "fr": "animal de compagnie"
+    },
+    {
+        "en": "phone",
+        "fr": "téléphone"
+    },
+    {
+        "en": "photo",
+        "fr": "photo"
+    },
+    {
+        "en": "picnic",
+        "fr": "pique-nique"
+    },
+    {
+        "en": "picture",
+        "fr": "image"
+    },
+    {
+        "en": "pig",
+        "fr": "cochon"
+    },
+    {
+        "en": "pizza",
+        "fr": "pizza"
+    },
+    {
+        "en": "place",
+        "fr": "lieu"
+    },
+    {
+        "en": "plane",
+        "fr": "avion"
+    },
+    {
+        "en": "plant",
+        "fr": "usine"
+    },
+    {
+        "en": "plate",
+        "fr": "plaque"
+    },
+    {
+        "en": "play",
+        "fr": "jouer"
+    },
+    {
+        "en": "player",
+        "fr": "joueur"
+    },
+    {
+        "en": "please",
+        "fr": "s'il te plaît"
+    },
+    {
+        "en": "poor",
+        "fr": "pauvre"
+    },
+    {
+        "en": "possible",
+        "fr": "possible"
+    },
+    {
+        "en": "potato",
+        "fr": "pomme de terre"
+    },
+    {
+        "en": "practise",
+        "fr": "pratique"
+    },
+    {
+        "en": "preposition",
+        "fr": "préposition"
+    },
+    {
+        "en": "problem",
+        "fr": "problème"
+    },
+    {
+        "en": "put",
+        "fr": "mettre"
+    },
+    {
+        "en": "quarter",
+        "fr": "quart"
+    },
+    {
+        "en": "question",
+        "fr": "question"
+    },
+    {
+        "en": "quick",
+        "fr": "rapide"
+    },
+    {
+        "en": "radio",
+        "fr": "radio"
+    },
+    {
+        "en": "rain",
+        "fr": "pluie"
+    },
+    {
+        "en": "read",
+        "fr": "lire"
+    },
+    {
+        "en": "reading",
+        "fr": "en lisant"
+    },
+    {
+        "en": "ready",
+        "fr": "prêt"
+    },
+    {
+        "en": "really",
+        "fr": "vraiment"
+    },
+    {
+        "en": "red",
+        "fr": "rouge"
+    },
+    {
+        "en": "remember",
+        "fr": "souviens-toi"
+    },
+    {
+        "en": "restaurant",
+        "fr": "restaurant"
+    },
+    {
+        "en": "rice",
+        "fr": "riz"
+    },
+    {
+        "en": "ride",
+        "fr": "monter"
+    },
+    {
+        "en": "right",
+        "fr": "droite"
+    },
+    {
+        "en": "river",
+        "fr": "rivière"
+    },
+    {
+        "en": "road",
+        "fr": "route"
+    },
+    {
+        "en": "room",
+        "fr": "chambre"
+    },
+    {
+        "en": "run",
+        "fr": "courir"
+    },
+    {
+        "en": "sad",
+        "fr": "triste"
+    },
+    {
+        "en": "safe",
+        "fr": "sûr"
+    },
+    {
+        "en": "salt",
+        "fr": "sel"
+    },
+    {
+        "en": "same",
+        "fr": "même"
+    },
+    {
+        "en": "sandwich",
+        "fr": "sandwich"
+    },
+    {
+        "en": "saturday",
+        "fr": "Samedi"
+    },
+    {
+        "en": "say",
+        "fr": "dire"
+    },
+    {
+        "en": "school",
+        "fr": "école"
+    },
+    {
+        "en": "sea",
+        "fr": "mer"
+    },
+    {
+        "en": "second",
+        "fr": "deuxième"
+    },
+    {
+        "en": "see",
+        "fr": "voir"
+    },
+    {
+        "en": "send",
+        "fr": "envoyer"
+    },
+    {
+        "en": "sentence",
+        "fr": "phrase"
+    },
+    {
+        "en": "september",
+        "fr": "septembre"
+    },
+    {
+        "en": "seven",
+        "fr": "Sept"
+    },
+    {
+        "en": "seventeen",
+        "fr": "dix-sept"
+    },
+    {
+        "en": "she",
+        "fr": "elle"
+    },
+    {
+        "en": "sheep",
+        "fr": "mouton"
+    },
+    {
+        "en": "shirt",
+        "fr": "chemise"
+    },
+    {
+        "en": "shoe",
+        "fr": "chaussure"
+    },
+    {
+        "en": "shop",
+        "fr": "boutique"
+    },
+    {
+        "en": "shopping",
+        "fr": "achats"
+    },
+    {
+        "en": "short",
+        "fr": "court"
+    },
+    {
+        "en": "show",
+        "fr": "montrer"
+    },
+    {
+        "en": "shower",
+        "fr": "douche"
+    },
+    {
+        "en": "sing",
+        "fr": "chanter"
+    },
+    {
+        "en": "sister",
+        "fr": "sœur"
+    },
+    {
+        "en": "sit",
+        "fr": "s'asseoir"
+    },
+    {
+        "en": "six",
+        "fr": "six"
+    },
+    {
+        "en": "sixteen",
+        "fr": "seize"
+    },
+    {
+        "en": "skirt",
+        "fr": "jupe"
+    },
+    {
+        "en": "sleep",
+        "fr": "dormir"
+    },
+    {
+        "en": "slim",
+        "fr": "mince"
+    },
+    {
+        "en": "slow",
+        "fr": "lent"
+    },
+    {
+        "en": "small",
+        "fr": "petit"
+    },
+    {
+        "en": "smoke",
+        "fr": "fumée"
+    },
+    {
+        "en": "smoking",
+        "fr": "fumeur"
+    },
+    {
+        "en": "snow",
+        "fr": "neige"
+    },
+    {
+        "en": "some",
+        "fr": "quelques"
+    },
+    {
+        "en": "something",
+        "fr": "quelque chose"
+    },
+    {
+        "en": "sometimes",
+        "fr": "parfois"
+    },
+    {
+        "en": "son",
+        "fr": "fils"
+    },
+    {
+        "en": "soon",
+        "fr": "bientôt"
+    },
+    {
+        "en": "sorry",
+        "fr": "Désolé"
+    },
+    {
+        "en": "soup",
+        "fr": "soupe"
+    },
+    {
+        "en": "speak",
+        "fr": "parler"
+    },
+    {
+        "en": "sport",
+        "fr": "sport"
+    },
+    {
+        "en": "start",
+        "fr": "commencer"
+    },
+    {
+        "en": "station",
+        "fr": "gare"
+    },
+    {
+        "en": "stay",
+        "fr": "rester"
+    },
+    {
+        "en": "stop",
+        "fr": "arrêt"
+    },
+    {
+        "en": "street",
+        "fr": "rue"
+    },
+    {
+        "en": "student",
+        "fr": "étudiant"
+    },
+    {
+        "en": "study",
+        "fr": "étude"
+    },
+    {
+        "en": "sugar",
+        "fr": "sucre"
+    },
+    {
+        "en": "summer",
+        "fr": "été"
+    },
+    {
+        "en": "sun",
+        "fr": "soleil"
+    },
+    {
+        "en": "sunday",
+        "fr": "dimanche"
+    },
+    {
+        "en": "supermarket",
+        "fr": "supermarché"
+    },
+    {
+        "en": "sweet",
+        "fr": "doux"
+    },
+    {
+        "en": "swim",
+        "fr": "nager"
+    },
+    {
+        "en": "table",
+        "fr": "tableau"
+    },
+    {
+        "en": "take",
+        "fr": "prendre"
+    },
+    {
+        "en": "talk",
+        "fr": "parler"
+    },
+    {
+        "en": "tall",
+        "fr": "grand"
+    },
+    {
+        "en": "taxi",
+        "fr": "Taxi"
+    },
+    {
+        "en": "tea",
+        "fr": "thé"
+    },
+    {
+        "en": "teach",
+        "fr": "enseigner"
+    },
+    {
+        "en": "teacher",
+        "fr": "professeur"
+    },
+    {
+        "en": "television",
+        "fr": "télévision"
+    },
+    {
+        "en": "tell",
+        "fr": "dire"
+    },
+    {
+        "en": "ten",
+        "fr": "dix"
+    },
+    {
+        "en": "tennis",
+        "fr": "tennis"
+    },
+    {
+        "en": "test",
+        "fr": "test"
+    },
+    {
+        "en": "than",
+        "fr": "que"
+    },
+    {
+        "en": "thanks",
+        "fr": "merci"
+    },
+    {
+        "en": "that",
+        "fr": "que"
+    },
+    {
+        "en": "the",
+        "fr": "le"
+    },
+    {
+        "en": "their",
+        "fr": "leur"
+    },
+    {
+        "en": "them",
+        "fr": "eux"
+    },
+    {
+        "en": "then",
+        "fr": "alors"
+    },
+    {
+        "en": "there",
+        "fr": "là"
+    },
+    {
+        "en": "these",
+        "fr": "ces"
+    },
+    {
+        "en": "they",
+        "fr": "ils"
+    },
+    {
+        "en": "thing",
+        "fr": "chose"
+    },
+    {
+        "en": "think",
+        "fr": "pense"
+    },
+    {
+        "en": "thirteen",
+        "fr": "treize"
+    },
+    {
+        "en": "this",
+        "fr": "ce"
+    },
+    {
+        "en": "those",
+        "fr": "ceux"
+    },
+    {
+        "en": "three",
+        "fr": "trois"
+    },
+    {
+        "en": "thursday",
+        "fr": "Jeudi"
+    },
+    {
+        "en": "ticket",
+        "fr": "billet"
+    },
+    {
+        "en": "time",
+        "fr": "temps"
+    },
+    {
+        "en": "tired",
+        "fr": "fatigué"
+    },
+    {
+        "en": "to",
+        "fr": "à"
+    },
+    {
+        "en": "today",
+        "fr": "aujourd'hui"
+    },
+    {
+        "en": "together",
+        "fr": "ensemble"
+    },
+    {
+        "en": "toilet",
+        "fr": "toilettes"
+    },
+    {
+        "en": "tomato",
+        "fr": "tomate"
+    },
+    {
+        "en": "tomorrow",
+        "fr": "demain"
+    },
+    {
+        "en": "tonight",
+        "fr": "ce soir"
+    },
+    {
+        "en": "too",
+        "fr": "aussi"
+    },
+    {
+        "en": "tooth",
+        "fr": "dent"
+    },
+    {
+        "en": "town",
+        "fr": "ville"
+    },
+    {
+        "en": "train",
+        "fr": "former"
+    },
+    {
+        "en": "travel",
+        "fr": "voyage"
+    },
+    {
+        "en": "tree",
+        "fr": "arbre"
+    },
+    {
+        "en": "trousers",
+        "fr": "pantalon"
+    },
+    {
+        "en": "tuesday",
+        "fr": "Mardi"
+    },
+    {
+        "en": "tv",
+        "fr": "TV"
+    },
+    {
+        "en": "twelve",
+        "fr": "douze"
+    },
+    {
+        "en": "twenty",
+        "fr": "vingt"
+    },
+    {
+        "en": "two",
+        "fr": "deux"
+    },
+    {
+        "en": "under",
+        "fr": "sous"
+    },
+    {
+        "en": "understand",
+        "fr": "comprendre"
+    },
+    {
+        "en": "university",
+        "fr": "université"
+    },
+    {
+        "en": "until",
+        "fr": "jusqu'à"
+    },
+    {
+        "en": "up",
+        "fr": "en haut"
+    },
+    {
+        "en": "us",
+        "fr": "nous"
+    },
+    {
+        "en": "vegetable",
+        "fr": "légume"
+    },
+    {
+        "en": "verb",
+        "fr": "verbe"
+    },
+    {
+        "en": "very",
+        "fr": "très"
+    },
+    {
+        "en": "village",
+        "fr": "village"
+    },
+    {
+        "en": "visit",
+        "fr": "visite"
+    },
+    {
+        "en": "wait",
+        "fr": "attendez"
+    },
+    {
+        "en": "waiter",
+        "fr": "serveur"
+    },
+    {
+        "en": "waitress",
+        "fr": "serveuse"
+    },
+    {
+        "en": "wake",
+        "fr": "se réveiller"
+    },
+    {
+        "en": "walk",
+        "fr": "marcher"
+    },
+    {
+        "en": "wall",
+        "fr": "mur"
+    },
+    {
+        "en": "want",
+        "fr": "vouloir"
+    },
+    {
+        "en": "warm",
+        "fr": "chaud"
+    },
+    {
+        "en": "wash",
+        "fr": "laver"
+    },
+    {
+        "en": "watch",
+        "fr": "montre"
+    },
+    {
+        "en": "water",
+        "fr": "eau"
+    },
+    {
+        "en": "we",
+        "fr": "nous"
+    },
+    {
+        "en": "wear",
+        "fr": "porter"
+    },
+    {
+        "en": "weather",
+        "fr": "météo"
+    },
+    {
+        "en": "wednesday",
+        "fr": "Mercredi"
+    },
+    {
+        "en": "week",
+        "fr": "semaine"
+    },
+    {
+        "en": "weekend",
+        "fr": "fin de semaine"
+    },
+    {
+        "en": "well",
+        "fr": "Bien"
+    },
+    {
+        "en": "what",
+        "fr": "quoi"
+    },
+    {
+        "en": "when",
+        "fr": "quand"
+    },
+    {
+        "en": "where",
+        "fr": "où"
+    },
+    {
+        "en": "which",
+        "fr": "lequel"
+    },
+    {
+        "en": "white",
+        "fr": "blanc"
+    },
+    {
+        "en": "who",
+        "fr": "qui"
+    },
+    {
+        "en": "why",
+        "fr": "pourquoi"
+    },
+    {
+        "en": "wife",
+        "fr": "épouse"
+    },
+    {
+        "en": "will",
+        "fr": "volonté"
+    },
+    {
+        "en": "wind1",
+        "fr": "vent1"
+    },
+    {
+        "en": "window",
+        "fr": "fenêtre"
+    },
+    {
+        "en": "wine",
+        "fr": "vin"
+    },
+    {
+        "en": "winter",
+        "fr": "hiver"
+    },
+    {
+        "en": "with",
+        "fr": "avec"
+    },
+    {
+        "en": "woman",
+        "fr": "femme"
+    },
+    {
+        "en": "work",
+        "fr": "travail"
+    },
+    {
+        "en": "world",
+        "fr": "monde"
+    },
+    {
+        "en": "worry",
+        "fr": "inquiétude"
+    },
+    {
+        "en": "would",
+        "fr": "serait"
+    },
+    {
+        "en": "write",
+        "fr": "écrire"
+    },
+    {
+        "en": "writing",
+        "fr": "en écrivant"
+    },
+    {
+        "en": "wrong",
+        "fr": "faux"
+    },
+    {
+        "en": "year",
+        "fr": "année"
+    },
+    {
+        "en": "yellow",
+        "fr": "jaune"
+    },
+    {
+        "en": "yes",
+        "fr": "Oui"
+    },
+    {
+        "en": "yesterday",
+        "fr": "hier"
+    },
+    {
+        "en": "you",
+        "fr": "toi"
+    },
+    {
+        "en": "young",
+        "fr": "jeune"
+    },
+    {
+        "en": "your",
+        "fr": "ton"
+    },
+    {
+        "en": "zoo",
+        "fr": "zoo"
+    }
+]

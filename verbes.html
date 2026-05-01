@@ -44,40 +44,56 @@
         .btn-add { background: var(--success); width: 100%; margin-bottom: 10px; }
         .reservoir-section { background: #fffafb; border: 1px solid #ffd1df; padding: 12px; border-radius: 10px; margin-bottom: 20px; }
         .word-tag { background: white; border: 1px solid #f06292; color: #c2185b; padding: 3px 8px; border-radius: 12px; font-size: 11px; margin-right: 5px; }
-		.container { position: relative; padding-top: 60px; } /* On laisse de la place en haut */
 
-	.btn-index {
-		position: absolute;
-		top: 20px;
-		left: 20px;
-		text-decoration: none;
-		background: #f8f9fa;
-		color: #2c3e50;
-		padding: 8px 15px;
-		border-radius: 10px;
-		font-size: 13px;
-		font-weight: bold;
-		border: 1px solid #eee;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		transition: 0.2s;
-	}
-
-	.btn-index:hover {
-		background: white;
-		box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-		transform: translateY(-1px);
-	}
+        .page-top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #e8ecef;
+        }
+        .page-brand {
+            font-size: 11px;
+            color: #bdc3c7;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-align: right;
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+        .btn-index {
+            position: static;
+            flex-shrink: 0;
+            text-decoration: none;
+            background: var(--primary);
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: bold;
+            border: none;
+            box-shadow: 0 2px 8px rgba(74, 144, 226, 0.35);
+            transition: 0.2s;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-index:hover {
+            filter: brightness(1.08);
+            transform: translateY(-1px);
+        }
     </style>
 </head>
 <body>
 <div class="container">
-    <a href="index.html" class="btn-index">🏠 INDEX</a>
-
-    <div style="font-size: 12px; color: #bdc3c7; font-weight: bold; letter-spacing: 2px;">
-        ENGLISH LEARNING HUB
-    </div>
-</nav>
-<div class="container">
+    <header class="page-top-bar">
+        <a href="index.html" class="btn-index">🏠 Hub</a>
+        <span class="page-brand">ENGLISH LEARNING HUB</span>
+    </header>
     <div class="streak-bar">
         <div class="s-badge s-days">
             <span id="stk-days">0</span><span class="s-label">Jours 🔥</span>

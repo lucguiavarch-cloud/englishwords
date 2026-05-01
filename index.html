@@ -2,10 +2,17 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<a href="vocabulaire.html" class="card vocab">
-    <title>English Learning Words</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>English Hub</title>
+    <script>
+    (function () {
+        try {
+            if (localStorage.getItem('learnEnglish_onboarding_v1') === '1') {
+                document.documentElement.classList.add('onboarding-done');
+            }
+        } catch (e) { /* private mode / denied */ }
+    })();
+    </script>
     <style>
     :root {
         --primary: #4a90e2;
@@ -26,7 +33,7 @@
     }
 
     .hub-container {
-        max-width: 600px; /* Plus étroit pour un look appli */
+        max-width: 600px;
         margin: 0 auto;
     }
 
@@ -45,7 +52,7 @@
 
     .cards-grid {
         display: flex;
-        flex-direction: column; /* Liste verticale sur mobile */
+        flex-direction: column;
         gap: 15px;
     }
 
@@ -58,12 +65,12 @@
         text-decoration: none;
         color: inherit;
         display: grid;
-        grid-template-columns: 60px 1fr; /* Icône à gauche, texte à droite */
+        grid-template-columns: 60px 1fr;
         align-items: center;
         border: 2px solid transparent;
     }
 
-    .card:active { transform: scale(0.98); } /* Effet de pression sur mobile */
+    .card:active { transform: scale(0.98); }
 
     .icon {
         font-size: 35px;
@@ -85,7 +92,6 @@
         line-height: 1.3;
     }
 
-    /* Bordures de couleurs au clic/hover */
     .card.vocab:hover, .card.vocab:active { border-color: var(--primary); }
     .card.verbs:hover, .card.verbs:active { border-color: var(--secondary); }
     .card.video:hover, .card.video:active { border-color: var(--bbc-red); }
@@ -97,9 +103,169 @@
         font-size: 0.75rem;
         color: #bdc3c7;
     }
-</style>
+
+    .footer-info button {
+        display: block;
+        margin: 10px auto 0;
+        background: none;
+        border: none;
+        color: #95a5a6;
+        font-size: inherit;
+        font-family: inherit;
+        text-decoration: underline;
+        cursor: pointer;
+        padding: 4px 8px;
+    }
+
+    .footer-info button:hover { color: var(--primary); }
+
+    /* Onboarding */
+    html.onboarding-done #onboarding-screen {
+        display: none !important;
+    }
+
+    #onboarding-screen {
+        position: fixed;
+        inset: 0;
+        z-index: 10000;
+        background: linear-gradient(165deg, #eef4fc 0%, var(--light) 45%, #e8f0f8 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 24px 20px;
+        box-sizing: border-box;
+    }
+
+    .onboarding-panel {
+        width: 100%;
+        max-width: 420px;
+        background: var(--white);
+        border-radius: 20px;
+        padding: 28px 24px 20px;
+        box-shadow: 0 12px 40px rgba(44, 62, 80, 0.12);
+        border: 1px solid rgba(74, 144, 226, 0.15);
+    }
+
+    .onboarding-emoji {
+        font-size: 3rem;
+        text-align: center;
+        line-height: 1;
+        margin-bottom: 16px;
+    }
+
+    .onboarding-panel h2 {
+        font-size: 1.35rem;
+        text-align: center;
+        margin: 0 0 12px;
+        color: var(--dark);
+    }
+
+    .onboarding-panel .onboarding-text {
+        font-size: 0.95rem;
+        color: #5d6d7e;
+        line-height: 1.55;
+        margin: 0;
+        text-align: center;
+    }
+
+    .onboarding-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin: 22px 0 18px;
+    }
+
+    .onboarding-dots button {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border: none;
+        padding: 0;
+        background: #d5d8dc;
+        cursor: pointer;
+        transition: transform 0.15s, background 0.15s;
+    }
+
+    .onboarding-dots button[aria-current="true"] {
+        background: var(--primary);
+        transform: scale(1.25);
+    }
+
+    .onboarding-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .onboarding-actions .left { margin-right: auto; }
+    .onboarding-actions .right { margin-left: auto; display: flex; gap: 10px; }
+
+    #onboarding-screen button.btn-ghost {
+        background: transparent;
+        border: none;
+        color: #7f8c8d;
+        font-size: 0.9rem;
+        font-family: inherit;
+        cursor: pointer;
+        padding: 10px 12px;
+        border-radius: 10px;
+    }
+
+    #onboarding-screen button.btn-ghost:hover {
+        background: rgba(0,0,0,0.04);
+        color: var(--dark);
+    }
+
+    #onboarding-screen button.btn-primary {
+        background: var(--primary);
+        color: var(--white);
+        border: none;
+        font-size: 0.95rem;
+        font-weight: 600;
+        font-family: inherit;
+        padding: 12px 22px;
+        border-radius: 12px;
+        cursor: pointer;
+        box-shadow: 0 4px 14px rgba(74, 144, 226, 0.35);
+    }
+
+    #onboarding-screen button.btn-primary:hover {
+        filter: brightness(1.05);
+    }
+
+    #onboarding-screen button.btn-primary:active {
+        transform: scale(0.98);
+    }
+
+    #onboarding-screen button:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+        box-shadow: none;
+    }
+    </style>
 </head>
 <body>
+
+<div id="onboarding-screen" role="dialog" aria-modal="true" aria-labelledby="onboarding-title">
+    <div class="onboarding-panel">
+        <div class="onboarding-emoji" id="onboarding-emoji" aria-hidden="true">👋</div>
+        <h2 id="onboarding-title">Bienvenue</h2>
+        <p class="onboarding-text" id="onboarding-body"></p>
+        <div class="onboarding-dots" id="onboarding-dots" aria-label="Étapes"></div>
+        <div class="onboarding-actions">
+            <div class="left">
+                <button type="button" class="btn-ghost" id="onboarding-skip">Passer</button>
+            </div>
+            <div class="right">
+                <button type="button" class="btn-ghost" id="onboarding-prev">Précédent</button>
+                <button type="button" class="btn-primary" id="onboarding-next">Suivant</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="hub-container">
     <h1>English Hub</h1>
@@ -122,7 +288,7 @@
             </div>
         </a>
 
-        <a href="https://www.bbc.co.uk/learningenglish/english/features/6-minute-english" target="_blank" class="card video">
+        <a href="https://www.bbc.co.uk/learningenglish/english/features/6-minute-english" target="_blank" rel="noopener noreferrer" class="card video">
             <div class="icon">📺</div>
             <div class="card-content">
                 <h2>BBC Learning</h2>
@@ -130,7 +296,7 @@
             </div>
         </a>
 
-        <a href="https://www.newsinlevels.com/" target="_blank" class="card reading">
+        <a href="https://www.newsinlevels.com/" target="_blank" rel="noopener noreferrer" class="card reading">
             <div class="icon">📰</div>
             <div class="card-content">
                 <h2>Daily Reading</h2>
@@ -141,8 +307,122 @@
 
     <div class="footer-info">
         Statistiques sauvegardées localement.
+        <button type="button" id="replay-onboarding">Revoir l’introduction</button>
     </div>
 </div>
 
+<script>
+(function () {
+    var STORAGE_KEY = 'learnEnglish_onboarding_v1';
+    var slides = [
+        {
+            emoji: '👋',
+            title: 'Bienvenue sur English Hub',
+            text: 'C’est ton tableau de bord : vocabulaire, verbes irréguliers et des liens pour t’entraîner au quotidien. En quelques écrans, tu vois comment tout s’articule.'
+        },
+        {
+            emoji: '📚',
+            title: 'Vocabulaire',
+            text: 'Choisis un thème, réponds au quiz, gagne de l’XP et remplis tes objectifs. Tes progrès et ton inventaire restent sur cet appareil (navigateur).'
+        },
+        {
+            emoji: '⚡',
+            title: 'Verbes irréguliers',
+            text: 'Une page dédiée pour réviser les trois formes (base, prétérit, participe). Idéal en complément du vocabulaire.'
+        },
+        {
+            emoji: '🌍',
+            title: 'Ressources en ligne',
+            text: 'BBC 6 Minute English et la lecture graduée t’ouvrent l’oreille et la lecture en vrai anglais. Ces liens s’ouvrent dans un nouvel onglet.'
+        },
+        {
+            emoji: '🚀',
+            title: 'C’est parti',
+            text: 'Tu peux revenir quand tu veux : rien n’est envoyé sur un serveur pour cette appli. Pour revoir cette introduction, utilise le lien en bas du hub.'
+        }
+    ];
+
+    var idx = 0;
+    var elScreen = document.getElementById('onboarding-screen');
+    var elEmoji = document.getElementById('onboarding-emoji');
+    var elTitle = document.getElementById('onboarding-title');
+    var elBody = document.getElementById('onboarding-body');
+    var elDots = document.getElementById('onboarding-dots');
+    var btnPrev = document.getElementById('onboarding-prev');
+    var btnNext = document.getElementById('onboarding-next');
+    var btnSkip = document.getElementById('onboarding-skip');
+
+    function finish() {
+        try {
+            localStorage.setItem(STORAGE_KEY, '1');
+        } catch (e) { /* ignore */ }
+        document.documentElement.classList.add('onboarding-done');
+    }
+
+    function renderDots() {
+        elDots.innerHTML = '';
+        for (var i = 0; i < slides.length; i++) {
+            var b = document.createElement('button');
+            b.type = 'button';
+            b.setAttribute('aria-label', 'Étape ' + (i + 1));
+            if (i === idx) b.setAttribute('aria-current', 'true');
+            (function (j) {
+                b.addEventListener('click', function () {
+                    idx = j;
+                    render();
+                });
+            })(i);
+            elDots.appendChild(b);
+        }
+    }
+
+    function render() {
+        var s = slides[idx];
+        elEmoji.textContent = s.emoji;
+        elTitle.textContent = s.title;
+        elBody.textContent = s.text;
+        btnPrev.disabled = idx === 0;
+        btnPrev.style.visibility = idx === 0 ? 'hidden' : 'visible';
+        if (idx === slides.length - 1) {
+            btnNext.textContent = 'Commencer';
+        } else {
+            btnNext.textContent = 'Suivant';
+        }
+        renderDots();
+    }
+
+    btnPrev.addEventListener('click', function () {
+        if (idx > 0) {
+            idx--;
+            render();
+        }
+    });
+
+    btnNext.addEventListener('click', function () {
+        if (idx < slides.length - 1) {
+            idx++;
+            render();
+        } else {
+            finish();
+        }
+    });
+
+    btnSkip.addEventListener('click', finish);
+
+    var replay = document.getElementById('replay-onboarding');
+    if (replay) {
+        replay.addEventListener('click', function () {
+            try {
+                localStorage.removeItem(STORAGE_KEY);
+            } catch (e) { /* ignore */ }
+            document.documentElement.classList.remove('onboarding-done');
+            idx = 0;
+            render();
+        });
+    }
+
+    render();
+})();
+</script>
 </body>
 </html>
