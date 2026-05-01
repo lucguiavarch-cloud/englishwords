@@ -2,7 +2,17 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Irregular Verbs Master 🇬🇧</title>
+    <script>
+    (function () {
+        try {
+            if (localStorage.getItem('learnEnglish_verbs_onboarding_v1') === '1') {
+                document.documentElement.classList.add('verbs-onboarding-done');
+            }
+        } catch (e) { /* private mode */ }
+    })();
+    </script>
     <style>
         :root {
             --primary: #4a90e2; --success: #2ecc71; --danger: #e74c3c;
@@ -86,9 +96,187 @@
             filter: brightness(1.08);
             transform: translateY(-1px);
         }
+
+        .admin-section textarea { width: 100%; box-sizing: border-box; margin-bottom: 8px; border-radius: 8px; border: 1px solid #ddd; padding: 10px; font-size: 14px; }
+
+        .modal-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(44, 62, 80, 0.55);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+        .modal-backdrop.is-open { display: flex; }
+        .modal-panel {
+            background: #fff;
+            border-radius: 14px;
+            max-width: 420px;
+            width: 100%;
+            box-shadow: 0 16px 48px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 16px;
+            background: linear-gradient(135deg, #4a90e2, #6ba3e8);
+            color: #fff;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .modal-close {
+            background: rgba(255,255,255,0.25);
+            color: #fff;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            line-height: 1;
+            padding: 0;
+        }
+        .modal-close:hover { background: rgba(255,255,255,0.4); }
+        .modal-body { padding: 16px; font-size: 14px; color: var(--dark); line-height: 1.5; }
+        .modal-body p { margin: 0 0 12px; }
+        .modal-options { margin: 14px 0; }
+        .modal-options label {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+        .modal-options input { margin-top: 3px; }
+        .modal-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+        .modal-actions button { flex: 1 1 auto; min-width: 120px; }
+        .modal-status { margin-top: 12px; font-size: 13px; min-height: 1.3em; }
+        .modal-status.error { color: var(--danger); }
+        .modal-status.ok { color: var(--success); }
+        .btn-modal-load { background: var(--success); }
+        .btn-modal-secondary { background: #95a5a6; color: #fff; }
+
+        html.verbs-onboarding-done #verbs-onboarding-screen { display: none !important; }
+        #verbs-onboarding-screen {
+            position: fixed;
+            inset: 0;
+            z-index: 10050;
+            background: linear-gradient(165deg, #eef4fc 0%, #f4f7f6 45%, #e8f0f8 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px 16px;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+        #verbs-onboarding-screen .vb-panel {
+            width: 100%;
+            max-width: 420px;
+            background: #fff;
+            border-radius: 20px;
+            padding: 26px 22px 18px;
+            box-shadow: 0 12px 40px rgba(44, 62, 80, 0.12);
+            border: 1px solid rgba(74, 144, 226, 0.15);
+        }
+        #verbs-onboarding-screen .vb-emoji {
+            font-size: 2.75rem;
+            text-align: center;
+            line-height: 1;
+            margin-bottom: 14px;
+        }
+        #verbs-onboarding-screen .vb-panel h2 {
+            font-size: 1.28rem;
+            text-align: center;
+            margin: 0 0 12px;
+            color: #2c3e50;
+        }
+        #verbs-onboarding-screen .vb-text {
+            font-size: 0.94rem;
+            color: #5d6d7e;
+            line-height: 1.55;
+            margin: 0;
+            text-align: center;
+        }
+        #verbs-onboarding-screen .vb-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px 0 16px;
+        }
+        #verbs-onboarding-screen .vb-dots button {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: none;
+            padding: 0;
+            background: #d5d8dc;
+            cursor: pointer;
+        }
+        #verbs-onboarding-screen .vb-dots button[aria-current="true"] {
+            background: #4a90e2;
+            transform: scale(1.2);
+        }
+        #verbs-onboarding-screen .vb-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #verbs-onboarding-screen .vb-actions .vb-right { margin-left: auto; display: flex; gap: 10px; }
+        #verbs-onboarding-screen button.vb-ghost {
+            background: transparent;
+            border: none;
+            color: #7f8c8d;
+            font-size: 0.88rem;
+            font-family: inherit;
+            cursor: pointer;
+            padding: 10px 12px;
+            border-radius: 10px;
+        }
+        #verbs-onboarding-screen button.vb-ghost:hover { background: rgba(0,0,0,0.04); color: #2c3e50; }
+        #verbs-onboarding-screen button.vb-primary {
+            background: #4a90e2;
+            color: #fff;
+            border: none;
+            font-size: 0.94rem;
+            font-weight: 600;
+            font-family: inherit;
+            padding: 12px 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(74, 144, 226, 0.35);
+        }
+        #verbs-onboarding-screen button.vb-primary:hover { filter: brightness(1.05); }
+        #verbs-onboarding-screen button.vb-primary:active { transform: scale(0.98); }
+        #verbs-onboarding-screen button:disabled { opacity: 0.35; cursor: not-allowed; box-shadow: none; }
     </style>
 </head>
 <body>
+
+<div id="verbs-onboarding-screen" role="dialog" aria-modal="true" aria-labelledby="verbs-onboarding-title">
+    <div class="vb-panel">
+        <div class="vb-emoji" id="verbs-onboarding-emoji" aria-hidden="true">🔤</div>
+        <h2 id="verbs-onboarding-title">Verbes irréguliers</h2>
+        <p class="vb-text" id="verbs-onboarding-body"></p>
+        <div class="vb-dots" id="verbs-onboarding-dots" aria-label="Étapes"></div>
+        <div class="vb-actions">
+            <button type="button" class="vb-ghost" id="verbs-onboarding-skip">Passer</button>
+            <div class="vb-right">
+                <button type="button" class="vb-ghost" id="verbs-onboarding-prev">Précédent</button>
+                <button type="button" class="vb-primary" id="verbs-onboarding-next">Suivant</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container">
     <header class="page-top-bar">
         <a href="index.html" class="btn-index">🏠 Hub</a>
@@ -151,11 +339,42 @@
     <div class="admin-section">
         <textarea id="bulk-input" rows="2" placeholder="Saisie : Aller, go, went, gone (un par ligne)"></textarea>
         <button class="btn-add" onclick="importVerbs()">📥 Ajouter les verbes</button>
+        <button type="button" onclick="openOfficialVerbsModal()" style="background:var(--accent); width:100%; margin-bottom:10px;">📚 Charger la liste officielle (data/verbes.json)</button>
         <div style="display:flex; gap:10px;">
             <button onclick="exportJSON()" style="background:var(--violet)">💾 Sauvegarder</button>
             <button onclick="document.getElementById('fLoader').click()" style="background:var(--primary)">📂 Charger</button>
             <input type="file" id="fLoader" style="display:none" onchange="importJSON(event)">
             <button onclick="resetAll()" style="background:var(--danger)">🗑️ Reset</button>
+        </div>
+        <p style="text-align: center; margin: 12px 0 0; font-size: 11px; color: #7f8c8d;">
+            <button type="button" id="replay-verbs-onboarding" style="background: none; border: none; color: inherit; text-decoration: underline; cursor: pointer; font-family: inherit; font-size: inherit; padding: 4px 8px;">Revoir l’intro verbes</button>
+        </p>
+    </div>
+</div>
+
+<div id="modal-official-verbs" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-official-title">
+    <div class="modal-panel">
+        <div class="modal-header">
+            <span id="modal-official-title">Liste des verbes irréguliers</span>
+            <button type="button" class="modal-close" onclick="closeOfficialVerbsModal()" aria-label="Fermer">×</button>
+        </div>
+        <div class="modal-body">
+            <p>Charge le fichier <strong>data/verbes.json</strong> depuis le site. Tu peux toujours ajouter des verbes à la main avec la zone de texte ci-dessus.</p>
+            <div class="modal-options">
+                <label>
+                    <input type="radio" name="official-load-mode" value="merge" checked>
+                    <span><strong>Fusionner</strong> : ajoute les verbes manquants et garde ta progression sur ceux que tu as déjà.</span>
+                </label>
+                <label>
+                    <input type="radio" name="official-load-mode" value="replace">
+                    <span><strong>Remplacer</strong> : remplace toute la liste par le fichier (réinitialise niveaux et stats des verbes).</span>
+                </label>
+            </div>
+            <div class="modal-actions">
+                <button type="button" class="btn-modal-load" onclick="loadOfficialVerbsFromJson()">⬇️ Charger le fichier</button>
+                <button type="button" class="btn-modal-secondary" onclick="closeOfficialVerbsModal()">Annuler</button>
+            </div>
+            <div id="modal-official-status" class="modal-status" role="status"></div>
         </div>
     </div>
 </div>
@@ -163,6 +382,7 @@
 <script>
     const KEY = 'EM_VERBS_V17';
     const VOL_GOAL = 5;
+    const OFFICIAL_VERBS_URL = 'data/verbes.json';
     let dictionary = JSON.parse(localStorage.getItem(KEY)) || [];
     let stats = JSON.parse(localStorage.getItem(KEY+'_STATS')) || { days: 0, perfect: 0, dailyCount: 0, lastDate: null };
     let currentWord = null;
@@ -290,6 +510,87 @@
         setTimeout(() => { fb.innerHTML = ""; getNextWord(); }, 7500);
     }
 
+    function verbKey(en) { return String(en || '').trim().toLowerCase(); }
+
+    function normalizeVerbEntry(v) {
+        return {
+            fr: String(v.fr || '').trim(),
+            en: String(v.en || '').trim(),
+            pt: String(v.pt || '').trim(),
+            pp: String(v.pp || '').trim(),
+            level: 0,
+            isFailed: false,
+            nextReview: new Date().toISOString()
+        };
+    }
+
+    function openOfficialVerbsModal() {
+        const el = document.getElementById('modal-official-verbs');
+        const st = document.getElementById('modal-official-status');
+        el.classList.add('is-open');
+        st.textContent = '';
+        st.className = 'modal-status';
+        document.querySelector('input[name="official-load-mode"][value="merge"]').checked = true;
+    }
+
+    function closeOfficialVerbsModal() {
+        document.getElementById('modal-official-verbs').classList.remove('is-open');
+    }
+
+    async function loadOfficialVerbsFromJson() {
+        const st = document.getElementById('modal-official-status');
+        const mode = document.querySelector('input[name="official-load-mode"]:checked')?.value || 'merge';
+        st.className = 'modal-status';
+        st.textContent = 'Chargement…';
+
+        let data;
+        try {
+            const res = await fetch(OFFICIAL_VERBS_URL, { cache: 'no-store' });
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            data = await res.json();
+        } catch (err) {
+            st.className = 'modal-status error';
+            st.textContent = 'Impossible de charger le fichier. Ouvre la page via un serveur local (pas file://) ou vérifie que data/verbes.json existe.';
+            return;
+        }
+
+        if (!Array.isArray(data)) {
+            st.className = 'modal-status error';
+            st.textContent = 'Format invalide : le JSON doit être un tableau de verbes.';
+            return;
+        }
+
+        const valid = data.filter(v => v && verbKey(v.en) && v.fr != null && v.pt != null && v.pp != null);
+        if (mode === 'replace') {
+            dictionary = valid.map(v => normalizeVerbEntry(v));
+            st.className = 'modal-status ok';
+            st.textContent = `Liste remplacée : ${dictionary.length} verbes.`;
+        } else {
+            const seen = new Set(dictionary.map(w => verbKey(w.en)));
+            let added = 0;
+            for (const v of valid) {
+                const k = verbKey(v.en);
+                if (seen.has(k)) continue;
+                dictionary.push(normalizeVerbEntry(v));
+                seen.add(k);
+                added++;
+            }
+            st.className = 'modal-status ok';
+            st.textContent = `Fusion : ${added} verbe(s) ajouté(s) (fichier : ${valid.length} entrées valides).`;
+        }
+
+        save();
+        updateUI();
+        getNextWord();
+    }
+
+    document.getElementById('modal-official-verbs').addEventListener('click', (e) => {
+        if (e.target.id === 'modal-official-verbs') closeOfficialVerbsModal();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && document.getElementById('modal-official-verbs').classList.contains('is-open')) closeOfficialVerbsModal();
+    });
+
     function importVerbs() {
         const lines = document.getElementById('bulk-input').value.split('\n');
         lines.forEach(l => {
@@ -326,6 +627,107 @@
         stats.dailyCount = 0; stats.lastDate = today; save();
     }
     updateUI(); getNextWord();
+</script>
+<script>
+(function () {
+    var STORAGE_KEY = 'learnEnglish_verbs_onboarding_v1';
+    var slides = [
+        {
+            emoji: '🔤',
+            title: 'Bienvenue',
+            text: 'Cette page t’entraîne sur les verbes irréguliers en anglais : tu vois le sens en français, tu dois écrire les trois formes en anglais. Tout est enregistré localement sur cet appareil (localStorage).'
+        },
+        {
+            emoji: '✍️',
+            title: 'Comment répondre',
+            text: 'Tape l’infinitif, le prétérit et le participe passé séparés par des virgules, en minuscules, puis valide avec Entrée. Exemple pour « Aller » : go, went, gone. Après chaque correction, la prononciation des trois formes peut se lire automatiquement.'
+        },
+        {
+            emoji: '📊',
+            title: 'Suivi et note',
+            text: 'Les quatre pastilles en haut suivent ta série de jours, ta précision sur les bonnes réponses d’affilée, ton objectif de 5 verbes par jour, et le « nettoyage » quand il ne reste plus de verbes ratés à consolider. La grille de niveaux compte tes verbes de Nouveau jusqu’à Acquis ; la note sur 20 et la barre résument la progression globale.'
+        },
+        {
+            emoji: '🎯',
+            title: 'Modes de quiz',
+            text: 'Le badge indique Nouveau, Révision ou Consolidation selon les verbes tirés. Quand tu as des verbes « Acquis », le bouton « Test acquis » les révise : une bonne réponse ne change pas leur niveau ; une erreur les repasse en révision (niveau 4) et quitte le test.'
+        },
+        {
+            emoji: '📚',
+            title: 'Remplir ta liste',
+            text: 'Tu peux charger la liste officielle depuis data/verbes.json (bouton orange, avec fusion ou remplacement), ou ajouter des lignes à la main : français, infinitif, prétérit, participe passé. Pense à servir le site via un petit serveur HTTP pour que le fichier JSON se charge ; en ouverture file:// seul, le fetch peut être bloqué.'
+        },
+        {
+            emoji: '💾',
+            title: 'Sauvegarde',
+            text: 'Sauvegarder télécharge ton dictionnaire en JSON ; Charger ouvre un fichier de sauvegarde. Reset efface tout le stockage local du navigateur pour cette appli : utilise-le seulement si tu es sûr.'
+        },
+        {
+            emoji: '🚀',
+            title: 'C’est parti',
+            text: 'Au prochain chargement, cette intro ne s’affichera plus. Tu pourras la revoir avec le lien sous les boutons, en bas de la page.'
+        }
+    ];
+
+    var idx = 0;
+    var elEmoji = document.getElementById('verbs-onboarding-emoji');
+    var elTitle = document.getElementById('verbs-onboarding-title');
+    var elBody = document.getElementById('verbs-onboarding-body');
+    var elDots = document.getElementById('verbs-onboarding-dots');
+    var btnPrev = document.getElementById('verbs-onboarding-prev');
+    var btnNext = document.getElementById('verbs-onboarding-next');
+    var btnSkip = document.getElementById('verbs-onboarding-skip');
+
+    function finish() {
+        try { localStorage.setItem(STORAGE_KEY, '1'); } catch (e) {}
+        document.documentElement.classList.add('verbs-onboarding-done');
+    }
+
+    function renderDots() {
+        elDots.innerHTML = '';
+        for (var i = 0; i < slides.length; i++) {
+            var b = document.createElement('button');
+            b.type = 'button';
+            b.setAttribute('aria-label', 'Étape ' + (i + 1));
+            if (i === idx) b.setAttribute('aria-current', 'true');
+            (function (j) {
+                b.addEventListener('click', function () { idx = j; render(); });
+            })(i);
+            elDots.appendChild(b);
+        }
+    }
+
+    function render() {
+        var s = slides[idx];
+        elEmoji.textContent = s.emoji;
+        elTitle.textContent = s.title;
+        elBody.textContent = s.text;
+        btnPrev.disabled = idx === 0;
+        btnPrev.style.visibility = idx === 0 ? 'hidden' : 'visible';
+        btnNext.textContent = idx === slides.length - 1 ? 'Jouer' : 'Suivant';
+        renderDots();
+    }
+
+    btnPrev.addEventListener('click', function () {
+        if (idx > 0) { idx--; render(); }
+    });
+    btnNext.addEventListener('click', function () {
+        if (idx < slides.length - 1) { idx++; render(); } else { finish(); }
+    });
+    btnSkip.addEventListener('click', finish);
+
+    var replay = document.getElementById('replay-verbs-onboarding');
+    if (replay) {
+        replay.addEventListener('click', function () {
+            try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+            document.documentElement.classList.remove('verbs-onboarding-done');
+            idx = 0;
+            render();
+        });
+    }
+
+    render();
+})();
 </script>
 </body>
 </html>
