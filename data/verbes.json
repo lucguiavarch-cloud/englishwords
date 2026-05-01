@@ -1,119 +1,1055 @@
 [
-  {"fr": "Surgir", "en": "arise", "pt": "arose", "pp": "arisen", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Se réveiller", "en": "awake", "pt": "awoke", "pp": "awoken", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Être", "en": "be", "pt": "was", "pp": "been", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Porter / Supporter", "en": "bear", "pt": "bore", "pp": "borne", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Battre", "en": "beat", "pt": "beat", "pp": "beaten", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Devenir", "en": "become", "pt": "became", "pp": "become", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Commencer", "en": "begin", "pt": "began", "pp": "begun", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Plier / Courber", "en": "bend", "pt": "bent", "pp": "bent", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Parier", "en": "bet", "pt": "bet", "pp": "bet", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Mordre", "en": "bite", "pt": "bit", "pp": "bitten", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Saigner", "en": "bleed", "pt": "bled", "pp": "bled", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Souffler", "en": "blow", "pt": "blew", "pp": "blown", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Casser", "en": "break", "pt": "broke", "pp": "broken", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Apporter", "en": "bring", "pt": "brought", "pp": "brought", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Construire", "en": "build", "pt": "built", "pp": "built", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Brûler", "en": "burn", "pt": "burnt", "pp": "burnt", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Éclater / Exploser", "en": "burst", "pt": "burst", "pp": "burst", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Acheter", "en": "buy", "pt": "bought", "pp": "bought", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Attraper", "en": "catch", "pt": "caught", "pp": "caught", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Choisir", "en": "choose", "pt": "chose", "pp": "chosen", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Venir", "en": "come", "pt": "came", "pp": "come", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Coûter", "en": "cost", "pt": "cost", "pp": "cost", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Couper", "en": "cut", "pt": "cut", "pp": "cut", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Distribuer / Négocier", "en": "deal", "pt": "dealt", "pp": "dealt", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Creuser", "en": "dig", "pt": "dug", "pp": "dug", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Faire", "en": "do", "pt": "did", "pp": "done", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Dessiner", "en": "draw", "pt": "drew", "pp": "drawn", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Rêver", "en": "dream", "pt": "dreamt", "pp": "dreamt", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Boire", "en": "drink", "pt": "drank", "pp": "drunk", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Conduire", "en": "drive", "pt": "drove", "pp": "driven", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Manger", "en": "eat", "pt": "ate", "pp": "eaten", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Tomber", "en": "fall", "pt": "fell", "pp": "fallen", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Nourrir", "en": "feed", "pt": "fed", "pp": "fed", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Sentir / Ressentir", "en": "feel", "pt": "felt", "pp": "felt", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Se battre", "en": "fight", "pt": "fought", "pp": "fought", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Trouver", "en": "find", "pt": "found", "pp": "found", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "S'enfuir", "en": "flee", "pt": "fled", "pp": "fled", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Voler (oiseau)", "en": "fly", "pt": "flew", "pp": "flown", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Oublier", "en": "forget", "pt": "forgot", "pp": "forgotten", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Pardonner", "en": "forgive", "pt": "forgave", "pp": "forgiven", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Geler", "en": "freeze", "pt": "froze", "pp": "frozen", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Obtenir", "en": "get", "pt": "got", "pp": "got", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Donner", "en": "give", "pt": "gave", "pp": "given", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Aller", "en": "go", "pt": "went", "pp": "gone", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Grandir / Pousser", "en": "grow", "pt": "grew", "pp": "grown", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Pendre / Accrocher", "en": "hang", "pt": "hung", "pp": "hung", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Avoir", "en": "have", "pt": "had", "pp": "had", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Entendre", "en": "hear", "pt": "heard", "pp": "heard", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Cacher", "en": "hide", "pt": "hid", "pp": "hidden", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Frapper", "en": "hit", "pt": "hit", "pp": "hit", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Tenir", "en": "hold", "pt": "held", "pp": "held", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Blesser", "en": "hurt", "pt": "hurt", "pp": "hurt", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Garder", "en": "keep", "pt": "kept", "pp": "kept", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "S'agenouiller", "en": "kneel", "pt": "knelt", "pp": "knelt", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Savoir / Connaître", "en": "know", "pt": "knew", "pp": "known", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Poser à plat", "en": "lay", "pt": "laid", "pp": "laid", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Mener / Conduire", "en": "lead", "pt": "led", "pp": "led", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Apprendre", "en": "learn", "pt": "learnt", "pp": "learnt", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Quitter / Laisser", "en": "leave", "pt": "left", "pp": "left", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Prêter", "en": "lend", "pt": "lent", "pp": "lent", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Laisser / Autoriser", "en": "let", "pt": "let", "pp": "let", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Être couché", "en": "lie", "pt": "lay", "pp": "lain", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Allumer", "en": "light", "pt": "lit", "pp": "lit", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Perdre", "en": "lose", "pt": "lost", "pp": "lost", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Fabriquer / Faire", "en": "make", "pt": "made", "pp": "made", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Signifier", "en": "mean", "pt": "meant", "pp": "meant", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Rencontrer", "en": "meet", "pt": "met", "pp": "met", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Payer", "en": "pay", "pt": "paid", "pp": "paid", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Mettre", "en": "put", "pt": "put", "pp": "put", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Lire", "en": "read", "pt": "read", "pp": "read", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Monter (cheval/vélo)", "en": "ride", "pt": "rode", "pp": "ridden", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Sonner", "en": "ring", "pt": "rang", "pp": "rung", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Lever (soleil) / Monter", "en": "rise", "pt": "rose", "pp": "risen", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Courir", "en": "run", "pt": "ran", "pp": "run", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Dire", "en": "say", "pt": "said", "pp": "said", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Voir", "en": "see", "pt": "saw", "pp": "seen", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Vendre", "en": "sell", "pt": "sold", "pp": "sold", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Envoyer", "en": "send", "pt": "sent", "pp": "sent", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Placer / Fixer", "en": "set", "pt": "set", "pp": "set", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Secouer", "en": "shake", "pt": "shook", "pp": "shaken", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Briller", "en": "shine", "pt": "shone", "pp": "shone", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Tirer (fusil)", "en": "shoot", "pt": "shot", "pp": "shot", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Montrer", "en": "show", "pt": "showed", "pp": "shown", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Fermer", "en": "shut", "pt": "shut", "pp": "shut", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Chanter", "en": "sing", "pt": "sang", "pp": "sung", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Couler / Sombrer", "en": "sink", "pt": "sank", "pp": "sunk", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "S'asseoir", "en": "sit", "pt": "sat", "pp": "sat", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Dormir", "en": "sleep", "pt": "slept", "pp": "slept", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Glisser", "en": "slide", "pt": "slid", "pp": "slid", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Sentir (odeur)", "en": "smell", "pt": "smelt", "pp": "smelt", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Parler", "en": "speak", "pt": "spoke", "pp": "spoken", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Dépenser / Passer du temps", "en": "spend", "pt": "spent", "pp": "spent", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Renverser (liquide)", "en": "spill", "pt": "spilt", "pp": "spilt", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Gâcher / Abîmer", "en": "spoil", "pt": "spoilt", "pp": "spoilt", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Se propager / Étaler", "en": "spread", "pt": "spread", "pp": "spread", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Sauter", "en": "spring", "pt": "sprang", "pp": "sprung", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Être debout", "en": "stand", "pt": "stood", "pp": "stood", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Voler (dérober)", "en": "steal", "pt": "stole", "pp": "stolen", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Coller", "en": "stick", "pt": "stuck", "pp": "stuck", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Piquer", "en": "sting", "pt": "stung", "pp": "stung", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Puer", "en": "stink", "pt": "stank", "pp": "stunk", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Frapper / Grêver", "en": "strike", "pt": "struck", "pp": "struck", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Jurer", "en": "swear", "pt": "swore", "pp": "sworn", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Balayer", "en": "sweep", "pt": "swept", "pp": "swept", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Nager", "en": "swim", "pt": "swam", "pp": "swum", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Balancer", "en": "swing", "pt": "swung", "pp": "swung", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Prendre", "en": "take", "pt": "took", "pp": "ridden", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Enseigner", "en": "teach", "pt": "taught", "pp": "taught", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Déchirer", "en": "tear", "pt": "tore", "pp": "torn", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Dire / Raconter", "en": "tell", "pt": "told", "pp": "told", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Penser", "en": "think", "pt": "thought", "pp": "thought", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Jeter", "en": "throw", "pt": "threw", "pp": "thrown", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Comprendre", "en": "understand", "pt": "understood", "pp": "understood", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Se réveiller", "en": "wake", "pt": "woke", "pp": "woken", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Porter (vêtements)", "en": "wear", "pt": "wore", "pp": "worn", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Gagner", "en": "win", "pt": "won", "pp": "won", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"},
-  {"fr": "Écrire", "en": "write", "pt": "wrote", "pp": "written", "level": 0, "isFailed": false, "nextReview": "2024-01-01T00:00:00.000Z"}
+    {
+        "fr": "Surgir",
+        "en": "arise",
+        "pt": "arose",
+        "pp": "arisen",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Se réveiller",
+        "en": "awake",
+        "pt": "awoke",
+        "pp": "awoken",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Être",
+        "en": "be",
+        "pt": "was",
+        "pp": "been",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Porter / Supporter",
+        "en": "bear",
+        "pt": "bore",
+        "pp": "borne",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Battre",
+        "en": "beat",
+        "pt": "beat",
+        "pp": "beaten",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Devenir",
+        "en": "become",
+        "pt": "became",
+        "pp": "become",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Commencer",
+        "en": "begin",
+        "pt": "began",
+        "pp": "begun",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Plier / Courber",
+        "en": "bend",
+        "pt": "bent",
+        "pp": "bent",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Parier",
+        "en": "bet",
+        "pt": "bet",
+        "pp": "bet",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Mordre",
+        "en": "bite",
+        "pt": "bit",
+        "pp": "bitten",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Saigner",
+        "en": "bleed",
+        "pt": "bled",
+        "pp": "bled",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Souffler",
+        "en": "blow",
+        "pt": "blew",
+        "pp": "blown",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Casser",
+        "en": "break",
+        "pt": "broke",
+        "pp": "broken",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Apporter",
+        "en": "bring",
+        "pt": "brought",
+        "pp": "brought",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Construire",
+        "en": "build",
+        "pt": "built",
+        "pp": "built",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Brûler",
+        "en": "burn",
+        "pt": "burnt",
+        "pp": "burnt",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Éclater / Exploser",
+        "en": "burst",
+        "pt": "burst",
+        "pp": "burst",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Acheter",
+        "en": "buy",
+        "pt": "bought",
+        "pp": "bought",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Attraper",
+        "en": "catch",
+        "pt": "caught",
+        "pp": "caught",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Choisir",
+        "en": "choose",
+        "pt": "chose",
+        "pp": "chosen",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Venir",
+        "en": "come",
+        "pt": "came",
+        "pp": "come",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Coûter",
+        "en": "cost",
+        "pt": "cost",
+        "pp": "cost",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Couper",
+        "en": "cut",
+        "pt": "cut",
+        "pp": "cut",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Distribuer / Négocier",
+        "en": "deal",
+        "pt": "dealt",
+        "pp": "dealt",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Creuser",
+        "en": "dig",
+        "pt": "dug",
+        "pp": "dug",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Faire",
+        "en": "do",
+        "pt": "did",
+        "pp": "done",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Dessiner",
+        "en": "draw",
+        "pt": "drew",
+        "pp": "drawn",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Rêver",
+        "en": "dream",
+        "pt": "dreamt",
+        "pp": "dreamt",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Boire",
+        "en": "drink",
+        "pt": "drank",
+        "pp": "drunk",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Conduire",
+        "en": "drive",
+        "pt": "drove",
+        "pp": "driven",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Manger",
+        "en": "eat",
+        "pt": "ate",
+        "pp": "eaten",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Tomber",
+        "en": "fall",
+        "pt": "fell",
+        "pp": "fallen",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Nourrir",
+        "en": "feed",
+        "pt": "fed",
+        "pp": "fed",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Sentir / Ressentir",
+        "en": "feel",
+        "pt": "felt",
+        "pp": "felt",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Se battre",
+        "en": "fight",
+        "pt": "fought",
+        "pp": "fought",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Trouver",
+        "en": "find",
+        "pt": "found",
+        "pp": "found",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "S'enfuir",
+        "en": "flee",
+        "pt": "fled",
+        "pp": "fled",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Voler (oiseau)",
+        "en": "fly",
+        "pt": "flew",
+        "pp": "flown",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Oublier",
+        "en": "forget",
+        "pt": "forgot",
+        "pp": "forgotten",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Pardonner",
+        "en": "forgive",
+        "pt": "forgave",
+        "pp": "forgiven",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Geler",
+        "en": "freeze",
+        "pt": "froze",
+        "pp": "frozen",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Obtenir",
+        "en": "get",
+        "pt": "got",
+        "pp": "got",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Donner",
+        "en": "give",
+        "pt": "gave",
+        "pp": "given",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Aller",
+        "en": "go",
+        "pt": "went",
+        "pp": "gone",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Grandir / Pousser",
+        "en": "grow",
+        "pt": "grew",
+        "pp": "grown",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Pendre / Accrocher",
+        "en": "hang",
+        "pt": "hung",
+        "pp": "hung",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Avoir",
+        "en": "have",
+        "pt": "had",
+        "pp": "had",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Entendre",
+        "en": "hear",
+        "pt": "heard",
+        "pp": "heard",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Cacher",
+        "en": "hide",
+        "pt": "hid",
+        "pp": "hidden",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Frapper",
+        "en": "hit",
+        "pt": "hit",
+        "pp": "hit",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Tenir",
+        "en": "hold",
+        "pt": "held",
+        "pp": "held",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Blesser",
+        "en": "hurt",
+        "pt": "hurt",
+        "pp": "hurt",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Garder",
+        "en": "keep",
+        "pt": "kept",
+        "pp": "kept",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "S'agenouiller",
+        "en": "kneel",
+        "pt": "knelt",
+        "pp": "knelt",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Savoir / Connaître",
+        "en": "know",
+        "pt": "knew",
+        "pp": "known",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Poser à plat",
+        "en": "lay",
+        "pt": "laid",
+        "pp": "laid",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Mener / Conduire",
+        "en": "lead",
+        "pt": "led",
+        "pp": "led",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Apprendre",
+        "en": "learn",
+        "pt": "learnt",
+        "pp": "learnt",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Quitter / Laisser",
+        "en": "leave",
+        "pt": "left",
+        "pp": "left",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Prêter",
+        "en": "lend",
+        "pt": "lent",
+        "pp": "lent",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Laisser / Autoriser",
+        "en": "let",
+        "pt": "let",
+        "pp": "let",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Être couché",
+        "en": "lie",
+        "pt": "lay",
+        "pp": "lain",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Allumer",
+        "en": "light",
+        "pt": "lit",
+        "pp": "lit",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Perdre",
+        "en": "lose",
+        "pt": "lost",
+        "pp": "lost",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Fabriquer / Faire",
+        "en": "make",
+        "pt": "made",
+        "pp": "made",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Signifier",
+        "en": "mean",
+        "pt": "meant",
+        "pp": "meant",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Rencontrer",
+        "en": "meet",
+        "pt": "met",
+        "pp": "met",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Payer",
+        "en": "pay",
+        "pt": "paid",
+        "pp": "paid",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Mettre",
+        "en": "put",
+        "pt": "put",
+        "pp": "put",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Lire",
+        "en": "read",
+        "pt": "read",
+        "pp": "read",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Monter (cheval/vélo)",
+        "en": "ride",
+        "pt": "rode",
+        "pp": "ridden",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Sonner",
+        "en": "ring",
+        "pt": "rang",
+        "pp": "rung",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Lever (soleil) / Monter",
+        "en": "rise",
+        "pt": "rose",
+        "pp": "risen",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Courir",
+        "en": "run",
+        "pt": "ran",
+        "pp": "run",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Dire",
+        "en": "say",
+        "pt": "said",
+        "pp": "said",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Voir",
+        "en": "see",
+        "pt": "saw",
+        "pp": "seen",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Vendre",
+        "en": "sell",
+        "pt": "sold",
+        "pp": "sold",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Envoyer",
+        "en": "send",
+        "pt": "sent",
+        "pp": "sent",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Placer / Fixer",
+        "en": "set",
+        "pt": "set",
+        "pp": "set",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Secouer",
+        "en": "shake",
+        "pt": "shook",
+        "pp": "shaken",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Briller",
+        "en": "shine",
+        "pt": "shone",
+        "pp": "shone",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Tirer (fusil)",
+        "en": "shoot",
+        "pt": "shot",
+        "pp": "shot",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Montrer",
+        "en": "show",
+        "pt": "showed",
+        "pp": "shown",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Fermer",
+        "en": "shut",
+        "pt": "shut",
+        "pp": "shut",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Chanter",
+        "en": "sing",
+        "pt": "sang",
+        "pp": "sung",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Couler / Sombrer",
+        "en": "sink",
+        "pt": "sank",
+        "pp": "sunk",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "S'asseoir",
+        "en": "sit",
+        "pt": "sat",
+        "pp": "sat",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Dormir",
+        "en": "sleep",
+        "pt": "slept",
+        "pp": "slept",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Glisser",
+        "en": "slide",
+        "pt": "slid",
+        "pp": "slid",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Sentir (odeur)",
+        "en": "smell",
+        "pt": "smelt",
+        "pp": "smelt",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Parler",
+        "en": "speak",
+        "pt": "spoke",
+        "pp": "spoken",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Dépenser / Passer du temps",
+        "en": "spend",
+        "pt": "spent",
+        "pp": "spent",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Renverser (liquide)",
+        "en": "spill",
+        "pt": "spilt",
+        "pp": "spilt",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Gâcher / Abîmer",
+        "en": "spoil",
+        "pt": "spoilt",
+        "pp": "spoilt",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Se propager / Étaler",
+        "en": "spread",
+        "pt": "spread",
+        "pp": "spread",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Sauter",
+        "en": "spring",
+        "pt": "sprang",
+        "pp": "sprung",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Être debout",
+        "en": "stand",
+        "pt": "stood",
+        "pp": "stood",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Voler (dérober)",
+        "en": "steal",
+        "pt": "stole",
+        "pp": "stolen",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Coller",
+        "en": "stick",
+        "pt": "stuck",
+        "pp": "stuck",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Piquer",
+        "en": "sting",
+        "pt": "stung",
+        "pp": "stung",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Puer",
+        "en": "stink",
+        "pt": "stank",
+        "pp": "stunk",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Frapper / Grêver",
+        "en": "strike",
+        "pt": "struck",
+        "pp": "struck",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Jurer",
+        "en": "swear",
+        "pt": "swore",
+        "pp": "sworn",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Balayer",
+        "en": "sweep",
+        "pt": "swept",
+        "pp": "swept",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Nager",
+        "en": "swim",
+        "pt": "swam",
+        "pp": "swum",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Balancer",
+        "en": "swing",
+        "pt": "swung",
+        "pp": "swung",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Prendre",
+        "en": "take",
+        "pt": "took",
+        "pp": "ridden",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Enseigner",
+        "en": "teach",
+        "pt": "taught",
+        "pp": "taught",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Déchirer",
+        "en": "tear",
+        "pt": "tore",
+        "pp": "torn",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Dire / Raconter",
+        "en": "tell",
+        "pt": "told",
+        "pp": "told",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Penser",
+        "en": "think",
+        "pt": "thought",
+        "pp": "thought",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Jeter",
+        "en": "throw",
+        "pt": "threw",
+        "pp": "thrown",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Comprendre",
+        "en": "understand",
+        "pt": "understood",
+        "pp": "understood",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Se réveiller",
+        "en": "wake",
+        "pt": "woke",
+        "pp": "woken",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Porter (vêtements)",
+        "en": "wear",
+        "pt": "wore",
+        "pp": "worn",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Gagner",
+        "en": "win",
+        "pt": "won",
+        "pp": "won",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    },
+    {
+        "fr": "Écrire",
+        "en": "write",
+        "pt": "wrote",
+        "pp": "written",
+        "level": 0,
+        "isFailed": false,
+        "nextReview": "2024-01-01T00:00:00.000Z"
+    }
 ]

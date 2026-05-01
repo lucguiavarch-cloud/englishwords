@@ -575,17 +575,87 @@ function setMode(text, color) {
     modeTag.style.backgroundColor = color;
 }
 
+function normalizeFrKey(fr) {
+    return String(fr || '').trim().toLowerCase();
+}
+
+/** Tous les anglais distincts (minuscules) enregistrés pour ce français. */
+function collectAcceptedEnLowerForFr(dict, frKey) {
+    const set = new Set();
+    for (const w of dict) {
+        if (!w || w.en == null) continue;
+        if (normalizeFrKey(w.fr) === frKey) {
+            set.add(String(w.en).trim().toLowerCase());
+        }
+    }
+    return Array.from(set);
+}
+
+function pickCanonicalEnForSpeak(dict, frKey, enLower) {
+    const row = dict.find(
+        (w) => normalizeFrKey(w.fr) === frKey && String(w.en || '').trim().toLowerCase() === enLower
+    );
+    return row ? row.en : enLower;
+}
+
+/** Forme affichable : toutes les réponses attendues pour ce FR (casse conservée). */
+function formatExpectedEnglishAnswers(dict, frKey) {
+    const lowers = collectAcceptedEnLowerForFr(dict, frKey);
+    const seen = new Set();
+    const out = [];
+    for (const lo of lowers) {
+        if (seen.has(lo)) continue;
+        seen.add(lo);
+        out.push(pickCanonicalEnForSpeak(dict, frKey, lo));
+    }
+    if (out.length) return out;
+    const any = dict.find((w) => normalizeFrKey(w.fr) === frKey && w.en != null);
+    return any ? [any.en] : [''];
+}
+
+/**
+ * Même FR affiché = plusieurs EN possibles dans les JSON → on accepte n’importe laquelle
+ * (ex. porter → wear | carry) avec les mêmes règles de distance qu’avant.
+ */
+function resolveEnglishQuizAnswer(inputRaw, cw, dict) {
+    const input = String(inputRaw || '').trim().toLowerCase();
+    const frKey = normalizeFrKey(cw.fr);
+    const accepted = collectAcceptedEnLowerForFr(dict, frKey);
+    const fallback = String(cw.en || '').trim().toLowerCase();
+    const pool = accepted.length ? accepted : [fallback];
+
+    const perfect = [];
+    const almost = [];
+    for (const t of pool) {
+        const d = getLevenshteinDistance(input, t);
+        if (d === 0) perfect.push(t);
+        else if (d === 1 && t.length > 3) almost.push(t);
+    }
+
+    if (perfect.length) {
+        const pref = fallback;
+        const enLower = perfect.includes(pref) ? pref : perfect[0];
+        return { ok: true, dist: 0, enLower, pool };
+    }
+    if (almost.length) {
+        const pref = fallback;
+        const enLower = almost.includes(pref) ? pref : almost[0];
+        return { ok: true, dist: 1, enLower, pool };
+    }
+    return { ok: false, dist: getLevenshteinDistance(input, fallback), enLower: fallback, pool };
+}
+
 function handleAnswer() {
     if (!timerActive && timeLeft > 0) timerActive = true;
 
     const input = document.getElementById('user-input').value.trim().toLowerCase();
-    const target = currentWord.en.toLowerCase();
+    const frKey = normalizeFrKey(currentWord.fr);
+    const resolved = resolveEnglishQuizAnswer(input, currentWord, dictionary);
+    const distance = resolved.dist;
     const fb = document.getElementById('feedback');
     const box = document.getElementById('quiz-box');
 
-    const distance = getLevenshteinDistance(input, target);
-
-    if (distance === 0 || (distance === 1 && target.length > 3)) {
+    if (resolved.ok) {
         sessionCombo++;
         stats.dailyTotal++;
         if (stats.dailyTotal % 10 === 0 && stats.dailyTotal !== 0) {
@@ -622,13 +692,14 @@ function handleAnswer() {
 				
         if (currentWord.level !== oldLevel) pendingLevelFlash = currentWord.level;
 
+        const spoken = pickCanonicalEnForSpeak(dictionary, frKey, resolved.enLower);
         if (distance === 1) {
-            fb.innerHTML = `<span style="color:var(--accent)">PRESQUE ! </span> <small>(Correction: ${currentWord.en})</small>`;
+            fb.innerHTML = `<span style="color:var(--accent)">PRESQUE ! </span> <small>(Correction: ${spoken})</small>`;
         } else {
             fb.innerHTML = `<span style="color:var(--success)">EXCELLENT !</span>`;
         }
-        
-        speak(currentWord.en);
+
+        speak(spoken);
 
         if (oldLevel === 6 && currentWord.level === 7) {
             addXP(50); 
@@ -655,11 +726,12 @@ function handleAnswer() {
             
             box.classList.add('shake');
             playErrorSound();
+            const expectedShield = formatExpectedEnglishAnswers(dictionary, frKey).join(' · ');
             speak(currentWord.en);
 
             fb.innerHTML = `
                 <div style="font-size: 11px; color: var(--primary); margin-bottom: 5px; font-weight: bold;">🛡️ BOUCLIER UTILISÉ</div>
-                <span style="color:var(--danger)">${currentWord.en}</span>
+                <span style="color:var(--danger)">${expectedShield}</span>
             `;
             
             const oldLevel = currentWord.level;
@@ -686,7 +758,8 @@ function handleAnswer() {
             }
 
             box.classList.add('shake');
-            fb.innerHTML = `<span style="color:var(--danger)">${currentWord.en}</span>`;
+            const expectedWrong = formatExpectedEnglishAnswers(dictionary, frKey).join(' · ');
+            fb.innerHTML = `<span style="color:var(--danger)">${expectedWrong}</span>`;
             speak(currentWord.en);
 
             const oldLevel = currentWord.level;
