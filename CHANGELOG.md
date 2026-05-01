@@ -1,5 +1,31 @@
 # Changelog
 
+## v4.7 — 01/05/2026
+
+### Données vocabulaire (A1–C2)
+- Champ optionnel **`guide`** : précision **en français uniquement**, sans exemple anglais ni mot anglais attendu — elle oriente sur le sens (article vs nombre, nature du mot, faux ami…) pour ne pas tricher avec la réponse.
+- Fichier des indices détaillés : **`scripts/explicit-guides-fr-only.mjs`** (importé par `add-word-guides.mjs`).
+- **Sauvegarde** des JSON d’origine : `data/backup-pre-guide-2026-05-01/`.
+- Script de régénération / mise à jour des guides : **`scripts/add-word-guides.mjs`** (`node scripts/add-word-guides.mjs`).
+
+### Appli (`vocabulaire.html` / `.css` / `.js`)
+- **Onboarding vocabulaire** (7 écrans) : première visite uniquement, clé **`learnEnglish_vocab_onboarding_v1`** + classe **`vocab-onboarding-done`** sur `<html>` (script dans le `<head>`, pas de flash au rechargement). Lien **« Revoir l’intro vocabulaire »** sous la zone admin.
+- Bloc **`#word-guide`** sous le mot affiché ; masqué s’il n’y a pas de précision.
+- Import en masse : format **`Anglais, Français`** ou **`Anglais, Français ||| précision`** (trois barres verticales).
+- Chargement des packs CECRL depuis **`data/`** : les lignes collées dans la zone d’import incluent la précision quand elle existe.
+
+## v4.6 — 01/05/2026
+
+### Hub & onboarding (`index.html`)
+- **Onboarding** au premier lancement : **5 écrans** (hub, vocabulaire, verbes, ressources externes, données locales), navigation **Suivant / Précédent**, **Passer** et **Commencer** sur la dernière étape.
+- **Mémorisation** : `localStorage` **`learnEnglish_onboarding_v1`** ; script dans le **`<head>`** + classe **`onboarding-done`** sur `<html>` pour éviter un flash chez les utilisateurs déjà passés.
+- Lien **« Revoir l’introduction »** en pied de page (réinitialise la clé et rouvre le flux).
+- **Corrections** : suppression d’un **`<a>`** erroné dans le **`<head>`** et d’un **doublon** de balise **`viewport`**.
+- Liens externes BBC / News in Levels : **`rel="noopener noreferrer"`**.
+
+### PWA (`manifest.json`)
+- **`start_url`** : **`index.html`** (ouverture sur le hub et prise en compte de l’onboarding à la première utilisation).
+
 ## v4.5 — 29/04/2026
 
 ### Thème

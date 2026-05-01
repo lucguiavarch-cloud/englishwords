@@ -2,21 +2,145 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
     <title>English Master 🎓</title>
+    <script>
+    (function () {
+        try {
+            if (localStorage.getItem('learnEnglish_vocab_onboarding_v1') === '1') {
+                document.documentElement.classList.add('vocab-onboarding-done');
+            }
+        } catch (e) { /* private mode */ }
+    })();
+    </script>
     <link rel="stylesheet" href="vocabulaire.css">
 	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+    html.vocab-onboarding-done #vocab-onboarding-screen { display: none !important; }
+    #vocab-onboarding-screen {
+        position: fixed;
+        inset: 0;
+        z-index: 10050;
+        background: linear-gradient(165deg, #eef4fc 0%, #f4f7f6 45%, #e8f0f8 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 24px 16px;
+        box-sizing: border-box;
+        font-family: system-ui, "Segoe UI", sans-serif;
+    }
+    #vocab-onboarding-screen .vob-panel {
+        width: 100%;
+        max-width: 420px;
+        background: #fff;
+        border-radius: 20px;
+        padding: 26px 22px 18px;
+        box-shadow: 0 12px 40px rgba(44, 62, 80, 0.12);
+        border: 1px solid rgba(74, 144, 226, 0.15);
+    }
+    #vocab-onboarding-screen .vob-emoji {
+        font-size: 2.75rem;
+        text-align: center;
+        line-height: 1;
+        margin-bottom: 14px;
+    }
+    #vocab-onboarding-screen .vob-panel h2 {
+        font-size: 1.28rem;
+        text-align: center;
+        margin: 0 0 12px;
+        color: #2c3e50;
+    }
+    #vocab-onboarding-screen .vob-text {
+        font-size: 0.94rem;
+        color: #5d6d7e;
+        line-height: 1.55;
+        margin: 0;
+        text-align: center;
+    }
+    #vocab-onboarding-screen .vob-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin: 20px 0 16px;
+    }
+    #vocab-onboarding-screen .vob-dots button {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border: none;
+        padding: 0;
+        background: #d5d8dc;
+        cursor: pointer;
+    }
+    #vocab-onboarding-screen .vob-dots button[aria-current="true"] {
+        background: #4a90e2;
+        transform: scale(1.2);
+    }
+    #vocab-onboarding-screen .vob-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #vocab-onboarding-screen .vob-actions .vob-right { margin-left: auto; display: flex; gap: 10px; }
+    #vocab-onboarding-screen button.vob-ghost {
+        background: transparent;
+        border: none;
+        color: #7f8c8d;
+        font-size: 0.88rem;
+        font-family: inherit;
+        cursor: pointer;
+        padding: 10px 12px;
+        border-radius: 10px;
+    }
+    #vocab-onboarding-screen button.vob-ghost:hover { background: rgba(0,0,0,0.04); color: #2c3e50; }
+    #vocab-onboarding-screen button.vob-primary {
+        background: #4a90e2;
+        color: #fff;
+        border: none;
+        font-size: 0.94rem;
+        font-weight: 600;
+        font-family: inherit;
+        padding: 12px 20px;
+        border-radius: 12px;
+        cursor: pointer;
+        box-shadow: 0 4px 14px rgba(74, 144, 226, 0.35);
+    }
+    #vocab-onboarding-screen button.vob-primary:hover { filter: brightness(1.05); }
+    #vocab-onboarding-screen button.vob-primary:active { transform: scale(0.98); }
+    #vocab-onboarding-screen button:disabled { opacity: 0.35; cursor: not-allowed; box-shadow: none; }
+    </style>
 </head>
 <body>
 
+<div id="vocab-onboarding-screen" role="dialog" aria-modal="true" aria-labelledby="vocab-onboarding-title">
+    <div class="vob-panel">
+        <div class="vob-emoji" id="vocab-onboarding-emoji" aria-hidden="true">📚</div>
+        <h2 id="vocab-onboarding-title">Vocabulaire</h2>
+        <p class="vob-text" id="vocab-onboarding-body"></p>
+        <div class="vob-dots" id="vocab-onboarding-dots" aria-label="Étapes"></div>
+        <div class="vob-actions">
+            <button type="button" class="vob-ghost" id="vocab-onboarding-skip">Passer</button>
+            <div class="vob-right">
+                <button type="button" class="vob-ghost" id="vocab-onboarding-prev">Précédent</button>
+                <button type="button" class="vob-primary" id="vocab-onboarding-next">Suivant</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container">
+    <nav class="top-nav-links" aria-label="Navigation">
+        <a href="index.html" class="hub-link">🏠 Hub</a>
+        <a href="tuto-anglais.html" target="_blank" rel="noopener noreferrer" class="tuto-link">❓ Aide</a>
+    </nav>
        <div class="dashboard-grid">
 	   
         <div class="badges-section" id="next-objectives">
             <div class="session-info">
-			 <a href="tuto-anglais.html" target="_blank" class="tuto-link">❓</a>
                 <div class="session-pill" title="Nom de session">
                     👤 <span id="current-session-display">Session Locale</span>
                 </div>
@@ -55,7 +179,7 @@
     	<div class="quiz-section" id="quiz-box">
     <div id="mode-tag" class="mode-indicator">MODE</div>
     <div class="word-to-translate" id="current-word">---</div>
-    
+    <p id="word-guide" class="word-guide" hidden></p>
     <input type="text" id="user-input" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false">
     
     <div class="action-controls-container">
@@ -81,6 +205,9 @@
     <button id="btn-apply-skin" class="bg-accent" style="border: 2px solid var(--text-light);">🎨 Appliquer</button>
 </div>
         </div>
+        <p class="vocab-onboarding-replay-wrap" style="text-align: center; margin: 10px 0 0; font-size: 11px;">
+            <button type="button" id="replay-vocab-onboarding" style="background: none; border: none; color: var(--text-muted); text-decoration: underline; cursor: pointer; font-family: inherit; font-size: inherit; padding: 4px 8px;">Revoir l’intro vocabulaire</button>
+        </p>
     </div>
 
    <div id="wordModal" class="modal">
@@ -101,7 +228,7 @@
             </div>
         </div>
 
-        <p style="font-size: 0.9em; margin-bottom: 5px;">Format : <b>Anglais, Français</b></p>
+        <p style="font-size: 0.9em; margin-bottom: 5px;">Format : <b>Anglais, Français</b> — optionnel après la ligne : <b>|||</b> puis une précision (affichée sous le mot pendant le quiz).</p>
         <textarea id="bulk-input" placeholder="Exemple:&#10;Apple, Pomme&#10;House, Maison" style="height: 150px;"></textarea>
 
         <div class="modal-buttons" style="margin-top: 15px;">
@@ -176,6 +303,107 @@
     </div>
 </div>
 
+<script>
+(function () {
+    var STORAGE_KEY = 'learnEnglish_vocab_onboarding_v1';
+    var slides = [
+        {
+            emoji: '📚',
+            title: 'Bienvenue dans le vocabulaire',
+            text: 'Tu vois un mot en français au centre : tape sa traduction en anglais puis valide avec Entrée. Un chrono peut limiter la session ; tes scores restent sur cet appareil.'
+        },
+        {
+            emoji: '🔄',
+            title: 'Modes de jeu',
+            text: 'Le bandeau « mode » indique si tu es en révision, consolidation (mots ratés) ou nouveaux mots. Les cases à droite montrent la progression de chaque mot vers la maîtrise.'
+        },
+        {
+            emoji: '🎯',
+            title: 'Objectifs et Grimoire',
+            text: 'Les badges d’objectifs suivent tes combos et tes réussites du jour. Le Grimoire liste tous les succès débloqués — ouvre-le quand tu veux admirer ta collection.'
+        },
+        {
+            emoji: '💡',
+            title: 'Indice et bouclier',
+            text: 'L’indice t’aide sans tout donner. Le bouclier peut annuler une erreur : utilise-les avec parcimonie, ils sont comptés.'
+        },
+        {
+            emoji: '🏠',
+            title: 'Navigation',
+            text: 'En haut : retour au Hub et lien Aide (tutoriel). Sur mobile, ces boutons restent sur une ligne dédiée pour rester accessibles.'
+        },
+        {
+            emoji: '⚙️',
+            title: 'Mots, packs et thème',
+            text: 'Ajoute des mots ou charge les packs A1–C2, importe / exporte ta sauvegarde, change de thème dans la zone du bas. Le reset efface tout le stockage local de cette appli.'
+        },
+        {
+            emoji: '🚀',
+            title: 'C’est parti',
+            text: 'Quand tu rouvres cette page, cette intro ne réapparaît pas. Pour la revoir, utilise le lien sous les boutons d’administration.'
+        }
+    ];
+
+    var idx = 0;
+    var elEmoji = document.getElementById('vocab-onboarding-emoji');
+    var elTitle = document.getElementById('vocab-onboarding-title');
+    var elBody = document.getElementById('vocab-onboarding-body');
+    var elDots = document.getElementById('vocab-onboarding-dots');
+    var btnPrev = document.getElementById('vocab-onboarding-prev');
+    var btnNext = document.getElementById('vocab-onboarding-next');
+    var btnSkip = document.getElementById('vocab-onboarding-skip');
+
+    function finish() {
+        try { localStorage.setItem(STORAGE_KEY, '1'); } catch (e) {}
+        document.documentElement.classList.add('vocab-onboarding-done');
+    }
+
+    function renderDots() {
+        elDots.innerHTML = '';
+        for (var i = 0; i < slides.length; i++) {
+            var b = document.createElement('button');
+            b.type = 'button';
+            b.setAttribute('aria-label', 'Étape ' + (i + 1));
+            if (i === idx) b.setAttribute('aria-current', 'true');
+            (function (j) {
+                b.addEventListener('click', function () { idx = j; render(); });
+            })(i);
+            elDots.appendChild(b);
+        }
+    }
+
+    function render() {
+        var s = slides[idx];
+        elEmoji.textContent = s.emoji;
+        elTitle.textContent = s.title;
+        elBody.textContent = s.text;
+        btnPrev.disabled = idx === 0;
+        btnPrev.style.visibility = idx === 0 ? 'hidden' : 'visible';
+        btnNext.textContent = idx === slides.length - 1 ? 'Jouer' : 'Suivant';
+        renderDots();
+    }
+
+    btnPrev.addEventListener('click', function () {
+        if (idx > 0) { idx--; render(); }
+    });
+    btnNext.addEventListener('click', function () {
+        if (idx < slides.length - 1) { idx++; render(); } else { finish(); }
+    });
+    btnSkip.addEventListener('click', finish);
+
+    var replay = document.getElementById('replay-vocab-onboarding');
+    if (replay) {
+        replay.addEventListener('click', function () {
+            try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+            document.documentElement.classList.remove('vocab-onboarding-done');
+            idx = 0;
+            render();
+        });
+    }
+
+    render();
+})();
+</script>
 <script src="vocabulaire.js"></script>
 
 </body>

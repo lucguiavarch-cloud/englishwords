@@ -541,8 +541,13 @@ function getNextWord() {
         setMode("✨ NOUVEAU", "var(--primary)");
     }
 
+    const guideEl = document.getElementById('word-guide');
     if (!pool.length) {
         document.getElementById('current-word').innerText = "Bravo !";
+        if (guideEl) {
+            guideEl.textContent = "";
+            guideEl.hidden = true;
+        }
         modeTag.style.display = "none";
         return;
     }
@@ -550,6 +555,16 @@ function getNextWord() {
     modeTag.style.display = "block";
     currentWord = pool[Math.floor(Math.random() * pool.length)];
     document.getElementById('current-word').innerText = currentWord.fr;
+    if (guideEl) {
+        const g = currentWord.guide && String(currentWord.guide).trim();
+        if (g) {
+            guideEl.textContent = g;
+            guideEl.hidden = false;
+        } else {
+            guideEl.textContent = "";
+            guideEl.hidden = true;
+        }
+    }
     document.getElementById('user-input').value = "";
     document.getElementById('user-input').focus();
 }
@@ -757,17 +772,30 @@ function importMassive() {
     const input = document.getElementById('bulk-input').value;
     if (!input.trim()) return;
 
-    input.split('\n').forEach(line => {
-        const parts = line.split(',');
-        if (parts.length === 2) {
-            dictionary.push({
-                en: parts[0].trim(),
-                fr: parts[1].trim(),
-                level: 0,
-                isFailed: false,
-                nextReview: new Date().toISOString()
-            });
+    const GUIDE_SEP = " ||| ";
+    input.split('\n').forEach(rawLine => {
+        let line = rawLine.trim();
+        if (!line) return;
+        let guide = "";
+        const gi = line.indexOf(GUIDE_SEP);
+        if (gi !== -1) {
+            guide = line.slice(gi + GUIDE_SEP.length).trim();
+            line = line.slice(0, gi).trim();
         }
+        const comma = line.indexOf(",");
+        if (comma === -1) return;
+        const en = line.slice(0, comma).trim();
+        const fr = line.slice(comma + 1).trim();
+        if (!en || !fr) return;
+        const row = {
+            en,
+            fr,
+            level: 0,
+            isFailed: false,
+            nextReview: new Date().toISOString()
+        };
+        if (guide) row.guide = guide;
+        dictionary.push(row);
     });
     save();
     closeModal();
@@ -842,7 +870,16 @@ async function loadPreset(fileName) {
         const response = await fetch(`data/${fileName}.json`);
         if (!response.ok) throw new Error(`Fichier ${fileName}.json introuvable.`);
         const data = await response.json();
-        const formattedLines = data.map(item => `${item.en}, ${item.fr}`).join('\n');
+        const GUIDE_SEP = " ||| ";
+        const formattedLines = data
+            .map((item) => {
+                let line = `${item.en}, ${item.fr}`;
+                if (item.guide && String(item.guide).trim()) {
+                    line += GUIDE_SEP + String(item.guide).trim().replace(/\s*\|\|\|\s*/g, " ");
+                }
+                return line;
+            })
+            .join("\n");
         if (area.value.trim() !== "") {
             if (confirm("Ajouter à la liste actuelle ? (Annuler pour remplacer tout)")) {
                 area.value += "\n" + formattedLines;

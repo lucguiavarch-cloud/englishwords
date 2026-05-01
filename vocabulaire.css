@@ -104,14 +104,51 @@ body {
     transition: background 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* --- BOUTON D'AIDE --- */
-.tuto-link {
-    position: absolute; top: 15px; right: 15px;
-    background: var(--violet); color: var(--text-light); text-decoration: none;
-    padding: 8px 15px; border-radius: 20px; font-weight: bold; font-size: 13px;
-    transition: 0.3s; z-index: 100;
+/* --- Hub + aide (desktop : coins du cadre ; mobile : ligne pleine largeur, grid-area tuto) --- */
+.top-nav-links {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    z-index: 100;
+    pointer-events: none;
 }
-.tuto-link:hover { transform: scale(1.1); background: var(--accent); }
+.top-nav-links a {
+    pointer-events: auto;
+}
+
+.hub-link {
+    background: var(--primary);
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+    transition: 0.3s;
+    border: 1px solid var(--glass-medium);
+}
+.hub-link:hover {
+    transform: scale(1.06);
+    filter: brightness(1.08);
+}
+
+.tuto-link {
+    position: static;
+    background: var(--violet);
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+    transition: 0.3s;
+}
+.tuto-link:hover { transform: scale(1.06); background: var(--accent); }
 
 /* =========================================
    3. STATISTIQUES
@@ -464,7 +501,27 @@ body {
     font-family: var(--font-main);
 	font-size: 50px; font-weight: bold; 
     color: var(--text-card); 
-    margin-bottom: 20px; 
+    margin-bottom: 12px; 
+}
+
+.word-guide {
+    font-family: system-ui, "Segoe UI", sans-serif;
+    font-size: 12px;
+    line-height: 1.45;
+    color: var(--text-muted);
+    max-width: 520px;
+    margin: 0 auto 16px auto;
+    padding: 10px 14px;
+    text-align: center;
+    background: var(--bg-alt);
+    border-radius: var(--radius-btn);
+    border: 1px dashed var(--border-main);
+    box-sizing: border-box;
+}
+
+.word-guide:empty,
+.word-guide[hidden] {
+    display: none !important;
 }
 
 input[type="text"] { 
@@ -705,16 +762,28 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
    📱 INTERFACE MOBILE : DOUBLE COLONNE
    ========================================= */
 @media (max-width: 600px) {
-    /* Lien aide : visible dans le flux, au-dessus du HUD (ne plus masquer) */
-    .tuto-link {
-        display: block !important;
-        position: static;
+    .top-nav-links {
+        position: static !important;
         grid-area: tuto;
-        margin: 10px auto;
-        text-align: center;
-        width: fit-content;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2px;
+        margin: 0 0 6px 0;
+        pointer-events: auto;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hub-link,
+    .tuto-link {
         font-size: 11px;
-        padding: 5px 12px;
+        padding: 8px 12px;
+        margin: 0;
+        flex: 0 1 auto;
+        min-height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
 
     /* ✅ HUD mobile: nom de session + chrono (clic = modale) */
@@ -815,7 +884,13 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
         min-height: 250px;
         margin-bottom: 5px;
     }
-    .word-to-translate { font-size: 24px; margin-bottom: 10px; }
+    .word-to-translate { font-size: 24px; margin-bottom: 8px; }
+    .word-guide {
+        font-size: 10px;
+        padding: 8px 10px;
+        margin-bottom: 12px;
+        max-width: 100%;
+    }
     input[type="text"] {
         width: 95% !important; 
         font-size: 22px;

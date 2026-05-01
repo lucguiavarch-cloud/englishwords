@@ -1,7 +1,8 @@
 [
     {
         "en": "a",
-        "fr": "un"
+        "fr": "un",
+        "guide": "Article indéfini placé devant un son consonantique — ce n’est ni la forme devant voyelle, ni le nombre « un »."
     },
     {
         "en": "about",
@@ -29,7 +30,8 @@
     },
     {
         "en": "after",
-        "fr": "après"
+        "fr": "après",
+        "guide": "Plusieurs traductions (2) existent pour « après » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "afternoon",
@@ -37,11 +39,13 @@
     },
     {
         "en": "again",
-        "fr": "encore"
+        "fr": "encore",
+        "guide": "Plusieurs traductions (2) existent pour « encore » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "age",
-        "fr": "âge"
+        "fr": "âge",
+        "guide": "Plusieurs traductions (2) existent pour « âge » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "all",
@@ -53,15 +57,18 @@
     },
     {
         "en": "also",
-        "fr": "aussi"
+        "fr": "aussi",
+        "guide": "Plusieurs traductions (2) existent pour « aussi » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "always",
-        "fr": "toujours"
+        "fr": "toujours",
+        "guide": "Plusieurs traductions (2) existent pour « toujours » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "an",
-        "fr": "un"
+        "fr": "un",
+        "guide": "Article indéfini placé devant voyelle — ce n’est ni la forme devant consonne, ni le nombre « un »."
     },
     {
         "en": "and",
@@ -73,7 +80,8 @@
     },
     {
         "en": "answer",
-        "fr": "répondre"
+        "fr": "répondre",
+        "guide": "Répondre de façon directe (question, téléphone…) — nuance générale parmi trois verbes proches."
     },
     {
         "en": "any",
@@ -81,7 +89,8 @@
     },
     {
         "en": "anything",
-        "fr": "rien"
+        "fr": "rien",
+        "guide": "Plusieurs traductions (2) existent pour « rien » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "apple",
@@ -97,7 +106,8 @@
     },
     {
         "en": "as",
-        "fr": "comme"
+        "fr": "comme",
+        "guide": "Plusieurs traductions (2) existent pour « comme » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "ask",
@@ -105,7 +115,8 @@
     },
     {
         "en": "at",
-        "fr": "à"
+        "fr": "à",
+        "guide": "Plusieurs traductions (2) existent pour « à » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "august",
@@ -125,11 +136,13 @@
     },
     {
         "en": "bag",
-        "fr": "sac"
+        "fr": "sac",
+        "guide": "Plusieurs traductions (2) existent pour « sac » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "ball",
-        "fr": "balle"
+        "fr": "balle",
+        "guide": "Plusieurs traductions (2) existent pour « balle » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "banana",
@@ -137,7 +150,8 @@
     },
     {
         "en": "band",
-        "fr": "groupe"
+        "fr": "groupe",
+        "guide": "Plusieurs traductions (2) existent pour « groupe » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "bank",
@@ -161,7 +175,8 @@
     },
     {
         "en": "be",
-        "fr": "être"
+        "fr": "être",
+        "guide": "Plusieurs traductions (2) existent pour « être » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "beach",
@@ -173,7 +188,8 @@
     },
     {
         "en": "beautiful",
-        "fr": "beau"
+        "fr": "beau",
+        "guide": "Beau — général."
     },
     {
         "en": "because",
@@ -193,11 +209,13 @@
     },
     {
         "en": "before",
-        "fr": "avant"
+        "fr": "avant",
+        "guide": "Avant — temps ou ordre."
     },
     {
         "en": "begin",
-        "fr": "commencer"
+        "fr": "commencer",
+        "guide": "Entamer, être au début de — verbe très courant parmi trois du même champ lexical."
     },
     {
         "en": "behind",
@@ -221,7 +239,8 @@
     },
     {
         "en": "big",
-        "fr": "grand"
+        "fr": "grand",
+        "guide": "Grand ou important de façon générale — à distinguer de « haut » ou « large » selon contexte."
     },
     {
         "en": "bird",
@@ -229,7 +248,8 @@
     },
     {
         "en": "birthday",
-        "fr": "anniversaire"
+        "fr": "anniversaire",
+        "guide": "Plusieurs traductions (2) existent pour « anniversaire » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "biscuit",
@@ -245,11 +265,13 @@
     },
     {
         "en": "board",
-        "fr": "conseil"
+        "fr": "conseil",
+        "guide": "Conseil d’administration ou tableau — autre sens institutionnel."
     },
     {
         "en": "boat",
-        "fr": "bateau"
+        "fr": "bateau",
+        "guide": "Plusieurs traductions (2) existent pour « bateau » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "body",
@@ -257,7 +279,8 @@
     },
     {
         "en": "book",
-        "fr": "livre"
+        "fr": "livre",
+        "guide": "Objet qu’on lit (ouvrage) — pas la monnaie ni la livre-mesure de poids."
     },
     {
         "en": "bored",
@@ -265,7 +288,8 @@
     },
     {
         "en": "boring",
-        "fr": "ennuyeux"
+        "fr": "ennuyeux",
+        "guide": "Plusieurs traductions (2) existent pour « ennuyeux » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "both",
@@ -281,7 +305,8 @@
     },
     {
         "en": "boy",
-        "fr": "garçon"
+        "fr": "garçon",
+        "guide": "Plusieurs traductions (2) existent pour « garçon » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "bread",
@@ -305,7 +330,8 @@
     },
     {
         "en": "business",
-        "fr": "entreprise"
+        "fr": "entreprise",
+        "guide": "Affaires, commerce, entreprise — champ large."
     },
     {
         "en": "but",
@@ -321,7 +347,8 @@
     },
     {
         "en": "bye",
-        "fr": "au revoir"
+        "fr": "au revoir",
+        "guide": "Plusieurs traductions (2) existent pour « au revoir » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "cake",
@@ -329,7 +356,8 @@
     },
     {
         "en": "call",
-        "fr": "appel"
+        "fr": "appel",
+        "guide": "Plusieurs traductions (2) existent pour « appel » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "camera",
@@ -349,11 +377,13 @@
     },
     {
         "en": "carry",
-        "fr": "porter"
+        "fr": "porter",
+        "guide": "Plusieurs traductions (2) existent pour « porter » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "cat",
-        "fr": "chat"
+        "fr": "chat",
+        "guide": "Plusieurs traductions (2) existent pour « chat » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "catch",
@@ -369,7 +399,8 @@
     },
     {
         "en": "change",
-        "fr": "changement"
+        "fr": "changement",
+        "guide": "Plusieurs traductions (2) existent pour « changement » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "cheap",
@@ -381,7 +412,8 @@
     },
     {
         "en": "child",
-        "fr": "enfant"
+        "fr": "enfant",
+        "guide": "Enfant, standard neutre."
     },
     {
         "en": "chip",
@@ -401,15 +433,18 @@
     },
     {
         "en": "city",
-        "fr": "ville"
+        "fr": "ville",
+        "guide": "Plusieurs traductions (2) existent pour « ville » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "class",
-        "fr": "classe"
+        "fr": "classe",
+        "guide": "Plusieurs traductions (2) existent pour « classe » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "classroom",
-        "fr": "classe"
+        "fr": "classe",
+        "guide": "Plusieurs traductions (2) existent pour « classe » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "clean",
@@ -417,7 +452,8 @@
     },
     {
         "en": "clever",
-        "fr": "intelligent"
+        "fr": "intelligent",
+        "guide": "Malin, débrouillard — registre un peu familier parmi trois adjectifs d’esprit."
     },
     {
         "en": "clock",
@@ -429,7 +465,8 @@
     },
     {
         "en": "clothes",
-        "fr": "vêtements"
+        "fr": "vêtements",
+        "guide": "Plusieurs traductions (2) existent pour « vêtements » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "coat",
@@ -441,7 +478,8 @@
     },
     {
         "en": "cold",
-        "fr": "froid"
+        "fr": "froid",
+        "guide": "Plusieurs traductions (2) existent pour « froid » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "colour",
@@ -481,7 +519,8 @@
     },
     {
         "en": "cup",
-        "fr": "tasse"
+        "fr": "tasse",
+        "guide": "Plusieurs traductions (2) existent pour « tasse » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "dad",
@@ -497,7 +536,8 @@
     },
     {
         "en": "dark",
-        "fr": "sombre"
+        "fr": "sombre",
+        "guide": "Sombre, peu lumineux."
     },
     {
         "en": "date",
@@ -505,15 +545,18 @@
     },
     {
         "en": "daughter",
-        "fr": "fille"
+        "fr": "fille",
+        "guide": "Plusieurs traductions (2) existent pour « fille » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "day",
-        "fr": "jour"
+        "fr": "jour",
+        "guide": "Plusieurs traductions (2) existent pour « jour » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "dear",
-        "fr": "cher"
+        "fr": "cher",
+        "guide": "Plusieurs traductions (2) existent pour « cher » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "december",
@@ -521,7 +564,8 @@
     },
     {
         "en": "desk",
-        "fr": "bureau"
+        "fr": "bureau",
+        "guide": "Plusieurs traductions (2) existent pour « bureau » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "dictionary",
@@ -537,7 +581,8 @@
     },
     {
         "en": "difficult",
-        "fr": "difficile"
+        "fr": "difficile",
+        "guide": "Difficile, standard."
     },
     {
         "en": "dinner",
@@ -545,7 +590,8 @@
     },
     {
         "en": "do",
-        "fr": "faire"
+        "fr": "faire",
+        "guide": "Plusieurs traductions (2) existent pour « faire » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "doctor",
@@ -565,11 +611,13 @@
     },
     {
         "en": "door",
-        "fr": "porte"
+        "fr": "porte",
+        "guide": "Plusieurs traductions (2) existent pour « porte » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "down",
-        "fr": "vers le bas"
+        "fr": "vers le bas",
+        "guide": "Vers le bas — adverbe."
     },
     {
         "en": "draw",
@@ -585,11 +633,13 @@
     },
     {
         "en": "drive",
-        "fr": "conduire"
+        "fr": "conduire",
+        "guide": "Plusieurs traductions (2) existent pour « conduire » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "driver",
-        "fr": "conducteur"
+        "fr": "conducteur",
+        "guide": "Plusieurs traductions (2) existent pour « conducteur » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "dvd",
@@ -597,7 +647,8 @@
     },
     {
         "en": "each",
-        "fr": "chaque"
+        "fr": "chaque",
+        "guide": "Plusieurs traductions (2) existent pour « chaque » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "ear",
@@ -637,11 +688,13 @@
     },
     {
         "en": "end",
-        "fr": "fin"
+        "fr": "fin",
+        "guide": "Fin, terme — substantif principal."
     },
     {
         "en": "enjoy",
-        "fr": "apprécier"
+        "fr": "apprécier",
+        "guide": "Plusieurs traductions (2) existent pour « apprécier » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "evening",
@@ -649,11 +702,13 @@
     },
     {
         "en": "every",
-        "fr": "chaque"
+        "fr": "chaque",
+        "guide": "Plusieurs traductions (2) existent pour « chaque » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "example",
-        "fr": "exemple"
+        "fr": "exemple",
+        "guide": "Plusieurs traductions (2) existent pour « exemple » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "excited",
@@ -665,7 +720,8 @@
     },
     {
         "en": "expensive",
-        "fr": "cher"
+        "fr": "cher",
+        "guide": "Plusieurs traductions (2) existent pour « cher » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "eye",
@@ -673,11 +729,13 @@
     },
     {
         "en": "face",
-        "fr": "affronter"
+        "fr": "affronter",
+        "guide": "Plusieurs traductions (2) existent pour « affronter » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "factory",
-        "fr": "usine"
+        "fr": "usine",
+        "guide": "Plusieurs traductions (2) existent pour « usine » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "family",
@@ -685,15 +743,18 @@
     },
     {
         "en": "famous",
-        "fr": "célèbre"
+        "fr": "célèbre",
+        "guide": "Célèbre — général."
     },
     {
         "en": "farm",
-        "fr": "ferme"
+        "fr": "ferme",
+        "guide": "Plusieurs traductions (2) existent pour « ferme » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "fast",
-        "fr": "rapide"
+        "fr": "rapide",
+        "guide": "Rapide, courant — parmi plusieurs adjectifs/adverbes de vitesse."
     },
     {
         "en": "fat",
@@ -721,7 +782,8 @@
     },
     {
         "en": "film",
-        "fr": "film"
+        "fr": "film",
+        "guide": "Plusieurs traductions (2) existent pour « film » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "find",
@@ -729,7 +791,8 @@
     },
     {
         "en": "fine",
-        "fr": "bien"
+        "fr": "bien",
+        "guide": "Adjectif : correct, convenable, en bonne forme — nuance différente des deux autres « bien »."
     },
     {
         "en": "finish",
@@ -749,11 +812,13 @@
     },
     {
         "en": "flat",
-        "fr": "plat"
+        "fr": "plat",
+        "guide": "Plusieurs traductions (2) existent pour « plat » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "floor",
-        "fr": "sol"
+        "fr": "sol",
+        "guide": "Surface sur laquelle on marche dans une pièce — pas le sol extérieur ni la terre végétale."
     },
     {
         "en": "flower",
@@ -761,7 +826,8 @@
     },
     {
         "en": "fly",
-        "fr": "voler"
+        "fr": "voler",
+        "guide": "Sens aérien : s’élever ou se déplacer dans les airs — pas dérober ni braquer."
     },
     {
         "en": "food",
@@ -801,7 +867,8 @@
     },
     {
         "en": "from",
-        "fr": "depuis"
+        "fr": "depuis",
+        "guide": "Plusieurs traductions (2) existent pour « depuis » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "fruit",
@@ -809,7 +876,8 @@
     },
     {
         "en": "fun",
-        "fr": "amusant"
+        "fr": "amusant",
+        "guide": "Amusement — substantif informel."
     },
     {
         "en": "funny",
@@ -825,11 +893,13 @@
     },
     {
         "en": "get",
-        "fr": "obtenir"
+        "fr": "obtenir",
+        "guide": "Plusieurs traductions (2) existent pour « obtenir » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "girl",
-        "fr": "fille"
+        "fr": "fille",
+        "guide": "Plusieurs traductions (2) existent pour « fille » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "give",
@@ -849,15 +919,18 @@
     },
     {
         "en": "good",
-        "fr": "bien"
+        "fr": "bien",
+        "guide": "Adjectif de qualité ou de moral — pas l’adverbe de manière."
     },
     {
         "en": "goodbye",
-        "fr": "au revoir"
+        "fr": "au revoir",
+        "guide": "Plusieurs traductions (2) existent pour « au revoir » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "grass",
-        "fr": "herbe"
+        "fr": "herbe",
+        "guide": "Gazon, pelouse — pas la plante aromatique ni la mauvaise herbe."
     },
     {
         "en": "great",
@@ -873,7 +946,8 @@
     },
     {
         "en": "group",
-        "fr": "groupe"
+        "fr": "groupe",
+        "guide": "Plusieurs traductions (2) existent pour « groupe » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "guitar",
@@ -893,7 +967,8 @@
     },
     {
         "en": "happy",
-        "fr": "heureux"
+        "fr": "heureux",
+        "guide": "Heureux, content — général."
     },
     {
         "en": "hard",
@@ -909,7 +984,8 @@
     },
     {
         "en": "he",
-        "fr": "il"
+        "fr": "il",
+        "guide": "Plusieurs traductions (2) existent pour « il » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "head",
@@ -925,11 +1001,13 @@
     },
     {
         "en": "help",
-        "fr": "aide"
+        "fr": "aide",
+        "guide": "Plusieurs traductions (2) existent pour « aide » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "her",
-        "fr": "son"
+        "fr": "son",
+        "guide": "Relatif au féminin (elle) : possessif ou complément correspondant — pas la forme masculine ni le substantif « bruit »."
     },
     {
         "en": "here",
@@ -945,7 +1023,8 @@
     },
     {
         "en": "his",
-        "fr": "son"
+        "fr": "son",
+        "guide": "Relatif au masculin (il) : possessif — pas la forme au féminin ni le substantif « bruit »."
     },
     {
         "en": "holiday",
@@ -969,7 +1048,8 @@
     },
     {
         "en": "hot",
-        "fr": "chaud"
+        "fr": "chaud",
+        "guide": "Plusieurs traductions (2) existent pour « chaud » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "hotel",
@@ -985,7 +1065,8 @@
     },
     {
         "en": "hungry",
-        "fr": "affamé"
+        "fr": "affamé",
+        "guide": "Plusieurs traductions (2) existent pour « affamé » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "husband",
@@ -997,19 +1078,23 @@
     },
     {
         "en": "important",
-        "fr": "important"
+        "fr": "important",
+        "guide": "Plusieurs traductions (2) existent pour « important » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "in",
-        "fr": "dans"
+        "fr": "dans",
+        "guide": "Dans l’espace ou le temps, à l’intérieur — statique ou général."
     },
     {
         "en": "interesting",
-        "fr": "intéressant"
+        "fr": "intéressant",
+        "guide": "Plusieurs traductions (2) existent pour « intéressant » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "into",
-        "fr": "dans"
+        "fr": "dans",
+        "guide": "Vers l’intérieur, mouvement d’entrée — insiste sur le passage."
     },
     {
         "en": "invite",
@@ -1017,7 +1102,8 @@
     },
     {
         "en": "it",
-        "fr": "il"
+        "fr": "il",
+        "guide": "Plusieurs traductions (2) existent pour « il » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "its",
@@ -1037,7 +1123,8 @@
     },
     {
         "en": "job",
-        "fr": "emploi"
+        "fr": "emploi",
+        "guide": "Plusieurs traductions (2) existent pour « emploi » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "juice",
@@ -1057,7 +1144,8 @@
     },
     {
         "en": "kick",
-        "fr": "coup"
+        "fr": "coup",
+        "guide": "Plusieurs traductions (2) existent pour « coup » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "kind",
@@ -1077,11 +1165,13 @@
     },
     {
         "en": "language",
-        "fr": "langue"
+        "fr": "langue",
+        "guide": "Plusieurs traductions (2) existent pour « langue » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "last",
-        "fr": "dernier"
+        "fr": "dernier",
+        "guide": "Dernier dans une suite, précédent — attention au faux ami avec « le plus récent »."
     },
     {
         "en": "late",
@@ -1097,7 +1187,8 @@
     },
     {
         "en": "leave",
-        "fr": "partir"
+        "fr": "partir",
+        "guide": "Plusieurs traductions (2) existent pour « partir » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "leg",
@@ -1113,7 +1204,8 @@
     },
     {
         "en": "life",
-        "fr": "vie"
+        "fr": "vie",
+        "guide": "Plusieurs traductions (2) existent pour « vie » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "light",
@@ -1121,7 +1213,8 @@
     },
     {
         "en": "like",
-        "fr": "comme"
+        "fr": "comme",
+        "guide": "Plusieurs traductions (2) existent pour « comme » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "listen",
@@ -1129,7 +1222,8 @@
     },
     {
         "en": "little",
-        "fr": "petit"
+        "fr": "petit",
+        "guide": "Petit ou peu (souvent affectif) — nuance parmi trois « petit »."
     },
     {
         "en": "long",
@@ -1141,7 +1235,8 @@
     },
     {
         "en": "lot",
-        "fr": "parcelle"
+        "fr": "parcelle",
+        "guide": "Plusieurs traductions (2) existent pour « parcelle » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "love",
@@ -1153,7 +1248,8 @@
     },
     {
         "en": "make",
-        "fr": "faire"
+        "fr": "faire",
+        "guide": "Plusieurs traductions (2) existent pour « faire » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "man",
@@ -1161,7 +1257,8 @@
     },
     {
         "en": "many",
-        "fr": "beaucoup"
+        "fr": "beaucoup",
+        "guide": "Beaucoup avec nom dénombrable au pluriel."
     },
     {
         "en": "march",
@@ -1205,7 +1302,8 @@
     },
     {
         "en": "mobile",
-        "fr": "mobile"
+        "fr": "mobile",
+        "guide": "Plusieurs traductions (2) existent pour « mobile » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "monday",
@@ -1213,7 +1311,8 @@
     },
     {
         "en": "money",
-        "fr": "argent"
+        "fr": "argent",
+        "guide": "Plusieurs traductions (2) existent pour « argent » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "month",
@@ -1221,7 +1320,8 @@
     },
     {
         "en": "more",
-        "fr": "plus"
+        "fr": "plus",
+        "guide": "Comparatif de quantité ou de degré — usage général."
     },
     {
         "en": "morning",
@@ -1229,7 +1329,8 @@
     },
     {
         "en": "mother",
-        "fr": "mère"
+        "fr": "mère",
+        "guide": "Plusieurs traductions (2) existent pour « mère » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "mouth",
@@ -1237,7 +1338,8 @@
     },
     {
         "en": "movie",
-        "fr": "film"
+        "fr": "film",
+        "guide": "Plusieurs traductions (2) existent pour « film » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "mr",
@@ -1249,7 +1351,8 @@
     },
     {
         "en": "much",
-        "fr": "beaucoup"
+        "fr": "beaucoup",
+        "guide": "Beaucoup avec nom indénombrable."
     },
     {
         "en": "mum",
@@ -1269,7 +1372,8 @@
     },
     {
         "en": "name",
-        "fr": "nom"
+        "fr": "nom",
+        "guide": "Plusieurs traductions (2) existent pour « nom » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "nationality",
@@ -1285,7 +1389,8 @@
     },
     {
         "en": "never",
-        "fr": "jamais"
+        "fr": "jamais",
+        "guide": "Plusieurs traductions (2) existent pour « jamais » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "new",
@@ -1293,11 +1398,13 @@
     },
     {
         "en": "newspaper",
-        "fr": "journal"
+        "fr": "journal",
+        "guide": "Plusieurs traductions (2) existent pour « journal » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "next",
-        "fr": "suivant"
+        "fr": "suivant",
+        "guide": "Plusieurs traductions (2) existent pour « suivant » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "nice",
@@ -1329,15 +1436,18 @@
     },
     {
         "en": "not",
-        "fr": "pas"
+        "fr": "pas",
+        "guide": "Négation avec auxiliaire ou verbe — pas le bruit de pas ni le terrain de sport."
     },
     {
         "en": "note",
-        "fr": "note"
+        "fr": "note",
+        "guide": "Plusieurs traductions (2) existent pour « note » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "noun",
-        "fr": "nom"
+        "fr": "nom",
+        "guide": "Plusieurs traductions (2) existent pour « nom » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "november",
@@ -1373,11 +1483,13 @@
     },
     {
         "en": "on",
-        "fr": "sur"
+        "fr": "sur",
+        "guide": "Sur la surface, en contact — préposition de base."
     },
     {
         "en": "one",
-        "fr": "un"
+        "fr": "un",
+        "guide": "Ici au sens de nombre ou d’unité isolée — ce ne sont pas les articles indéfinis devant un nom."
     },
     {
         "en": "only",
@@ -1385,7 +1497,8 @@
     },
     {
         "en": "open",
-        "fr": "ouvrir"
+        "fr": "ouvrir",
+        "guide": "Plusieurs traductions (2) existent pour « ouvrir » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "or",
@@ -1397,7 +1510,8 @@
     },
     {
         "en": "other",
-        "fr": "autre"
+        "fr": "autre",
+        "guide": "Plusieurs traductions (2) existent pour « autre » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "our",
@@ -1409,7 +1523,8 @@
     },
     {
         "en": "paint",
-        "fr": "peinture"
+        "fr": "peinture",
+        "guide": "Plusieurs traductions (2) existent pour « peinture » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "pair",
@@ -1421,7 +1536,8 @@
     },
     {
         "en": "parent",
-        "fr": "mère"
+        "fr": "mère",
+        "guide": "Plusieurs traductions (2) existent pour « mère » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "park",
@@ -1429,7 +1545,8 @@
     },
     {
         "en": "part",
-        "fr": "partie"
+        "fr": "partie",
+        "guide": "Plusieurs traductions (2) existent pour « partie » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "party",
@@ -1457,7 +1574,8 @@
     },
     {
         "en": "person",
-        "fr": "personne"
+        "fr": "personne",
+        "guide": "Un être humain, quelqu’un — sens affirmatif simple."
     },
     {
         "en": "pet",
@@ -1465,7 +1583,8 @@
     },
     {
         "en": "phone",
-        "fr": "téléphone"
+        "fr": "téléphone",
+        "guide": "Plusieurs traductions (2) existent pour « téléphone » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "photo",
@@ -1477,7 +1596,8 @@
     },
     {
         "en": "picture",
-        "fr": "image"
+        "fr": "image",
+        "guide": "Plusieurs traductions (2) existent pour « image » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "pig",
@@ -1489,15 +1609,18 @@
     },
     {
         "en": "place",
-        "fr": "lieu"
+        "fr": "lieu",
+        "guide": "Plusieurs traductions (2) existent pour « lieu » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "plane",
-        "fr": "avion"
+        "fr": "avion",
+        "guide": "Plusieurs traductions (2) existent pour « avion » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "plant",
-        "fr": "usine"
+        "fr": "usine",
+        "guide": "Plusieurs traductions (2) existent pour « usine » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "plate",
@@ -1521,7 +1644,8 @@
     },
     {
         "en": "possible",
-        "fr": "possible"
+        "fr": "possible",
+        "guide": "Plusieurs traductions (2) existent pour « possible » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "potato",
@@ -1529,7 +1653,8 @@
     },
     {
         "en": "practise",
-        "fr": "pratique"
+        "fr": "pratique",
+        "guide": "Verbe (orthographe britannique fréquente) : s’exercer, entraîner — pas le nom d’habitude ni l’adjectif « commode »."
     },
     {
         "en": "preposition",
@@ -1537,7 +1662,8 @@
     },
     {
         "en": "problem",
-        "fr": "problème"
+        "fr": "problème",
+        "guide": "Plusieurs traductions (2) existent pour « problème » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "put",
@@ -1553,7 +1679,8 @@
     },
     {
         "en": "quick",
-        "fr": "rapide"
+        "fr": "rapide",
+        "guide": "Rapide, souvent bref ou immédiat."
     },
     {
         "en": "radio",
@@ -1573,11 +1700,13 @@
     },
     {
         "en": "ready",
-        "fr": "prêt"
+        "fr": "prêt",
+        "guide": "Plusieurs traductions (2) existent pour « prêt » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "really",
-        "fr": "vraiment"
+        "fr": "vraiment",
+        "guide": "Plusieurs traductions (2) existent pour « vraiment » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "red",
@@ -1597,7 +1726,8 @@
     },
     {
         "en": "ride",
-        "fr": "monter"
+        "fr": "monter",
+        "guide": "Monter à vélo, à cheval, conduire un véhicule léger."
     },
     {
         "en": "right",
@@ -1633,7 +1763,8 @@
     },
     {
         "en": "same",
-        "fr": "même"
+        "fr": "même",
+        "guide": "Identique, le même — adjectif ou pronom."
     },
     {
         "en": "sandwich",
@@ -1645,7 +1776,8 @@
     },
     {
         "en": "say",
-        "fr": "dire"
+        "fr": "dire",
+        "guide": "Dire quelque chose (énoncer) — complément souvent une chose."
     },
     {
         "en": "school",
@@ -1661,7 +1793,8 @@
     },
     {
         "en": "see",
-        "fr": "voir"
+        "fr": "voir",
+        "guide": "Plusieurs traductions (2) existent pour « voir » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "send",
@@ -1669,7 +1802,8 @@
     },
     {
         "en": "sentence",
-        "fr": "phrase"
+        "fr": "phrase",
+        "guide": "Plusieurs traductions (2) existent pour « phrase » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "september",
@@ -1749,7 +1883,8 @@
     },
     {
         "en": "slim",
-        "fr": "mince"
+        "fr": "mince",
+        "guide": "Mince, élancé."
     },
     {
         "en": "slow",
@@ -1757,7 +1892,8 @@
     },
     {
         "en": "small",
-        "fr": "petit"
+        "fr": "petit",
+        "guide": "De petite taille, modeste — neutre et fréquent."
     },
     {
         "en": "smoke",
@@ -1765,7 +1901,8 @@
     },
     {
         "en": "smoking",
-        "fr": "fumeur"
+        "fr": "fumeur",
+        "guide": "Plusieurs traductions (2) existent pour « fumeur » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "snow",
@@ -1801,7 +1938,8 @@
     },
     {
         "en": "speak",
-        "fr": "parler"
+        "fr": "parler",
+        "guide": "Plusieurs traductions (2) existent pour « parler » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "sport",
@@ -1809,7 +1947,8 @@
     },
     {
         "en": "start",
-        "fr": "commencer"
+        "fr": "commencer",
+        "guide": "Démarrer une action ou faire partir quelque chose — très fréquent, proche mais pas identique aux deux autres."
     },
     {
         "en": "station",
@@ -1817,7 +1956,8 @@
     },
     {
         "en": "stay",
-        "fr": "rester"
+        "fr": "rester",
+        "guide": "Rester sur place ou dans un état — le plus courant."
     },
     {
         "en": "stop",
@@ -1825,7 +1965,8 @@
     },
     {
         "en": "street",
-        "fr": "rue"
+        "fr": "rue",
+        "guide": "Plusieurs traductions (2) existent pour « rue » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "student",
@@ -1845,7 +1986,8 @@
     },
     {
         "en": "sun",
-        "fr": "soleil"
+        "fr": "soleil",
+        "guide": "Astre du jour — mot court."
     },
     {
         "en": "sunday",
@@ -1857,7 +1999,8 @@
     },
     {
         "en": "sweet",
-        "fr": "doux"
+        "fr": "doux",
+        "guide": "Sucré ou gentil selon contexte."
     },
     {
         "en": "swim",
@@ -1869,19 +2012,23 @@
     },
     {
         "en": "take",
-        "fr": "prendre"
+        "fr": "prendre",
+        "guide": "Plusieurs traductions (2) existent pour « prendre » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "talk",
-        "fr": "parler"
+        "fr": "parler",
+        "guide": "Plusieurs traductions (2) existent pour « parler » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "tall",
-        "fr": "grand"
+        "fr": "grand",
+        "guide": "Grand en hauteur (personne, bâtiment) — pas l’idée de grosseur générale ou de largeur."
     },
     {
         "en": "taxi",
-        "fr": "Taxi"
+        "fr": "Taxi",
+        "guide": "Plusieurs traductions (2) existent pour « Taxi » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "tea",
@@ -1893,7 +2040,8 @@
     },
     {
         "en": "teacher",
-        "fr": "professeur"
+        "fr": "professeur",
+        "guide": "Plusieurs traductions (2) existent pour « professeur » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "television",
@@ -1901,7 +2049,8 @@
     },
     {
         "en": "tell",
-        "fr": "dire"
+        "fr": "dire",
+        "guide": "Dire à quelqu’un, raconter — complément souvent une personne."
     },
     {
         "en": "ten",
@@ -1917,7 +2066,8 @@
     },
     {
         "en": "than",
-        "fr": "que"
+        "fr": "que",
+        "guide": "Plusieurs traductions (2) existent pour « que » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "thanks",
@@ -1925,7 +2075,8 @@
     },
     {
         "en": "that",
-        "fr": "que"
+        "fr": "que",
+        "guide": "Plusieurs traductions (2) existent pour « que » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "the",
@@ -1993,19 +2144,23 @@
     },
     {
         "en": "tired",
-        "fr": "fatigué"
+        "fr": "fatigué",
+        "guide": "Plusieurs traductions (2) existent pour « fatigué » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "to",
-        "fr": "à"
+        "fr": "à",
+        "guide": "Plusieurs traductions (2) existent pour « à » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "today",
-        "fr": "aujourd'hui"
+        "fr": "aujourd'hui",
+        "guide": "Plusieurs traductions (2) existent pour « aujourd'hui » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "together",
-        "fr": "ensemble"
+        "fr": "ensemble",
+        "guide": "Plusieurs traductions (2) existent pour « ensemble » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "toilet",
@@ -2025,7 +2180,8 @@
     },
     {
         "en": "too",
-        "fr": "aussi"
+        "fr": "aussi",
+        "guide": "Plusieurs traductions (2) existent pour « aussi » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "tooth",
@@ -2033,7 +2189,8 @@
     },
     {
         "en": "town",
-        "fr": "ville"
+        "fr": "ville",
+        "guide": "Plusieurs traductions (2) existent pour « ville » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "train",
@@ -2041,7 +2198,8 @@
     },
     {
         "en": "travel",
-        "fr": "voyage"
+        "fr": "voyage",
+        "guide": "Voyager ou le voyage en général — terme large."
     },
     {
         "en": "tree",
@@ -2049,7 +2207,8 @@
     },
     {
         "en": "trousers",
-        "fr": "pantalon"
+        "fr": "pantalon",
+        "guide": "Plusieurs traductions (2) existent pour « pantalon » dans l’appli. Les réponses anglaises attendues n’ont pas toutes la même longueur. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "tuesday",
@@ -2073,11 +2232,13 @@
     },
     {
         "en": "under",
-        "fr": "sous"
+        "fr": "sous",
+        "guide": "Plusieurs traductions (2) existent pour « sous » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "understand",
-        "fr": "comprendre"
+        "fr": "comprendre",
+        "guide": "Plusieurs traductions (2) existent pour « comprendre » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "university",
@@ -2085,7 +2246,8 @@
     },
     {
         "en": "until",
-        "fr": "jusqu'à"
+        "fr": "jusqu'à",
+        "guide": "Plusieurs traductions (2) existent pour « jusqu'à » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "up",
@@ -2093,7 +2255,8 @@
     },
     {
         "en": "us",
-        "fr": "nous"
+        "fr": "nous",
+        "guide": "Plusieurs traductions (2) existent pour « nous » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "vegetable",
@@ -2105,7 +2268,8 @@
     },
     {
         "en": "very",
-        "fr": "très"
+        "fr": "très",
+        "guide": "Plusieurs traductions (2) existent pour « très » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "village",
@@ -2121,7 +2285,8 @@
     },
     {
         "en": "waiter",
-        "fr": "serveur"
+        "fr": "serveur",
+        "guide": "Plusieurs traductions (2) existent pour « serveur » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "waitress",
@@ -2145,7 +2310,8 @@
     },
     {
         "en": "warm",
-        "fr": "chaud"
+        "fr": "chaud",
+        "guide": "Plusieurs traductions (2) existent pour « chaud » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "wash",
@@ -2161,11 +2327,13 @@
     },
     {
         "en": "we",
-        "fr": "nous"
+        "fr": "nous",
+        "guide": "Plusieurs traductions (2) existent pour « nous » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "wear",
-        "fr": "porter"
+        "fr": "porter",
+        "guide": "Plusieurs traductions (2) existent pour « porter » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "weather",
@@ -2185,7 +2353,8 @@
     },
     {
         "en": "well",
-        "fr": "Bien"
+        "fr": "Bien",
+        "guide": "Adverbe de manière (souvent avec un verbe) — pas l’adjectif de qualité ni « correct / en forme »."
     },
     {
         "en": "what",
@@ -2209,7 +2378,8 @@
     },
     {
         "en": "who",
-        "fr": "qui"
+        "fr": "qui",
+        "guide": "Plusieurs traductions (2) existent pour « qui » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "why",
@@ -2221,7 +2391,8 @@
     },
     {
         "en": "will",
-        "fr": "volonté"
+        "fr": "volonté",
+        "guide": "Volonté ou document testamentaire — substantif court."
     },
     {
         "en": "wind1",
@@ -2249,7 +2420,8 @@
     },
     {
         "en": "work",
-        "fr": "travail"
+        "fr": "travail",
+        "guide": "Plusieurs traductions (2) existent pour « travail » dans l’appli. Réfléchis au contexte (nom, verbe, adjectif…). Ce rappel ne donne pas le mot anglais ; l’indice 💡 est là seulement si tu en as besoin."
     },
     {
         "en": "world",
@@ -2273,7 +2445,8 @@
     },
     {
         "en": "wrong",
-        "fr": "faux"
+        "fr": "faux",
+        "guide": "Incorrect, erroné — première nuance du groupe."
     },
     {
         "en": "year",
