@@ -989,7 +989,7 @@ function spawnFloatingText(text, color, opts) {
 
     document.body.appendChild(floatEl);
 
-    setTimeout(() => floatEl.remove(), 800);
+    setTimeout(() => floatEl.remove(), 1600);
 }
 
 function spawnFloatingTextFromElement(anchorEl, text, color) {
@@ -1002,7 +1002,7 @@ function spawnFloatingTextFromElement(anchorEl, text, color) {
     floatEl.style.left = `${rect.left + rect.width / 2 + window.scrollX}px`;
     floatEl.style.top = `${rect.top + window.scrollY}px`;
     document.body.appendChild(floatEl);
-    setTimeout(() => floatEl.remove(), 800);
+    setTimeout(() => floatEl.remove(), 1500);
 }
 
 

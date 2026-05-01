@@ -972,7 +972,7 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
     pointer-events: none; /* Empêche de bloquer les clics */
     z-index: 9999;
     transform: translate(-50%, -50%); /* Centrage précis */
-    animation: floatUp 0.8s cubic-bezier(0.22, 1.24, 0.36, 1) forwards;
+    animation: floatUp 1.55s cubic-bezier(0.22, 1.1, 0.36, 1) forwards;
     /* Lisibilité + lueur initiale (renforcée dans les keyframes) */
     text-shadow:
         2px 2px 0 rgba(0, 0, 0, 0.35),
@@ -985,14 +985,15 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
 #btn-shield + .floating-text,
 .floating-text.shield-plus {
     font-size: 26px;
-    animation: shieldPlus 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    animation: shieldPlus 1.45s cubic-bezier(0.25, 1, 0.45, 1) forwards;
     text-shadow: 0 0 12px rgba(0,0,0,0.35), 0 0 20px var(--primary);
 }
 
 @keyframes shieldPlus {
     0% { opacity: 0; transform: translate(-50%, -30%) scale(0.6); }
-    25% { opacity: 1; transform: translate(-50%, -60%) scale(1.6); }
-    100% { opacity: 0; transform: translate(-50%, -140%) scale(1.2); }
+    22% { opacity: 1; transform: translate(-50%, -60%) scale(1.55); }
+    68% { opacity: 1; transform: translate(-50%, -108%) scale(1.22); }
+    100% { opacity: 0; transform: translate(-50%, -145%) scale(1.15); }
 }
 
 @keyframes floatUp {
@@ -1007,7 +1008,7 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
             0 0 44px currentColor,
             0 0 64px currentColor;
     }
-    10% {
+    18% {
         opacity: 1;
         transform: translate(calc(-50% + 14px), -88%) scale(1.38);
         filter: brightness(1.2);
@@ -1018,7 +1019,7 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
             0 0 38px currentColor,
             0 0 52px currentColor;
     }
-    22% {
+    32% {
         transform: translate(calc(-50% - 6px), -72%) scale(0.94);
         filter: brightness(1.05);
         text-shadow:
@@ -1027,7 +1028,7 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
             0 0 12px currentColor,
             0 0 26px currentColor;
     }
-    45% {
+    52% {
         opacity: 1;
         transform: translate(calc(-50% + 10px), -118%) scale(1.05);
         text-shadow:
@@ -1035,6 +1036,24 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
             -1px -1px 0 rgba(255, 255, 255, 0.35),
             0 0 10px currentColor,
             0 0 22px currentColor;
+    }
+    74% {
+        opacity: 1;
+        transform: translate(calc(-50% - 3px), -188%) scale(1.02);
+        text-shadow:
+            2px 2px 0 rgba(0, 0, 0, 0.32),
+            -1px -1px 0 rgba(255, 255, 255, 0.3),
+            0 0 8px currentColor,
+            0 0 18px currentColor;
+    }
+    88% {
+        opacity: 0.5;
+        transform: translate(calc(-50% - 4px), -198%) scale(1);
+        filter: brightness(1);
+        text-shadow:
+            2px 2px 0 rgba(0, 0, 0, 0.28),
+            -1px -1px 0 rgba(255, 255, 255, 0.22),
+            0 0 5px currentColor;
     }
     100% {
         opacity: 0;
