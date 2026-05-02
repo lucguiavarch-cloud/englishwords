@@ -1,5 +1,19 @@
 # Changelog
 
+## v4.8 — 02/05/2026
+
+### Vocabulaire (`vocabulaire.html` / `.css` / `.js`)
+- **Zone Objectifs** : pastilles **~40px** avec **anneau de progression SVG**, disposition **compacte** (toolbar 🎯 + réservoir fusionné + Grimoire), libellés courts, **focus** sur l’objectif le plus avancé (pulse). Mobile : bulles **28px** dans la colonne étroite.
+- **Maîtrise totale** (colonne droite) : bandeau **ultra-compact** — `Maîtrise` + **%** + barre fine + **delta jour** (`+n%` / `−n%` / `·`), détail en **infobulle**. Stats **`masteryBaselineDate`**, **`masteryBaselinePercent`**, **`masterySnapshotEod`** + **`persistStatsOnly()`** pour suivre la progression sur la journée.
+- **Reset** : **double confirmation** avec rappel du contenu effacé et **recommandation d’exporter** avant.
+
+### Verbes (`verbes.html`)
+- **Gamification** : **XP** + niveau joueur (barre), **combo** de session (pastille), **toasts** (objectif quotidien, combo, verbe **Acquis**, niveau joueur), animation courte sur bonne réponse, pastille volume **dorée** quand l’objectif du jour est atteint, modes quiz **colorés**. Stats étendues (**`sessionCombo`**, **`bestSessionCombo`**, **`xp`**, **`playerLevel`**) avec fusion **`mergeVerbStats`**.
+- **Reset** : même logique **double confirmation** + export recommandé.
+
+### Onboarding (vocabulaire + verbes)
+- Nouvelle clé **`learnEnglish_vocab_onboarding_v2`** / **`learnEnglish_verbs_onboarding_v2`** (script `<head>` aligné) : contenu recentré sur la **répétition quotidienne**, la métaphore des **boîtes** jusqu’à **Maître** (vocab) / **Acquis** (verbes), la **première connexion** (packs A1–C2 avec **repères scolaires indicatifs**, liste officielle verbes), et la **sauvegarde régulière** (données **navigateur**).
+
 ## v4.7 — 01/05/2026
 
 ### Données vocabulaire (A1–C2)
@@ -9,7 +23,7 @@
 - Script de régénération / mise à jour des guides : **`scripts/add-word-guides.mjs`** (`node scripts/add-word-guides.mjs`).
 
 ### Appli (`vocabulaire.html` / `.css` / `.js`)
-- **Onboarding vocabulaire** (7 écrans) : première visite uniquement, clé **`learnEnglish_vocab_onboarding_v1`** + classe **`vocab-onboarding-done`** sur `<html>` (script dans le `<head>`, pas de flash au rechargement). Lien **« Revoir l’intro vocabulaire »** sous la zone admin.
+- **Onboarding vocabulaire** : voir **v4.8** (clé **`learnEnglish_vocab_onboarding_v2`**). Ancienne clé **`v1`** obsolète pour le masquage automatique.
 - Bloc **`#word-guide`** sous le mot affiché ; masqué s’il n’y a pas de précision.
 - Import en masse : format **`Anglais, Français`** ou **`Anglais, Français ||| précision`** (trois barres verticales).
 - Chargement des packs CECRL depuis **`data/`** : les lignes collées dans la zone d’import incluent la précision quand elle existe.
