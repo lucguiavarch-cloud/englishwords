@@ -966,10 +966,22 @@ async function loadPreset(fileName) {
 window.loadPreset = loadPreset;
 
 function resetAll() {
-    if (confirm("Tout effacer ? Cette action est irréversible.")) {
-        localStorage.clear();
-        location.reload();
-    }
+    const msg1 =
+        "Réinitialisation complète\n\n" +
+        "Seront effacés sur cet appareil : ton dictionnaire et les mots appris / maîtrisés, toute la progression " +
+        "(XP, niveau, flammes, combos, série), les badges et le Grimoire, les préférences (thème, chrono, indices, boucliers…), " +
+        "ainsi que les autres données enregistrées pour ce site (par ex. les verbes irréguliers).\n\n" +
+        "Il est fortement recommandé d’exporter ta session avec « Sauvegarder » avant de continuer.\n\n" +
+        "Voulez-vous poursuivre ?";
+    if (!confirm(msg1)) return;
+
+    const msg2 =
+        "Confirmation finale : tout sera définitivement supprimé. Cette action est irréversible.\n\n" +
+        "Confirmer l’effacement ?";
+    if (!confirm(msg2)) return;
+
+    localStorage.clear();
+    location.reload();
 }
 
 function triggerCelebration(type, icon, mainText,customSubtitle = null) {

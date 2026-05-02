@@ -616,7 +616,21 @@
         r.onload = (f) => { dictionary = JSON.parse(f.target.result); save(); location.reload(); };
         r.readAsText(e.target.files[0]);
     }
-    function resetAll() { if(confirm("Effacer tout ?")) { localStorage.clear(); location.reload(); } }
+    function resetAll() {
+        var msg1 =
+            "Réinitialisation complète\n\n" +
+            "Seront effacés sur cet appareil : ta liste de verbes et leur niveau, tes stats (série, objectifs quotidiens…), " +
+            "ainsi que toutes les autres données enregistrées pour ce site (vocabulaire personnalisé, XP, badges, progression, préférences…).\n\n" +
+            "Il est fortement recommandé d’exporter ta session avec « Sauvegarder » avant de continuer.\n\n" +
+            "Voulez-vous poursuivre ?";
+        if (!confirm(msg1)) return;
+        var msg2 =
+            "Confirmation finale : tout sera définitivement supprimé. Cette action est irréversible.\n\n" +
+            "Confirmer l’effacement ?";
+        if (!confirm(msg2)) return;
+        localStorage.clear();
+        location.reload();
+    }
     document.getElementById('user-input').addEventListener('keypress', (e) => { if(e.key === 'Enter') handleAnswer(); });
     
     // Init Date
@@ -660,7 +674,7 @@
         {
             emoji: '💾',
             title: 'Sauvegarde',
-            text: 'Sauvegarder télécharge ton dictionnaire en JSON ; Charger ouvre un fichier de sauvegarde. Reset efface tout le stockage local du navigateur pour cette appli : utilise-le seulement si tu es sûr.'
+            text: 'Sauvegarder télécharge ton dictionnaire en JSON ; Charger ouvre un fichier de sauvegarde. Reset efface tout le stockage local (verbes, progression, et le reste du site) : une double confirmation t’avertit — exporte ta session avant si tu hésites.'
         },
         {
             emoji: '🚀',
