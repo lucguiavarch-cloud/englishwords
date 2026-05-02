@@ -17,6 +17,7 @@
         :root {
             --primary: #4a90e2; --success: #2ecc71; --danger: #e74c3c;
             --dark: #2c3e50; --light: #f4f7f6; --accent: #f39c12; --violet: #9b59b6; --pink: #f06292;
+            --gold: #ffd700; --xp-mint: #00e5a8;
         }
         body { font-family: 'Segoe UI', sans-serif; background: var(--light); display: flex; justify-content: center; padding: 20px; }
         .container { width: 100%; max-width: 850px; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
@@ -29,6 +30,118 @@
         .s-volume { background: #f3e5f5; color: #7b1fa2; border-color: #ce93d8; }
         .s-shield { background: #e1f5fe; color: #0277bd; border-color: #4fc3f7; transition: 0.3s; opacity: 0.4; }
         .s-shield.active { opacity: 1; box-shadow: 0 0 10px rgba(79, 195, 247, 0.5); }
+
+        .s-volume.s-goal-done {
+            border-color: var(--gold);
+            box-shadow: 0 0 12px rgba(255, 215, 0, 0.35);
+            animation: verbs-glow-pulse 2s ease-in-out infinite;
+        }
+        @keyframes verbs-glow-pulse {
+            0%, 100% { box-shadow: 0 0 8px rgba(255, 215, 0, 0.35); }
+            50% { box-shadow: 0 0 16px rgba(255, 215, 0, 0.55); }
+        }
+
+        /* XP & niveau joueur */
+        .verbs-xp-card {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #f8fafc 0%, #eef4fc 100%);
+            border: 1px solid #d8e4f5;
+            border-radius: 12px;
+            padding: 8px 12px;
+            margin-bottom: 14px;
+            font-size: 12px;
+        }
+        .verbs-xp-level {
+            flex-shrink: 0;
+            min-width: 52px;
+            text-align: center;
+            font-weight: 800;
+            color: var(--primary);
+            font-size: 11px;
+            line-height: 1.2;
+        }
+        .verbs-xp-level span { display: block; font-size: 18px; color: var(--dark); }
+        .verbs-xp-track {
+            flex: 1;
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 999px;
+            overflow: hidden;
+        }
+        .verbs-xp-fill {
+            height: 100%;
+            width: 0%;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #4a90e2, var(--xp-mint));
+            box-shadow: 0 0 8px rgba(0, 229, 168, 0.45);
+            transition: width 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .verbs-xp-meta { flex-shrink: 0; font-variant-numeric: tabular-nums; color: #64748b; font-weight: 600; font-size: 11px; }
+
+        /* Toasts gamification */
+        .verbs-toast-host {
+            position: fixed;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-120%);
+            z-index: 10040;
+            max-width: min(420px, 92vw);
+            pointer-events: none;
+            transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.2, 1);
+        }
+        .verbs-toast-host.is-visible { transform: translateX(-50%) translateY(0); }
+        .verbs-toast {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 700;
+            text-align: center;
+            box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+        .verbs-toast.toast-gold {
+            background: linear-gradient(135deg, #5c4813 0%, #b8860b 50%, #daa520 100%);
+        }
+        .verbs-toast.toast-success {
+            background: linear-gradient(135deg, #14532d 0%, #22c55e 100%);
+        }
+
+        /* Combo session */
+        .verbs-combo-pill {
+            display: none;
+            margin: 0 auto 10px;
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 800;
+            background: linear-gradient(90deg, #ff6b35, #f7931e);
+            color: #fff;
+            box-shadow: 0 2px 10px rgba(255, 107, 53, 0.45);
+            animation: verbs-combo-pop 0.45s ease-out;
+        }
+        .verbs-combo-pill.is-hot { background: linear-gradient(90deg, #dc2626, #f97316); }
+        @keyframes verbs-combo-pop {
+            0% { transform: scale(0.85); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .mode-indicator.mode-revision { background: linear-gradient(90deg, #dbeafe, #bfdbfe); color: #1e40af; }
+        .mode-indicator.mode-new { background: linear-gradient(90deg, #dcfce7, #bbf7d0); color: #166534; }
+        .mode-indicator.mode-consolidation { background: linear-gradient(90deg, #fce7f3, #fbcfe8); color: #9d174d; }
+        .mode-indicator.mode-test { background: linear-gradient(90deg, #e0f2fe, #bae6fd); color: #0369a1; }
+
+        .word-to-translate.verbs-answer-celebrate {
+            animation: verbs-word-pop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        @keyframes verbs-word-pop {
+            0% { transform: scale(1); }
+            40% { transform: scale(1.06); color: var(--success); }
+            100% { transform: scale(1); }
+        }
         
         .tooltip { visibility: hidden; width: 180px; background-color: rgba(44, 62, 80, 0.95); color: #fff; text-align: center; border-radius: 8px; padding: 10px; position: absolute; z-index: 100; top: 110%; left: 50%; transform: translateX(-50%); font-size: 11px; font-weight: normal; opacity: 0; transition: 0.3s; pointer-events: none; }
         .s-badge:hover .tooltip { visibility: visible; opacity: 1; }
@@ -261,6 +374,8 @@
 </head>
 <body>
 
+<div id="verbs-toast-host" class="verbs-toast-host" aria-live="polite" aria-atomic="true"></div>
+
 <div id="verbs-onboarding-screen" role="dialog" aria-modal="true" aria-labelledby="verbs-onboarding-title">
     <div class="vb-panel">
         <div class="vb-emoji" id="verbs-onboarding-emoji" aria-hidden="true">🔤</div>
@@ -282,6 +397,12 @@
         <a href="index.html" class="btn-index">🏠 Hub</a>
         <span class="page-brand">ENGLISH LEARNING HUB</span>
     </header>
+    <div class="verbs-xp-card" id="verbs-xp-card" title="Gagne de l’XP à chaque bonne réponse et quand un verbe passe « Acquis ».">
+        <div class="verbs-xp-level">Niveau<br><span id="verbs-player-lvl">1</span></div>
+        <div class="verbs-xp-track"><div class="verbs-xp-fill" id="verbs-xp-fill"></div></div>
+        <div class="verbs-xp-meta"><span id="verbs-xp-text">0 / 100 XP</span></div>
+    </div>
+
     <div class="streak-bar">
         <div class="s-badge s-days">
             <span id="stk-days">0</span><span class="s-label">Jours 🔥</span>
@@ -291,7 +412,7 @@
             <span id="stk-perf">0</span><span class="s-label">Précision 🎯</span>
             <div class="tooltip">Bonnes réponses d'affilée (les 3 formes correctes).</div>
         </div>
-        <div class="s-badge s-volume">
+        <div class="s-badge s-volume" id="stk-volume-wrap">
             <span id="stk-vol">0/5</span><span class="s-label">Effort ⚡</span>
             <div class="vol-progress" style="width:100%; height:4px; background:rgba(0,0,0,0.1); margin-top:5px;"><div class="vol-bar" id="vol-bar" style="height:100%; background:var(--violet); width:0%;"></div></div>
             <div class="tooltip">Objectif : 5 verbes par jour.</div>
@@ -319,6 +440,7 @@
 
     <div class="quiz-section">
         <div id="mode-tag" class="mode-indicator">---</div>
+        <div id="verbs-combo-pill" class="verbs-combo-pill" role="status" aria-live="polite"></div>
         <div id="quiz-content">
             <div class="word-to-translate" id="current-word">Chargement...</div>
             <div class="format-hint">Tape : Infinitif, Prétérit, Participe Passé</div>
@@ -383,10 +505,92 @@
     const KEY = 'EM_VERBS_V17';
     const VOL_GOAL = 5;
     const OFFICIAL_VERBS_URL = 'data/verbes.json';
+    const STATS_DEFAULT = { days: 0, perfect: 0, dailyCount: 0, lastDate: null, sessionCombo: 0, bestSessionCombo: 0, xp: 0, playerLevel: 1 };
+
+    function mergeVerbStats(raw) {
+        try {
+            const s = raw && typeof raw === 'object' ? raw : {};
+            const o = { ...STATS_DEFAULT, ...s };
+            if (typeof o.playerLevel !== 'number' || o.playerLevel < 1) o.playerLevel = STATS_DEFAULT.playerLevel;
+            if (typeof o.xp !== 'number' || o.xp < 0) o.xp = 0;
+            if (typeof o.sessionCombo !== 'number' || o.sessionCombo < 0) o.sessionCombo = 0;
+            if (typeof o.bestSessionCombo !== 'number' || o.bestSessionCombo < 0) o.bestSessionCombo = 0;
+            return o;
+        } catch (e) {
+            return { ...STATS_DEFAULT };
+        }
+    }
+
     let dictionary = JSON.parse(localStorage.getItem(KEY)) || [];
-    let stats = JSON.parse(localStorage.getItem(KEY+'_STATS')) || { days: 0, perfect: 0, dailyCount: 0, lastDate: null };
+    let stats = mergeVerbStats(JSON.parse(localStorage.getItem(KEY + '_STATS')));
     let currentWord = null;
     let isTestMode = false;
+
+    function xpNeededForCurrentLevel() {
+        return Math.max(1, (stats.playerLevel || 1) * 100);
+    }
+
+    function addXP(amount) {
+        stats.xp = (stats.xp || 0) + amount;
+        let guard = 0;
+        while (stats.xp >= xpNeededForCurrentLevel() && guard < 50) {
+            stats.xp -= xpNeededForCurrentLevel();
+            stats.playerLevel = (stats.playerLevel || 1) + 1;
+            showVerbsToast('Niveau ' + stats.playerLevel + ' atteint ! 🎮', 'gold');
+            guard++;
+        }
+        updateXPBar();
+    }
+
+    function updateXPBar() {
+        const elBar = document.getElementById('verbs-xp-fill');
+        const elLvl = document.getElementById('verbs-player-lvl');
+        const elTxt = document.getElementById('verbs-xp-text');
+        if (!elBar || !elLvl || !elTxt) return;
+        const need = xpNeededForCurrentLevel();
+        const pct = Math.min(100, ((stats.xp || 0) / need) * 100);
+        elLvl.innerText = stats.playerLevel || 1;
+        elTxt.innerText = `${stats.xp || 0} / ${need} XP`;
+        elBar.style.width = pct + '%';
+    }
+
+    function updateComboPill() {
+        const el = document.getElementById('verbs-combo-pill');
+        if (!el) return;
+        const c = stats.sessionCombo || 0;
+        if (c < 2) {
+            el.style.display = 'none';
+            el.textContent = '';
+            el.classList.remove('is-hot');
+            return;
+        }
+        el.style.display = 'block';
+        el.textContent = 'Combo ×' + c + ' 🔥';
+        el.classList.toggle('is-hot', c >= 8);
+    }
+
+    let verbsToastTimer = null;
+    function showVerbsToast(message, variant) {
+        const host = document.getElementById('verbs-toast-host');
+        if (!host) return;
+        clearTimeout(verbsToastTimer);
+        const cls = 'verbs-toast ' + (variant === 'gold' ? 'toast-gold ' : '') + (variant === 'success' ? 'toast-success ' : '');
+        host.innerHTML = '<div class="' + cls.trim() + '">' + message + '</div>';
+        host.classList.add('is-visible');
+        verbsToastTimer = setTimeout(function () {
+            host.classList.remove('is-visible');
+        }, 2800);
+    }
+
+    function applyQuizModeStyle(modeEl, label) {
+        if (!modeEl) return;
+        modeEl.className = 'mode-indicator';
+        const t = String(label || '');
+        if (t.indexOf('Révision') !== -1) modeEl.classList.add('mode-revision');
+        else if (t.indexOf('Nouveau') !== -1) modeEl.classList.add('mode-new');
+        else if (t.indexOf('Consolidation') !== -1) modeEl.classList.add('mode-consolidation');
+        else if (t.indexOf('Test') !== -1) modeEl.classList.add('mode-test');
+    }
 
 	// --- FONCTION AUDIO ---
     function speak(text) {
@@ -435,6 +639,13 @@
             document.getElementById('reservoir-ui').style.display = 'none';
             if(dictionary.length > 0) { shield.classList.add('active'); document.getElementById('shield-txt').innerText = "CLEAN"; }
         }
+
+        const volWrap = document.getElementById('stk-volume-wrap');
+        if (volWrap) {
+            volWrap.classList.toggle('s-goal-done', stats.dailyCount >= VOL_GOAL);
+        }
+        updateXPBar();
+        updateComboPill();
     }
 
     function getNextWord() {
@@ -446,7 +657,8 @@
 
     if(isTestMode) {
         pool = dictionary.filter(w => w.level === 5);
-        mode.innerText = "Test Acquis"; mode.style.background = "#e1f5fe";
+        mode.innerText = "Test Acquis";
+        applyQuizModeStyle(mode, mode.innerText);
     } else {
         // Changement ici : on compare avec todayStart
         let revs = dictionary.filter(w => w.level >= 1 && w.level <= 4 && new Date(w.nextReview) <= now);
@@ -456,6 +668,7 @@
         if(revs.length) { pool = revs; mode.innerText = "Révision"; }
         else if(cons.length) { pool = cons; mode.innerText = "Consolidation"; }
         else if(news.length) { pool = news; mode.innerText = "Nouveau"; }
+        applyQuizModeStyle(mode, mode.innerText);
     }
 
     if(!pool.length) {
@@ -483,10 +696,19 @@
         
         const isCorrect = userForms.length === 3 && userForms.every((val, index) => val === correctForms[index]);
 
+        const wordEl = document.getElementById('current-word');
         if(isCorrect) {
             fb.innerHTML = "<span style='color:var(--success)'>Excellent ! ✅</span><br><small style='color:gray; font-weight:normal'>"+correctForms.join(' - ')+"</small>";
+            if (wordEl) {
+                wordEl.classList.remove('verbs-answer-celebrate');
+                void wordEl.offsetWidth;
+                wordEl.classList.add('verbs-answer-celebrate');
+                setTimeout(() => wordEl.classList.remove('verbs-answer-celebrate'), 600);
+            }
             speakCurrent();// PRONONCIATION AUTOMATIQUE
             if(!isTestMode) {
+                const prevLevel = currentWord.level;
+                const prevDaily = stats.dailyCount;
                 currentWord.level++;
                 currentWord.isFailed = false;
                 let d = new Date(); d.setDate(d.getDate() + [0, 1, 3, 7, 30, 90][currentWord.level]);
@@ -494,6 +716,32 @@
                 stats.perfect++;
                 stats.dailyCount++;
                 if(stats.dailyCount === VOL_GOAL) stats.days++;
+
+                addXP(12);
+                let toastDelay = 0;
+                if (currentWord.level === 5 && prevLevel === 4) {
+                    addXP(40);
+                    showVerbsToast('Verbe acquis ! ' + (currentWord.fr || '') + ' 🏆', 'gold');
+                    toastDelay = 400;
+                }
+
+                stats.sessionCombo = (stats.sessionCombo || 0) + 1;
+                stats.bestSessionCombo = Math.max(stats.bestSessionCombo || 0, stats.sessionCombo);
+
+                const sc = stats.sessionCombo;
+                const dailyDone = prevDaily < VOL_GOAL && stats.dailyCount >= VOL_GOAL;
+                if (dailyDone) {
+                    setTimeout(function () {
+                        showVerbsToast('Objectif du jour : ' + VOL_GOAL + ' verbes ! ⚡', 'success');
+                    }, toastDelay);
+                    toastDelay += 400;
+                }
+                if (sc === 3 || sc === 5 || sc === 10) {
+                    setTimeout(function () {
+                        showVerbsToast('Combo ×' + sc + ' ! Ne lâche rien 🔥', sc >= 10 ? 'gold' : 'default');
+                    }, toastDelay);
+                }
+                updateComboPill();
             }
         } else {
             fb.innerHTML = `<span style='color:var(--danger)'>Attention ! ❌</span><br><span style='font-size:14px; color:var(--dark)'>La réponse était : <b>${correctForms.join(', ')}</b></span>`;
@@ -501,6 +749,8 @@
             if(!isTestMode) {
                 currentWord.level = 0; currentWord.isFailed = true;
                 stats.perfect = 0;
+                stats.sessionCombo = 0;
+                updateComboPill();
             } else {
                 currentWord.level = 4;
                 isTestMode = false;
@@ -638,7 +888,10 @@
     if(stats.lastDate !== today) {
         const yest = new Date(); yest.setDate(yest.getDate()-1);
         if(stats.lastDate !== yest.toLocaleDateString()) stats.days = 0;
-        stats.dailyCount = 0; stats.lastDate = today; save();
+        stats.dailyCount = 0;
+        stats.sessionCombo = 0;
+        stats.lastDate = today;
+        save();
     }
     updateUI(); getNextWord();
 </script>
@@ -659,7 +912,7 @@
         {
             emoji: '📊',
             title: 'Suivi et note',
-            text: 'Les quatre pastilles en haut suivent ta série de jours, ta précision sur les bonnes réponses d’affilée, ton objectif de 5 verbes par jour, et le « nettoyage » quand il ne reste plus de verbes ratés à consolider. La grille de niveaux compte tes verbes de Nouveau jusqu’à Acquis ; la note sur 20 et la barre résument la progression globale.'
+            text: 'En haut : jauge d’XP et niveau joueur (bonus quand un verbe devient « Acquis »), puis les quatre pastilles — série, précision d’affilée, objectif 5 verbes/jour, nettoyage. La grille compte tes verbes par niveau ; la note sur 20 résume ta progression. Un combo de bonnes réponses s’affiche au-dessus du mot.'
         },
         {
             emoji: '🎯',
