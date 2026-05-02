@@ -1419,7 +1419,8 @@ function speakJuronBritish(text) {
             msg.voice = voice;
             msg.lang = voice.lang || 'en-GB';
         } else {
-            msg.lang = 'en-GB';
+            /* Sans voix listée, en-US se fait lire presque partout (évite le silence total). */
+            msg.lang = 'en-US';
         }
         msg.rate = 0.6;
         msg.pitch = 0.8;
@@ -1431,18 +1432,20 @@ function speakJuronBritish(text) {
         window.speechSynthesis.speak(msg);
     };
 
-    /* Chrome/Chromium : les voix arrivent souvent après `voiceschanged` */
-    if (!window.speechSynthesis.getVoices().length) {
-        const once = () => {
-            window.speechSynthesis.removeEventListener('voiceschanged', once);
-            run();
-        };
-        window.speechSynthesis.addEventListener('voiceschanged', once, { once: true });
-        window.speechSynthesis.getVoices();
-        setTimeout(run, 50);
+    /* Chrome/Chromium : liste de voix souvent vide jusqu’à `voiceschanged`. */
+    if (window.speechSynthesis.getVoices().length) {
+        run();
         return;
     }
-    run();
+    let ran = false;
+    const fire = () => {
+        if (ran) return;
+        ran = true;
+        run();
+    };
+    window.speechSynthesis.addEventListener('voiceschanged', fire, { once: true });
+    window.speechSynthesis.getVoices();
+    setTimeout(fire, 400);
 }
 
 function tryUnlockRandomJuron() {
