@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
     <title>English Master 🎓</title>
     <script>
     (function () {
@@ -15,7 +15,7 @@
     })();
     </script>
     <link rel="stylesheet" href="vocabulaire.css">
-	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
     html.vocab-onboarding-done #vocab-onboarding-screen { display: none !important; }
     #vocab-onboarding-screen {
@@ -137,8 +137,8 @@
         <a href="index.html" class="hub-link">🏠 Hub</a>
         <a href="tuto-anglais.html" target="_blank" rel="noopener noreferrer" class="tuto-link">❓ Aide</a>
     </nav>
-       <div class="dashboard-grid">
-	   
+
+    <div class="dashboard-grid">
         <div class="badges-section" id="next-objectives">
             <div class="session-info">
                 <div class="session-pill" title="Nom de session">
@@ -149,7 +149,7 @@
                     <span id="hud-streak-days" class="streak-hud-days">1</span>
                 </div>
                 <div class="timer-pill" title="Cliquer pour changer la durée">
-						<span id="timer">10:00</span>
+                    <span id="timer">10:00</span>
                 </div>
                 <select id="time-limit" class="time-selector" aria-label="Durée du chrono">
                     <option value="5">5 min</option>
@@ -161,13 +161,13 @@
                 <span class="objectives-toolbar-ico" title="Objectifs" aria-hidden="true">🎯</span>
                 <div class="objectives-toolbar-row">
                     <div id="reviser-container" class="reviser-bubble" style="display: none;">
-                        <button type="button" id="btn-open-reservoir" class="objective-reservoir-btn" title="Mots à consolider">
+                        <button type="button" id="btn-open-reservoir" class="objective-reservoir-btn" title="Mots à consolider" aria-label="Révision : mots à consolider">
                             <span class="objective-reservoir-glyph" aria-hidden="true">↻</span>
                             <span id="reservoir-count" class="objective-reservoir-n">0</span>
                         </button>
                     </div>
                     <div class="badge-group objective-slots-group" id="objective-slots"></div>
-                    <button type="button" id="btn-show-collection" class="btn-grimoire-compact" title="Grimoire">🏆</button>
+                    <button type="button" id="btn-show-collection" class="btn-grimoire-compact" title="Grimoire" aria-label="Ouvrir le Grimoire des succès">🏆</button>
                 </div>
             </div>
         </div>
@@ -201,128 +201,110 @@
         </div>
     </div>
 
-    	<div class="quiz-section" id="quiz-box">
-    <div id="mode-tag" class="mode-indicator">MODE</div>
-    <div class="word-to-translate" id="current-word">---</div>
-    <p id="word-guide" class="word-guide" hidden></p>
-    <input type="text" id="user-input" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false">
-    
-    <div class="action-controls-container">
-        <button id="btn-hint" class="bg-violet">💡 Indice (<span id="count-hint">0</span>)</button>
-        <button id="btn-shield" class="bg-primary">🛡️ Bouclier (<span id="count-shield">0</span>)</button>
+    <div class="quiz-section" id="quiz-box">
+        <div id="mode-tag" class="mode-indicator">MODE</div>
+        <div class="word-to-translate" id="current-word">---</div>
+        <p id="word-guide" class="word-guide" hidden></p>
+        <input type="text" id="user-input" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false">
+
+        <div class="action-controls-container">
+            <button id="btn-hint" class="bg-violet">💡 Indice (<span id="count-hint">0</span>)</button>
+            <button id="btn-shield" class="bg-primary">🛡️ Bouclier (<span id="count-shield">0</span>)</button>
+        </div>
+
+        <div id="feedback"></div>
     </div>
-
-    <div id="feedback"></div>
-</div>
-
-   
 
     <div class="admin-panel">
         <div class="button-group">
             <button id="btn-add" class="bg-success">➕ Ajouter des mots</button>
             <button id="btn-export" class="bg-violet">💾 Exporter</button>
             <button id="btn-import-trigger" class="bg-primary">📂 Importer</button>
-            <input type="file" id="fLoader" style="display:none">
+            <input type="file" id="fLoader" class="input-hidden" tabindex="-1" title="Fichier JSON à importer">
             <button id="btn-reset" class="bg-danger">🗑️ Reset</button>
-			<div style="display: flex; gap: 5px; align-items: center;">
-    <select id="skin-selector" style="padding: 8px; border-radius: var(--radius-btn); background: var(--bg-card); color: var(--text-card); border: 2px solid var(--primary); font-weight: bold; cursor: pointer;">
-    </select>
-    <button id="btn-apply-skin" class="bg-accent" style="border: 2px solid var(--text-light);">🎨 Appliquer</button>
-</div>
+            <div class="admin-skin-row">
+                <select id="skin-selector" class="skin-selector" aria-label="Choisir un thème"></select>
+                <button id="btn-apply-skin" type="button" class="bg-accent btn-apply-skin">🎨 Appliquer</button>
+            </div>
         </div>
-        <p class="vocab-onboarding-replay-wrap" style="text-align: center; margin: 10px 0 0; font-size: 11px;">
-            <button type="button" id="replay-vocab-onboarding" style="background: none; border: none; color: var(--text-muted); text-decoration: underline; cursor: pointer; font-family: inherit; font-size: inherit; padding: 4px 8px;">Revoir l’intro vocabulaire</button>
+        <p class="vocab-onboarding-replay-wrap">
+            <button type="button" id="replay-vocab-onboarding" class="vocab-onboarding-replay-btn">Revoir l’intro vocabulaire</button>
         </p>
     </div>
 
-   <div id="wordModal" class="modal">
-    <div class="modal-content">
-        <h2>Ajouter de nouveaux mots</h2>
-        
-        <div class="presets-container" style="background: #f8f9fa; padding: 15px; border-radius: 12px; border: 1px solid #e9ecef; margin-bottom: 15px;">
-            <p style="margin-top: 0; font-weight: bold; color: #495057; font-size: 0.85em; text-align: center;">
-                📥 Charger un pack (Niveaux CECRL)
-            </p>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">
-                <button type="button" onclick="loadPreset('A1')" class="btn-preset">A1</button>
-                <button type="button" onclick="loadPreset('A2')" class="btn-preset">A2</button>
-                <button type="button" onclick="loadPreset('B1')" class="btn-preset">B1</button>
-                <button type="button" onclick="loadPreset('B2')" class="btn-preset">B2</button>
-                <button type="button" onclick="loadPreset('C1')" class="btn-preset">C1</button>
-                <button type="button" onclick="loadPreset('C2')" class="btn-preset">C2</button>
+    <div id="wordModal" class="modal">
+        <div class="modal-content">
+            <h2>Ajouter de nouveaux mots</h2>
+
+            <div class="presets-box">
+                <p>📥 Charger un pack (Niveaux CECRL)</p>
+                <div class="presets-grid">
+                    <button type="button" onclick="loadPreset('A1')" class="btn-preset">A1</button>
+                    <button type="button" onclick="loadPreset('A2')" class="btn-preset">A2</button>
+                    <button type="button" onclick="loadPreset('B1')" class="btn-preset">B1</button>
+                    <button type="button" onclick="loadPreset('B2')" class="btn-preset">B2</button>
+                    <button type="button" onclick="loadPreset('C1')" class="btn-preset">C1</button>
+                    <button type="button" onclick="loadPreset('C2')" class="btn-preset">C2</button>
+                </div>
+            </div>
+
+            <p class="modal-format-hint">Format : <b>Anglais, Français</b> — optionnel après la ligne : <b>|||</b> puis une précision (affichée sous le mot pendant le quiz).</p>
+            <textarea id="bulk-input" placeholder="Exemple:&#10;Apple, Pomme&#10;House, Maison"></textarea>
+
+            <div class="modal-buttons modal-actions">
+                <button id="btn-modal-valid" class="bg-success">✅ Valider</button>
+                <button id="btn-modal-close" class="bg-danger">Annuler</button>
             </div>
         </div>
+    </div>
 
-        <p style="font-size: 0.9em; margin-bottom: 5px;">Format : <b>Anglais, Français</b> — optionnel après la ligne : <b>|||</b> puis une précision (affichée sous le mot pendant le quiz).</p>
-        <textarea id="bulk-input" placeholder="Exemple:&#10;Apple, Pomme&#10;House, Maison" style="height: 150px;"></textarea>
-
-        <div class="modal-buttons" style="margin-top: 15px;">
-            <button id="btn-modal-valid" class="bg-success">✅ Valider</button>
-            <button id="btn-modal-close" class="bg-danger">Annuler</button>
-        </div>
+    <div id="celebration-overlay">
+        <div id="celebration-icon"></div>
+        <h2 id="celebration-title"></h2>
+        <p id="celebration-name"></p>
+        <p id="celebration-subtitle"></p>
     </div>
 </div>
-<div id="celebration-overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:3000; flex-direction:column; align-items:center; justify-content:center; color:white; text-align:center; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);">
-    
-    <div id="celebration-icon" style="font-size:130px; margin-bottom:10px; filter: drop-shadow(0 0 30px var(--gold));"></div>
-    
-    <h2 id="celebration-title" style="font-size:40px; margin:0; text-transform:uppercase; letter-spacing:4px; color:var(--gold);"></h2>
-    
-    <p id="celebration-name" style="font-size:25px; margin:10px 0; color:white; font-weight:bold;"></p>
-    
-    <p id="celebration-subtitle" style="font-size:16px; color:#aaa; text-transform:uppercase;"></p>
-</div>
-</div>
+
 <div id="modal-collection" class="modal">
-    <div class="modal-content" style="max-width: 600px;">
-        <h2 style="margin-top: 0; color: var(--gold);">🏆 Grimoire des Succès</h2>
-        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 20px;">
-            Débloque ces badges en réalisant de grandes performances !
-        </p>
-        
-        <div class="badges-grid-full" id="full-badges-list">
-            </div>
-        
-        <div class="modal-buttons" style="margin-top: 20px;">
-            <button id="btn-close-collection" class="bg-danger">Fermer le Grimoire</button>
+    <div class="modal-content modal-content--wide">
+        <h2 class="modal-h2--collection">🏆 Grimoire des Succès</h2>
+        <p class="modal-lead modal-lead--tight">Débloque ces badges en réalisant de grandes performances !</p>
+        <div class="badges-grid-full" id="full-badges-list"></div>
+        <div class="modal-buttons modal-actions">
+            <button id="btn-close-collection" class="bg-danger" type="button">Fermer le Grimoire</button>
         </div>
     </div>
 </div>
 
 <div id="modal-reservoir" class="modal">
-    <div class="modal-content" style="max-width: 400px;">
-        <h2 style="color: var(--pink);">🛠️ Mots à réviser</h2>
-        <p style="font-size: 12px; color: var(--text-muted);">Voici les mots que vous avez ratés récemment :</p>
-        <div id="reservoir-list-modal" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; margin: 15px 0; max-height: 200px; overflow-y: auto;">
-            </div>
-        <button onclick="document.getElementById('modal-reservoir').style.display='none'" class="bg-danger">Fermer</button>
+    <div class="modal-content modal-content--narrow">
+        <h2 class="modal-h2--reservoir">🛠️ Mots à réviser</h2>
+        <p class="modal-lead">Voici les mots que vous avez ratés récemment :</p>
+        <div id="reservoir-list-modal" class="reservoir-tags"></div>
+        <button type="button" id="btn-close-reservoir" class="bg-danger">Fermer</button>
     </div>
 </div>
 
 <div id="modal-level-details" class="modal">
-    <div class="modal-content" style="max-width: 500px;">
-        <h2 id="level-modal-title" style="color: var(--primary); margin-top: 0; font-size: 1.2rem;"></h2>
-        <p style="font-size: 11px; color: var(--text-muted); margin-bottom: 15px;">Mots actuellement à ce stade de mémorisation :</p>
-        
-        <div id="level-words-list" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 15px 0; max-height: 300px; overflow-y: auto; padding: 10px; background: var(--bg-alt); border-radius: 10px; border: 1px inset var(--border-main);">
-        </div>
-        
-        <button onclick="document.getElementById('modal-level-details').style.display='none'" class="bg-danger">Fermer</button>
+    <div class="modal-content modal-content--medium">
+        <h2 id="level-modal-title" class="modal-h2--level"></h2>
+        <p class="modal-lead">Mots actuellement à ce stade de mémorisation :</p>
+        <div id="level-words-list" class="level-words-list"></div>
+        <button type="button" id="btn-close-level" class="bg-danger">Fermer</button>
     </div>
 </div>
 
 <div id="modal-timer" class="modal">
-    <div class="modal-content" style="max-width: 360px;">
-        <h2 style="margin-top: 0; color: var(--gold);">⏳ Chrono</h2>
-        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 15px;">
-            Choisis une durée (ça réinitialise le chrono).
-        </p>
-        <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap;">
+    <div class="modal-content modal-content--timer">
+        <h2 class="modal-h2--timer">⏳ Chrono</h2>
+        <p class="modal-lead">Choisis une durée (ça réinitialise le chrono).</p>
+        <div class="timer-choices">
             <button type="button" class="btn-timer-choice bg-primary" data-min="5">5 min</button>
             <button type="button" class="btn-timer-choice bg-primary" data-min="10">10 min</button>
             <button type="button" class="btn-timer-choice bg-primary" data-min="15">15 min</button>
         </div>
-        <div class="modal-buttons" style="margin-top: 16px;">
+        <div class="modal-buttons modal-actions modal-actions--spaced">
             <button id="btn-close-timer" class="bg-danger" type="button">Fermer</button>
         </div>
     </div>
