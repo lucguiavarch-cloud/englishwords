@@ -8,7 +8,7 @@
     <script>
     (function () {
         try {
-            if (localStorage.getItem('learnEnglish_vocab_onboarding_v1') === '1') {
+            if (localStorage.getItem('learnEnglish_vocab_onboarding_v2') === '1') {
                 document.documentElement.classList.add('vocab-onboarding-done');
             }
         } catch (e) { /* private mode */ }
@@ -309,42 +309,42 @@
 
 <script>
 (function () {
-    var STORAGE_KEY = 'learnEnglish_vocab_onboarding_v1';
+    var STORAGE_KEY = 'learnEnglish_vocab_onboarding_v2';
     var slides = [
         {
-            emoji: '📚',
-            title: 'Bienvenue dans le vocabulaire',
-            text: 'Tu vois un mot en français au centre : tape sa traduction en anglais puis valide avec Entrée. Un chrono peut limiter la session ; tes scores restent sur cet appareil.'
-        },
-        {
-            emoji: '🔄',
-            title: 'Modes de jeu',
-            text: 'Le bandeau « mode » indique si tu es en révision, consolidation (mots ratés) ou nouveaux mots. Les cases à droite montrent la progression de chaque mot vers la maîtrise.'
-        },
-        {
             emoji: '🎯',
-            title: 'Objectifs et Grimoire',
-            text: 'Les badges d’objectifs suivent tes combos et tes réussites du jour. Le Grimoire liste tous les succès débloqués — ouvre-le quand tu veux admirer ta collection.'
+            title: 'L’idée : répéter, régulièrement',
+            text: 'Cette appli s’appuie sur l’apprentissage par la répétition au quotidien : un peu chaque jour, c’est plus efficace qu’une longue séance de temps en temps. Les mots reviennent au bon moment pour passer de la mémoire courte à une mémorisation durable.'
         },
         {
-            emoji: '💡',
-            title: 'Indice et bouclier',
-            text: 'L’indice t’aide sans tout donner. Le bouclier peut annuler une erreur : utilise-les avec parcimonie, ils sont comptés.'
+            emoji: '📦',
+            title: 'Les boîtes : jusqu’à Maître',
+            text: 'À droite, chaque case représente une étape de consolidation. Quand tu réussis, le mot avance d’une « boîte » à l’autre, de gauche à droite. L’objectif du jeu : que tous tes mots finissent dans la dernière boîte, le niveau Maître — la maîtrise complète du mot.'
         },
         {
-            emoji: '🏠',
-            title: 'Navigation',
-            text: 'En haut : retour au Hub et lien Aide (tutoriel). Sur mobile, ces boutons restent sur une ligne dédiée pour rester accessibles.'
+            emoji: '📥',
+            title: 'Première connexion : charge des mots',
+            text: 'Au début, ta liste est vide : va en bas de page et charge un ou plusieurs packs par niveau CECRL (boutons A1 à C2). Repères indicatifs avec le collège / lycée en France : A1 ≈ 6e (très débutant), A2 ≈ 4e, B1 ≈ 3e / lycée, B2 et au-dessus pour des niveaux plus avancés. Tu peux cumuler plusieurs packs.'
+        },
+        {
+            emoji: '✍️',
+            title: 'Comment jouer',
+            text: 'Un mot en français au centre : tape la traduction en anglais, puis Entrée. Le bandeau « mode » indique si tu révises, si tu consolides des mots ratés ou si tu découvres des mots neufs. Un chrono peut limiter la durée de la session ; tout est enregistré sur cet appareil.'
+        },
+        {
+            emoji: '🏆',
+            title: 'Objectifs, Grimoire, aides',
+            text: 'Les objectifs à gauche suivent tes combos et tes réussites du jour ; le Grimoire rassemble tes badges. L’indice t’aide sans tout révéler ; le bouclier peut annuler une erreur — ce sont des ressources limitées, à utiliser avec discernement.'
         },
         {
             emoji: '⚙️',
-            title: 'Mots, packs et thème',
-            text: 'Ajoute des mots ou charge les packs A1–C2, importe / exporte ta sauvegarde, change de thème dans la zone du bas. Le reset efface tout le stockage local (mots appris, progression, badges…) : une double confirmation t’avertit et il vaut mieux sauvegarder avant.'
+            title: 'Sauvegarde et réglages',
+            text: 'Tu peux importer ou exporter ta sauvegarde, ajouter des mots à la main, changer de thème. Sauvegarde régulièrement avec Exporter (par exemple une fois par semaine ou après une grosse session) : tout est stocké dans le navigateur ; changement d’ordinateur, mise à jour agressive ou effacement des données du site peut faire perdre la progression sans fichier JSON. Le reset efface tout le stockage (vocabulaire, verbes, progression…) : double confirmation — exporte avant si tu hésites.'
         },
         {
             emoji: '🚀',
             title: 'C’est parti',
-            text: 'Quand tu rouvres cette page, cette intro ne réapparaît pas. Pour la revoir, utilise le lien sous les boutons d’administration.'
+            text: 'Cette intro ne s’affichera plus automatiquement. Tu pourras la revoir avec le lien sous les boutons d’administration en bas de page.'
         }
     ];
 

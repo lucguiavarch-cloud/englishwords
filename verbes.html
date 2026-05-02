@@ -7,7 +7,7 @@
     <script>
     (function () {
         try {
-            if (localStorage.getItem('learnEnglish_verbs_onboarding_v1') === '1') {
+            if (localStorage.getItem('learnEnglish_verbs_onboarding_v2') === '1') {
                 document.documentElement.classList.add('verbs-onboarding-done');
             }
         } catch (e) { /* private mode */ }
@@ -897,42 +897,42 @@
 </script>
 <script>
 (function () {
-    var STORAGE_KEY = 'learnEnglish_verbs_onboarding_v1';
+    var STORAGE_KEY = 'learnEnglish_verbs_onboarding_v2';
     var slides = [
         {
-            emoji: '🔤',
-            title: 'Bienvenue',
-            text: 'Cette page t’entraîne sur les verbes irréguliers en anglais : tu vois le sens en français, tu dois écrire les trois formes en anglais. Tout est enregistré localement sur cet appareil (localStorage).'
+            emoji: '🔥',
+            title: 'Mémoriser par la répétition',
+            text: 'Les verbes irréguliers s’apprennent comme le vocabulaire : en les revoyant souvent, surtout au quotidien. L’appli te les repropose au bon moment pour ancrer les trois formes (infinitif, prétérit, participe passé) dans la mémoire longue durée.'
+        },
+        {
+            emoji: '📦',
+            title: 'Les boîtes : jusqu’à Acquis',
+            text: 'La grille colorée compte tes verbes par niveau : chaque colonne est une « boîte » de progression. Quand tu réussis, le verbe avance vers la droite. Objectif : que tous tes verbes finissent dans la dernière boîte, Acquis — c’est l’équivalent de la maîtrise pour les verbes (comme la boîte Maître côté vocabulaire).'
         },
         {
             emoji: '✍️',
             title: 'Comment répondre',
-            text: 'Tape l’infinitif, le prétérit et le participe passé séparés par des virgules, en minuscules, puis valide avec Entrée. Exemple pour « Aller » : go, went, gone. Après chaque correction, la prononciation des trois formes peut se lire automatiquement.'
+            text: 'Tu vois le sens en français : tape les trois formes en anglais séparées par des virgules, en minuscules, puis Entrée. Exemple pour « Aller » : go, went, gone. La prononciation peut se lire après la correction. Le bandeau indique le mode : Nouveau, Révision ou Consolidation.'
+        },
+        {
+            emoji: '📥',
+            title: 'À la première connexion : remplis ta liste',
+            text: 'Sans verbes enregistrés, il n’y a rien à réviser. Charge la liste officielle (bouton orange, fichier data/verbes.json) ou ajoute des lignes à la main. Sers le site via un petit serveur local si besoin (le chargement du JSON peut être bloqué en file://). Sur la page Vocabulaire, les packs A1–C2 suivent le CECRL : à titre indicatif A1 ≈ 6e, A2 ≈ 4e, puis niveaux plus avancés pour B1, B2, C1, C2.'
         },
         {
             emoji: '📊',
-            title: 'Suivi et note',
-            text: 'En haut : jauge d’XP et niveau joueur (bonus quand un verbe devient « Acquis »), puis les quatre pastilles — série, précision d’affilée, objectif 5 verbes/jour, nettoyage. La grille compte tes verbes par niveau ; la note sur 20 résume ta progression. Un combo de bonnes réponses s’affiche au-dessus du mot.'
+            title: 'XP, série et combo',
+            text: 'En haut : jauge d’XP et niveau joueur (bonus quand un verbe devient Acquis), pastilles pour la série de jours, la précision d’affilée, l’objectif de 5 verbes par jour, et le « nettoyage » quand il ne reste plus d’erreurs à corriger. Un combo s’affiche au-dessus du mot quand tu enchaînes les bonnes réponses. La note sur 20 résume ta progression globale.'
         },
         {
-            emoji: '🎯',
-            title: 'Modes de quiz',
-            text: 'Le badge indique Nouveau, Révision ou Consolidation selon les verbes tirés. Quand tu as des verbes « Acquis », le bouton « Test acquis » les révise : une bonne réponse ne change pas leur niveau ; une erreur les repasse en révision (niveau 4) et quitte le test.'
-        },
-        {
-            emoji: '📚',
-            title: 'Remplir ta liste',
-            text: 'Tu peux charger la liste officielle depuis data/verbes.json (bouton orange, avec fusion ou remplacement), ou ajouter des lignes à la main : français, infinitif, prétérit, participe passé. Pense à servir le site via un petit serveur HTTP pour que le fichier JSON se charge ; en ouverture file:// seul, le fetch peut être bloqué.'
-        },
-        {
-            emoji: '💾',
-            title: 'Sauvegarde',
-            text: 'Sauvegarder télécharge ton dictionnaire en JSON ; Charger ouvre un fichier de sauvegarde. Reset efface tout le stockage local (verbes, progression, et le reste du site) : une double confirmation t’avertit — exporte ta session avant si tu hésites.'
+            emoji: '🧠',
+            title: 'Test acquis & sauvegarde',
+            text: 'Quand tu as des verbes Acquis, le bouton « Test acquis » les fait réapparaître : une bonne réponse ne change pas leur niveau ; une erreur les repasse en révision. Utilise Sauvegarder souvent (idéalement après chaque bonne session ou au moins chaque semaine) : les données vivent dans le navigateur ; sans export JSON tu risques de tout perdre en changeant d’appareil ou en vidant les données du site. Charger restaure un fichier ; Reset efface tout le site (verbes, vocabulaire, progression…) avec double confirmation.'
         },
         {
             emoji: '🚀',
             title: 'C’est parti',
-            text: 'Au prochain chargement, cette intro ne s’affichera plus. Tu pourras la revoir avec le lien sous les boutons, en bas de la page.'
+            text: 'Cette intro ne s’affichera plus tout seul. Tu pourras la revoir avec le lien sous les boutons, en bas de la page.'
         }
     ];
 
