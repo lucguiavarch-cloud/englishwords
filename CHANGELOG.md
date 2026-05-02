@@ -16,7 +16,7 @@
 - **Stats** : **`unlockedJurons`** (indices), **`lastUnlockedId`** (carte « nouvelle » + persistance export / import).
 - **Gameplay** : tous les **50** mots justes **du jour** (**`dailyTotal`**), tirage aléatoire d’un juron non possédé ; célébration type **`juron`** (overlay rouge **`var(--danger)`**, distinct du type **`badge`** ignoré par l’overlay).
 - **UI** : donut **`#donut-juron`** (anneau rouge, progression **`dailyTotal % 50`**) dans **`updateBadgeSystem`** ; bouton **🤬** sous le Grimoire ; modale **BD** (bordures noires, fond à pois) ; cartes verrou / débloqué ; classe **`.new-juron`** + **`@keyframes flash-juron`** et **`vibration`** au clic.
-- **TTS cartes** : **`en-GB`** avec sélection de voix (**`pickEnglishVoiceForJuron`**) ; attente **`voiceschanged`** + repli temporel si liste vide ; repli **`en-US`** si aucune voix ; **`getVoices()`** à l’ouverture de la modale pour fiabiliser Chrome/Edge.
+- **TTS cartes** : réutilisation de **`speak()`** (même pile que le quiz : **`en-US`**, débit / hauteur identiques) ; clic **`onclick`** → **`window.speakJuronFromId(id)`** → **`speak(row.en)`** ; clavier (Enter / espace) appelle **`speak(row.en)`** directement — geste utilisateur sans **`setTimeout`** autour de la synthèse.
 
 ### Mobile — quiz
 - **Mode** : bandeau **`#mode-tag`** en flux (**`top: 0`**, marge sous le tag) pour ne plus recouvrir le mot ; **`.quiz-section`** en colonne centrée.
