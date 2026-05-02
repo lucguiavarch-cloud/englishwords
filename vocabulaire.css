@@ -1263,6 +1263,7 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
 
     /* 🎮 ZONE QUIZ (AU CENTRE) */
     .quiz-section { 
+        padding-top: 25px !important; /* Ajoute de l'espace en haut pour le tag */
         grid-area: quiz; 
         padding: 10px 5px; 
         display: flex; 
@@ -1270,6 +1271,19 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
         justify-content: center;
         min-height: 250px;
         margin-bottom: 5px;
+    }
+    .mode-indicator { 
+        position: relative !important; /* On le remet dans le flux normal */
+        top: -10px !important; 
+        margin-bottom: 5px !important;
+        display: inline-block !important;
+        transform: none !important;
+        left: auto !important;
+    }
+
+    .word-to-translate { 
+        font-size: 26px !important; /* Légèrement plus petit pour éviter de pousser l'input */
+        margin-top: 0 !important;
     }
     .word-to-translate { font-size: 24px; margin-bottom: 8px; }
     .word-guide {
