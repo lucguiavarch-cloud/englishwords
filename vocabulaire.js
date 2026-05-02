@@ -1396,77 +1396,117 @@ async function loadJuronLibrary() {
 
 /** Voix anglaise préférée (GB sinon US) — évite le silence si en-GB est absent du système. */
 function pickEnglishVoiceForJuron() {
-    const list = window.speechSynthesis.getVoices();
-    if (!list || !list.length) return null;
-    return (
-        list.find((v) => v.lang === 'en-GB' || (v.lang && v.lang.toLowerCase().startsWith('en-gb'))) ||
-        list.find((v) => v.lang && /en-gb/i.test(v.lang)) ||
-        list.find((v) => v.lang && /^en-/i.test(v.lang)) ||
-        null
-    );
+    const voices = window.speechSynthesis.getVoices();
+    if (!voices || voices.length === 0) return null;
+
+    // Petite fonction utilitaire pour vérifier la langue sans se soucier de la casse ou des tirets
+    const isLang = (voice, langCode) => {
+        if (!voice.lang) return false;
+        // Transforme "en_GB" ou "en-gb" en "en-gb"
+        const normalizedLang = voice.lang.toLowerCase().replace('_', '-');
+        return normalizedLang.includes(langCode);
+    };
+
+    // Mots-clés indiquant une voix de haute qualité (tous navigateurs confondus)
+    // "daniel" et "arthur" sont d'excellentes voix Safari/Apple
+    // "male" car les voix masculines rendent souvent mieux pour un ton "grincheux"
+    const premiumKeywords = ['natural', 'online', 'premium', 'enhanced', 'google', 'daniel', 'arthur', 'male'];
+
+    // 1. Priorité Absolue : Voix British ET Haute Qualité
+    const premiumBritish = voices.find(v => {
+        if (!isLang(v, 'en-gb')) return false;
+        const lowerName = v.name.toLowerCase();
+        return premiumKeywords.some(keyword => lowerName.includes(keyword));
+    });
+
+    // 2. Plan B : N'importe quelle voix British (même robotique)
+    const anyBritish = voices.find(v => isLang(v, 'en-gb'));
+
+    // 3. Plan C : Voix Américaine de Haute Qualité (mieux qu'un robot British inaudible)
+    const premiumUS = voices.find(v => {
+        if (!isLang(v, 'en-us')) return false;
+        const lowerName = v.name.toLowerCase();
+        return premiumKeywords.some(keyword => lowerName.includes(keyword));
+    });
+
+    // 4. Plan D : N'importe quelle voix anglaise
+    const anyEnglish = voices.find(v => isLang(v, 'en'));
+
+    // On retourne le meilleur résultat trouvé (le premier qui n'est pas null)
+    // S'il n'y a VRAIMENT aucune voix anglaise, on prend la toute première du système par désespoir
+    return premiumBritish || anyBritish || premiumUS || anyEnglish || voices[0];
 }
 
+// On garde notre bouclier anti-suppression
+window._juronUtterance = null;
+
 function speakJuronBritish(text) {
-    if (!text) return;
+    if (!text || !window.speechSynthesis) return;
     const t = String(text).trim();
     if (!t) return;
 
     const run = () => {
-        // 1. On annule toute lecture en cours
         window.speechSynthesis.cancel();
 
-        // 2. Petit délai de 50ms pour laisser le navigateur "digérer" l'annulation
-        // avant de lancer le nouveau son. C'est le secret de la stabilité.
-        setTimeout(() => {
-            const msg = new SpeechSynthesisUtterance(t);
-            const voice = pickEnglishVoiceForJuron();
+        const msg = new SpeechSynthesisUtterance(t);
+        window._juronUtterance = msg; 
+
+        // 1. On crée une petite fonction pour appliquer le côté "Fun" partout
+        const applyFunSettings = (utterance) => {
+            utterance.rate = 0.6;  // Lent, hautain et méprisant
+            utterance.pitch = 0.8; // Ton un peu plus grave
+            utterance.volume = 1;
+        };
+
+        // 2. Configuration Principale
+        const voice = pickEnglishVoiceForJuron();
+        if (voice) {
+            msg.voice = voice;
+            msg.lang = voice.lang || 'en-GB';
+        } else {
+            msg.lang = 'en-GB'; 
+        }
+        applyFunSettings(msg);
+
+        if (window.speechSynthesis.paused) {
+            window.speechSynthesis.resume();
+        }
+
+        // 3. Gestion des Erreurs & Plan B "Fun"
+        msg.onerror = (ev) => {
+            const err = ev && ev.error;
+            if (err === 'interrupted' || err === 'canceled') return;
             
-            if (voice) {
-                msg.voice = voice;
-                msg.lang = voice.lang || 'en-GB';
-            } else {
-                msg.lang = 'en-US';
-            }
-
-            msg.rate = 0.6;
-            msg.pitch = 0.8;
-            msg.volume = 1;
-
-            // Sécurité pour débloquer le moteur si le navigateur l'a mis en pause
-            if (window.speechSynthesis.paused) {
-                window.speechSynthesis.resume();
-            }
-
-            msg.onerror = (ev) => {
-                const err = ev && ev.error;
-                // ON IGNORE l'erreur 'interrupted' car elle est volontaire (clic rapide)
-                if (err === 'interrupted') return;
+            if (err === 'synthesis-failed') {
+                console.log("Bug du navigateur détecté. Lancement du Plan B British...");
                 
-                // On ne log que les vraies erreurs de synthèse
-                if (err !== 'canceled') {
-                    console.warn('Juron TTS:', err);
-                }
-            };
+                // On crée le son de secours
+                const fallback = new SpeechSynthesisUtterance(t);
+                
+                // ON LUI DONNE AUSSI LA PERSONNALITÉ !
+                fallback.lang = 'en-GB'; // Force l'accent anglais 
+                applyFunSettings(fallback); // Applique la lenteur et la voix grave
+                
+                window._juronUtterance = fallback; // On protège le plan B
+                window.speechSynthesis.speak(fallback);
+            }
+        };
 
+        msg.onend = () => {
+            window._juronUtterance = null;
+        };
+
+        setTimeout(() => {
             window.speechSynthesis.speak(msg);
-        }, 50); 
+        }, 10);
     };
 
-    // Logique de chargement des voix (inchangée car elle est très bonne)
-    if (window.speechSynthesis.getVoices().length) {
+    if (window.speechSynthesis.getVoices().length > 0) {
         run();
-        return;
+    } else {
+        window.speechSynthesis.onvoiceschanged = () => run();
+        window.speechSynthesis.getVoices();
     }
-
-    let ran = false;
-    const fire = () => {
-        if (ran) return;
-        ran = true;
-        run();
-    };
-    window.speechSynthesis.addEventListener('voiceschanged', fire, { once: true });
-    window.speechSynthesis.getVoices();
-    setTimeout(fire, 400);
 }
 
 function tryUnlockRandomJuron() {
