@@ -1,14 +1,402 @@
 [
-  { "en": "Blimey", "fr": "Grands dieux ! / Ça alors !" },
-  { "en": "Bloody hell", "fr": "Bon sang !" },
-  { "en": "Bollocks", "fr": "(fam.) Balivernes !" },
-  { "en": "Bugger", "fr": "(fam.) Zut / mince" },
-  { "en": "Crikey", "fr": "Mille tonnerres !" },
-  { "en": "Damn", "fr": "Mince / fichu" },
-  { "en": "For crying out loud", "fr": "Bon sang ! (exaspération)" },
-  { "en": "Gordon Bennett", "fr": "Nom d'un chien !" },
-  { "en": "Good grief", "fr": "Bon sang !" },
-  { "en": "Sod it", "fr": "Au diable !" },
-  { "en": "Strewth", "fr": "(Australo-brit.) Nom d'une pipe !" },
-  { "en": "What the devil", "fr": "Que diable !" }
+  {
+    "en": "You absolute muppet!",
+    "fr": "Espèce de marionnette !"
+  },
+  {
+    "en": "Go boil your head!",
+    "fr": "Va te faire cuire l'œuf !"
+  },
+  {
+    "en": "You're a sandwich short of a picnic!",
+    "fr": "Il te manque une case !"
+  },
+  {
+    "en": "Shut your cakehole!",
+    "fr": "Ferme ta boîte à camembert !"
+  },
+  {
+    "en": "You daft cow!",
+    "fr": "Espèce de gourde !"
+  },
+  {
+    "en": "Codswallop!",
+    "fr": "Des balivernes !"
+  },
+  {
+    "en": "You're as useful as a chocolate teapot!",
+    "fr": "Aussi utile qu'une théière en chocolat !"
+  },
+  {
+    "en": "By George, you're a blithering idiot!",
+    "fr": "Par George, quel imbécile fini !"
+  },
+  {
+    "en": "Stop faffing around!",
+    "fr": "Arrête de glandouiller !"
+  },
+  {
+    "en": "You dimwit!",
+    "fr": "Espèce de crétin !"
+  },
+  {
+    "en": "Pants on fire!",
+    "fr": "Gros menteur !"
+  },
+  {
+    "en": "Tosh!",
+    "fr": "N'importe quoi !"
+  },
+  {
+    "en": "You're a few bricks short of a full load!",
+    "fr": "Il ne capte pas toutes les chaînes !"
+  },
+  {
+    "en": "Gordon Bennett!",
+    "fr": "Nom d'un chien !"
+  },
+  {
+    "en": "You berk!",
+    "fr": "Espèce de naze !"
+  },
+  {
+    "en": "Manky!",
+    "fr": "Dégueulasse !"
+  },
+  {
+    "en": "You pillock!",
+    "fr": "Quel abruti !"
+  },
+  {
+    "en": "Bloody hell!",
+    "fr": "Putain de bordel !"
+  },
+  {
+    "en": "You wally!",
+    "fr": "Espèce de bêta !"
+  },
+  {
+    "en": "Plonker!",
+    "fr": "Crétin !"
+  },
+  {
+    "en": "Skive off!",
+    "fr": "Tirer au flanc !"
+  },
+  {
+    "en": "You numpty!",
+    "fr": "Espèce de demeuré !"
+  },
+  {
+    "en": "Blimey!",
+    "fr": "Ça alors !"
+  },
+  {
+    "en": "Daft as a brush!",
+    "fr": "Bête comme ses pieds !"
+  },
+  {
+    "en": "You twit!",
+    "fr": "Quel idiot !"
+  },
+  {
+    "en": "Belt up!",
+    "fr": "Boucle-la !"
+  },
+  {
+    "en": "Barmy!",
+    "fr": "Cinglé !"
+  },
+  {
+    "en": "You nitwit!",
+    "fr": "Espèce de linotte !"
+  },
+  {
+    "en": "Chuffed!",
+    "fr": "Ravi (souvent ironique ici) !"
+  },
+  {
+    "en": "Naff!",
+    "fr": "Ringard / Nul !"
+  },
+  {
+    "en": "Gormless!",
+    "fr": "Niais !"
+  },
+  {
+    "en": "Wind your neck in!",
+    "fr": "Mêle-toi de tes oignons !"
+  },
+  {
+    "en": "You muppet!",
+    "fr": "Gros nigaud !"
+  },
+  {
+    "en": "Knackered!",
+    "fr": "Crevé !"
+  },
+  {
+    "en": "Gobsmacked!",
+    "fr": "J'en reste comme deux ronds de frites !"
+  },
+  {
+    "en": "Porkies!",
+    "fr": "Des craques !"
+  },
+  {
+    "en": "Twaddle!",
+    "fr": "Des fadaises !"
+  },
+  {
+    "en": "Curry favour!",
+    "fr": "Faire du lèche-bottes !"
+  },
+  {
+    "en": "Balderdash!",
+    "fr": "Sornettes !"
+  },
+  {
+    "en": "Rubbish!",
+    "fr": "C'est nul !"
+  },
+  {
+    "en": "Bugger off!",
+    "fr": "Dégage !"
+  },
+  {
+    "en": "Stark raving mad!",
+    "fr": "Complètement fou !"
+  },
+  {
+    "en": "Not my cup of tea!",
+    "fr": "Pas ma tasse de thé !"
+  },
+  {
+    "en": "Poppycock!",
+    "fr": "Bêtises !"
+  },
+  {
+    "en": "Taking the mickey!",
+    "fr": "Se payer ma tête !"
+  },
+  {
+    "en": "Cheeky bugger!",
+    "fr": "Petit insolent !"
+  },
+  {
+    "en": "Lost the plot!",
+    "fr": "Perdre la boule !"
+  },
+  {
+    "en": "Barking mad!",
+    "fr": "Fou à lier !"
+  },
+  {
+    "en": "Bits and bobs!",
+    "fr": "Bric-à-brac !"
+  },
+  {
+    "en": "Cockerel!",
+    "fr": "Petit coq frimeur !"
+  },
+  {
+    "en": "Dafty!",
+    "fr": "Petit idiot !"
+  },
+  {
+    "en": "Dozy!",
+    "fr": "Endormi !"
+  },
+  {
+    "en": "Git!",
+    "fr": "Enfoiré !"
+  },
+  {
+    "en": "Hell's teeth!",
+    "fr": "Enfer et damnation !"
+  },
+  {
+    "en": "In a pickle!",
+    "fr": "Dans de beaux draps !"
+  },
+  {
+    "en": "Mad as a hatter!",
+    "fr": "Fou comme un chapelier !"
+  },
+  {
+    "en": "Mince pies!",
+    "fr": "Tes yeux (argot rhyming) !"
+  },
+  {
+    "en": "Nincompoop!",
+    "fr": "Espèce de nigaud !"
+  },
+  {
+    "en": "Old codger!",
+    "fr": "Vieux croulant !"
+  },
+  {
+    "en": "Over the moon!",
+    "fr": "Aux anges !"
+  },
+  {
+    "en": "Pear-shaped!",
+    "fr": "Partir en vrille !"
+  },
+  {
+    "en": "Piece of cake!",
+    "fr": "C'est du gâteau !"
+  },
+  {
+    "en": "Proper job!",
+    "fr": "Beau travail (ironique) !"
+  },
+  {
+    "en": "Quid!",
+    "fr": "Du flouze !"
+  },
+  {
+    "en": "Right royal mess!",
+    "fr": "Une pagaille royale !"
+  },
+  {
+    "en": "Scallywag!",
+    "fr": "Petit garnement !"
+  },
+  {
+    "en": "Skint!",
+    "fr": "Fauché !"
+  },
+  {
+    "en": "Smarmy!",
+    "fr": "Mielleux !"
+  },
+  {
+    "en": "Snog!",
+    "fr": "Pelle / Galoche !"
+  },
+  {
+    "en": "Sod's law!",
+    "fr": "Loi de Murphy !"
+  },
+  {
+    "en": "Spiffing!",
+    "fr": "Épatant !"
+  },
+  {
+    "en": "Spot of bother!",
+    "fr": "Un petit pépin !"
+  },
+  {
+    "en": "Strop!",
+    "fr": "Colère noire !"
+  },
+  {
+    "en": "Swine!",
+    "fr": "Porc / Salaud !"
+  },
+  {
+    "en": "Tally-ho!",
+    "fr": "Taïaut !"
+  },
+  {
+    "en": "Tickety-boo!",
+    "fr": "Tout baigne !"
+  },
+  {
+    "en": "Tiddly!",
+    "fr": "Pompette !"
+  },
+  {
+    "en": "Toff!",
+    "fr": "Aristo !"
+  },
+  {
+    "en": "Total pants!",
+    "fr": "Nul à chier !"
+  },
+  {
+    "en": "Useless git!",
+    "fr": "Bon à rien !"
+  },
+  {
+    "en": "Wanker!",
+    "fr": "Branleur !"
+  },
+  {
+    "en": "What a palaver!",
+    "fr": "Quel cirque !"
+  },
+  {
+    "en": "Willy-nilly!",
+    "fr": "Bon gré mal gré !"
+  },
+  {
+    "en": "Wonky!",
+    "fr": "Bancal !"
+  },
+  {
+    "en": "Yonks!",
+    "fr": "Une éternité !"
+  },
+  {
+    "en": "Zonked!",
+    "fr": "Complètement crevé !"
+  },
+  {
+    "en": "Bloody nuisance!",
+    "fr": "Une plaie !"
+  },
+  {
+    "en": "Blunderbuss!",
+    "fr": "Maladroit !"
+  },
+  {
+    "en": "Claptrap!",
+    "fr": "Baratin !"
+  },
+  {
+    "en": "Dilly-dally!",
+    "fr": "Traînasser !"
+  },
+  {
+    "en": "Donkey's years!",
+    "fr": "Des lustres !"
+  },
+  {
+    "en": "Full of beans!",
+    "fr": "Plein de jus (ironique ici) !"
+  },
+  {
+    "en": "Gobshite!",
+    "fr": "Grosse gueule !"
+  },
+  {
+    "en": "Mug!",
+    "fr": "Poire / Pigeon !"
+  },
+  {
+    "en": "Scrotum face!",
+    "fr": "Tête de gland !"
+  },
+  {
+    "en": "Slapper!",
+    "fr": "Traînée !"
+  },
+  {
+    "en": "Twerp!",
+    "fr": "Petit merdeux !"
+  },
+  {
+    "en": "Village idiot!",
+    "fr": "L'idiot du village !"
+  },
+  {
+    "en": "Wazzock!",
+    "fr": "Imbécile !"
+  },
+  {
+    "en": "You're a muppet!",
+    "fr": "T'es un guignol !"
+  }
 ]

@@ -982,20 +982,27 @@ input[type="text"] {
     z-index: 1100;
 }
 
-.modal-jurons-content {
-    max-width: 520px;
+.modal.modal-jurons .modal-jurons-content.modal-content {
+    max-width: min(920px, 98vw);
+    width: min(96vw, 920px);
+    margin: max(8px, 2dvh) auto;
+    max-height: calc(100vh - 16px);
+    max-height: min(94dvh, 100vh - 16px);
+    box-sizing: border-box;
     border: 5px solid #111;
     border-radius: 18px;
     background-color: #fffef8;
     background-image: radial-gradient(#111 1.1px, transparent 1.1px);
     background-size: 14px 14px;
     box-shadow: 8px 8px 0 #111;
-    padding: 18px 16px 20px;
+    padding: 10px 12px 12px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .jurons-comic-title {
-    margin: 0 0 10px;
-    font-size: 1.35rem;
+    margin: 0 0 6px;
+    font-size: 1.15rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--text-card);
@@ -1003,34 +1010,32 @@ input[type="text"] {
 }
 
 .jurons-comic-lead {
-    font-size: 13px;
+    font-size: 12px;
     color: var(--text-muted);
-    margin: 0 0 14px;
-    line-height: 1.45;
+    margin: 0 0 10px;
+    line-height: 1.35;
     text-align: left;
 }
 
 .jurons-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 12px;
-    max-height: 52vh;
-    overflow-y: auto;
-    padding: 4px;
-    margin-bottom: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(min(100px, 28vw), 1fr));
+    gap: 8px;
+    padding: 2px 0;
+    margin-bottom: 10px;
 }
 
 .juron-card {
-    border: 4px solid #111;
-    border-radius: 12px;
-    padding: 12px 10px;
-    min-height: 88px;
+    border: 3px solid #111;
+    border-radius: 10px;
+    padding: 7px 6px;
+    min-height: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 6px;
-    box-shadow: 4px 4px 0 #111;
+    gap: 4px;
+    box-shadow: 3px 3px 0 #111;
     background: var(--bg-card);
 }
 
@@ -1066,19 +1071,23 @@ input[type="text"] {
 
 .juron-en {
     display: block;
-    font-size: 1rem;
+    font-size: 0.82rem;
     font-weight: 800;
     color: var(--text-card);
     text-align: center;
+    line-height: 1.2;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 .juron-fr {
     display: block;
-    font-size: 0.85rem;
+    font-size: 0.7rem;
     font-style: italic;
     color: var(--primary);
     text-align: center;
-    line-height: 1.25;
+    line-height: 1.2;
+    word-break: break-word;
 }
 
 .juron-card.new-juron {
@@ -1106,7 +1115,7 @@ input[type="text"] {
     75% { transform: translate(-1px, 2px); }
 }
 
-body.skin-dark .modal-jurons-content {
+body.skin-dark .modal.modal-jurons .modal-jurons-content.modal-content {
     background-color: var(--bg-card);
     background-image: radial-gradient(color-mix(in srgb, var(--text-light) 22%, transparent) 1.1px, transparent 1.1px);
     box-shadow: 8px 8px 0 color-mix(in srgb, var(--text-light) 35%, transparent);
@@ -1901,6 +1910,25 @@ body.skin-arcade {
         height: 28px;
         font-size: 13px;
         margin: 0;
+    }
+
+    .modal.modal-jurons .modal-jurons-content.modal-content {
+        margin: 4px auto;
+        max-height: 92dvh;
+        padding: 8px 8px 10px;
+    }
+
+    .jurons-grid {
+        gap: 6px;
+        grid-template-columns: repeat(auto-fill, minmax(min(86px, 29vw), 1fr));
+    }
+
+    .juron-en {
+        font-size: 0.76rem;
+    }
+
+    .juron-fr {
+        font-size: 0.64rem;
     }
 
     .badge { 
