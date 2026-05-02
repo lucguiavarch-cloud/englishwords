@@ -18,7 +18,10 @@ const defaultStats = {
   shields: 3,
   hints: 5,
   currentTheme: 'skin-dark',
-  streakDays: 1
+  streakDays: 1,
+  masteryBaselineDate: null,
+  masteryBaselinePercent: null,
+  masterySnapshotEod: null
 };
 
 const savedStats = JSON.parse(localStorage.getItem(KEY + '_STATS')) || {};
@@ -380,29 +383,65 @@ function speak(text) {
 /* =========================================================
    UI
    ========================================================= */
+function getWeightedMasteryPercent() {
+    const totalWords = dictionary.length;
+    if (totalWords <= 0) return 0;
+    const totalPoints = dictionary.reduce((sum, w) => sum + (w.level || 0), 0);
+    const maxPossiblePoints = totalWords * 7;
+    return Math.round((totalPoints / maxPossiblePoints) * 100);
+}
+
+function persistStatsOnly() {
+    try {
+        localStorage.setItem(KEY + '_STATS', JSON.stringify(stats));
+    } catch (e) { /* quota / private mode */ }
+}
+
 function updateUI() {
     const elOwner = document.getElementById('current-session-display');
-    const elMastery = document.getElementById('elMastery');
 
     if (elOwner) elOwner.innerText = stats.owner;
 
-    // ✅ gestion du mastery-score !
-   if (elMastery) {
-        const totalWords = dictionary.length;
-        
-        if (totalWords > 0) {
-            // 1. On additionne les points de chaque mot (niveau 0 = 0pt, niveau 7 = 7pts)
-            const totalPoints = dictionary.reduce((sum, w) => sum + (w.level || 0), 0);
-            
-            // 2. Le score max possible est le nombre de mots x 7
-            const maxPossiblePoints = totalWords * 7;
-            
-            // 3. On calcule le pourcentage global de progression
-            const weightedPercent = Math.round((totalPoints / maxPossiblePoints) * 100);
-            
-            elMastery.innerText = weightedPercent + "%";
+    // ✅ Maîtrise totale (objectif ultime) + progression sur la journée
+    const elMasteryPct = document.getElementById('elMasteryPct');
+    const elMasteryFill = document.getElementById('elMasteryFill');
+    const elMasteryDelta = document.getElementById('elMasteryDelta');
+    const totalWords = dictionary.length;
+    const weightedPercent = getWeightedMasteryPercent();
+    const todayStr = new Date().toDateString();
+
+    if (stats.masteryBaselineDate !== todayStr) {
+        stats.masteryBaselinePercent =
+            typeof stats.masterySnapshotEod === 'number' ? stats.masterySnapshotEod : weightedPercent;
+        stats.masteryBaselineDate = todayStr;
+    }
+    stats.masterySnapshotEod = weightedPercent;
+    persistStatsOnly();
+
+    const baseline = typeof stats.masteryBaselinePercent === 'number' ? stats.masteryBaselinePercent : weightedPercent;
+    const dayDelta = weightedPercent - baseline;
+
+    if (elMasteryPct) elMasteryPct.textContent = String(weightedPercent);
+    if (elMasteryFill) elMasteryFill.style.width = Math.min(100, Math.max(0, weightedPercent)) + '%';
+
+    if (elMasteryDelta) {
+        elMasteryDelta.className = 'mastery-total-delta';
+        elMasteryDelta.removeAttribute('title');
+        if (totalWords === 0) {
+            elMasteryDelta.textContent = '';
+            elMasteryDelta.title = 'Charge des mots pour mesurer ta progression.';
+        } else if (dayDelta > 0) {
+            elMasteryDelta.classList.add('is-up');
+            elMasteryDelta.textContent = '+' + dayDelta + '%';
+            elMasteryDelta.title = '+' + dayDelta + '% aujourd’hui — la régularité paie.';
+        } else if (dayDelta < 0) {
+            elMasteryDelta.classList.add('is-down');
+            elMasteryDelta.textContent = '−' + Math.abs(dayDelta) + '%';
+            elMasteryDelta.title = 'Écart vs début de journée (nouveaux mots ou révisions).';
         } else {
-            elMastery.innerText = "0%";
+            elMasteryDelta.classList.add('is-neutral');
+            elMasteryDelta.textContent = '·';
+            elMasteryDelta.title = 'Stable aujourd’hui. Objectif : 100 %, tous les mots en Maître.';
         }
     }
 

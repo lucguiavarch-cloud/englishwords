@@ -209,6 +209,107 @@ body {
 .xp-bar-bg { width: 100%; height: 4px; background: #444; border-radius: 2px; overflow: hidden; margin-top: 4px; }
 #xp-bar { width: 0%; height: 100%; background: var(--gold); transition: 0.3s; }
 
+/* Maîtrise : bandeau ultra-compact (clavier / colonne étroite) */
+.mastery-total-card {
+    margin-top: 0;
+    padding: 4px 6px 5px;
+    border-radius: 12px;
+    background: var(--bg-dark);
+    border: 1px solid var(--glass-medium);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.mastery-total-strip {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: nowrap;
+}
+
+.mastery-total-kicker {
+    flex: 0 0 auto;
+    font-size: 7px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    opacity: 0.85;
+    line-height: 1;
+    max-width: 4.2em;
+}
+
+.mastery-total-pct-wrap {
+    flex: 0 0 auto;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.mastery-total-number {
+    font-size: 17px;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+    color: var(--gold);
+    text-shadow: 0 0 8px color-mix(in srgb, var(--gold) 28%, transparent);
+}
+
+.mastery-total-suffix {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--gold);
+    margin-left: 0;
+    opacity: 0.92;
+}
+
+.mastery-total-bar {
+    flex: 1 1 auto;
+    min-width: 28px;
+    height: 3px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+.mastery-total-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--accent), var(--gold) 60%, #fff8dc);
+    box-shadow: 0 0 6px color-mix(in srgb, var(--gold) 35%, transparent);
+    transition: width 0.45s cubic-bezier(0.2, 0.85, 0.2, 1);
+}
+
+.mastery-total-delta {
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 0;
+    font-size: 8px;
+    line-height: 1;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-light);
+    opacity: 0.8;
+    white-space: nowrap;
+    min-width: 1.5em;
+    text-align: right;
+}
+
+.mastery-total-delta.is-up {
+    color: #b8f5c4;
+    opacity: 0.98;
+}
+
+.mastery-total-delta.is-down {
+    color: #ffc9c9;
+    opacity: 0.98;
+}
+
+.mastery-total-delta.is-neutral {
+    opacity: 0.55;
+    font-weight: 600;
+}
+
 /* Ajustement des colonnes */
 .dashboard-grid { 
     grid-template-columns: 1fr 1.2fr; 
@@ -543,7 +644,13 @@ body {
 
 .levels-grid { 
     display: grid; grid-template-columns: repeat(4, 1fr); 
-    gap: 8px; background: var(--bg-dark); padding: 15px; border-radius: 15px; 
+    gap: 8px; background: var(--bg-dark); padding: 12px 12px 8px; border-radius: 15px 15px 0 0; 
+}
+
+.levels-grid + .mastery-total-card {
+    margin-top: 0;
+    border-radius: 0 0 15px 15px;
+    border-top: 1px solid var(--glass-medium);
 }
 
 .level-box { 
@@ -1218,6 +1325,53 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
     }
 	.level-count { font-size: 11px; line-height: 1; }
     .level-label { font-size: 9px; font-weight: bold; color: var(--text-muted); }
+
+    .levels-grid + .mastery-total-card {
+        margin-top: 4px;
+        border-radius: 8px;
+        padding: 3px 4px 4px;
+    }
+
+    /* Colonne ~55px : grille 2 lignes, hauteur minimale pour le clavier */
+    .mastery-total-strip {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto auto;
+        gap: 2px 2px;
+        align-items: center;
+    }
+
+    .mastery-total-kicker {
+        grid-column: 1;
+        font-size: 6px;
+        max-width: none;
+    }
+
+    .mastery-total-pct-wrap {
+        grid-column: 2;
+        justify-self: end;
+    }
+
+    .mastery-total-number {
+        font-size: 13px;
+    }
+
+    .mastery-total-suffix {
+        font-size: 9px;
+    }
+
+    .mastery-total-bar {
+        grid-column: 1 / -1;
+        min-width: 0;
+        height: 2px;
+    }
+
+    .mastery-total-delta {
+        grid-column: 1 / -1;
+        text-align: center;
+        font-size: 7px;
+        min-width: 0;
+    }
 
     /* 🛠️ ADMIN EN BAS */
     .admin-panel { grid-area: admin; }
