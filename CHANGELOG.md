@@ -1,5 +1,27 @@
 # Changelog
 
+## v4.9 — 02/05/2026
+
+### Refactor & qualité — Vocabulaire (`vocabulaire.html` / `.css` / `.js`)
+- **JavaScript** : conservation de l’**IIFE** ; helpers **`loadJSON`**, **`setText`**, **`escapeHtml`**, **`safeAddListener`** ; chargement JSON / stats plus robuste ; **`save()`** avec **`try/catch`** ; garde-fous avant accès DOM ; **`RARITY_LEVELS`** unique (grille + modale niveaux) ; construction du Grimoire en **`join()`** au lieu de **`innerHTML +=`** ; fermeture modales **réservoir** / **niveau** par boutons + écouteurs ; sections commentées (init, jeu, UI, stockage, audio).
+- **CSS** : nettoyage variables inutilisées (**`--font-title`**, tokens réservoir non référencés) ; fusion règles **`.dashboard-grid`** ; **boutons** avec **`--radius-btn`** et **`--shadow-main`** ; bloc **Grimoire / flottant / skins** avant le **`@media (max-width: 600px)`** unique en fin de fichier ; suppression de règles mortes (presets inutilisés, animations orphelines, etc.) ; styles extraits du HTML vers des classes (modales, célébration, admin, etc.).
+- **HTML** : indentation ; **ARIA** (Grimoire, révision, thème) ; **`#celebration-overlay`** et modales sans gros blocs **`style=`** inline.
+
+### Correctif export — compteurs objectifs / progression
+- **`exportJSON`** : **`cleanStats`** inclut désormais **`maxCombo`**, **`dailyTotal`**, champs **maîtrise** (**`masteryBaselineDate`**, **`masteryBaselinePercent`**, **`masterySnapshotEod`**) — évite la perte de ces clés lors du remplacement de **`stats`** et le dérèglement des donuts / Grimoire après export.
+- **Import** : normalisation **`maxCombo`** / **`dailyTotal`** ; idem pour la collection jurons (**`unlockedJurons`**, **`lastUnlockedId`**) une fois la feature ajoutée.
+
+### Juron Box — collection & déblocage (`data/jurons.json`, vocabulaire)
+- **Données** : **`data/jurons.json`** (`[{ "en", "fr" }, …]`), identifiant = **index** du tableau ; chargement au démarrage (**`fetch`**) dans **`JURON_LIBRARY`** (async avant init UI).
+- **Stats** : **`unlockedJurons`** (indices), **`lastUnlockedId`** (carte « nouvelle » + persistance export / import).
+- **Gameplay** : tous les **50** mots justes **du jour** (**`dailyTotal`**), tirage aléatoire d’un juron non possédé ; célébration type **`juron`** (overlay rouge **`var(--danger)`**, distinct du type **`badge`** ignoré par l’overlay).
+- **UI** : donut **`#donut-juron`** (anneau rouge, progression **`dailyTotal % 50`**) dans **`updateBadgeSystem`** ; bouton **🤬** sous le Grimoire ; modale **BD** (bordures noires, fond à pois) ; cartes verrou / débloqué ; classe **`.new-juron`** + **`@keyframes flash-juron`** et **`vibration`** au clic.
+- **TTS cartes** : **`en-GB`** avec sélection de voix (**`pickEnglishVoiceForJuron`**) ; attente **`voiceschanged`** + repli temporel si liste vide ; repli **`en-US`** si aucune voix ; **`getVoices()`** à l’ouverture de la modale pour fiabiliser Chrome/Edge.
+
+### Mobile — quiz
+- **Mode** : bandeau **`#mode-tag`** en flux (**`top: 0`**, marge sous le tag) pour ne plus recouvrir le mot ; **`.quiz-section`** en colonne centrée.
+- **Saisie** : **`input`** pleine largeur utile, **`box-sizing`**, marges auto pour centrage cohérent sur **≤600px**.
+
 ## v4.8 — 02/05/2026
 
 ### Vocabulaire (`vocabulaire.html` / `.css` / `.js`)
