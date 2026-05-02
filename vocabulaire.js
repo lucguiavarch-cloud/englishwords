@@ -1245,19 +1245,66 @@ function updateBadgeSystem(currentCombo, maxCombo, totalScore) {
         }
     });
 
-    // 2. Fonction de création des Objectifs
+    const pickFocusBadgeId = (comboB, comboP, wordsB, wordsP) => {
+        if (!comboB && !wordsB) return null;
+        if (!comboB) return wordsB.id;
+        if (!wordsB) return comboB.id;
+        const rCombo = comboP / comboB.target;
+        const rWords = wordsP / wordsB.target;
+        if (rWords > rCombo) return wordsB.id;
+        if (rCombo > rWords) return comboB.id;
+        const remCombo = comboB.target - comboP;
+        const remWords = wordsB.target - wordsP;
+        return remWords < remCombo ? wordsB.id : comboB.id;
+    };
+
+    const focusBadgeId = pickFocusBadgeId(
+        nextComboBadge,
+        currentCombo,
+        nextWordsBadge,
+        totalScore
+    );
+
+    const RING_R = 16;
+    const RING_C = 2 * Math.PI * RING_R;
+
+    // 2. Objectifs = donuts 40px (anneau SVG + icône + fraction)
     const createObjectiveHTML = (badge, progressVal) => {
         const isCompleted = progressVal >= badge.target;
         const statusClass = isCompleted ? 'unlocked' : 'in-progress';
-        const counterText = `${progressVal} / ${badge.target}`;
+        const pct = Math.min(1, Math.max(0, progressVal / badge.target));
+        const dashOffset = RING_C * (1 - pct);
+        const isFocus = badge.id === focusBadgeId;
+        const slotMod = isFocus ? 'objective-donut--focus' : 'objective-donut--idle';
+        const counterText = `${progressVal}/${badge.target}`;
+        const titleLong =
+            badge.type === 'combo'
+                ? `Combo ×${badge.target} — ${badge.desc}`
+                : `${badge.target} mots parfaits — ${badge.desc}`;
+        const gradId = `obj-ring-grad-${badge.id}`;
 
         return `
-            <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
-                <div class="objective-badge-name">${badge.name}</div>
-                <div class="badge ${statusClass}" data-badge-id="${badge.id}" data-objective-type="${badge.type}" title="${badge.name} — ${badge.desc}">
-                    ${badge.icon}
+            <div class="objective-donut ${slotMod} ${statusClass}" data-badge-id="${badge.id}" title="${titleLong}">
+                <svg class="objective-donut-svg" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="${gradId}" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#2ee8a8" />
+                            <stop offset="100%" stop-color="#00ffc8" />
+                        </linearGradient>
+                    </defs>
+                    <circle class="objective-ring-track" cx="20" cy="20" r="${RING_R}" />
+                    <circle
+                        class="objective-ring-fill"
+                        cx="20" cy="20" r="${RING_R}"
+                        stroke="url(#${gradId})"
+                        stroke-dasharray="${RING_C}"
+                        stroke-dashoffset="${dashOffset}"
+                    />
+                </svg>
+                <div class="objective-donut-core">
+                    <span class="objective-donut-icon" aria-hidden="true">${badge.icon}</span>
+                    <span class="objective-counter objective-donut-score" data-objective-type="${badge.type}" aria-live="polite">${counterText}</span>
                 </div>
-                <div class="objective-counter" data-objective-type="${badge.type}" aria-live="polite">${counterText}</div>
             </div>
         `;
     };
@@ -1271,7 +1318,7 @@ function updateBadgeSystem(currentCombo, maxCombo, totalScore) {
 
     const triggerNewObjectiveBounce = (prevSlotId, nextSlotId) => {
         if (!prevSlotId || !nextSlotId || prevSlotId === nextSlotId) return;
-        const badgeEl = objectiveSlots.querySelector(`.badge[data-badge-id="${nextSlotId}"]`);
+        const badgeEl = objectiveSlots.querySelector(`.objective-donut[data-badge-id="${nextSlotId}"]`);
         if (!badgeEl) return;
         badgeEl.classList.remove('new-objective-bounce');
         void badgeEl.offsetWidth;
@@ -1306,7 +1353,7 @@ function updateBadgeSystem(currentCombo, maxCombo, totalScore) {
 
     // Si plus aucun badge n'est disponible (tout est débloqué)
     if (!nextComboBadge && !nextWordsBadge) {
-        objectiveSlots.innerHTML = `<div style="font-size: 11px; color: var(--gold); text-align: center;">Toutes les quêtes sont terminées ! 🏆</div>`;
+        objectiveSlots.innerHTML = `<div class="objectives-all-done" title="Toutes les quêtes terminées">🏆✓</div>`;
     }
 }
 
