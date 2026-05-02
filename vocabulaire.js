@@ -439,7 +439,7 @@ function initSkins() {
 /* =========================================================
    5. AUDIO — synthèse vocale
    ========================================================= */
-function speak(text) {
+function speak(text, customPitch, customRate) {
     if (!text) return;
     
     // 1. On annule tout pour éviter les bugs de file d'attente
@@ -449,8 +449,8 @@ function speak(text) {
     
     // 2. On change pour une langue plus universelle au cas où
     msg.lang = 'en-US'; 
-    msg.rate = 0.9;
-    msg.pitch = 1;
+    msg.pitch = customPitch ?? 1;
+    msg.rate = customRate ?? 1;
     msg.volume = 1; // On force le volume à fond
 
     // 3. LE HACK : Sur certains navigateurs, il faut "re-déclencher" le resume
@@ -466,12 +466,14 @@ function speak(text) {
     window.speechSynthesis.speak(msg);
 }
 
-/** Même synthèse que le quiz (`speak`) — utilisé par les cartes jurons (`onclick` = geste direct). */
+/** Même synthèse que le quiz (`speak`) + pitch/rate tirés au hasard — cartes jurons (`onclick` = geste direct). */
 function speakJuronFromId(id) {
     const n = parseInt(id, 10);
     if (isNaN(n)) return;
     const row = JURON_LIBRARY[n];
-    if (row && row.en) speak(row.en);
+    if (!row || !row.en) return;
+    const profile = JURON_VOICE_PROFILES[Math.floor(Math.random() * JURON_VOICE_PROFILES.length)];
+    speak(row.en, profile.pitch, profile.rate);
 }
 
 /* (helpers pour la section 3 — jauges / maîtrise) */
@@ -1442,6 +1444,14 @@ function createJuronDonutHTML(dailyTotal) {
             </div>`;
 }
 
+const JURON_VOICE_PROFILES = [
+    { id: 'lord', pitch: 0.6, rate: 0.6 },
+    { id: 'gobelin', pitch: 1.8, rate: 1.4 },
+    { id: 'mamie_tea', pitch: 1.4, rate: 0.65 },
+    { id: 'mamie_bar', pitch: 0.3, rate: 0.7 },
+    { id: 'enfant', pitch: 1.7, rate: 1.15 },
+];
+
 function renderJuronCards() {
     const grid = document.getElementById('jurons-grid');
     if (!grid) return;
@@ -1460,7 +1470,7 @@ function renderJuronCards() {
         const enEsc = escapeHtml(row.en);
         const frEsc = escapeHtml(row.fr);
         return `
-            <article class="juron-card juron-card--unlocked${newCls}" data-id="${id}" role="button" tabindex="0" title="Écouter (même voix que le quiz)" onclick="window.speakJuronFromId(${id})">
+            <article class="juron-card juron-card--unlocked${newCls}" data-id="${id}" role="button" tabindex="0" title="Écouter (voix surprise : pitch / débit aléatoires)" onclick="window.speakJuronFromId(${id})">
                 <strong class="juron-en">${enEsc}</strong>
                 <em class="juron-fr">${frEsc}</em>
             </article>`;
@@ -1502,7 +1512,9 @@ function initJuronsModal() {
             e.preventDefault();
             const id = parseInt(card.getAttribute('data-id'), 10);
             const row = JURON_LIBRARY[id];
-            if (row && row.en) speak(row.en);
+            if (!row || !row.en) return;
+            const profile = JURON_VOICE_PROFILES[Math.floor(Math.random() * JURON_VOICE_PROFILES.length)];
+            speak(row.en, profile.pitch, profile.rate);
         });
     }
 }
