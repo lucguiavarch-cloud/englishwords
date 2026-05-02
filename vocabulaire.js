@@ -19,6 +19,7 @@ const defaultStats = {
   hints: 5,
   currentTheme: 'skin-dark',
   streakDays: 1,
+  dailyGoalProgress: 0,
   masteryBaselineDate: null,
   masteryBaselinePercent: null,
   masterySnapshotEod: null
@@ -35,6 +36,8 @@ stats.hints = parseInt(stats.hints);
 if (isNaN(stats.hints)) stats.hints = 5;
 stats.streakDays = parseInt(stats.streakDays);
 if (isNaN(stats.streakDays) || stats.streakDays < 1) stats.streakDays = 1;
+stats.dailyGoalProgress = parseInt(stats.dailyGoalProgress, 10);
+if (isNaN(stats.dailyGoalProgress) || stats.dailyGoalProgress < 0) stats.dailyGoalProgress = 0;
 
 let celebrationQueue = [];
 let isCelebrationRunning = false;
@@ -104,7 +107,6 @@ if (stats.lastDate !== today) {
   yesterday.setDate(yesterday.getDate() - 1);
 
   stats.maxCombo = 0;
-  stats.dailyTotal = 0;
 
   const isConsecutive = lastVisit.toDateString() === yesterday.toDateString();
   if (isConsecutive) {
@@ -123,6 +125,7 @@ if (stats.lastDate !== today) {
   }
 
   stats.dailyTotal = 0;
+  stats.dailyGoalProgress = 0;
   stats.lastDate = today;
   save();
 }
@@ -538,6 +541,31 @@ if (elXpText) {
     elXpText.innerText = `${stats.xp} / ${xpReq} XP`;
 }
 
+    const dailyGoalCap = 20;
+    const dg = typeof stats.dailyGoalProgress === 'number' ? stats.dailyGoalProgress : 0;
+    const elDailyGoalLabel = document.getElementById('daily-goal-label');
+    const elDailyGoalFill = document.getElementById('daily-goal-fill');
+    const elDailyGoalWrap = document.getElementById('daily-goal-wrap');
+    if (elDailyGoalLabel) {
+        const shown = Math.min(dg, dailyGoalCap);
+        elDailyGoalLabel.textContent = `Focus du jour : ${shown} / ${dailyGoalCap}`;
+    }
+    if (elDailyGoalFill) {
+        elDailyGoalFill.style.width = `${Math.min(100, (dg / dailyGoalCap) * 100)}%`;
+    }
+    if (elDailyGoalWrap) {
+        elDailyGoalWrap.classList.toggle('daily-goal-complete', dg >= dailyGoalCap);
+    }
+
+    const elHudStreakDays = document.getElementById('hud-streak-days');
+    const elHudStreakFlame = document.getElementById('hud-streak-flame');
+    if (elHudStreakDays) {
+        elHudStreakDays.textContent = String(Math.max(1, parseInt(stats.streakDays, 10) || 1));
+    }
+    if (elHudStreakFlame) {
+        elHudStreakFlame.classList.toggle('streak-flame-pulse', (stats.dailyTotal || 0) > 0);
+    }
+
     const elHint = document.getElementById('count-hint');
     if (elHint) elHint.innerText = stats.hints;
     const elShield = document.getElementById('count-shield');
@@ -697,6 +725,14 @@ function handleAnswer() {
     if (resolved.ok) {
         sessionCombo++;
         stats.dailyTotal++;
+        stats.dailyGoalProgress++;
+        if (stats.dailyGoalProgress === 20) {
+            addXP(100);
+            stats.shields++;
+            triggerCelebration('focus', '⚡', 'OBJECTIF ATTEINT', 'Bilan du jour : +100 XP et +1 Bouclier !');
+            const shieldBtn = document.getElementById('btn-shield');
+            if (shieldBtn) spawnFloatingTextFromElement(shieldBtn, '+1', 'var(--text-light)');
+        }
         if (stats.dailyTotal % 10 === 0 && stats.dailyTotal !== 0) {
             let bonusPalier = stats.dailyTotal; 
             addXP(bonusPalier);
@@ -930,7 +966,8 @@ function exportJSON() {
         shields: isNaN(parseInt(stats.shields)) ? 3 : parseInt(stats.shields),
         hints: isNaN(parseInt(stats.hints)) ? 5 : parseInt(stats.hints),
         currentTheme: stats.currentTheme || 'skin-dark',
-        streakDays: isNaN(parseInt(stats.streakDays)) ? 1 : Math.max(1, parseInt(stats.streakDays))
+        streakDays: isNaN(parseInt(stats.streakDays)) ? 1 : Math.max(1, parseInt(stats.streakDays)),
+        dailyGoalProgress: isNaN(parseInt(stats.dailyGoalProgress, 10)) ? 0 : Math.max(0, parseInt(stats.dailyGoalProgress, 10))
     };
 
     stats = cleanStats;
@@ -965,6 +1002,8 @@ function importJSON(e) {
                 if (isNaN(stats.shields)) stats.shields = 3;
                 stats.hints = parseInt(stats.hints);
                 if (isNaN(stats.hints)) stats.hints = 5;
+                stats.dailyGoalProgress = parseInt(stats.dailyGoalProgress, 10);
+                if (isNaN(stats.dailyGoalProgress) || stats.dailyGoalProgress < 0) stats.dailyGoalProgress = 0;
             } 
             else if (Array.isArray(data)) { dictionary = data; } 
             else { throw new Error("Format de données inconnu"); }
@@ -1064,7 +1103,7 @@ async function processCelebrationQueue() {
         iconEl.classList.add('mastery-pulse');
     } else if (type === 'focus') {
         titleEl.innerText = "OBJECTIF ATTEINT !";
-        titleEl.style.color = "var(--accent)";
+        titleEl.style.color = "var(--objective-mint)";
         subEl.innerText = "Bonus de concentration débloqué (+50 XP)";
         iconEl.classList.add('badge-pop');
     } else {

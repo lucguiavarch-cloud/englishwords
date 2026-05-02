@@ -206,8 +206,111 @@ body {
     color: var(--text-light) !important;
 }
 .xp-mini-stat #xp-text { opacity: 0.9; }
-.xp-bar-bg { width: 100%; height: 4px; background: #444; border-radius: 2px; overflow: hidden; margin-top: 4px; }
-#xp-bar { width: 0%; height: 100%; background: var(--gold); transition: 0.3s; }
+
+.xp-mini-stat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 10px;
+}
+
+.xp-bar-bg {
+    width: 100%;
+    height: 4px;
+    margin-top: 6px;
+    background: color-mix(in srgb, var(--text-light) 18%, transparent);
+    border-radius: 2px;
+    overflow: hidden;
+}
+#xp-bar { width: 0%; height: 100%; background: var(--gold); transition: width 0.3s ease; }
+
+/* Objectif quotidien (distinct de la jauge XP) */
+.daily-goal-wrap {
+    margin-top: 8px;
+    padding-top: 6px;
+    border-top: 1px solid color-mix(in srgb, var(--text-light) 12%, transparent);
+}
+
+.daily-goal-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--text-light) !important;
+    opacity: 0.95;
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.daily-goal-bar-bg {
+    width: 100%;
+    height: 5px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--objective-mint) 15%, var(--text-light) 8%);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--objective-mint) 25%, transparent);
+}
+
+.daily-goal-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: inherit;
+    background: linear-gradient(
+        90deg,
+        var(--objective-mint-soft),
+        var(--objective-mint)
+    );
+    transition: width 0.35s ease;
+    box-shadow: 0 0 8px color-mix(in srgb, var(--objective-mint) 45%, transparent);
+}
+
+.daily-goal-complete .daily-goal-fill {
+    animation: daily-goal-shine 2s ease-in-out infinite;
+}
+
+.daily-goal-complete .daily-goal-bar-bg {
+    animation: daily-goal-track-pulse 2s ease-in-out infinite;
+}
+
+@keyframes daily-goal-shine {
+    0%, 100% {
+        filter: brightness(1);
+        box-shadow: 0 0 8px color-mix(in srgb, var(--objective-mint) 45%, transparent);
+    }
+    50% {
+        filter: brightness(1.15);
+        box-shadow: 0 0 14px var(--objective-mint), 0 0 6px var(--objective-mint-soft);
+    }
+}
+
+@keyframes daily-goal-track-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.88; }
+}
+
+/* Série (HUD) — chrome partagé avec .session-pill / .timer-pill plus bas */
+
+.streak-hud-flame {
+    font-size: 14px;
+    line-height: 1;
+    display: inline-block;
+    transform-origin: center bottom;
+}
+
+.streak-hud-flame.streak-flame-pulse {
+    animation: streak-flame-pulse 1.25s ease-in-out infinite;
+}
+
+@keyframes streak-flame-pulse {
+    0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 2px color-mix(in srgb, var(--gold) 40%, transparent));
+    }
+    50% {
+        transform: scale(1.14);
+        filter: drop-shadow(0 0 8px var(--gold)) drop-shadow(0 0 4px var(--accent));
+    }
+}
 
 /* Maîtrise : bandeau ultra-compact (clavier / colonne étroite) */
 .mastery-total-card {
@@ -980,7 +1083,8 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
 }
 
 .session-pill,
-.timer-pill{
+.timer-pill,
+.streak-hud-pill {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1003,6 +1107,12 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
     font-variant-numeric: tabular-nums;
     cursor: pointer;
     user-select: none;
+}
+
+.streak-hud-pill {
+    font-size: 11px;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
 }
 
 .timer-pill #timer{
@@ -1135,10 +1245,20 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
     /* En mobile: on masque le select natif (remplacé par modale) */
     .session-info .time-selector { display: none !important; }
 
-    .session-pill, .timer-pill{
+    .session-pill, .timer-pill, .streak-hud-pill {
         /* "HUD" propre + compatible */
         background: rgba(0, 0, 0, 0.22);
         border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .streak-hud-pill {
+        padding: 4px 6px;
+        gap: 2px;
+        font-size: 10px;
+    }
+
+    .streak-hud-flame {
+        font-size: 12px;
     }
 
     .container {
@@ -1315,6 +1435,24 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
     }
     .xp-mini-stat span {
         font-size: 7px !important;
+    }
+
+    .xp-mini-stat .daily-goal-label {
+        font-size: 6px !important;
+    }
+
+    .daily-goal-wrap {
+        margin-top: 4px;
+        padding-top: 4px;
+    }
+
+    .daily-goal-bar-bg {
+        height: 4px;
+    }
+
+    .xp-bar-bg {
+        margin-top: 4px;
+        height: 3px;
     }
 
     .levels-grid {

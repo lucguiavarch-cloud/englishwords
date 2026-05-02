@@ -144,6 +144,10 @@
                 <div class="session-pill" title="Nom de session">
                     👤 <span id="current-session-display">Session Locale</span>
                 </div>
+                <div class="streak-hud-pill" title="Série : jours consécutifs avec activité">
+                    <span class="streak-hud-flame" id="hud-streak-flame" aria-hidden="true">🔥</span>
+                    <span id="hud-streak-days" class="streak-hud-days">1</span>
+                </div>
                 <div class="timer-pill" title="Cliquer pour changer la durée">
 						<span id="timer">10:00</span>
                 </div>
@@ -170,10 +174,14 @@
 
         <div class="levels-container">
             <div class="xp-mini-stat">
-                <div style="display:flex; justify-content: space-between; font-size: 10px;">
+                <div class="xp-mini-stat-header">
                     <span>LVL: <b id="player-lvl">1</b><br><b id="xp-text">0/100 XP</b></span>
                 </div>
-                
+                <div class="xp-bar-bg" aria-hidden="true"><div id="xp-bar"></div></div>
+                <div class="daily-goal-wrap" id="daily-goal-wrap">
+                    <div class="daily-goal-label" id="daily-goal-label">Focus du jour : 0 / 20</div>
+                    <div class="daily-goal-bar-bg" aria-hidden="true"><div id="daily-goal-fill" class="daily-goal-fill"></div></div>
+                </div>
             </div>
             <div class="levels-grid" id="levels-display"></div>
             <div
