@@ -1412,31 +1412,52 @@ function speakJuronBritish(text) {
     if (!t) return;
 
     const run = () => {
+        // 1. On annule toute lecture en cours
         window.speechSynthesis.cancel();
-        const msg = new SpeechSynthesisUtterance(t);
-        const voice = pickEnglishVoiceForJuron();
-        if (voice) {
-            msg.voice = voice;
-            msg.lang = voice.lang || 'en-GB';
-        } else {
-            /* Sans voix listée, en-US se fait lire presque partout (évite le silence total). */
-            msg.lang = 'en-US';
-        }
-        msg.rate = 0.6;
-        msg.pitch = 0.8;
-        msg.volume = 1;
-        if (window.speechSynthesis.paused) window.speechSynthesis.resume();
-        msg.onerror = (ev) => {
-            console.warn('Juron TTS:', ev && ev.error);
-        };
-        window.speechSynthesis.speak(msg);
+
+        // 2. Petit délai de 50ms pour laisser le navigateur "digérer" l'annulation
+        // avant de lancer le nouveau son. C'est le secret de la stabilité.
+        setTimeout(() => {
+            const msg = new SpeechSynthesisUtterance(t);
+            const voice = pickEnglishVoiceForJuron();
+            
+            if (voice) {
+                msg.voice = voice;
+                msg.lang = voice.lang || 'en-GB';
+            } else {
+                msg.lang = 'en-US';
+            }
+
+            msg.rate = 0.6;
+            msg.pitch = 0.8;
+            msg.volume = 1;
+
+            // Sécurité pour débloquer le moteur si le navigateur l'a mis en pause
+            if (window.speechSynthesis.paused) {
+                window.speechSynthesis.resume();
+            }
+
+            msg.onerror = (ev) => {
+                const err = ev && ev.error;
+                // ON IGNORE l'erreur 'interrupted' car elle est volontaire (clic rapide)
+                if (err === 'interrupted') return;
+                
+                // On ne log que les vraies erreurs de synthèse
+                if (err !== 'canceled') {
+                    console.warn('Juron TTS:', err);
+                }
+            };
+
+            window.speechSynthesis.speak(msg);
+        }, 50); 
     };
 
-    /* Chrome/Chromium : liste de voix souvent vide jusqu’à `voiceschanged`. */
+    // Logique de chargement des voix (inchangée car elle est très bonne)
     if (window.speechSynthesis.getVoices().length) {
         run();
         return;
     }
+
     let ran = false;
     const fire = () => {
         if (ran) return;
