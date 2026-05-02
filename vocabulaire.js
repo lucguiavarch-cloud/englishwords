@@ -25,6 +25,13 @@ function safeAddListener(el, type, handler, options) {
   el.addEventListener(type, handler, options);
 }
 
+function escapeHtml(str) {
+  if (str == null) return '';
+  const d = document.createElement('div');
+  d.textContent = String(str);
+  return d.innerHTML;
+}
+
 /* =========================================================
    STATE & CONSTANTS
    ========================================================= */
@@ -43,9 +50,13 @@ const defaultStats = {
   currentTheme: 'skin-dark',
   streakDays: 1,
   dailyGoalProgress: 0,
+  maxCombo: 0,
+  dailyTotal: 0,
   masteryBaselineDate: null,
   masteryBaselinePercent: null,
-  masterySnapshotEod: null
+  masterySnapshotEod: null,
+  unlockedJurons: [],
+  lastUnlockedId: null
 };
 
 const savedStats = loadJSON(KEY + '_STATS', {});
@@ -61,6 +72,22 @@ stats.streakDays = parseInt(stats.streakDays);
 if (isNaN(stats.streakDays) || stats.streakDays < 1) stats.streakDays = 1;
 stats.dailyGoalProgress = parseInt(stats.dailyGoalProgress, 10);
 if (isNaN(stats.dailyGoalProgress) || stats.dailyGoalProgress < 0) stats.dailyGoalProgress = 0;
+stats.maxCombo = parseInt(stats.maxCombo, 10);
+if (isNaN(stats.maxCombo) || stats.maxCombo < 0) stats.maxCombo = 0;
+stats.dailyTotal = parseInt(stats.dailyTotal, 10);
+if (isNaN(stats.dailyTotal) || stats.dailyTotal < 0) stats.dailyTotal = 0;
+stats.unlockedJurons = Array.isArray(stats.unlockedJurons)
+  ? [...new Set(stats.unlockedJurons.map((id) => parseInt(id, 10)).filter((n) => !isNaN(n) && n >= 0))]
+  : [];
+const _lastJ = stats.lastUnlockedId;
+stats.lastUnlockedId = _lastJ != null && _lastJ !== '' && !isNaN(parseInt(_lastJ, 10))
+  ? parseInt(_lastJ, 10)
+  : null;
+
+/** Bibliothèque de jurons (index = id unique), chargée via fetch au démarrage. */
+let JURON_LIBRARY = [];
+
+const JURON_MILESTONE = 50;
 
 let celebrationQueue = [];
 let isCelebrationRunning = false;
@@ -270,12 +297,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (wordModal && event.target === wordModal) closeModal();
   });
 
-  initSkins();
-  initCollectionModal();
-  updateUI();
-  getNextWord();
-  updateTimerDisplay();
-  startInterval();
+  (async () => {
+    await loadJuronLibrary();
+    initSkins();
+    initCollectionModal();
+    initJuronsModal();
+    updateUI();
+    getNextWord();
+    updateTimerDisplay();
+    startInterval();
+  })();
 });
 
 /* --- GESTION DU TEMPS (UI) --- */
@@ -782,6 +813,9 @@ function handleAnswer() {
             const shieldBtn = document.getElementById('btn-shield');
             if (shieldBtn) spawnFloatingTextFromElement(shieldBtn, '+1', 'var(--text-light)');
         }
+        if (stats.dailyTotal % JURON_MILESTONE === 0 && stats.dailyTotal !== 0) {
+            tryUnlockRandomJuron();
+        }
         if (stats.dailyTotal % 10 === 0 && stats.dailyTotal !== 0) {
             let bonusPalier = stats.dailyTotal; 
             addXP(bonusPalier);
@@ -1029,7 +1063,23 @@ function exportJSON() {
         hints: isNaN(parseInt(stats.hints)) ? 5 : parseInt(stats.hints),
         currentTheme: stats.currentTheme || 'skin-dark',
         streakDays: isNaN(parseInt(stats.streakDays)) ? 1 : Math.max(1, parseInt(stats.streakDays)),
-        dailyGoalProgress: isNaN(parseInt(stats.dailyGoalProgress, 10)) ? 0 : Math.max(0, parseInt(stats.dailyGoalProgress, 10))
+        dailyGoalProgress: isNaN(parseInt(stats.dailyGoalProgress, 10)) ? 0 : Math.max(0, parseInt(stats.dailyGoalProgress, 10)),
+        /* Badges / objectifs (sinon export → stats = cleanStats les efface et les donuts se dérèglent) */
+        maxCombo: isNaN(parseInt(stats.maxCombo, 10)) ? 0 : Math.max(0, parseInt(stats.maxCombo, 10)),
+        dailyTotal: isNaN(parseInt(stats.dailyTotal, 10)) ? 0 : Math.max(0, parseInt(stats.dailyTotal, 10)),
+        masteryBaselineDate: stats.masteryBaselineDate != null ? stats.masteryBaselineDate : null,
+        masteryBaselinePercent: typeof stats.masteryBaselinePercent === 'number' && !isNaN(stats.masteryBaselinePercent)
+            ? stats.masteryBaselinePercent
+            : null,
+        masterySnapshotEod: typeof stats.masterySnapshotEod === 'number' && !isNaN(stats.masterySnapshotEod)
+            ? stats.masterySnapshotEod
+            : null,
+        unlockedJurons: Array.isArray(stats.unlockedJurons)
+            ? stats.unlockedJurons.map((n) => parseInt(n, 10)).filter((n) => !isNaN(n) && n >= 0)
+            : [],
+        lastUnlockedId: stats.lastUnlockedId != null && !isNaN(parseInt(stats.lastUnlockedId, 10))
+            ? parseInt(stats.lastUnlockedId, 10)
+            : null
     };
 
     stats = cleanStats;
@@ -1068,6 +1118,17 @@ function importJSON(e) {
                 if (isNaN(stats.hints)) stats.hints = 5;
                 stats.dailyGoalProgress = parseInt(stats.dailyGoalProgress, 10);
                 if (isNaN(stats.dailyGoalProgress) || stats.dailyGoalProgress < 0) stats.dailyGoalProgress = 0;
+                stats.maxCombo = parseInt(stats.maxCombo, 10);
+                if (isNaN(stats.maxCombo) || stats.maxCombo < 0) stats.maxCombo = 0;
+                stats.dailyTotal = parseInt(stats.dailyTotal, 10);
+                if (isNaN(stats.dailyTotal) || stats.dailyTotal < 0) stats.dailyTotal = 0;
+                stats.unlockedJurons = Array.isArray(stats.unlockedJurons)
+                    ? [...new Set(stats.unlockedJurons.map((id) => parseInt(id, 10)).filter((n) => !isNaN(n) && n >= 0))]
+                    : [];
+                const lj = stats.lastUnlockedId;
+                stats.lastUnlockedId = lj != null && lj !== '' && !isNaN(parseInt(lj, 10))
+                    ? parseInt(lj, 10)
+                    : null;
             } 
             else if (Array.isArray(data)) { dictionary = data; } 
             else { throw new Error("Format de données inconnu"); }
@@ -1128,7 +1189,7 @@ function resetAll() {
 
 function triggerCelebration(type, icon, mainText,customSubtitle = null) {
     // Désactivé: pas de modale (overlay) pour les badges et bonus de palier (tous les 10 mots)
-    // On garde les célébrations importantes: master / level / focus
+    // On garde les célébrations importantes: master / level / focus / juron
     if (type === 'badge') return;
     celebrationQueue.push({ type, icon, mainText,customSubtitle });
     processCelebrationQueue();
@@ -1175,6 +1236,12 @@ async function processCelebrationQueue() {
         titleEl.innerText = "OBJECTIF ATTEINT !";
         titleEl.style.color = "var(--objective-mint)";
         subEl.innerText = "Bonus de concentration débloqué (+50 XP)";
+        iconEl.classList.add('badge-pop');
+    } else if (type === 'juron') {
+        titleEl.innerText = "JURON !";
+        titleEl.style.color = "var(--danger)";
+        iconEl.style.filter = "drop-shadow(0 0 24px var(--danger))";
+        subEl.innerText = "Collection britannique";
         iconEl.classList.add('badge-pop');
     } else {
         titleEl.innerText = "NOUVEAU BADGE !";
@@ -1312,6 +1379,188 @@ function getLevenshteinDistance(a, b) {
     return matrix[b.length][a.length];
 }
 
+
+/* =========================================================
+   Jurons (collection GB)
+   ========================================================= */
+async function loadJuronLibrary() {
+    try {
+        const res = await fetch('data/jurons.json');
+        if (!res.ok) throw new Error('fetch');
+        const data = await res.json();
+        JURON_LIBRARY = Array.isArray(data) ? data : [];
+    } catch (e) {
+        JURON_LIBRARY = [];
+    }
+}
+
+/** Voix anglaise préférée (GB sinon US) — évite le silence si en-GB est absent du système. */
+function pickEnglishVoiceForJuron() {
+    const list = window.speechSynthesis.getVoices();
+    if (!list || !list.length) return null;
+    return (
+        list.find((v) => v.lang === 'en-GB' || (v.lang && v.lang.toLowerCase().startsWith('en-gb'))) ||
+        list.find((v) => v.lang && /en-gb/i.test(v.lang)) ||
+        list.find((v) => v.lang && /^en-/i.test(v.lang)) ||
+        null
+    );
+}
+
+function speakJuronBritish(text) {
+    if (!text) return;
+    const t = String(text).trim();
+    if (!t) return;
+
+    const run = () => {
+        window.speechSynthesis.cancel();
+        const msg = new SpeechSynthesisUtterance(t);
+        const voice = pickEnglishVoiceForJuron();
+        if (voice) {
+            msg.voice = voice;
+            msg.lang = voice.lang || 'en-GB';
+        } else {
+            msg.lang = 'en-GB';
+        }
+        msg.rate = 0.6;
+        msg.pitch = 0.8;
+        msg.volume = 1;
+        if (window.speechSynthesis.paused) window.speechSynthesis.resume();
+        msg.onerror = (ev) => {
+            console.warn('Juron TTS:', ev && ev.error);
+        };
+        window.speechSynthesis.speak(msg);
+    };
+
+    /* Chrome/Chromium : les voix arrivent souvent après `voiceschanged` */
+    if (!window.speechSynthesis.getVoices().length) {
+        const once = () => {
+            window.speechSynthesis.removeEventListener('voiceschanged', once);
+            run();
+        };
+        window.speechSynthesis.addEventListener('voiceschanged', once, { once: true });
+        window.speechSynthesis.getVoices();
+        setTimeout(run, 50);
+        return;
+    }
+    run();
+}
+
+function tryUnlockRandomJuron() {
+    if (!JURON_LIBRARY.length) return;
+    const unlocked = new Set(stats.unlockedJurons || []);
+    const available = [];
+    for (let i = 0; i < JURON_LIBRARY.length; i++) {
+        if (!unlocked.has(i)) available.push(i);
+    }
+    if (!available.length) return;
+    const pick = available[Math.floor(Math.random() * available.length)];
+    if (!Array.isArray(stats.unlockedJurons)) stats.unlockedJurons = [];
+    stats.unlockedJurons.push(pick);
+    stats.lastUnlockedId = pick;
+    triggerCelebration('juron', '🤬', 'NOUVEAU JURON DÉBLOQUÉ', 'Allez l\'écouter !');
+}
+
+function createJuronDonutHTML(dailyTotal) {
+    const seg = dailyTotal % JURON_MILESTONE;
+    const pct = Math.min(1, Math.max(0, seg / JURON_MILESTONE));
+    const RING_R = 16;
+    const RING_C = 2 * Math.PI * RING_R;
+    const dashOffset = RING_C * (1 - pct);
+    const counterText = `${seg}/${JURON_MILESTONE}`;
+
+    return `
+            <div id="donut-juron" class="objective-donut objective-donut--idle in-progress objective-donut--juron" data-juron-donut="1" title="Tous les 50 mots justes (aujourd'hui) : débloque un juron au hasard">
+                <svg class="objective-donut-svg" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+                    <circle class="objective-ring-track" cx="20" cy="20" r="${RING_R}" />
+                    <circle
+                        class="objective-ring-fill objective-ring-fill--juron"
+                        cx="20" cy="20" r="${RING_R}"
+                        stroke-dasharray="${RING_C}"
+                        stroke-dashoffset="${dashOffset}"
+                    />
+                </svg>
+                <div class="objective-donut-core">
+                    <span class="objective-donut-icon" aria-hidden="true">🤬</span>
+                    <span class="objective-counter objective-donut-score" aria-live="polite">${counterText}</span>
+                </div>
+            </div>`;
+}
+
+function renderJuronCards() {
+    const grid = document.getElementById('jurons-grid');
+    if (!grid) return;
+    const unlockedSet = new Set(stats.unlockedJurons || []);
+    grid.innerHTML = JURON_LIBRARY.map((row, id) => {
+        const locked = !unlockedSet.has(id);
+        const isNew = stats.lastUnlockedId === id;
+        if (locked) {
+            return `
+            <article class="juron-card juron-card--locked" data-id="${id}">
+                <span class="juron-lock" aria-hidden="true">🔒</span>
+                <p class="juron-blur" aria-hidden="true">········</p>
+            </article>`;
+        }
+        const newCls = isNew ? ' new-juron' : '';
+        const enEsc = escapeHtml(row.en);
+        const frEsc = escapeHtml(row.fr);
+        return `
+            <article class="juron-card juron-card--unlocked${newCls}" data-id="${id}" role="button" tabindex="0" title="Écouter (en-GB)">
+                <strong class="juron-en">${enEsc}</strong>
+                <em class="juron-fr">${frEsc}</em>
+            </article>`;
+    }).join('');
+}
+
+function initJuronsModal() {
+    const modal = document.getElementById('modal-jurons');
+    const btnOpen = document.getElementById('btn-open-jurons');
+    const btnClose = document.getElementById('btn-close-jurons');
+    if (!modal) return;
+
+    const closeModal = () => {
+        modal.style.display = 'none';
+        if (stats.lastUnlockedId != null) {
+            stats.lastUnlockedId = null;
+            persistStatsOnly();
+        }
+    };
+
+    if (btnOpen) {
+        btnOpen.addEventListener('click', () => {
+            renderJuronCards();
+            modal.style.display = 'block';
+            /* Précharge les voix pendant le geste utilisateur (meilleure fiabilité TTS au clic sur une carte). */
+            try {
+                window.speechSynthesis.getVoices();
+            } catch (e) { /* */ }
+        });
+    }
+    if (btnClose) btnClose.addEventListener('click', closeModal);
+
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    const grid = document.getElementById('jurons-grid');
+    if (grid) {
+        grid.addEventListener('click', (e) => {
+            const card = e.target.closest('.juron-card--unlocked');
+            if (!card) return;
+            const id = parseInt(card.getAttribute('data-id'), 10);
+            const row = JURON_LIBRARY[id];
+            if (row && row.en) speakJuronBritish(row.en);
+        });
+        grid.addEventListener('keydown', (e) => {
+            if (e.key !== 'Enter' && e.key !== ' ') return;
+            const card = e.target.closest('.juron-card--unlocked');
+            if (!card) return;
+            e.preventDefault();
+            const id = parseInt(card.getAttribute('data-id'), 10);
+            const row = JURON_LIBRARY[id];
+            if (row && row.en) speakJuronBritish(row.en);
+        });
+    }
+}
 
 /* =========================================================
    Modales (Grimoire — hors init principale)
@@ -1452,9 +1701,17 @@ function updateBadgeSystem(currentCombo, maxCombo, totalScore) {
         `;
     };
 
-    // 3. Affichage des slots d'objectifs
-    if (nextComboBadge) objectiveSlots.innerHTML += createObjectiveHTML(nextComboBadge, currentCombo);
-    if (nextWordsBadge) objectiveSlots.innerHTML += createObjectiveHTML(nextWordsBadge, totalScore);
+    // 3. Affichage des slots d'objectifs (+ donut Juron)
+    let slotsHTML = '';
+    if (nextComboBadge) slotsHTML += createObjectiveHTML(nextComboBadge, currentCombo);
+    if (nextWordsBadge) slotsHTML += createObjectiveHTML(nextWordsBadge, totalScore);
+    if (JURON_LIBRARY.length) slotsHTML += createJuronDonutHTML(totalScore);
+
+    if (!slotsHTML.trim()) {
+        objectiveSlots.innerHTML = `<div class="objectives-all-done" title="Toutes les quêtes terminées">🏆✓</div>`;
+    } else {
+        objectiveSlots.innerHTML = slotsHTML;
+    }
 
     objectivePrevComboBadgeId = nextComboBadge ? nextComboBadge.id : null;
     objectivePrevWordsBadgeId = nextWordsBadge ? nextWordsBadge.id : null;
@@ -1493,11 +1750,6 @@ function updateBadgeSystem(currentCombo, maxCombo, totalScore) {
     }
 
     lastUnlockedBadgeIds = unlockedNowIds;
-
-    // Si plus aucun badge n'est disponible (tout est débloqué)
-    if (!nextComboBadge && !nextWordsBadge) {
-        objectiveSlots.innerHTML = `<div class="objectives-all-done" title="Toutes les quêtes terminées">🏆✓</div>`;
-    }
 }
 
 

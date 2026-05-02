@@ -167,7 +167,10 @@
                         </button>
                     </div>
                     <div class="badge-group objective-slots-group" id="objective-slots"></div>
-                    <button type="button" id="btn-show-collection" class="btn-grimoire-compact" title="Grimoire" aria-label="Ouvrir le Grimoire des succès">🏆</button>
+                    <div class="objectives-action-stack" aria-label="Collections">
+                        <button type="button" id="btn-show-collection" class="btn-grimoire-compact" title="Grimoire" aria-label="Ouvrir le Grimoire des succès">🏆</button>
+                        <button type="button" id="btn-open-jurons" class="btn-juron-compact" title="Boîte à jurons (GB)" aria-label="Ouvrir la Boîte à jurons britanniques">🤬</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -306,6 +309,17 @@
         </div>
         <div class="modal-buttons modal-actions modal-actions--spaced">
             <button id="btn-close-timer" class="bg-danger" type="button">Fermer</button>
+        </div>
+    </div>
+</div>
+
+<div id="modal-jurons" class="modal modal-jurons" role="dialog" aria-modal="true" aria-labelledby="jurons-modal-title">
+    <div class="modal-content modal-jurons-content">
+        <h2 id="jurons-modal-title" class="jurons-comic-title">🤬 Juron Box</h2>
+        <p class="jurons-comic-lead">Un juron au hasard tous les <strong>50 mots justes</strong> dans la journée. Clique une carte pour l’entendre en <em>en-GB</em>.</p>
+        <div id="jurons-grid" class="jurons-grid"></div>
+        <div class="modal-buttons modal-actions">
+            <button type="button" id="btn-close-jurons" class="bg-danger">Fermer</button>
         </div>
     </div>
 </div>

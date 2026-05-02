@@ -520,6 +520,15 @@ body {
     transition: stroke-dashoffset 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
+.objective-ring-fill--juron {
+    stroke: var(--danger);
+    filter: drop-shadow(0 0 4px color-mix(in srgb, var(--danger) 45%, transparent));
+}
+
+.objective-donut--juron .objective-donut-svg {
+    filter: drop-shadow(0 0 3px color-mix(in srgb, var(--danger) 35%, transparent));
+}
+
 .objective-donut--focus .objective-ring-fill {
     stroke: var(--objective-mint);
     filter: drop-shadow(0 0 5px var(--objective-mint));
@@ -621,6 +630,40 @@ body {
 }
 
 .btn-grimoire-compact:active {
+    transform: scale(0.95);
+}
+
+.objectives-action-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    flex: 0 0 auto;
+}
+
+.btn-juron-compact {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    border-radius: var(--radius-btn);
+    border: 3px solid #111;
+    background:
+        radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.5) 0%, transparent 45%),
+        linear-gradient(155deg, color-mix(in srgb, var(--danger) 45%, #fff) 0%, var(--danger) 100%);
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px var(--shadow-main), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    transition: transform 0.15s ease;
+}
+
+.btn-juron-compact:active {
     transform: scale(0.95);
 }
 
@@ -931,6 +974,143 @@ input[type="text"] {
 }
 
 #feedback { margin-top:15px; min-height: 40px; font-weight: bold; font-size: 18px; }
+
+/* =========================================
+   5b. JURON BOX (modale BD)
+   ========================================= */
+.modal.modal-jurons {
+    z-index: 1100;
+}
+
+.modal-jurons-content {
+    max-width: 520px;
+    border: 5px solid #111;
+    border-radius: 18px;
+    background-color: #fffef8;
+    background-image: radial-gradient(#111 1.1px, transparent 1.1px);
+    background-size: 14px 14px;
+    box-shadow: 8px 8px 0 #111;
+    padding: 18px 16px 20px;
+}
+
+.jurons-comic-title {
+    margin: 0 0 10px;
+    font-size: 1.35rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-card);
+    text-shadow: 3px 3px 0 color-mix(in srgb, var(--danger) 30%, transparent);
+}
+
+.jurons-comic-lead {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 0 0 14px;
+    line-height: 1.45;
+    text-align: left;
+}
+
+.jurons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+    max-height: 52vh;
+    overflow-y: auto;
+    padding: 4px;
+    margin-bottom: 14px;
+}
+
+.juron-card {
+    border: 4px solid #111;
+    border-radius: 12px;
+    padding: 12px 10px;
+    min-height: 88px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 4px 4px 0 #111;
+    background: var(--bg-card);
+}
+
+.juron-card--locked {
+    background: repeating-linear-gradient(45deg, #f0f0f0, #f0f0f0 6px, #e4e4e4 6px, #e4e4e4 12px);
+}
+
+.juron-card--locked .juron-blur {
+    filter: blur(6px);
+    user-select: none;
+    margin: 0;
+    letter-spacing: 0.25em;
+    font-size: 14px;
+}
+
+.juron-lock {
+    font-size: 1.35rem;
+}
+
+.juron-card--unlocked {
+    cursor: pointer;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.juron-card--unlocked:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #111;
+}
+
+.juron-card--unlocked:active {
+    animation: vibration 0.28s ease-in-out;
+}
+
+.juron-en {
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--text-card);
+    text-align: center;
+}
+
+.juron-fr {
+    display: block;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--primary);
+    text-align: center;
+    line-height: 1.25;
+}
+
+.juron-card.new-juron {
+    animation: flash-juron 1.05s ease-in-out 2;
+    border-color: var(--danger);
+}
+
+@keyframes flash-juron {
+    0%, 100% {
+        filter: brightness(1);
+        box-shadow: 4px 4px 0 #111;
+    }
+    50% {
+        filter: brightness(1.25) drop-shadow(0 0 12px var(--danger));
+        box-shadow: 4px 4px 0 var(--danger);
+    }
+}
+
+@keyframes vibration {
+    0%, 100% { transform: translate(0, 0); }
+    15% { transform: translate(-2px, 2px); }
+    30% { transform: translate(2px, -2px); }
+    45% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 1px); }
+    75% { transform: translate(-1px, 2px); }
+}
+
+body.skin-dark .modal-jurons-content {
+    background-color: var(--bg-card);
+    background-image: radial-gradient(color-mix(in srgb, var(--text-light) 22%, transparent) 1.1px, transparent 1.1px);
+    box-shadow: 8px 8px 0 color-mix(in srgb, var(--text-light) 35%, transparent);
+}
 
 /* =========================================
    6. TAGS & LISTES (mots)
@@ -1703,8 +1883,20 @@ body.skin-arcade {
         font-size: 9px;
     }
 
+    .objectives-action-stack {
+        gap: 3px;
+    }
+
     .btn-grimoire-compact,
     #btn-show-collection.btn-grimoire-compact {
+        width: 28px;
+        height: 28px;
+        font-size: 13px;
+        margin: 0;
+    }
+
+    .btn-juron-compact,
+    #btn-open-jurons.btn-juron-compact {
         width: 28px;
         height: 28px;
         font-size: 13px;
@@ -1722,29 +1914,35 @@ body.skin-arcade {
 
     /* 🎮 ZONE QUIZ (AU CENTRE) */
     .quiz-section { 
-        padding-top: 25px !important; /* Ajoute de l'espace en haut pour le tag */
+        padding-top: 12px !important;
         grid-area: quiz; 
-        padding: 10px 5px; 
+        padding: 10px 5px 12px; 
         display: flex; 
         flex-direction: column; 
-        justify-content: center;
+        justify-content: flex-start;
+        align-items: center;
         min-height: 250px;
         margin-bottom: 5px;
     }
     .mode-indicator { 
-        position: relative !important; /* On le remet dans le flux normal */
-        top: -10px !important; 
-        margin-bottom: 5px !important;
+        position: relative !important;
+        top: 0 !important; 
+        margin: 0 auto 12px auto !important;
         display: inline-block !important;
         transform: none !important;
         left: auto !important;
+        align-self: center;
     }
 
     .word-to-translate { 
-        font-size: 26px !important; /* Légèrement plus petit pour éviter de pousser l'input */
+        font-size: 24px !important;
         margin-top: 0 !important;
+        margin-bottom: 8px;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 4px;
+        box-sizing: border-box;
     }
-    .word-to-translate { font-size: 24px; margin-bottom: 8px; }
     .word-guide {
         font-size: 10px;
         padding: 8px 10px;
@@ -1752,9 +1950,14 @@ body.skin-arcade {
         max-width: 100%;
     }
     input[type="text"] {
-        width: 95% !important; 
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
         font-size: 22px;
         margin: 0 auto 10px auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
         padding: 10px;
     }
     .action-controls-container { display: grid !important; grid-template-columns: 1fr; gap: 5px; }
