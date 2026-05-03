@@ -92,6 +92,8 @@ const JURON_MILESTONE = 50;
 let celebrationQueue = [];
 let isCelebrationRunning = false;
 let isShieldArmed = false;
+/** Un seul indice par mot : pas de double consommation avant la prochaine question. */
+let hintConsumedForCurrentWord = false;
 let currentWord = null;
 let sessionCombo = 0;
 let timeLeft = 10 * 60;
@@ -691,6 +693,23 @@ if (elXpText) {
     if (elHint) elHint.innerText = stats.hints;
     const elShield = document.getElementById('count-shield');
     if (elShield) elShield.innerText = stats.shields;
+    syncHintButton();
+}
+
+function syncHintButton() {
+    const btn = document.getElementById('btn-hint');
+    if (!btn) return;
+    const noStock = stats.hints <= 0;
+    const noActiveWord = !currentWord;
+    const spent = hintConsumedForCurrentWord;
+    btn.disabled = noStock || noActiveWord || spent;
+    if (spent && !noStock && !noActiveWord) {
+        btn.title = 'Indice déjà utilisé pour ce mot. Valide une réponse pour passer au suivant.';
+    } else if (noStock) {
+        btn.title = 'Plus d’indices en réserve.';
+    } else {
+        btn.removeAttribute('title');
+    }
 }
 
 /* =========================================================
@@ -734,6 +753,7 @@ function getNextWord() {
 
     if (modeTag) modeTag.style.display = "block";
     currentWord = pool[Math.floor(Math.random() * pool.length)];
+    hintConsumedForCurrentWord = false;
     setText(wordEl, currentWord.fr);
     if (guideEl) {
         const g = currentWord.guide && String(currentWord.guide).trim();
@@ -749,6 +769,7 @@ function getNextWord() {
         inputEl.value = "";
         inputEl.focus();
     }
+    syncHintButton();
 }
 
 function setMode(text, color) {
@@ -1025,15 +1046,25 @@ function toggleShield() {
 }
 
 function useHint() {
-    if (stats.hints > 0 && currentWord) {
-        stats.hints--;
-        const hintText = `Commence par "${currentWord.en[0]}" (${currentWord.en.length} lettres)`;
+    if (!currentWord || stats.hints <= 0) return;
+    if (hintConsumedForCurrentWord) {
         const fb = document.getElementById('feedback');
-        if (fb) fb.innerHTML = `<span style="color:var(--violet)">${hintText}</span>`;
-        updateUI();
+        if (fb) {
+            fb.innerHTML =
+                '<span style="color:var(--text-muted)">Indice déjà utilisé pour ce mot — valide ta réponse pour continuer.</span>';
+        }
         const input = document.getElementById('user-input');
         if (input) input.focus();
+        return;
     }
+    hintConsumedForCurrentWord = true;
+    stats.hints--;
+    const hintText = `Commence par "${currentWord.en[0]}" (${currentWord.en.length} lettres)`;
+    const fb = document.getElementById('feedback');
+    if (fb) fb.innerHTML = `<span style="color:var(--violet)">${hintText}</span>`;
+    updateUI();
+    const input = document.getElementById('user-input');
+    if (input) input.focus();
 }
 
 /* =========================================================
