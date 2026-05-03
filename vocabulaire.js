@@ -105,8 +105,8 @@ const today = new Date().toDateString();
 let objectivePrevComboBadgeId = null;
 let objectivePrevWordsBadgeId = null;
 
-// Pour déclencher un flash unique + pop texte quand un badge est gagné
-let lastUnlockedBadgeIds = new Set();
+// Pour déclencher un flash unique + pop texte quand un badge est gagné (initialisé après gameBadges + reset jour)
+let lastUnlockedBadgeIds;
 
 // Pour déclencher un flash quand un mot tombe dans une boîte de niveau
 let pendingLevelFlash = null;
@@ -140,6 +140,19 @@ const gameBadges = [
   { id: 'w300', type: 'words', target: 300, icon: '🦄', name: '300 mots justes', desc: '300 mots justes' },
   { id: 'w500', type: 'words', target: 500, icon: '🌋', name: '500 mots justes', desc: '500 mots justes' }
 ];
+
+function collectUnlockedBadgeIds(maxCombo, dailyTotal) {
+  const ids = new Set();
+  for (const badge of gameBadges) {
+    if (
+      (badge.type === 'combo' && maxCombo >= badge.target) ||
+      (badge.type === 'words' && dailyTotal >= badge.target)
+    ) {
+      ids.add(badge.id);
+    }
+  }
+  return ids;
+}
 
 /** Symboles + libellés des boîtes de niveau (grille + modale détail). */
 const RARITY_LEVELS = [
@@ -199,6 +212,8 @@ if (stats.lastDate !== today) {
   stats.lastDate = today;
   save();
 }
+
+lastUnlockedBadgeIds = collectUnlockedBadgeIds(stats.maxCombo, stats.dailyTotal);
 
 /* =========================================================
    1. INIT & LISTENERS
