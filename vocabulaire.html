@@ -239,8 +239,9 @@
         <div class="modal-content">
             <h2>Ajouter de nouveaux mots</h2>
 
-            <div class="presets-box">
-                <p>📥 Charger un pack (Niveaux CECRL)</p>
+            <div class="presets-box presets-box--full">
+                <p class="presets-box-heading">📥 Packs complets (cumulatifs)</p>
+                <p class="presets-box-lead">Chaque niveau inclut <strong>tous</strong> les mots des niveaux précédents. Idéal pour repartir d’une liste complète ou découvrir un niveau de zéro.</p>
                 <div class="presets-grid">
                     <button type="button" onclick="loadPreset('A1')" class="btn-preset">A1</button>
                     <button type="button" onclick="loadPreset('A2')" class="btn-preset">A2</button>
@@ -248,6 +249,37 @@
                     <button type="button" onclick="loadPreset('B2')" class="btn-preset">B2</button>
                     <button type="button" onclick="loadPreset('C1')" class="btn-preset">C1</button>
                     <button type="button" onclick="loadPreset('C2')" class="btn-preset">C2</button>
+                </div>
+            </div>
+
+            <div class="presets-box presets-box--delta">
+                <p class="presets-box-heading">✨ Nouveautés d’un niveau seulement</p>
+                <p class="presets-box-lead">Pour <strong>enrichir</strong> ta liste sans doublons : seuls les mots qui ne figuraient pas dans le pack cumulatif précédent (même couple <strong>anglais + français</strong>). Exemple : tu as déjà chargé B1 → utilise <strong>B2 · nouveautés</strong> pour n’ajouter que les mots propres au B2.</p>
+                <div class="presets-grid presets-grid--delta">
+                    <button type="button" onclick="loadPreset('delta/A1')" class="btn-preset btn-preset--delta" title="Équivalent au pack A1 complet (socle débutant).">
+                        <span class="preset-delta-level">A1</span>
+                        <span class="preset-delta-hint">Socle débutant</span>
+                    </button>
+                    <button type="button" onclick="loadPreset('delta/A2')" class="btn-preset btn-preset--delta" title="Mots du niveau A2 absents du pack A1 cumulatif.">
+                        <span class="preset-delta-level">A2</span>
+                        <span class="preset-delta-hint">Sans les mots A1</span>
+                    </button>
+                    <button type="button" onclick="loadPreset('delta/B1')" class="btn-preset btn-preset--delta" title="Mots du niveau B1 absents du pack A2 cumulatif.">
+                        <span class="preset-delta-level">B1</span>
+                        <span class="preset-delta-hint">Sans les mots A2</span>
+                    </button>
+                    <button type="button" onclick="loadPreset('delta/B2')" class="btn-preset btn-preset--delta" title="Mots du niveau B2 absents du pack B1 cumulatif.">
+                        <span class="preset-delta-level">B2</span>
+                        <span class="preset-delta-hint">Sans les mots B1</span>
+                    </button>
+                    <button type="button" onclick="loadPreset('delta/C1')" class="btn-preset btn-preset--delta" title="Mots du niveau C1 absents du pack B2 cumulatif.">
+                        <span class="preset-delta-level">C1</span>
+                        <span class="preset-delta-hint">Sans les mots B2</span>
+                    </button>
+                    <button type="button" onclick="loadPreset('delta/C2')" class="btn-preset btn-preset--delta" title="Mots du niveau C2 absents du pack C1 cumulatif.">
+                        <span class="preset-delta-level">C2</span>
+                        <span class="preset-delta-hint">Sans les mots C1</span>
+                    </button>
                 </div>
             </div>
 
@@ -344,7 +376,7 @@
         {
             emoji: '📥',
             title: 'Première connexion : charge des mots',
-            text: 'Au début, ta liste est vide : va en bas de page et charge un ou plusieurs packs par niveau CECRL (boutons A1 à C2). Repères indicatifs avec le collège / lycée en France : A1 ≈ 6e (très débutant), A2 ≈ 4e, B1 ≈ 3e / lycée, B2 et au-dessus pour des niveaux plus avancés. Tu peux cumuler plusieurs packs.'
+            text: 'Au début, ta liste est vide : ouvre « Ajouter des mots » et choisis un pack CECRL. Les packs complets sont cumulatifs (A2 contient déjà A1, etc.). Les boutons verts « nouveautés seulement » ajoutent uniquement les mots nouveaux par rapport au niveau précédent — pratique pour passer de B1 à B2 sans doublons. Repères indicatifs : A1 ≈ 6e, A2 ≈ 4e, B1 ≈ 3e / lycée, B2 et au-dessus pour des niveaux plus avancés.'
         },
         {
             emoji: '✍️',

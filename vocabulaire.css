@@ -1198,18 +1198,73 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
     margin-bottom: 15px;
 }
 
-.presets-box > p:first-child {
-    margin-top: 0;
-    font-weight: bold;
-    color: var(--text-muted);
-    font-size: 0.85em;
+.presets-box-heading {
+    margin: 0 0 8px;
+    font-weight: 700;
+    color: var(--text-card);
+    font-size: 0.95em;
     text-align: center;
+}
+
+.presets-box-lead {
+    margin: 0 0 12px;
+    font-size: 0.8em;
+    line-height: 1.45;
+    color: var(--text-muted);
+    text-align: left;
+}
+
+.presets-box--delta {
+    border-color: color-mix(in srgb, var(--success) 35%, var(--border-main));
+    background: color-mix(in srgb, var(--success) 6%, var(--bg-alt));
 }
 
 .presets-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
+}
+
+.presets-grid--delta {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 520px) {
+    .presets-grid--delta {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.btn-preset--delta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    min-height: 52px;
+    padding: 10px 8px;
+    border-color: var(--success);
+    color: var(--success);
+}
+
+.btn-preset--delta:hover {
+    background-color: var(--success);
+    color: var(--text-light);
+    box-shadow: 0 4px 6px var(--shadow-main);
+}
+
+.preset-delta-level {
+    font-size: 1em;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.preset-delta-hint {
+    font-size: 0.68em;
+    font-weight: 600;
+    line-height: 1.2;
+    opacity: 0.95;
+    text-align: center;
 }
 
 .modal-format-hint { font-size: 0.9em; margin-bottom: 5px; }

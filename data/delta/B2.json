@@ -1,0 +1,6646 @@
+[
+    {
+        "en": "abandon",
+        "fr": "abandonner"
+    },
+    {
+        "en": "abandoned",
+        "fr": "abandonné"
+    },
+    {
+        "en": "abolish",
+        "fr": "abolir"
+    },
+    {
+        "en": "absence",
+        "fr": "absence"
+    },
+    {
+        "en": "absolute",
+        "fr": "absolu"
+    },
+    {
+        "en": "absorb",
+        "fr": "absorber"
+    },
+    {
+        "en": "abstract",
+        "fr": "abstrait"
+    },
+    {
+        "en": "absurd",
+        "fr": "absurde"
+    },
+    {
+        "en": "abuse",
+        "fr": "abus"
+    },
+    {
+        "en": "academic",
+        "fr": "académique"
+    },
+    {
+        "en": "accessible",
+        "fr": "accessible"
+    },
+    {
+        "en": "accidental",
+        "fr": "accidentel"
+    },
+    {
+        "en": "accidentally",
+        "fr": "accidentellement"
+    },
+    {
+        "en": "accuracy",
+        "fr": "précision"
+    },
+    {
+        "en": "accuse",
+        "fr": "accuser"
+    },
+    {
+        "en": "acid",
+        "fr": "acide"
+    },
+    {
+        "en": "acquire",
+        "fr": "acquérir"
+    },
+    {
+        "en": "actively",
+        "fr": "activement"
+    },
+    {
+        "en": "actual",
+        "fr": "réel"
+    },
+    {
+        "en": "adapt",
+        "fr": "adapter"
+    },
+    {
+        "en": "addict",
+        "fr": "toxicomane"
+    },
+    {
+        "en": "addicted",
+        "fr": "accro"
+    },
+    {
+        "en": "addiction",
+        "fr": "dépendance"
+    },
+    {
+        "en": "additional",
+        "fr": "supplémentaire"
+    },
+    {
+        "en": "additionally",
+        "fr": "en plus"
+    },
+    {
+        "en": "adequate",
+        "fr": "adéquat"
+    },
+    {
+        "en": "adequately",
+        "fr": "adéquatement"
+    },
+    {
+        "en": "adjust",
+        "fr": "ajuster"
+    },
+    {
+        "en": "adjustment",
+        "fr": "ajustement"
+    },
+    {
+        "en": "admiration",
+        "fr": "admiration"
+    },
+    {
+        "en": "admittedly",
+        "fr": "certes"
+    },
+    {
+        "en": "adopt",
+        "fr": "adopter"
+    },
+    {
+        "en": "adopted",
+        "fr": "adopté"
+    },
+    {
+        "en": "adoption",
+        "fr": "adoption"
+    },
+    {
+        "en": "adventurous",
+        "fr": "aventureux"
+    },
+    {
+        "en": "advertising",
+        "fr": "publicité"
+    },
+    {
+        "en": "affair",
+        "fr": "affaire"
+    },
+    {
+        "en": "affect",
+        "fr": "affecter"
+    },
+    {
+        "en": "affection",
+        "fr": "affection"
+    },
+    {
+        "en": "agent",
+        "fr": "agent"
+    },
+    {
+        "en": "aggressive",
+        "fr": "agressif"
+    },
+    {
+        "en": "aggressively",
+        "fr": "agressivement"
+    },
+    {
+        "en": "agreement",
+        "fr": "accord"
+    },
+    {
+        "en": "agriculture",
+        "fr": "agriculture"
+    },
+    {
+        "en": "aircraft",
+        "fr": "aéronef"
+    },
+    {
+        "en": "alphabetical",
+        "fr": "alphabétique"
+    },
+    {
+        "en": "alter",
+        "fr": "modifier"
+    },
+    {
+        "en": "alternative",
+        "fr": "alternative"
+    },
+    {
+        "en": "alternatively",
+        "fr": "alternativement"
+    },
+    {
+        "en": "aluminium",
+        "fr": "aluminium"
+    },
+    {
+        "en": "amazement",
+        "fr": "stupéfaction"
+    },
+    {
+        "en": "ambassador",
+        "fr": "ambassadeur"
+    },
+    {
+        "en": "ambitious",
+        "fr": "ambitieux"
+    },
+    {
+        "en": "amongst",
+        "fr": "parmi"
+    },
+    {
+        "en": "amuse",
+        "fr": "amuser"
+    },
+    {
+        "en": "amused",
+        "fr": "amusé"
+    },
+    {
+        "en": "amusement",
+        "fr": "amusement"
+    },
+    {
+        "en": "analyse",
+        "fr": "analyser"
+    },
+    {
+        "en": "analysis",
+        "fr": "analyse"
+    },
+    {
+        "en": "analyst",
+        "fr": "analyste"
+    },
+    {
+        "en": "ancestor",
+        "fr": "ancêtre"
+    },
+    {
+        "en": "anger",
+        "fr": "colère"
+    },
+    {
+        "en": "annually",
+        "fr": "annuellement"
+    },
+    {
+        "en": "anxiety",
+        "fr": "anxiété"
+    },
+    {
+        "en": "anxiously",
+        "fr": "anxieusement"
+    },
+    {
+        "en": "anyhow",
+        "fr": "de toute façon"
+    },
+    {
+        "en": "apostrophe",
+        "fr": "apostrophe"
+    },
+    {
+        "en": "apparent",
+        "fr": "apparent"
+    },
+    {
+        "en": "apparently",
+        "fr": "apparemment"
+    },
+    {
+        "en": "appeal",
+        "fr": "appel"
+    },
+    {
+        "en": "appreciate",
+        "fr": "apprécier"
+    },
+    {
+        "en": "appreciation",
+        "fr": "appréciation"
+    },
+    {
+        "en": "appropriate",
+        "fr": "approprié"
+    },
+    {
+        "en": "appropriately",
+        "fr": "de manière appropriée"
+    },
+    {
+        "en": "approval",
+        "fr": "approbation"
+    },
+    {
+        "en": "approximate",
+        "fr": "approximatif"
+    },
+    {
+        "en": "armed",
+        "fr": "armé"
+    },
+    {
+        "en": "arrogant",
+        "fr": "arrogant"
+    },
+    {
+        "en": "arrow",
+        "fr": "flèche"
+    },
+    {
+        "en": "artificial",
+        "fr": "artificiel"
+    },
+    {
+        "en": "artificially",
+        "fr": "artificiellement"
+    },
+    {
+        "en": "artistic",
+        "fr": "artistique"
+    },
+    {
+        "en": "aside",
+        "fr": "de côté"
+    },
+    {
+        "en": "aspect",
+        "fr": "aspect"
+    },
+    {
+        "en": "assess",
+        "fr": "évaluer"
+    },
+    {
+        "en": "assessment",
+        "fr": "évaluation"
+    },
+    {
+        "en": "assist",
+        "fr": "assister"
+    },
+    {
+        "en": "assistance",
+        "fr": "assistance"
+    },
+    {
+        "en": "associate",
+        "fr": "associé"
+    },
+    {
+        "en": "association",
+        "fr": "association"
+    },
+    {
+        "en": "assume",
+        "fr": "supposer"
+    },
+    {
+        "en": "assure",
+        "fr": "assurer"
+    },
+    {
+        "en": "astonished",
+        "fr": "étonné"
+    },
+    {
+        "en": "astonishing",
+        "fr": "étonnant"
+    },
+    {
+        "en": "astonishment",
+        "fr": "étonnement"
+    },
+    {
+        "en": "athletic",
+        "fr": "athlétique"
+    },
+    {
+        "en": "atom",
+        "fr": "atome"
+    },
+    {
+        "en": "atomic",
+        "fr": "atomique"
+    },
+    {
+        "en": "attached",
+        "fr": "ci-joint"
+    },
+    {
+        "en": "attachment",
+        "fr": "pièce jointe"
+    },
+    {
+        "en": "aubergine",
+        "fr": "aubergine"
+    },
+    {
+        "en": "authority",
+        "fr": "autorité"
+    },
+    {
+        "en": "automatic",
+        "fr": "automatique"
+    },
+    {
+        "en": "automatically",
+        "fr": "automatiquement"
+    },
+    {
+        "en": "availability",
+        "fr": "disponibilité"
+    },
+    {
+        "en": "award",
+        "fr": "prix"
+    },
+    {
+        "en": "aware",
+        "fr": "conscient"
+    },
+    {
+        "en": "awkward",
+        "fr": "maladroit"
+    },
+    {
+        "en": "badge",
+        "fr": "badge"
+    },
+    {
+        "en": "bakery",
+        "fr": "boulangerie"
+    },
+    {
+        "en": "balance",
+        "fr": "équilibre"
+    },
+    {
+        "en": "balanced",
+        "fr": "équilibré"
+    },
+    {
+        "en": "ban",
+        "fr": "interdire"
+    },
+    {
+        "en": "bang",
+        "fr": "claquer"
+    },
+    {
+        "en": "banker",
+        "fr": "banquier"
+    },
+    {
+        "en": "banking",
+        "fr": "bancaire"
+    },
+    {
+        "en": "bare",
+        "fr": "nu"
+    },
+    {
+        "en": "barely",
+        "fr": "à peine"
+    },
+    {
+        "en": "bargain",
+        "fr": "marchander"
+    },
+    {
+        "en": "bark",
+        "fr": "aboyer"
+    },
+    {
+        "en": "barrier",
+        "fr": "barrière"
+    },
+    {
+        "en": "basement",
+        "fr": "sous-sol"
+    },
+    {
+        "en": "basically",
+        "fr": "essentiellement"
+    },
+    {
+        "en": "basics",
+        "fr": "bases"
+    },
+    {
+        "en": "basis",
+        "fr": "base"
+    },
+    {
+        "en": "beam",
+        "fr": "faisceau"
+    },
+    {
+        "en": "beg",
+        "fr": "mendier"
+    },
+    {
+        "en": "behalf",
+        "fr": "au nom de"
+    },
+    {
+        "en": "belief",
+        "fr": "croyance"
+    },
+    {
+        "en": "belongings",
+        "fr": "affaires"
+    },
+    {
+        "en": "bench",
+        "fr": "banc"
+    },
+    {
+        "en": "bend",
+        "fr": "plier"
+    },
+    {
+        "en": "beneath",
+        "fr": "sous"
+    },
+    {
+        "en": "beneficial",
+        "fr": "avantageux"
+    },
+    {
+        "en": "berry",
+        "fr": "baie"
+    },
+    {
+        "en": "bestseller",
+        "fr": "best-seller"
+    },
+    {
+        "en": "betray",
+        "fr": "trahir"
+    },
+    {
+        "en": "beyond",
+        "fr": "au-del�"
+    },
+    {
+        "en": "bikini",
+        "fr": "bikini"
+    },
+    {
+        "en": "billion",
+        "fr": "milliard"
+    },
+    {
+        "en": "biological",
+        "fr": "biologique"
+    },
+    {
+        "en": "bizarre",
+        "fr": "bizarre"
+    },
+    {
+        "en": "blade",
+        "fr": "lame"
+    },
+    {
+        "en": "blink",
+        "fr": "clignoter"
+    },
+    {
+        "en": "bloody",
+        "fr": "sanglant"
+    },
+    {
+        "en": "blush",
+        "fr": "rougir"
+    },
+    {
+        "en": "boast",
+        "fr": "se vanter"
+    },
+    {
+        "en": "boiling",
+        "fr": "ébullition"
+    },
+    {
+        "en": "boldly",
+        "fr": "hardiment"
+    },
+    {
+        "en": "bomber",
+        "fr": "bombardier"
+    },
+    {
+        "en": "bombing",
+        "fr": "bombardement"
+    },
+    {
+        "en": "bond",
+        "fr": "lier"
+    },
+    {
+        "en": "bonus",
+        "fr": "prime"
+    },
+    {
+        "en": "booklet",
+        "fr": "brochure"
+    },
+    {
+        "en": "bookmark",
+        "fr": "marque-page"
+    },
+    {
+        "en": "boost",
+        "fr": "booster"
+    },
+    {
+        "en": "bossy",
+        "fr": "autoritaire"
+    },
+    {
+        "en": "bothered",
+        "fr": "dérangé"
+    },
+    {
+        "en": "bounce",
+        "fr": "rebond"
+    },
+    {
+        "en": "bound",
+        "fr": "lié"
+    },
+    {
+        "en": "bow",
+        "fr": "arc"
+    },
+    {
+        "en": "bra",
+        "fr": "soutien-gorge"
+    },
+    {
+        "en": "bracket",
+        "fr": "support"
+    },
+    {
+        "en": "brand",
+        "fr": "marque"
+    },
+    {
+        "en": "bravery",
+        "fr": "bravoure"
+    },
+    {
+        "en": "breakable",
+        "fr": "cassable"
+    },
+    {
+        "en": "breakdown",
+        "fr": "panne"
+    },
+    {
+        "en": "breakthrough",
+        "fr": "percée"
+    },
+    {
+        "en": "breathtaking",
+        "fr": "à couper le souffle"
+    },
+    {
+        "en": "breed",
+        "fr": "race"
+    },
+    {
+        "en": "brick",
+        "fr": "brique"
+    },
+    {
+        "en": "brightly",
+        "fr": "brillamment"
+    },
+    {
+        "en": "brilliantly",
+        "fr": "brillamment"
+    },
+    {
+        "en": "broadband",
+        "fr": "haut débit"
+    },
+    {
+        "en": "broadcast",
+        "fr": "diffuser"
+    },
+    {
+        "en": "browse",
+        "fr": "parcourir"
+    },
+    {
+        "en": "browser",
+        "fr": "navigateur"
+    },
+    {
+        "en": "bruise",
+        "fr": "hématome"
+    },
+    {
+        "en": "budget",
+        "fr": "budget"
+    },
+    {
+        "en": "bulb",
+        "fr": "ampoule"
+    },
+    {
+        "en": "bullet",
+        "fr": "balle"
+    },
+    {
+        "en": "bump",
+        "fr": "bosse"
+    },
+    {
+        "en": "bumper",
+        "fr": "pare-chocs"
+    },
+    {
+        "en": "bun",
+        "fr": "chignon"
+    },
+    {
+        "en": "burglar",
+        "fr": "cambrioleur"
+    },
+    {
+        "en": "burglary",
+        "fr": "cambriolage"
+    },
+    {
+        "en": "burgle",
+        "fr": "cambrioler"
+    },
+    {
+        "en": "burst",
+        "fr": "éclatement"
+    },
+    {
+        "en": "bush",
+        "fr": "buisson"
+    },
+    {
+        "en": "cabinet",
+        "fr": "armoire"
+    },
+    {
+        "en": "calculate",
+        "fr": "calculer"
+    },
+    {
+        "en": "calculation",
+        "fr": "calcul"
+    },
+    {
+        "en": "calmly",
+        "fr": "calmement"
+    },
+    {
+        "en": "campus",
+        "fr": "campus"
+    },
+    {
+        "en": "canned",
+        "fr": "en conserve"
+    },
+    {
+        "en": "capable",
+        "fr": "capable"
+    },
+    {
+        "en": "capacity",
+        "fr": "capacité"
+    },
+    {
+        "en": "capture",
+        "fr": "capturer"
+    },
+    {
+        "en": "carbon",
+        "fr": "carbone"
+    },
+    {
+        "en": "cardboard",
+        "fr": "carton"
+    },
+    {
+        "en": "cardigan",
+        "fr": "cardigan"
+    },
+    {
+        "en": "carelessly",
+        "fr": "négligemment"
+    },
+    {
+        "en": "carelessness",
+        "fr": "négligence"
+    },
+    {
+        "en": "caring",
+        "fr": "bienveillance"
+    },
+    {
+        "en": "carnival",
+        "fr": "carnaval"
+    },
+    {
+        "en": "cast",
+        "fr": "casting"
+    },
+    {
+        "en": "casually",
+        "fr": "nonchalamment"
+    },
+    {
+        "en": "catalogue",
+        "fr": "catalogue"
+    },
+    {
+        "en": "category",
+        "fr": "catégorie"
+    },
+    {
+        "en": "catering",
+        "fr": "restauration"
+    },
+    {
+        "en": "cause",
+        "fr": "cause"
+    },
+    {
+        "en": "cautious",
+        "fr": "prudent"
+    },
+    {
+        "en": "cease",
+        "fr": "cesser"
+    },
+    {
+        "en": "cell",
+        "fr": "cellule"
+    },
+    {
+        "en": "cellar",
+        "fr": "cave"
+    },
+    {
+        "en": "cello",
+        "fr": "violoncelle"
+    },
+    {
+        "en": "cemetery",
+        "fr": "cimetière"
+    },
+    {
+        "en": "centigrade",
+        "fr": "centigrade"
+    },
+    {
+        "en": "certainty",
+        "fr": "certitude"
+    },
+    {
+        "en": "chaos",
+        "fr": "chaos"
+    },
+    {
+        "en": "characteristic",
+        "fr": "caractéristiques"
+    },
+    {
+        "en": "charm",
+        "fr": "charme"
+    },
+    {
+        "en": "chart",
+        "fr": "graphique"
+    },
+    {
+        "en": "chase",
+        "fr": "chasse"
+    },
+    {
+        "en": "cheat",
+        "fr": "tricher"
+    },
+    {
+        "en": "cheeky",
+        "fr": "effronté"
+    },
+    {
+        "en": "cheer",
+        "fr": "acclamation"
+    },
+    {
+        "en": "cheerfully",
+        "fr": "gaiement"
+    },
+    {
+        "en": "chemical",
+        "fr": "chimique"
+    },
+    {
+        "en": "cherry",
+        "fr": "cerise"
+    },
+    {
+        "en": "chest",
+        "fr": "poitrine"
+    },
+    {
+        "en": "chew",
+        "fr": "mâcher"
+    },
+    {
+        "en": "chief",
+        "fr": "chef"
+    },
+    {
+        "en": "childish",
+        "fr": "puéril"
+    },
+    {
+        "en": "chill",
+        "fr": "froideur"
+    },
+    {
+        "en": "chimney",
+        "fr": "cheminée"
+    },
+    {
+        "en": "choir",
+        "fr": "chÅ“ur"
+    },
+    {
+        "en": "chop",
+        "fr": "hacher"
+    },
+    {
+        "en": "circular",
+        "fr": "circulaire"
+    },
+    {
+        "en": "circumstance",
+        "fr": "circonstance"
+    },
+    {
+        "en": "citizen",
+        "fr": "citoyen"
+    },
+    {
+        "en": "claim",
+        "fr": "réclamer"
+    },
+    {
+        "en": "classic",
+        "fr": "classique"
+    },
+    {
+        "en": "clause",
+        "fr": "clause"
+    },
+    {
+        "en": "client",
+        "fr": "client"
+    },
+    {
+        "en": "closely",
+        "fr": "étroitement"
+    },
+    {
+        "en": "cloth",
+        "fr": "tissu"
+    },
+    {
+        "en": "clothing",
+        "fr": "vêtements"
+    },
+    {
+        "en": "clue",
+        "fr": "indice"
+    },
+    {
+        "en": "clumsy",
+        "fr": "maladroit"
+    },
+    {
+        "en": "coaching",
+        "fr": "entraînement"
+    },
+    {
+        "en": "coastal",
+        "fr": "côtier"
+    },
+    {
+        "en": "code",
+        "fr": "code"
+    },
+    {
+        "en": "coincidence",
+        "fr": "coïncidence"
+    },
+    {
+        "en": "collapse",
+        "fr": "effondrement"
+    },
+    {
+        "en": "collector",
+        "fr": "collectionneur"
+    },
+    {
+        "en": "collocation",
+        "fr": "collocation"
+    },
+    {
+        "en": "colon",
+        "fr": "côlon"
+    },
+    {
+        "en": "column",
+        "fr": "colonne"
+    },
+    {
+        "en": "combination",
+        "fr": "combinaison"
+    },
+    {
+        "en": "combine",
+        "fr": "combiner"
+    },
+    {
+        "en": "comedian",
+        "fr": "comédien"
+    },
+    {
+        "en": "comfort",
+        "fr": "confort"
+    },
+    {
+        "en": "comfortably",
+        "fr": "confortablement"
+    },
+    {
+        "en": "command",
+        "fr": "commande"
+    },
+    {
+        "en": "commerce",
+        "fr": "commerce"
+    },
+    {
+        "en": "commercial",
+        "fr": "commercial"
+    },
+    {
+        "en": "commit",
+        "fr": "commettre"
+    },
+    {
+        "en": "commitment",
+        "fr": "engagement"
+    },
+    {
+        "en": "committee",
+        "fr": "comité"
+    },
+    {
+        "en": "communicative",
+        "fr": "communicatif"
+    },
+    {
+        "en": "community",
+        "fr": "communauté"
+    },
+    {
+        "en": "companion",
+        "fr": "compagnon"
+    },
+    {
+        "en": "comparison",
+        "fr": "comparaison"
+    },
+    {
+        "en": "competitive",
+        "fr": "compétitif"
+    },
+    {
+        "en": "complex",
+        "fr": "complexe"
+    },
+    {
+        "en": "compose",
+        "fr": "composer"
+    },
+    {
+        "en": "composer",
+        "fr": "compositeur"
+    },
+    {
+        "en": "compromise",
+        "fr": "compromis"
+    },
+    {
+        "en": "compulsory",
+        "fr": "obligatoire"
+    },
+    {
+        "en": "concentration",
+        "fr": "concentration"
+    },
+    {
+        "en": "concept",
+        "fr": "concept"
+    },
+    {
+        "en": "concern",
+        "fr": "préoccupation"
+    },
+    {
+        "en": "concerned",
+        "fr": "concerné"
+    },
+    {
+        "en": "concerning",
+        "fr": "concernant"
+    },
+    {
+        "en": "concrete",
+        "fr": "béton"
+    },
+    {
+        "en": "conduct",
+        "fr": "conduire"
+    },
+    {
+        "en": "conductor",
+        "fr": "conducteur"
+    },
+    {
+        "en": "confess",
+        "fr": "confesser"
+    },
+    {
+        "en": "confession",
+        "fr": "confession"
+    },
+    {
+        "en": "confidence",
+        "fr": "confiance"
+    },
+    {
+        "en": "confidently",
+        "fr": "avec confiance"
+    },
+    {
+        "en": "confirmation",
+        "fr": "confirmation"
+    },
+    {
+        "en": "conflict",
+        "fr": "conflit"
+    },
+    {
+        "en": "confuse",
+        "fr": "embrouiller"
+    },
+    {
+        "en": "confusion",
+        "fr": "confusion"
+    },
+    {
+        "en": "congratulate",
+        "fr": "féliciter"
+    },
+    {
+        "en": "conjunction",
+        "fr": "conjonction"
+    },
+    {
+        "en": "conscious",
+        "fr": "conscient"
+    },
+    {
+        "en": "consciousness",
+        "fr": "conscience"
+    },
+    {
+        "en": "consequence",
+        "fr": "conséquence"
+    },
+    {
+        "en": "consequently",
+        "fr": "par conséquent"
+    },
+    {
+        "en": "conservation",
+        "fr": "conservation"
+    },
+    {
+        "en": "considerable",
+        "fr": "considérable"
+    },
+    {
+        "en": "considerably",
+        "fr": "considérablement"
+    },
+    {
+        "en": "consideration",
+        "fr": "considération"
+    },
+    {
+        "en": "considering",
+        "fr": "considérant"
+    },
+    {
+        "en": "constant",
+        "fr": "constante"
+    },
+    {
+        "en": "constantly",
+        "fr": "en permanence"
+    },
+    {
+        "en": "construct",
+        "fr": "construction"
+    },
+    {
+        "en": "construction",
+        "fr": "construction"
+    },
+    {
+        "en": "consultant",
+        "fr": "consultant"
+    },
+    {
+        "en": "consume",
+        "fr": "consommer"
+    },
+    {
+        "en": "consumer",
+        "fr": "consommateur"
+    },
+    {
+        "en": "container",
+        "fr": "récipient"
+    },
+    {
+        "en": "contemporary",
+        "fr": "contemporain"
+    },
+    {
+        "en": "context",
+        "fr": "contexte"
+    },
+    {
+        "en": "continuous",
+        "fr": "continu"
+    },
+    {
+        "en": "continuously",
+        "fr": "en continu"
+    },
+    {
+        "en": "contrary",
+        "fr": "contraire"
+    },
+    {
+        "en": "contribute",
+        "fr": "contribuer"
+    },
+    {
+        "en": "contribution",
+        "fr": "contribution"
+    },
+    {
+        "en": "controversial",
+        "fr": "controversé"
+    },
+    {
+        "en": "convenience",
+        "fr": "commodité"
+    },
+    {
+        "en": "conveniently",
+        "fr": "commodément"
+    },
+    {
+        "en": "conventional",
+        "fr": "conventionnel"
+    },
+    {
+        "en": "convert",
+        "fr": "convertir"
+    },
+    {
+        "en": "convinced",
+        "fr": "convaincu"
+    },
+    {
+        "en": "cooperative",
+        "fr": "coopérative"
+    },
+    {
+        "en": "cope",
+        "fr": "faire face"
+    },
+    {
+        "en": "copper",
+        "fr": "cuivre"
+    },
+    {
+        "en": "corporation",
+        "fr": "corporation"
+    },
+    {
+        "en": "correspond",
+        "fr": "correspondre"
+    },
+    {
+        "en": "corridor",
+        "fr": "couloir"
+    },
+    {
+        "en": "costume",
+        "fr": "costume"
+    },
+    {
+        "en": "council",
+        "fr": "conseil"
+    },
+    {
+        "en": "counter",
+        "fr": "comptoir"
+    },
+    {
+        "en": "county",
+        "fr": "comté"
+    },
+    {
+        "en": "courage",
+        "fr": "courage"
+    },
+    {
+        "en": "courtesy",
+        "fr": "courtoisie"
+    },
+    {
+        "en": "coward",
+        "fr": "lâche"
+    },
+    {
+        "en": "cowardly",
+        "fr": "lâche"
+    },
+    {
+        "en": "crab",
+        "fr": "crabe"
+    },
+    {
+        "en": "crack",
+        "fr": "fissure"
+    },
+    {
+        "en": "craft",
+        "fr": "artisanat"
+    },
+    {
+        "en": "crawl",
+        "fr": "crawl"
+    },
+    {
+        "en": "creation",
+        "fr": "création"
+    },
+    {
+        "en": "creatively",
+        "fr": "de manière créative"
+    },
+    {
+        "en": "creativity",
+        "fr": "créativité"
+    },
+    {
+        "en": "crisis",
+        "fr": "crise"
+    },
+    {
+        "en": "critic",
+        "fr": "critique"
+    },
+    {
+        "en": "critical",
+        "fr": "critique"
+    },
+    {
+        "en": "critically",
+        "fr": "critique"
+    },
+    {
+        "en": "criticism",
+        "fr": "critique"
+    },
+    {
+        "en": "crocodile",
+        "fr": "crocodile"
+    },
+    {
+        "en": "crossroads",
+        "fr": "carrefour"
+    },
+    {
+        "en": "crucial",
+        "fr": "crucial"
+    },
+    {
+        "en": "cruelly",
+        "fr": "cruellement"
+    },
+    {
+        "en": "cruelty",
+        "fr": "cruauté"
+    },
+    {
+        "en": "culturally",
+        "fr": "culturellement"
+    },
+    {
+        "en": "cure",
+        "fr": "guérir"
+    },
+    {
+        "en": "curiosity",
+        "fr": "curiosité"
+    },
+    {
+        "en": "current",
+        "fr": "actuel"
+    },
+    {
+        "en": "currently",
+        "fr": "actuellement"
+    },
+    {
+        "en": "cursor",
+        "fr": "curseur"
+    },
+    {
+        "en": "curve",
+        "fr": "courbe"
+    },
+    {
+        "en": "dairy",
+        "fr": "laitier"
+    },
+    {
+        "en": "damp",
+        "fr": "humide"
+    },
+    {
+        "en": "dare",
+        "fr": "oser"
+    },
+    {
+        "en": "darkness",
+        "fr": "obscurité"
+    },
+    {
+        "en": "darling",
+        "fr": "chéri"
+    },
+    {
+        "en": "dash",
+        "fr": "tiret"
+    },
+    {
+        "en": "data",
+        "fr": "données"
+    },
+    {
+        "en": "database",
+        "fr": "base de données"
+    },
+    {
+        "en": "dawn",
+        "fr": "aube"
+    },
+    {
+        "en": "daylight",
+        "fr": "lumière du jour"
+    },
+    {
+        "en": "daytime",
+        "fr": "jour"
+    },
+    {
+        "en": "deadline",
+        "fr": "date limite"
+    },
+    {
+        "en": "deadly",
+        "fr": "mortel"
+    },
+    {
+        "en": "dealer",
+        "fr": "revendeur"
+    },
+    {
+        "en": "debate",
+        "fr": "débat"
+    },
+    {
+        "en": "debit",
+        "fr": "débit"
+    },
+    {
+        "en": "debt",
+        "fr": "dette"
+    },
+    {
+        "en": "decade",
+        "fr": "décennie"
+    },
+    {
+        "en": "decay",
+        "fr": "pourriture"
+    },
+    {
+        "en": "deceive",
+        "fr": "tromper"
+    },
+    {
+        "en": "decent",
+        "fr": "décent"
+    },
+    {
+        "en": "decisive",
+        "fr": "décisif"
+    },
+    {
+        "en": "deck",
+        "fr": "pont"
+    },
+    {
+        "en": "decline",
+        "fr": "déclin"
+    },
+    {
+        "en": "decoration",
+        "fr": "décoration"
+    },
+    {
+        "en": "decorative",
+        "fr": "décoratif"
+    },
+    {
+        "en": "deeply",
+        "fr": "profondément"
+    },
+    {
+        "en": "deer",
+        "fr": "cerf"
+    },
+    {
+        "en": "defender",
+        "fr": "défenseur"
+    },
+    {
+        "en": "define",
+        "fr": "définir"
+    },
+    {
+        "en": "definite",
+        "fr": "précis"
+    },
+    {
+        "en": "definition",
+        "fr": "définition"
+    },
+    {
+        "en": "deliberate",
+        "fr": "volontaire"
+    },
+    {
+        "en": "deliberately",
+        "fr": "délibérément"
+    },
+    {
+        "en": "delicate",
+        "fr": "délicat"
+    },
+    {
+        "en": "delight",
+        "fr": "plaisir"
+    },
+    {
+        "en": "delightful",
+        "fr": "délicieux"
+    },
+    {
+        "en": "demanding",
+        "fr": "exigeant"
+    },
+    {
+        "en": "democracy",
+        "fr": "démocratie"
+    },
+    {
+        "en": "democratic",
+        "fr": "démocratique"
+    },
+    {
+        "en": "demolish",
+        "fr": "démolir"
+    },
+    {
+        "en": "demonstrate",
+        "fr": "démontrer"
+    },
+    {
+        "en": "demonstration",
+        "fr": "démonstration"
+    },
+    {
+        "en": "denim",
+        "fr": "denim"
+    },
+    {
+        "en": "dense",
+        "fr": "dense"
+    },
+    {
+        "en": "densely",
+        "fr": "à forte densité"
+    },
+    {
+        "en": "dental",
+        "fr": "dentaire"
+    },
+    {
+        "en": "deny",
+        "fr": "refuser"
+    },
+    {
+        "en": "dependent",
+        "fr": "dépendant"
+    },
+    {
+        "en": "depressing",
+        "fr": "déprimant"
+    },
+    {
+        "en": "depression",
+        "fr": "dépression"
+    },
+    {
+        "en": "deprive",
+        "fr": "priver"
+    },
+    {
+        "en": "descend",
+        "fr": "descendre"
+    },
+    {
+        "en": "desirable",
+        "fr": "souhaitable"
+    },
+    {
+        "en": "desire",
+        "fr": "désir"
+    },
+    {
+        "en": "desktop",
+        "fr": "ordinateur de bureau"
+    },
+    {
+        "en": "despair",
+        "fr": "désespoir"
+    },
+    {
+        "en": "desperate",
+        "fr": "désespéré"
+    },
+    {
+        "en": "desperately",
+        "fr": "désespérément"
+    },
+    {
+        "en": "destruction",
+        "fr": "destruction"
+    },
+    {
+        "en": "detailed",
+        "fr": "détaillé"
+    },
+    {
+        "en": "determination",
+        "fr": "détermination"
+    },
+    {
+        "en": "determined",
+        "fr": "déterminé"
+    },
+    {
+        "en": "determiner",
+        "fr": "déterminant"
+    },
+    {
+        "en": "developed",
+        "fr": "développé"
+    },
+    {
+        "en": "developing",
+        "fr": "développement"
+    },
+    {
+        "en": "device",
+        "fr": "appareil"
+    },
+    {
+        "en": "devil",
+        "fr": "diable"
+    },
+    {
+        "en": "devote",
+        "fr": "consacrer"
+    },
+    {
+        "en": "devoted",
+        "fr": "dévoué"
+    },
+    {
+        "en": "dialogue",
+        "fr": "dialogue"
+    },
+    {
+        "en": "diamond",
+        "fr": "diamant"
+    },
+    {
+        "en": "differ",
+        "fr": "différer"
+    },
+    {
+        "en": "dilemma",
+        "fr": "dilemme"
+    },
+    {
+        "en": "dimension",
+        "fr": "dimension"
+    },
+    {
+        "en": "dip",
+        "fr": "tremper"
+    },
+    {
+        "en": "diplomat",
+        "fr": "diplomate"
+    },
+    {
+        "en": "disability",
+        "fr": "invalidité"
+    },
+    {
+        "en": "disagreement",
+        "fr": "désaccord"
+    },
+    {
+        "en": "disappearance",
+        "fr": "disparition"
+    },
+    {
+        "en": "disapprove",
+        "fr": "désapprouver"
+    },
+    {
+        "en": "disaster",
+        "fr": "catastrophe"
+    },
+    {
+        "en": "discipline",
+        "fr": "discipline"
+    },
+    {
+        "en": "discourage",
+        "fr": "décourager"
+    },
+    {
+        "en": "discovery",
+        "fr": "découverte"
+    },
+    {
+        "en": "disgrace",
+        "fr": "disgrâce"
+    },
+    {
+        "en": "disguise",
+        "fr": "déguisement"
+    },
+    {
+        "en": "dishonest",
+        "fr": "malhonnête"
+    },
+    {
+        "en": "dishonesty",
+        "fr": "malhonnêteté"
+    },
+    {
+        "en": "disposal",
+        "fr": "élimination"
+    },
+    {
+        "en": "disrupt",
+        "fr": "perturber"
+    },
+    {
+        "en": "dissatisfaction",
+        "fr": "insatisfaction"
+    },
+    {
+        "en": "dissatisfied",
+        "fr": "mécontent"
+    },
+    {
+        "en": "distant",
+        "fr": "loin"
+    },
+    {
+        "en": "distinction",
+        "fr": "distinction"
+    },
+    {
+        "en": "distinguish",
+        "fr": "distinguer"
+    },
+    {
+        "en": "distinguished",
+        "fr": "distingué"
+    },
+    {
+        "en": "distract",
+        "fr": "distraire"
+    },
+    {
+        "en": "distressing",
+        "fr": "pénible"
+    },
+    {
+        "en": "distribute",
+        "fr": "distribuer"
+    },
+    {
+        "en": "disturb",
+        "fr": "déranger"
+    },
+    {
+        "en": "diverse",
+        "fr": "divers"
+    },
+    {
+        "en": "divided",
+        "fr": "divisé"
+    },
+    {
+        "en": "division",
+        "fr": "division"
+    },
+    {
+        "en": "dizzy",
+        "fr": "vertigineux"
+    },
+    {
+        "en": "domestic",
+        "fr": "domestique"
+    },
+    {
+        "en": "dominate",
+        "fr": "dominer"
+    },
+    {
+        "en": "donate",
+        "fr": "faire un don"
+    },
+    {
+        "en": "donation",
+        "fr": "donation"
+    },
+    {
+        "en": "dose",
+        "fr": "dose"
+    },
+    {
+        "en": "doubtful",
+        "fr": "douteux"
+    },
+    {
+        "en": "draft",
+        "fr": "brouillon"
+    },
+    {
+        "en": "dramatic",
+        "fr": "dramatique"
+    },
+    {
+        "en": "dramatically",
+        "fr": "de façon spectaculaire"
+    },
+    {
+        "en": "dreadful",
+        "fr": "terrible"
+    },
+    {
+        "en": "drown",
+        "fr": "noyer"
+    },
+    {
+        "en": "drug",
+        "fr": "médicament"
+    },
+    {
+        "en": "drunk",
+        "fr": "ivre"
+    },
+    {
+        "en": "dynamic",
+        "fr": "dynamique"
+    },
+    {
+        "en": "eager",
+        "fr": "désireux"
+    },
+    {
+        "en": "eagerly",
+        "fr": "avec empressement"
+    },
+    {
+        "en": "eagerness",
+        "fr": "ardeur"
+    },
+    {
+        "en": "eagle",
+        "fr": "aigle"
+    },
+    {
+        "en": "earnings",
+        "fr": "gains"
+    },
+    {
+        "en": "earthquake",
+        "fr": "tremblement de terre"
+    },
+    {
+        "en": "ease",
+        "fr": "facilité"
+    },
+    {
+        "en": "ecological",
+        "fr": "écologique"
+    },
+    {
+        "en": "ecologically",
+        "fr": "écologiquement"
+    },
+    {
+        "en": "economic",
+        "fr": "économique"
+    },
+    {
+        "en": "economical",
+        "fr": "économique"
+    },
+    {
+        "en": "economist",
+        "fr": "économiste"
+    },
+    {
+        "en": "economy",
+        "fr": "économie"
+    },
+    {
+        "en": "edit",
+        "fr": "modifier"
+    },
+    {
+        "en": "edition",
+        "fr": "édition"
+    },
+    {
+        "en": "editor",
+        "fr": "éditeur"
+    },
+    {
+        "en": "educate",
+        "fr": "éduquer"
+    },
+    {
+        "en": "educated",
+        "fr": "instruit"
+    },
+    {
+        "en": "educational",
+        "fr": "pédagogique"
+    },
+    {
+        "en": "effective",
+        "fr": "efficace"
+    },
+    {
+        "en": "effectively",
+        "fr": "efficacement"
+    },
+    {
+        "en": "efficiency",
+        "fr": "efficacité"
+    },
+    {
+        "en": "efficiently",
+        "fr": "efficacement"
+    },
+    {
+        "en": "elect",
+        "fr": "élire"
+    },
+    {
+        "en": "electrician",
+        "fr": "électricien"
+    },
+    {
+        "en": "electronically",
+        "fr": "électroniquement"
+    },
+    {
+        "en": "electronics",
+        "fr": "électronique"
+    },
+    {
+        "en": "elegant",
+        "fr": "élégant"
+    },
+    {
+        "en": "elegantly",
+        "fr": "élégamment"
+    },
+    {
+        "en": "element",
+        "fr": "élément"
+    },
+    {
+        "en": "elsewhere",
+        "fr": "autre part"
+    },
+    {
+        "en": "embarrassment",
+        "fr": "embarras"
+    },
+    {
+        "en": "emerge",
+        "fr": "émerger"
+    },
+    {
+        "en": "emotion",
+        "fr": "émotion"
+    },
+    {
+        "en": "emotional",
+        "fr": "émotionnel"
+    },
+    {
+        "en": "emotionally",
+        "fr": "émotionnellement"
+    },
+    {
+        "en": "emphasis",
+        "fr": "accent"
+    },
+    {
+        "en": "enable",
+        "fr": "activer"
+    },
+    {
+        "en": "enclose",
+        "fr": "joindre"
+    },
+    {
+        "en": "encounter",
+        "fr": "rencontre"
+    },
+    {
+        "en": "encouragement",
+        "fr": "encouragement"
+    },
+    {
+        "en": "encouraging",
+        "fr": "encourageant"
+    },
+    {
+        "en": "endangered",
+        "fr": "en voie de disparition"
+    },
+    {
+        "en": "endless",
+        "fr": "sans fin"
+    },
+    {
+        "en": "endure",
+        "fr": "endurer"
+    },
+    {
+        "en": "energetic",
+        "fr": "énergique"
+    },
+    {
+        "en": "enjoyment",
+        "fr": "jouissance"
+    },
+    {
+        "en": "entertainer",
+        "fr": "artiste"
+    },
+    {
+        "en": "entertaining",
+        "fr": "amusant"
+    },
+    {
+        "en": "enthusiasm",
+        "fr": "enthousiasme"
+    },
+    {
+        "en": "enthusiastic",
+        "fr": "enthousiaste"
+    },
+    {
+        "en": "enthusiastically",
+        "fr": "avec enthousiasme"
+    },
+    {
+        "en": "entire",
+        "fr": "entier"
+    },
+    {
+        "en": "entirely",
+        "fr": "entièrement"
+    },
+    {
+        "en": "entitle",
+        "fr": "titre"
+    },
+    {
+        "en": "environmentally",
+        "fr": "environnementalement"
+    },
+    {
+        "en": "envy",
+        "fr": "envie"
+    },
+    {
+        "en": "episode",
+        "fr": "épisode"
+    },
+    {
+        "en": "equality",
+        "fr": "égalité"
+    },
+    {
+        "en": "equally",
+        "fr": "également"
+    },
+    {
+        "en": "equip",
+        "fr": "équiper"
+    },
+    {
+        "en": "era",
+        "fr": "ère"
+    },
+    {
+        "en": "error",
+        "fr": "erreur"
+    },
+    {
+        "en": "escalator",
+        "fr": "escalator"
+    },
+    {
+        "en": "essentially",
+        "fr": "essentiellement"
+    },
+    {
+        "en": "establish",
+        "fr": "établir"
+    },
+    {
+        "en": "estate",
+        "fr": "domaine"
+    },
+    {
+        "en": "estimate",
+        "fr": "estimation"
+    },
+    {
+        "en": "estimated",
+        "fr": "estimé"
+    },
+    {
+        "en": "eventually",
+        "fr": "finalement"
+    },
+    {
+        "en": "evidence",
+        "fr": "preuve"
+    },
+    {
+        "en": "evident",
+        "fr": "évident"
+    },
+    {
+        "en": "evidently",
+        "fr": "évidemment"
+    },
+    {
+        "en": "evil",
+        "fr": "mal"
+    },
+    {
+        "en": "evolution",
+        "fr": "évolution"
+    },
+    {
+        "en": "examine",
+        "fr": "examiner"
+    },
+    {
+        "en": "exception",
+        "fr": "exception"
+    },
+    {
+        "en": "exceptional",
+        "fr": "exceptionnel"
+    },
+    {
+        "en": "exclusive",
+        "fr": "exclusif"
+    },
+    {
+        "en": "exhausting",
+        "fr": "épuisant"
+    },
+    {
+        "en": "exhaustion",
+        "fr": "épuisement"
+    },
+    {
+        "en": "existence",
+        "fr": "existence"
+    },
+    {
+        "en": "existing",
+        "fr": "existant"
+    },
+    {
+        "en": "exotic",
+        "fr": "exotique"
+    },
+    {
+        "en": "expand",
+        "fr": "développer"
+    },
+    {
+        "en": "expansion",
+        "fr": "expansion"
+    },
+    {
+        "en": "expectation",
+        "fr": "attente"
+    },
+    {
+        "en": "expected",
+        "fr": "attendu"
+    },
+    {
+        "en": "expense",
+        "fr": "frais"
+    },
+    {
+        "en": "exploit",
+        "fr": "exploiter"
+    },
+    {
+        "en": "explosion",
+        "fr": "explosion"
+    },
+    {
+        "en": "expose",
+        "fr": "exposer"
+    },
+    {
+        "en": "express",
+        "fr": "exprimer"
+    },
+    {
+        "en": "expression",
+        "fr": "expression"
+    },
+    {
+        "en": "extend",
+        "fr": "étendre"
+    },
+    {
+        "en": "extension",
+        "fr": "extension"
+    },
+    {
+        "en": "extensive",
+        "fr": "extensif"
+    },
+    {
+        "en": "extent",
+        "fr": "étendue"
+    },
+    {
+        "en": "external",
+        "fr": "externe"
+    },
+    {
+        "en": "extraordinarily",
+        "fr": "extraordinairement"
+    },
+    {
+        "en": "extreme",
+        "fr": "extrême"
+    },
+    {
+        "en": "eyebrow",
+        "fr": "sourcil"
+    },
+    {
+        "en": "eyelash",
+        "fr": "cil"
+    },
+    {
+        "en": "eyelid",
+        "fr": "paupière"
+    },
+    {
+        "en": "eyesight",
+        "fr": "vue"
+    },
+    {
+        "en": "facility",
+        "fr": "facilité"
+    },
+    {
+        "en": "factor",
+        "fr": "facteur"
+    },
+    {
+        "en": "fade",
+        "fr": "disparaître"
+    },
+    {
+        "en": "failure",
+        "fr": "échec"
+    },
+    {
+        "en": "faint",
+        "fr": "s'évanouir"
+    },
+    {
+        "en": "faith",
+        "fr": "foi"
+    },
+    {
+        "en": "faithful",
+        "fr": "fidèle"
+    },
+    {
+        "en": "faithfully",
+        "fr": "fidèlement"
+    },
+    {
+        "en": "fame",
+        "fr": "notoriété"
+    },
+    {
+        "en": "fantastically",
+        "fr": "fantastiquement"
+    },
+    {
+        "en": "fantasy",
+        "fr": "fantaisie"
+    },
+    {
+        "en": "fascinated",
+        "fr": "fasciné"
+    },
+    {
+        "en": "fascinating",
+        "fr": "fascinant"
+    },
+    {
+        "en": "fatal",
+        "fr": "fatal"
+    },
+    {
+        "en": "fate",
+        "fr": "destin"
+    },
+    {
+        "en": "faulty",
+        "fr": "défectueux"
+    },
+    {
+        "en": "favourable",
+        "fr": "favorable"
+    },
+    {
+        "en": "feather",
+        "fr": "plume"
+    },
+    {
+        "en": "feature",
+        "fr": "fonctionnalité"
+    },
+    {
+        "en": "feedback",
+        "fr": "retour"
+    },
+    {
+        "en": "fellow",
+        "fr": "compagnon"
+    },
+    {
+        "en": "fence",
+        "fr": "clôture"
+    },
+    {
+        "en": "fierce",
+        "fr": "féroce"
+    },
+    {
+        "en": "fighting",
+        "fr": "lutte"
+    },
+    {
+        "en": "finance",
+        "fr": "finance"
+    },
+    {
+        "en": "financially",
+        "fr": "financièrement"
+    },
+    {
+        "en": "finely",
+        "fr": "fin"
+    },
+    {
+        "en": "fingernail",
+        "fr": "ongle"
+    },
+    {
+        "en": "firmly",
+        "fr": "fermement"
+    },
+    {
+        "en": "firstly",
+        "fr": "premièrement"
+    },
+    {
+        "en": "fisherman",
+        "fr": "pêcheur"
+    },
+    {
+        "en": "fixed",
+        "fr": "fixé"
+    },
+    {
+        "en": "flame",
+        "fr": "flamme"
+    },
+    {
+        "en": "flash",
+        "fr": "éclair"
+    },
+    {
+        "en": "flexibility",
+        "fr": "flexibilité"
+    },
+    {
+        "en": "flexible",
+        "fr": "flexible"
+    },
+    {
+        "en": "fluency",
+        "fr": "aisance"
+    },
+    {
+        "en": "fluent",
+        "fr": "courant"
+    },
+    {
+        "en": "fluently",
+        "fr": "couramment"
+    },
+    {
+        "en": "focus",
+        "fr": "se concentrer"
+    },
+    {
+        "en": "foolish",
+        "fr": "idiot"
+    },
+    {
+        "en": "foolishly",
+        "fr": "bêtement"
+    },
+    {
+        "en": "forbid",
+        "fr": "interdire"
+    },
+    {
+        "en": "force",
+        "fr": "forcer"
+    },
+    {
+        "en": "formal",
+        "fr": "officiel"
+    },
+    {
+        "en": "formerly",
+        "fr": "anciennement"
+    },
+    {
+        "en": "forthcoming",
+        "fr": "à venir"
+    },
+    {
+        "en": "fortunate",
+        "fr": "heureux"
+    },
+    {
+        "en": "fortune",
+        "fr": "fortune"
+    },
+    {
+        "en": "found",
+        "fr": "trouvé"
+    },
+    {
+        "en": "fox",
+        "fr": "renard"
+    },
+    {
+        "en": "frankly",
+        "fr": "franchement"
+    },
+    {
+        "en": "freedom",
+        "fr": "liberté"
+    },
+    {
+        "en": "freely",
+        "fr": "librement"
+    },
+    {
+        "en": "friendliness",
+        "fr": "convivialité"
+    },
+    {
+        "en": "frighten",
+        "fr": "effrayer"
+    },
+    {
+        "en": "frost",
+        "fr": "gel"
+    },
+    {
+        "en": "frustration",
+        "fr": "frustration"
+    },
+    {
+        "en": "function",
+        "fr": "fonction"
+    },
+    {
+        "en": "functional",
+        "fr": "fonctionnel"
+    },
+    {
+        "en": "funeral",
+        "fr": "funérailles"
+    },
+    {
+        "en": "furious",
+        "fr": "furieux"
+    },
+    {
+        "en": "furiously",
+        "fr": "furieusement"
+    },
+    {
+        "en": "furthermore",
+        "fr": "en outre"
+    },
+    {
+        "en": "gambling",
+        "fr": "jeu d'argent"
+    },
+    {
+        "en": "gang",
+        "fr": "gang"
+    },
+    {
+        "en": "gardener",
+        "fr": "jardinier"
+    },
+    {
+        "en": "gardening",
+        "fr": "jardinage"
+    },
+    {
+        "en": "gather",
+        "fr": "rassembler"
+    },
+    {
+        "en": "gaze",
+        "fr": "regard"
+    },
+    {
+        "en": "gear",
+        "fr": "engrenage"
+    },
+    {
+        "en": "gender",
+        "fr": "genre"
+    },
+    {
+        "en": "generate",
+        "fr": "générer"
+    },
+    {
+        "en": "generosity",
+        "fr": "générosité"
+    },
+    {
+        "en": "generously",
+        "fr": "généreusement"
+    },
+    {
+        "en": "genetics",
+        "fr": "génétique"
+    },
+    {
+        "en": "gentleman",
+        "fr": "gentilhomme"
+    },
+    {
+        "en": "gently",
+        "fr": "doucement"
+    },
+    {
+        "en": "genuine",
+        "fr": "authentique"
+    },
+    {
+        "en": "genuinely",
+        "fr": "véritablement"
+    },
+    {
+        "en": "global",
+        "fr": "mondial"
+    },
+    {
+        "en": "globally",
+        "fr": "à l'échelle mondiale"
+    },
+    {
+        "en": "google",
+        "fr": "Google"
+    },
+    {
+        "en": "gossip",
+        "fr": "potins"
+    },
+    {
+        "en": "govern",
+        "fr": "gouverner"
+    },
+    {
+        "en": "gradual",
+        "fr": "graduel"
+    },
+    {
+        "en": "gradually",
+        "fr": "progressivement"
+    },
+    {
+        "en": "graph",
+        "fr": "graphique"
+    },
+    {
+        "en": "grave",
+        "fr": "tombe"
+    },
+    {
+        "en": "greatly",
+        "fr": "considérablement"
+    },
+    {
+        "en": "greatness",
+        "fr": "grandeur"
+    },
+    {
+        "en": "greedy",
+        "fr": "cupide"
+    },
+    {
+        "en": "grief",
+        "fr": "chagrin"
+    },
+    {
+        "en": "grip",
+        "fr": "poignée"
+    },
+    {
+        "en": "growing",
+        "fr": "croissance"
+    },
+    {
+        "en": "growth",
+        "fr": "croissance"
+    },
+    {
+        "en": "guarantee",
+        "fr": "garantie"
+    },
+    {
+        "en": "guidance",
+        "fr": "conseils"
+    },
+    {
+        "en": "guilt",
+        "fr": "culpabilité"
+    },
+    {
+        "en": "gum",
+        "fr": "gomme"
+    },
+    {
+        "en": "guts",
+        "fr": "tripes"
+    },
+    {
+        "en": "gymnastic",
+        "fr": "gymnastique"
+    },
+    {
+        "en": "hammer",
+        "fr": "marteau"
+    },
+    {
+        "en": "handful",
+        "fr": "poignée"
+    },
+    {
+        "en": "handout",
+        "fr": "polycopié"
+    },
+    {
+        "en": "harm",
+        "fr": "nuire"
+    },
+    {
+        "en": "harmful",
+        "fr": "nocif"
+    },
+    {
+        "en": "harmless",
+        "fr": "inoffensif"
+    },
+    {
+        "en": "harmony",
+        "fr": "harmonie"
+    },
+    {
+        "en": "harvest",
+        "fr": "récolte"
+    },
+    {
+        "en": "haunt",
+        "fr": "hanter"
+    },
+    {
+        "en": "headquarters",
+        "fr": "quartier général"
+    },
+    {
+        "en": "heal",
+        "fr": "guérir"
+    },
+    {
+        "en": "heaven",
+        "fr": "paradis"
+    },
+    {
+        "en": "hedge",
+        "fr": "haie"
+    },
+    {
+        "en": "hell",
+        "fr": "enfer"
+    },
+    {
+        "en": "helmet",
+        "fr": "casque"
+    },
+    {
+        "en": "helper",
+        "fr": "auxiliaire"
+    },
+    {
+        "en": "hesitate",
+        "fr": "hésiter"
+    },
+    {
+        "en": "highlight",
+        "fr": "souligner"
+    },
+    {
+        "en": "highly",
+        "fr": "très"
+    },
+    {
+        "en": "hint",
+        "fr": "indice"
+    },
+    {
+        "en": "hip",
+        "fr": "hanche"
+    },
+    {
+        "en": "honesty",
+        "fr": "honnêteté"
+    },
+    {
+        "en": "honour",
+        "fr": "honneur"
+    },
+    {
+        "en": "hood",
+        "fr": "capot"
+    },
+    {
+        "en": "hook",
+        "fr": "crochet"
+    },
+    {
+        "en": "horn",
+        "fr": "corne"
+    },
+    {
+        "en": "host",
+        "fr": "hôte"
+    },
+    {
+        "en": "hourly",
+        "fr": "horaires"
+    },
+    {
+        "en": "household",
+        "fr": "ménage"
+    },
+    {
+        "en": "hunting",
+        "fr": "chasse"
+    },
+    {
+        "en": "hyphen",
+        "fr": "trait d'union"
+    },
+    {
+        "en": "icon",
+        "fr": "icône"
+    },
+    {
+        "en": "ideal",
+        "fr": "idéal"
+    },
+    {
+        "en": "ideally",
+        "fr": "idéalement"
+    },
+    {
+        "en": "identical",
+        "fr": "identique"
+    },
+    {
+        "en": "identify",
+        "fr": "identifier"
+    },
+    {
+        "en": "identity",
+        "fr": "identité"
+    },
+    {
+        "en": "idiom",
+        "fr": "idiome"
+    },
+    {
+        "en": "idiot",
+        "fr": "idiot"
+    },
+    {
+        "en": "ignore",
+        "fr": "ignorer"
+    },
+    {
+        "en": "illegal",
+        "fr": "illégal"
+    },
+    {
+        "en": "illegally",
+        "fr": "illégalement"
+    },
+    {
+        "en": "illustrate",
+        "fr": "illustrer"
+    },
+    {
+        "en": "image",
+        "fr": "image"
+    },
+    {
+        "en": "immediate",
+        "fr": "immédiat"
+    },
+    {
+        "en": "immigrant",
+        "fr": "immigrant"
+    },
+    {
+        "en": "immoral",
+        "fr": "immoral"
+    },
+    {
+        "en": "impact",
+        "fr": "impact"
+    },
+    {
+        "en": "impatient",
+        "fr": "impatient"
+    },
+    {
+        "en": "impatiently",
+        "fr": "impatiemment"
+    },
+    {
+        "en": "imperative",
+        "fr": "impératif"
+    },
+    {
+        "en": "implement",
+        "fr": "mettre en Å“uvre"
+    },
+    {
+        "en": "impolite",
+        "fr": "impoli"
+    },
+    {
+        "en": "importantly",
+        "fr": "important"
+    },
+    {
+        "en": "impress",
+        "fr": "impressionner"
+    },
+    {
+        "en": "impressed",
+        "fr": "impressionné"
+    },
+    {
+        "en": "impression",
+        "fr": "impression"
+    },
+    {
+        "en": "impressive",
+        "fr": "impressionnant"
+    },
+    {
+        "en": "improved",
+        "fr": "amélioré"
+    },
+    {
+        "en": "inaccurate",
+        "fr": "inexacte"
+    },
+    {
+        "en": "incident",
+        "fr": "incident"
+    },
+    {
+        "en": "income",
+        "fr": "revenu"
+    },
+    {
+        "en": "inconvenient",
+        "fr": "incommode"
+    },
+    {
+        "en": "increasingly",
+        "fr": "de plus en plus"
+    },
+    {
+        "en": "incredibly",
+        "fr": "incroyablement"
+    },
+    {
+        "en": "independence",
+        "fr": "indépendance"
+    },
+    {
+        "en": "independently",
+        "fr": "indépendamment"
+    },
+    {
+        "en": "indicate",
+        "fr": "indiquer"
+    },
+    {
+        "en": "industrial",
+        "fr": "industriel"
+    },
+    {
+        "en": "inexperienced",
+        "fr": "inexpérimenté"
+    },
+    {
+        "en": "infection",
+        "fr": "infection"
+    },
+    {
+        "en": "inflation",
+        "fr": "inflation"
+    },
+    {
+        "en": "influence",
+        "fr": "influence"
+    },
+    {
+        "en": "informal",
+        "fr": "informel"
+    },
+    {
+        "en": "inhabitant",
+        "fr": "habitant"
+    },
+    {
+        "en": "initially",
+        "fr": "initialement"
+    },
+    {
+        "en": "injured",
+        "fr": "blessé"
+    },
+    {
+        "en": "injury",
+        "fr": "blessure"
+    },
+    {
+        "en": "inner",
+        "fr": "intérieur"
+    },
+    {
+        "en": "innocent",
+        "fr": "innocent"
+    },
+    {
+        "en": "innocently",
+        "fr": "naïvement"
+    },
+    {
+        "en": "input",
+        "fr": "saisir"
+    },
+    {
+        "en": "inspector",
+        "fr": "inspecteur"
+    },
+    {
+        "en": "inspiration",
+        "fr": "inspiration"
+    },
+    {
+        "en": "inspire",
+        "fr": "inspirer"
+    },
+    {
+        "en": "instant",
+        "fr": "instantané"
+    },
+    {
+        "en": "instantly",
+        "fr": "immédiatement"
+    },
+    {
+        "en": "institute",
+        "fr": "institut"
+    },
+    {
+        "en": "institution",
+        "fr": "institution"
+    },
+    {
+        "en": "insurance",
+        "fr": "assurance"
+    },
+    {
+        "en": "intellectual",
+        "fr": "intellectuel"
+    },
+    {
+        "en": "intelligence",
+        "fr": "intelligence"
+    },
+    {
+        "en": "intensive",
+        "fr": "intensif"
+    },
+    {
+        "en": "intention",
+        "fr": "intention"
+    },
+    {
+        "en": "interact",
+        "fr": "interagir"
+    },
+    {
+        "en": "interactive",
+        "fr": "interactif"
+    },
+    {
+        "en": "interfere",
+        "fr": "interférer"
+    },
+    {
+        "en": "interior",
+        "fr": "intérieur"
+    },
+    {
+        "en": "internal",
+        "fr": "interne"
+    },
+    {
+        "en": "interpret",
+        "fr": "interpréter"
+    },
+    {
+        "en": "interruption",
+        "fr": "interruption"
+    },
+    {
+        "en": "intransitive",
+        "fr": "intransitif"
+    },
+    {
+        "en": "introduction",
+        "fr": "introduction"
+    },
+    {
+        "en": "invade",
+        "fr": "envahir"
+    },
+    {
+        "en": "invasion",
+        "fr": "invasion"
+    },
+    {
+        "en": "inventor",
+        "fr": "inventeur"
+    },
+    {
+        "en": "invest",
+        "fr": "investir"
+    },
+    {
+        "en": "investigate",
+        "fr": "enquêter"
+    },
+    {
+        "en": "investigation",
+        "fr": "enquête"
+    },
+    {
+        "en": "investigator",
+        "fr": "enquêteur"
+    },
+    {
+        "en": "investment",
+        "fr": "investissement"
+    },
+    {
+        "en": "investor",
+        "fr": "investisseur"
+    },
+    {
+        "en": "invisible",
+        "fr": "invisible"
+    },
+    {
+        "en": "involved",
+        "fr": "impliqué"
+    },
+    {
+        "en": "involvement",
+        "fr": "participation"
+    },
+    {
+        "en": "irresponsible",
+        "fr": "irresponsable"
+    },
+    {
+        "en": "irritated",
+        "fr": "irrité"
+    },
+    {
+        "en": "irritating",
+        "fr": "irritant"
+    },
+    {
+        "en": "itch",
+        "fr": "démanger"
+    },
+    {
+        "en": "jaw",
+        "fr": "mâchoire"
+    },
+    {
+        "en": "jealously",
+        "fr": "jalousie"
+    },
+    {
+        "en": "jewel",
+        "fr": "bijou"
+    },
+    {
+        "en": "joint",
+        "fr": "articulation"
+    },
+    {
+        "en": "journalism",
+        "fr": "journalisme"
+    },
+    {
+        "en": "joy",
+        "fr": "joie"
+    },
+    {
+        "en": "junior",
+        "fr": "junior"
+    },
+    {
+        "en": "jury",
+        "fr": "jury"
+    },
+    {
+        "en": "justice",
+        "fr": "justice"
+    },
+    {
+        "en": "justify",
+        "fr": "justifier"
+    },
+    {
+        "en": "kindness",
+        "fr": "gentillesse"
+    },
+    {
+        "en": "kingdom",
+        "fr": "royaume"
+    },
+    {
+        "en": "kneel",
+        "fr": "s'agenouiller"
+    },
+    {
+        "en": "landing",
+        "fr": "atterrissage"
+    },
+    {
+        "en": "landlady",
+        "fr": "propriétaire"
+    },
+    {
+        "en": "landlord",
+        "fr": "propriétaire"
+    },
+    {
+        "en": "lane",
+        "fr": "voie"
+    },
+    {
+        "en": "lap",
+        "fr": "genoux"
+    },
+    {
+        "en": "largely",
+        "fr": "en grande partie"
+    },
+    {
+        "en": "laser",
+        "fr": "laser"
+    },
+    {
+        "en": "lastly",
+        "fr": "dernièrement"
+    },
+    {
+        "en": "latter",
+        "fr": "dernier"
+    },
+    {
+        "en": "laughter",
+        "fr": "rire"
+    },
+    {
+        "en": "launch",
+        "fr": "lancement"
+    },
+    {
+        "en": "laundry",
+        "fr": "lessive"
+    },
+    {
+        "en": "layer",
+        "fr": "couche"
+    },
+    {
+        "en": "laziness",
+        "fr": "paresse"
+    },
+    {
+        "en": "leading",
+        "fr": "menant"
+    },
+    {
+        "en": "leaflet",
+        "fr": "brochure"
+    },
+    {
+        "en": "leak",
+        "fr": "fuir"
+    },
+    {
+        "en": "lean",
+        "fr": "maigre"
+    },
+    {
+        "en": "learner",
+        "fr": "apprenant"
+    },
+    {
+        "en": "learning",
+        "fr": "apprentissage"
+    },
+    {
+        "en": "lecturer",
+        "fr": "conférencier"
+    },
+    {
+        "en": "leek",
+        "fr": "poireau"
+    },
+    {
+        "en": "legal",
+        "fr": "légal"
+    },
+    {
+        "en": "legally",
+        "fr": "légalement"
+    },
+    {
+        "en": "legend",
+        "fr": "légende"
+    },
+    {
+        "en": "leopard",
+        "fr": "léopard"
+    },
+    {
+        "en": "liar",
+        "fr": "menteur"
+    },
+    {
+        "en": "liberty",
+        "fr": "liberté"
+    },
+    {
+        "en": "lick",
+        "fr": "lécher"
+    },
+    {
+        "en": "lid",
+        "fr": "couvercle"
+    },
+    {
+        "en": "lifestyle",
+        "fr": "style de vie"
+    },
+    {
+        "en": "lifetime",
+        "fr": "durée de vie"
+    },
+    {
+        "en": "lighting",
+        "fr": "éclairage"
+    },
+    {
+        "en": "literally",
+        "fr": "littéralement"
+    },
+    {
+        "en": "literary",
+        "fr": "littéraire"
+    },
+    {
+        "en": "litter",
+        "fr": "litière"
+    },
+    {
+        "en": "liver",
+        "fr": "foie"
+    },
+    {
+        "en": "living",
+        "fr": "vie"
+    },
+    {
+        "en": "loaf",
+        "fr": "miche de pain"
+    },
+    {
+        "en": "lobby",
+        "fr": "hall d'entrée"
+    },
+    {
+        "en": "log",
+        "fr": "enregistrer"
+    },
+    {
+        "en": "logical",
+        "fr": "logique"
+    },
+    {
+        "en": "loss",
+        "fr": "perte"
+    },
+    {
+        "en": "lower",
+        "fr": "inférieur"
+    },
+    {
+        "en": "loyal",
+        "fr": "loyal"
+    },
+    {
+        "en": "loyalty",
+        "fr": "loyauté"
+    },
+    {
+        "en": "lung",
+        "fr": "poumon"
+    },
+    {
+        "en": "lyrics",
+        "fr": "paroles"
+    },
+    {
+        "en": "magical",
+        "fr": "magique"
+    },
+    {
+        "en": "maintain",
+        "fr": "maintenir"
+    },
+    {
+        "en": "maintenance",
+        "fr": "entretien"
+    },
+    {
+        "en": "major",
+        "fr": "majeur"
+    },
+    {
+        "en": "majority",
+        "fr": "majorité"
+    },
+    {
+        "en": "maker",
+        "fr": "fabricant"
+    },
+    {
+        "en": "management",
+        "fr": "gestion"
+    },
+    {
+        "en": "mankind",
+        "fr": "humanité"
+    },
+    {
+        "en": "manner",
+        "fr": "manière"
+    },
+    {
+        "en": "manual",
+        "fr": "manuel"
+    },
+    {
+        "en": "manufacture",
+        "fr": "fabrication"
+    },
+    {
+        "en": "manufacturer",
+        "fr": "fabricant"
+    },
+    {
+        "en": "manufacturing",
+        "fr": "fabrication"
+    },
+    {
+        "en": "marathon",
+        "fr": "marathon"
+    },
+    {
+        "en": "marketing",
+        "fr": "commercialisation"
+    },
+    {
+        "en": "mask",
+        "fr": "masque"
+    },
+    {
+        "en": "mass",
+        "fr": "masse"
+    },
+    {
+        "en": "massive",
+        "fr": "massif"
+    },
+    {
+        "en": "master",
+        "fr": "maître"
+    },
+    {
+        "en": "mathematical",
+        "fr": "mathématique"
+    },
+    {
+        "en": "mature",
+        "fr": "mature"
+    },
+    {
+        "en": "mayor",
+        "fr": "maire"
+    },
+    {
+        "en": "meaningful",
+        "fr": "significatif"
+    },
+    {
+        "en": "means",
+        "fr": "moyens"
+    },
+    {
+        "en": "meantime",
+        "fr": "entre-temps"
+    },
+    {
+        "en": "measure",
+        "fr": "mesure"
+    },
+    {
+        "en": "measurement",
+        "fr": "mesures"
+    },
+    {
+        "en": "mechanical",
+        "fr": "mécanique"
+    },
+    {
+        "en": "medal",
+        "fr": "médaille"
+    },
+    {
+        "en": "media",
+        "fr": "médias"
+    },
+    {
+        "en": "medical",
+        "fr": "médical"
+    },
+    {
+        "en": "melt",
+        "fr": "fondre"
+    },
+    {
+        "en": "memorable",
+        "fr": "mémorable"
+    },
+    {
+        "en": "mental",
+        "fr": "mental"
+    },
+    {
+        "en": "mentally",
+        "fr": "mentalement"
+    },
+    {
+        "en": "mere",
+        "fr": "simple"
+    },
+    {
+        "en": "merely",
+        "fr": "simplement"
+    },
+    {
+        "en": "microphone",
+        "fr": "microphone"
+    },
+    {
+        "en": "military",
+        "fr": "militaire"
+    },
+    {
+        "en": "minister",
+        "fr": "ministre"
+    },
+    {
+        "en": "minor",
+        "fr": "mineure"
+    },
+    {
+        "en": "minority",
+        "fr": "minorité"
+    },
+    {
+        "en": "mint",
+        "fr": "menthe"
+    },
+    {
+        "en": "miracle",
+        "fr": "miracle"
+    },
+    {
+        "en": "misery",
+        "fr": "misère"
+    },
+    {
+        "en": "misleading",
+        "fr": "trompeur"
+    },
+    {
+        "en": "mission",
+        "fr": "mission"
+    },
+    {
+        "en": "mist",
+        "fr": "brume"
+    },
+    {
+        "en": "misty",
+        "fr": "brumeux"
+    },
+    {
+        "en": "misunderstand",
+        "fr": "mal comprendre"
+    },
+    {
+        "en": "misunderstanding",
+        "fr": "malentendu"
+    },
+    {
+        "en": "mixture",
+        "fr": "mélange"
+    },
+    {
+        "en": "modest",
+        "fr": "modeste"
+    },
+    {
+        "en": "monitor",
+        "fr": "moniteur"
+    },
+    {
+        "en": "moonlight",
+        "fr": "clair de lune"
+    },
+    {
+        "en": "moral",
+        "fr": "morale"
+    },
+    {
+        "en": "morally",
+        "fr": "moralement"
+    },
+    {
+        "en": "moreover",
+        "fr": "de plus"
+    },
+    {
+        "en": "motivated",
+        "fr": "motivé"
+    },
+    {
+        "en": "motivation",
+        "fr": "motivation"
+    },
+    {
+        "en": "motive",
+        "fr": "motif"
+    },
+    {
+        "en": "motor",
+        "fr": "moteur"
+    },
+    {
+        "en": "motorist",
+        "fr": "automobiliste"
+    },
+    {
+        "en": "movement",
+        "fr": "mouvement"
+    },
+    {
+        "en": "moving",
+        "fr": "mobile"
+    },
+    {
+        "en": "mud",
+        "fr": "boue"
+    },
+    {
+        "en": "muddy",
+        "fr": "boueux"
+    },
+    {
+        "en": "mumble",
+        "fr": "marmonner"
+    },
+    {
+        "en": "muscle",
+        "fr": "muscle"
+    },
+    {
+        "en": "mutter",
+        "fr": "murmurer"
+    },
+    {
+        "en": "mysterious",
+        "fr": "mystérieux"
+    },
+    {
+        "en": "myth",
+        "fr": "mythe"
+    },
+    {
+        "en": "nail",
+        "fr": "clou"
+    },
+    {
+        "en": "naked",
+        "fr": "nu"
+    },
+    {
+        "en": "narrowly",
+        "fr": "étroitement"
+    },
+    {
+        "en": "nation",
+        "fr": "nation"
+    },
+    {
+        "en": "nationwide",
+        "fr": "à l'échelle nationale"
+    },
+    {
+        "en": "native",
+        "fr": "indigène"
+    },
+    {
+        "en": "naturally",
+        "fr": "naturellement"
+    },
+    {
+        "en": "naughty",
+        "fr": "vilain"
+    },
+    {
+        "en": "navy",
+        "fr": "marine"
+    },
+    {
+        "en": "necessarily",
+        "fr": "nécessairement"
+    },
+    {
+        "en": "needle",
+        "fr": "aiguille"
+    },
+    {
+        "en": "negatively",
+        "fr": "négativement"
+    },
+    {
+        "en": "neighbouring",
+        "fr": "voisin"
+    },
+    {
+        "en": "neither",
+        "fr": "ni l'un ni l'autre"
+    },
+    {
+        "en": "nerves",
+        "fr": "nerfs"
+    },
+    {
+        "en": "nervously",
+        "fr": "nerveusement"
+    },
+    {
+        "en": "network",
+        "fr": "réseau"
+    },
+    {
+        "en": "nevertheless",
+        "fr": "néanmoins"
+    },
+    {
+        "en": "newly",
+        "fr": "nouvellement"
+    },
+    {
+        "en": "nicely",
+        "fr": "bien"
+    },
+    {
+        "en": "nod",
+        "fr": "hocher la tête"
+    },
+    {
+        "en": "nonsense",
+        "fr": "absurdité"
+    },
+    {
+        "en": "nor",
+        "fr": "ni"
+    },
+    {
+        "en": "novelist",
+        "fr": "romancier"
+    },
+    {
+        "en": "nuclear",
+        "fr": "nucléaire"
+    },
+    {
+        "en": "nuisance",
+        "fr": "nuisance"
+    },
+    {
+        "en": "nursery",
+        "fr": "nursery"
+    },
+    {
+        "en": "nut",
+        "fr": "noix"
+    },
+    {
+        "en": "oak",
+        "fr": "chêne"
+    },
+    {
+        "en": "obey",
+        "fr": "obéir"
+    },
+    {
+        "en": "objection",
+        "fr": "objection"
+    },
+    {
+        "en": "objective",
+        "fr": "objectif"
+    },
+    {
+        "en": "obligation",
+        "fr": "obligation"
+    },
+    {
+        "en": "oblige",
+        "fr": "obliger"
+    },
+    {
+        "en": "observation",
+        "fr": "observation"
+    },
+    {
+        "en": "observe",
+        "fr": "observer"
+    },
+    {
+        "en": "obsessed",
+        "fr": "obsédé"
+    },
+    {
+        "en": "obsession",
+        "fr": "obsession"
+    },
+    {
+        "en": "obtain",
+        "fr": "obtenir"
+    },
+    {
+        "en": "occasionally",
+        "fr": "occasionnellement"
+    },
+    {
+        "en": "occupy",
+        "fr": "occuper"
+    },
+    {
+        "en": "occur",
+        "fr": "se produire"
+    },
+    {
+        "en": "odd",
+        "fr": "impair"
+    },
+    {
+        "en": "offence",
+        "fr": "infraction"
+    },
+    {
+        "en": "offend",
+        "fr": "offenser"
+    },
+    {
+        "en": "offender",
+        "fr": "délinquant"
+    },
+    {
+        "en": "offensive",
+        "fr": "offensant"
+    },
+    {
+        "en": "official",
+        "fr": "officiel"
+    },
+    {
+        "en": "opening",
+        "fr": "ouverture"
+    },
+    {
+        "en": "operator",
+        "fr": "opérateur"
+    },
+    {
+        "en": "opponent",
+        "fr": "adversaire"
+    },
+    {
+        "en": "oppose",
+        "fr": "opposer"
+    },
+    {
+        "en": "optimistic",
+        "fr": "optimiste"
+    },
+    {
+        "en": "optional",
+        "fr": "facultatif"
+    },
+    {
+        "en": "oral",
+        "fr": "oral"
+    },
+    {
+        "en": "orchestral",
+        "fr": "orchestral"
+    },
+    {
+        "en": "organic",
+        "fr": "organique"
+    },
+    {
+        "en": "origin",
+        "fr": "origine"
+    },
+    {
+        "en": "originally",
+        "fr": "initialement"
+    },
+    {
+        "en": "outer",
+        "fr": "extérieur"
+    },
+    {
+        "en": "outline",
+        "fr": "contour"
+    },
+    {
+        "en": "outrageous",
+        "fr": "scandaleux"
+    },
+    {
+        "en": "outskirts",
+        "fr": "faubourgs"
+    },
+    {
+        "en": "outstanding",
+        "fr": "remarquable"
+    },
+    {
+        "en": "oval",
+        "fr": "ovale"
+    },
+    {
+        "en": "overall",
+        "fr": "dans l'ensemble"
+    },
+    {
+        "en": "overcome",
+        "fr": "surmonter"
+    },
+    {
+        "en": "overlook",
+        "fr": "négliger"
+    },
+    {
+        "en": "overseas",
+        "fr": "outre-mer"
+    },
+    {
+        "en": "overtake",
+        "fr": "dépasser"
+    },
+    {
+        "en": "overtime",
+        "fr": "au fil du temps"
+    },
+    {
+        "en": "overweight",
+        "fr": "embonpoint"
+    },
+    {
+        "en": "owl",
+        "fr": "hibou"
+    },
+    {
+        "en": "oxygen",
+        "fr": "oxygène"
+    },
+    {
+        "en": "pace",
+        "fr": "rythme"
+    },
+    {
+        "en": "package",
+        "fr": "emballer"
+    },
+    {
+        "en": "packed",
+        "fr": "emballé"
+    },
+    {
+        "en": "pancake",
+        "fr": "crêpe"
+    },
+    {
+        "en": "panic",
+        "fr": "panique"
+    },
+    {
+        "en": "paperwork",
+        "fr": "paperasse"
+    },
+    {
+        "en": "parachute",
+        "fr": "parachute"
+    },
+    {
+        "en": "parade",
+        "fr": "parade"
+    },
+    {
+        "en": "parliament",
+        "fr": "parlement"
+    },
+    {
+        "en": "partial",
+        "fr": "partiel"
+    },
+    {
+        "en": "participate",
+        "fr": "participer"
+    },
+    {
+        "en": "partnership",
+        "fr": "partenariat"
+    },
+    {
+        "en": "passage",
+        "fr": "passage"
+    },
+    {
+        "en": "passion",
+        "fr": "passion"
+    },
+    {
+        "en": "passionate",
+        "fr": "passionné"
+    },
+    {
+        "en": "passionately",
+        "fr": "passionnément"
+    },
+    {
+        "en": "patience",
+        "fr": "patience"
+    },
+    {
+        "en": "patiently",
+        "fr": "patiemment"
+    },
+    {
+        "en": "paw",
+        "fr": "patte"
+    },
+    {
+        "en": "payment",
+        "fr": "paiement"
+    },
+    {
+        "en": "peacefully",
+        "fr": "pacifiquement"
+    },
+    {
+        "en": "peculiar",
+        "fr": "particulier"
+    },
+    {
+        "en": "pedal",
+        "fr": "pédale"
+    },
+    {
+        "en": "peel",
+        "fr": "peler"
+    },
+    {
+        "en": "penalty",
+        "fr": "peine"
+    },
+    {
+        "en": "pension",
+        "fr": "pension"
+    },
+    {
+        "en": "percentage",
+        "fr": "pourcentage"
+    },
+    {
+        "en": "permanently",
+        "fr": "en permanence"
+    },
+    {
+        "en": "personality",
+        "fr": "personnalité"
+    },
+    {
+        "en": "pessimistic",
+        "fr": "pessimiste"
+    },
+    {
+        "en": "petrified",
+        "fr": "pétrifié"
+    },
+    {
+        "en": "pharmacist",
+        "fr": "pharmacien"
+    },
+    {
+        "en": "phase",
+        "fr": "phase"
+    },
+    {
+        "en": "philosopher",
+        "fr": "philosophe"
+    },
+    {
+        "en": "philosophy",
+        "fr": "philosophie"
+    },
+    {
+        "en": "physical",
+        "fr": "physique"
+    },
+    {
+        "en": "physically",
+        "fr": "physiquement"
+    },
+    {
+        "en": "picturesque",
+        "fr": "pittoresque"
+    },
+    {
+        "en": "pine",
+        "fr": "pin"
+    },
+    {
+        "en": "pint",
+        "fr": "pinte"
+    },
+    {
+        "en": "pitch",
+        "fr": "pas"
+    },
+    {
+        "en": "planning",
+        "fr": "planification"
+    },
+    {
+        "en": "plot",
+        "fr": "parcelle"
+    },
+    {
+        "en": "plumber",
+        "fr": "plombier"
+    },
+    {
+        "en": "poison",
+        "fr": "poison"
+    },
+    {
+        "en": "poisonous",
+        "fr": "toxique"
+    },
+    {
+        "en": "policy",
+        "fr": "politique"
+    },
+    {
+        "en": "politeness",
+        "fr": "politesse"
+    },
+    {
+        "en": "pollute",
+        "fr": "polluer"
+    },
+    {
+        "en": "pond",
+        "fr": "étang"
+    },
+    {
+        "en": "popularity",
+        "fr": "popularité"
+    },
+    {
+        "en": "portion",
+        "fr": "partie"
+    },
+    {
+        "en": "portrait",
+        "fr": "portrait"
+    },
+    {
+        "en": "posh",
+        "fr": "chic"
+    },
+    {
+        "en": "positively",
+        "fr": "positivement"
+    },
+    {
+        "en": "possession",
+        "fr": "possession"
+    },
+    {
+        "en": "potential",
+        "fr": "potentiel"
+    },
+    {
+        "en": "potentially",
+        "fr": "potentiellement"
+    },
+    {
+        "en": "pottery",
+        "fr": "poterie"
+    },
+    {
+        "en": "poverty",
+        "fr": "pauvreté"
+    },
+    {
+        "en": "powerfully",
+        "fr": "puissamment"
+    },
+    {
+        "en": "practical",
+        "fr": "pratique"
+    },
+    {
+        "en": "practically",
+        "fr": "pratiquement"
+    },
+    {
+        "en": "praise",
+        "fr": "louer"
+    },
+    {
+        "en": "prawn",
+        "fr": "crevette"
+    },
+    {
+        "en": "precious",
+        "fr": "précieux"
+    },
+    {
+        "en": "precise",
+        "fr": "précis"
+    },
+    {
+        "en": "precisely",
+        "fr": "précisément"
+    },
+    {
+        "en": "predictable",
+        "fr": "prévisible"
+    },
+    {
+        "en": "prediction",
+        "fr": "prédiction"
+    },
+    {
+        "en": "preferable",
+        "fr": "préférable"
+    },
+    {
+        "en": "preferably",
+        "fr": "de préférence"
+    },
+    {
+        "en": "preference",
+        "fr": "préférence"
+    },
+    {
+        "en": "prefix",
+        "fr": "préfixe"
+    },
+    {
+        "en": "prejudice",
+        "fr": "préjugé"
+    },
+    {
+        "en": "presence",
+        "fr": "présence"
+    },
+    {
+        "en": "presenter",
+        "fr": "présentateur"
+    },
+    {
+        "en": "preserve",
+        "fr": "préserver"
+    },
+    {
+        "en": "presidency",
+        "fr": "présidence"
+    },
+    {
+        "en": "presidential",
+        "fr": "présidentiel"
+    },
+    {
+        "en": "pressure",
+        "fr": "pression"
+    },
+    {
+        "en": "presumably",
+        "fr": "probablement"
+    },
+    {
+        "en": "pretend",
+        "fr": "prétendre"
+    },
+    {
+        "en": "prevention",
+        "fr": "prévention"
+    },
+    {
+        "en": "priceless",
+        "fr": "inestimable"
+    },
+    {
+        "en": "pride",
+        "fr": "fierté"
+    },
+    {
+        "en": "primarily",
+        "fr": "principalement"
+    },
+    {
+        "en": "primary",
+        "fr": "primaire"
+    },
+    {
+        "en": "priority",
+        "fr": "priorité"
+    },
+    {
+        "en": "privacy",
+        "fr": "confidentialité"
+    },
+    {
+        "en": "privately",
+        "fr": "en privé"
+    },
+    {
+        "en": "pro",
+        "fr": "pro"
+    },
+    {
+        "en": "probable",
+        "fr": "probable"
+    },
+    {
+        "en": "procedure",
+        "fr": "procédure"
+    },
+    {
+        "en": "process",
+        "fr": "processus"
+    },
+    {
+        "en": "producer",
+        "fr": "producteur"
+    },
+    {
+        "en": "production",
+        "fr": "production"
+    },
+    {
+        "en": "productive",
+        "fr": "productif"
+    },
+    {
+        "en": "profile",
+        "fr": "profil"
+    },
+    {
+        "en": "profit",
+        "fr": "profit"
+    },
+    {
+        "en": "profitable",
+        "fr": "rentable"
+    },
+    {
+        "en": "programming",
+        "fr": "programmation"
+    },
+    {
+        "en": "progressive",
+        "fr": "progressif"
+    },
+    {
+        "en": "prohibit",
+        "fr": "interdire"
+    },
+    {
+        "en": "promotion",
+        "fr": "promotion"
+    },
+    {
+        "en": "prompt",
+        "fr": "rapide"
+    },
+    {
+        "en": "promptly",
+        "fr": "rapidement"
+    },
+    {
+        "en": "proof",
+        "fr": "preuve"
+    },
+    {
+        "en": "proposal",
+        "fr": "proposition"
+    },
+    {
+        "en": "propose",
+        "fr": "proposer"
+    },
+    {
+        "en": "proposed",
+        "fr": "proposé"
+    },
+    {
+        "en": "prospect",
+        "fr": "perspective"
+    },
+    {
+        "en": "protection",
+        "fr": "protection"
+    },
+    {
+        "en": "protective",
+        "fr": "protecteur"
+    },
+    {
+        "en": "protest",
+        "fr": "protestation"
+    },
+    {
+        "en": "proudly",
+        "fr": "fièrement"
+    },
+    {
+        "en": "psychological",
+        "fr": "psychologique"
+    },
+    {
+        "en": "psychologically",
+        "fr": "psychologiquement"
+    },
+    {
+        "en": "psychologist",
+        "fr": "psychologue"
+    },
+    {
+        "en": "psychology",
+        "fr": "psychologie"
+    },
+    {
+        "en": "publication",
+        "fr": "publication"
+    },
+    {
+        "en": "publicity",
+        "fr": "publicité"
+    },
+    {
+        "en": "publisher",
+        "fr": "éditeur"
+    },
+    {
+        "en": "pudding",
+        "fr": "pudding"
+    },
+    {
+        "en": "punch",
+        "fr": "punch"
+    },
+    {
+        "en": "punishment",
+        "fr": "punition"
+    },
+    {
+        "en": "purchase",
+        "fr": "achat"
+    },
+    {
+        "en": "puzzled",
+        "fr": "perplexe"
+    },
+    {
+        "en": "pyjamas",
+        "fr": "pyjamas"
+    },
+    {
+        "en": "qualify",
+        "fr": "qualifier"
+    },
+    {
+        "en": "quarrel",
+        "fr": "querelle"
+    },
+    {
+        "en": "query",
+        "fr": "requête"
+    },
+    {
+        "en": "racial",
+        "fr": "racial"
+    },
+    {
+        "en": "racism",
+        "fr": "racisme"
+    },
+    {
+        "en": "rage",
+        "fr": "rage"
+    },
+    {
+        "en": "rainbow",
+        "fr": "arc-en-ciel"
+    },
+    {
+        "en": "rape",
+        "fr": "râpé"
+    },
+    {
+        "en": "rapid",
+        "fr": "rapide"
+    },
+    {
+        "en": "rapidly",
+        "fr": "rapidement"
+    },
+    {
+        "en": "rate",
+        "fr": "taux"
+    },
+    {
+        "en": "ray",
+        "fr": "rayon"
+    },
+    {
+        "en": "razor",
+        "fr": "rasoir"
+    },
+    {
+        "en": "react",
+        "fr": "réagir"
+    },
+    {
+        "en": "reaction",
+        "fr": "réaction"
+    },
+    {
+        "en": "readily",
+        "fr": "facilement"
+    },
+    {
+        "en": "reality",
+        "fr": "réalité"
+    },
+    {
+        "en": "rear",
+        "fr": "arrière"
+    },
+    {
+        "en": "rearrange",
+        "fr": "réarranger"
+    },
+    {
+        "en": "recall",
+        "fr": "rappel"
+    },
+    {
+        "en": "recession",
+        "fr": "récession"
+    },
+    {
+        "en": "reckon",
+        "fr": "compter"
+    },
+    {
+        "en": "recommendation",
+        "fr": "recommandation"
+    },
+    {
+        "en": "recovery",
+        "fr": "récupération"
+    },
+    {
+        "en": "recreation",
+        "fr": "récréation"
+    },
+    {
+        "en": "rectangular",
+        "fr": "rectangulaire"
+    },
+    {
+        "en": "reduction",
+        "fr": "réduction"
+    },
+    {
+        "en": "redundant",
+        "fr": "redondant"
+    },
+    {
+        "en": "refer",
+        "fr": "référer"
+    },
+    {
+        "en": "referee",
+        "fr": "arbitre"
+    },
+    {
+        "en": "reference",
+        "fr": "référence"
+    },
+    {
+        "en": "reflect",
+        "fr": "refléter"
+    },
+    {
+        "en": "reflection",
+        "fr": "réflexion"
+    },
+    {
+        "en": "refugee",
+        "fr": "réfugié"
+    },
+    {
+        "en": "regain",
+        "fr": "regagner"
+    },
+    {
+        "en": "regional",
+        "fr": "régional"
+    },
+    {
+        "en": "regulation",
+        "fr": "règlement"
+    },
+    {
+        "en": "rehearsal",
+        "fr": "répétition"
+    },
+    {
+        "en": "reject",
+        "fr": "rejeter"
+    },
+    {
+        "en": "related",
+        "fr": "en rapport"
+    },
+    {
+        "en": "relatively",
+        "fr": "relativement"
+    },
+    {
+        "en": "release",
+        "fr": "libérer"
+    },
+    {
+        "en": "relevant",
+        "fr": "pertinent"
+    },
+    {
+        "en": "relief",
+        "fr": "relief"
+    },
+    {
+        "en": "relieved",
+        "fr": "soulagé"
+    },
+    {
+        "en": "religious",
+        "fr": "religieux"
+    },
+    {
+        "en": "rely",
+        "fr": "compter sur"
+    },
+    {
+        "en": "remaining",
+        "fr": "restant"
+    },
+    {
+        "en": "remains",
+        "fr": "restes"
+    },
+    {
+        "en": "remark",
+        "fr": "remarque"
+    },
+    {
+        "en": "remarkable",
+        "fr": "remarquable"
+    },
+    {
+        "en": "remedy",
+        "fr": "remède"
+    },
+    {
+        "en": "remote",
+        "fr": "télécommande"
+    },
+    {
+        "en": "renew",
+        "fr": "renouveler"
+    },
+    {
+        "en": "repay",
+        "fr": "rembourser"
+    },
+    {
+        "en": "replacement",
+        "fr": "remplacement"
+    },
+    {
+        "en": "represent",
+        "fr": "représenter"
+    },
+    {
+        "en": "representative",
+        "fr": "représentant"
+    },
+    {
+        "en": "reputation",
+        "fr": "réputation"
+    },
+    {
+        "en": "requirement",
+        "fr": "exigence"
+    },
+    {
+        "en": "researcher",
+        "fr": "chercheur"
+    },
+    {
+        "en": "resident",
+        "fr": "résident"
+    },
+    {
+        "en": "residential",
+        "fr": "Résidentiel"
+    },
+    {
+        "en": "resign",
+        "fr": "démissionner"
+    },
+    {
+        "en": "resist",
+        "fr": "résister"
+    },
+    {
+        "en": "resource",
+        "fr": "ressource"
+    },
+    {
+        "en": "respectable",
+        "fr": "respectable"
+    },
+    {
+        "en": "respected",
+        "fr": "respecté"
+    },
+    {
+        "en": "respond",
+        "fr": "répondre"
+    },
+    {
+        "en": "response",
+        "fr": "réponse"
+    },
+    {
+        "en": "responsibility",
+        "fr": "responsabilité"
+    },
+    {
+        "en": "restore",
+        "fr": "restaurer"
+    },
+    {
+        "en": "retired",
+        "fr": "à la retraite"
+    },
+    {
+        "en": "retirement",
+        "fr": "retraite"
+    },
+    {
+        "en": "reveal",
+        "fr": "révéler"
+    },
+    {
+        "en": "revenge",
+        "fr": "vengeance"
+    },
+    {
+        "en": "reverse",
+        "fr": "inverse"
+    },
+    {
+        "en": "revolution",
+        "fr": "révolution"
+    },
+    {
+        "en": "revolutionary",
+        "fr": "révolutionnaire"
+    },
+    {
+        "en": "rewrite",
+        "fr": "récrire"
+    },
+    {
+        "en": "rhythm",
+        "fr": "rythme"
+    },
+    {
+        "en": "rib",
+        "fr": "côte"
+    },
+    {
+        "en": "ridiculous",
+        "fr": "ridicule"
+    },
+    {
+        "en": "rightly",
+        "fr": "justement"
+    },
+    {
+        "en": "rip",
+        "fr": "déchirer"
+    },
+    {
+        "en": "ripe",
+        "fr": "mûr"
+    },
+    {
+        "en": "risk",
+        "fr": "risque"
+    },
+    {
+        "en": "risky",
+        "fr": "risqué"
+    },
+    {
+        "en": "robbery",
+        "fr": "vol"
+    },
+    {
+        "en": "rocket",
+        "fr": "fusée"
+    },
+    {
+        "en": "roommate",
+        "fr": "colocataire"
+    },
+    {
+        "en": "root",
+        "fr": "racine"
+    },
+    {
+        "en": "rope",
+        "fr": "corde"
+    },
+    {
+        "en": "rotten",
+        "fr": "pourri"
+    },
+    {
+        "en": "roughly",
+        "fr": "à peu près"
+    },
+    {
+        "en": "row2",
+        "fr": "ligne 2"
+    },
+    {
+        "en": "royal",
+        "fr": "royal"
+    },
+    {
+        "en": "rub",
+        "fr": "frotter"
+    },
+    {
+        "en": "rumour",
+        "fr": "rumeur"
+    },
+    {
+        "en": "rural",
+        "fr": "rural"
+    },
+    {
+        "en": "rush",
+        "fr": "se précipiter"
+    },
+    {
+        "en": "rusty",
+        "fr": "rouillé"
+    },
+    {
+        "en": "sack",
+        "fr": "sac"
+    },
+    {
+        "en": "sadly",
+        "fr": "malheureusement"
+    },
+    {
+        "en": "sadness",
+        "fr": "tristesse"
+    },
+    {
+        "en": "safety",
+        "fr": "sécurité"
+    },
+    {
+        "en": "sake",
+        "fr": "saké"
+    },
+    {
+        "en": "salon",
+        "fr": "salon"
+    },
+    {
+        "en": "salty",
+        "fr": "salé"
+    },
+    {
+        "en": "sample",
+        "fr": "échantillon"
+    },
+    {
+        "en": "satellite",
+        "fr": "satellite"
+    },
+    {
+        "en": "satisfaction",
+        "fr": "satisfaction"
+    },
+    {
+        "en": "satisfactory",
+        "fr": "satisfaisant"
+    },
+    {
+        "en": "satisfy",
+        "fr": "satisfaire"
+    },
+    {
+        "en": "savings",
+        "fr": "économies"
+    },
+    {
+        "en": "scale",
+        "fr": "échelle"
+    },
+    {
+        "en": "scandal",
+        "fr": "scandale"
+    },
+    {
+        "en": "scar",
+        "fr": "cicatrice"
+    },
+    {
+        "en": "scent",
+        "fr": "parfum"
+    },
+    {
+        "en": "schedule",
+        "fr": "calendrier"
+    },
+    {
+        "en": "scheduled",
+        "fr": "programmé"
+    },
+    {
+        "en": "scheme",
+        "fr": "schème"
+    },
+    {
+        "en": "scientifically",
+        "fr": "scientifiquement"
+    },
+    {
+        "en": "scratch",
+        "fr": "gratter"
+    },
+    {
+        "en": "script",
+        "fr": "scénario"
+    },
+    {
+        "en": "seal",
+        "fr": "joint"
+    },
+    {
+        "en": "seasonal",
+        "fr": "saisonnier"
+    },
+    {
+        "en": "secondly",
+        "fr": "deuxièmement"
+    },
+    {
+        "en": "secure",
+        "fr": "sécurisé"
+    },
+    {
+        "en": "seed",
+        "fr": "graine"
+    },
+    {
+        "en": "seek",
+        "fr": "chercher"
+    },
+    {
+        "en": "seize",
+        "fr": "saisir"
+    },
+    {
+        "en": "seldom",
+        "fr": "rarement"
+    },
+    {
+        "en": "selection",
+        "fr": "sélection"
+    },
+    {
+        "en": "semicolon",
+        "fr": "point-virgule"
+    },
+    {
+        "en": "seminar",
+        "fr": "séminaire"
+    },
+    {
+        "en": "sen",
+        "fr": "sen"
+    },
+    {
+        "en": "senior",
+        "fr": "senior"
+    },
+    {
+        "en": "sensation",
+        "fr": "sensation"
+    },
+    {
+        "en": "sensitive",
+        "fr": "sensible"
+    },
+    {
+        "en": "separately",
+        "fr": "séparément"
+    },
+    {
+        "en": "separation",
+        "fr": "séparation"
+    },
+    {
+        "en": "servant",
+        "fr": "serviteur"
+    },
+    {
+        "en": "setting",
+        "fr": "paramètre"
+    },
+    {
+        "en": "settle",
+        "fr": "régler"
+    },
+    {
+        "en": "severe",
+        "fr": "grave"
+    },
+    {
+        "en": "severely",
+        "fr": "gravement"
+    },
+    {
+        "en": "sexual",
+        "fr": "sexuel"
+    },
+    {
+        "en": "sexy",
+        "fr": "sexy"
+    },
+    {
+        "en": "shallow",
+        "fr": "peu profond"
+    },
+    {
+        "en": "sharply",
+        "fr": "nettement"
+    },
+    {
+        "en": "shed",
+        "fr": "hangar"
+    },
+    {
+        "en": "shell",
+        "fr": "coquille"
+    },
+    {
+        "en": "shelter",
+        "fr": "abri"
+    },
+    {
+        "en": "shift",
+        "fr": "changement"
+    },
+    {
+        "en": "shiver",
+        "fr": "frisson"
+    },
+    {
+        "en": "shooting",
+        "fr": "tournage"
+    },
+    {
+        "en": "shopkeeper",
+        "fr": "commerçant"
+    },
+    {
+        "en": "shortage",
+        "fr": "pénurie"
+    },
+    {
+        "en": "shot",
+        "fr": "tir"
+    },
+    {
+        "en": "shrink",
+        "fr": "rétrécir"
+    },
+    {
+        "en": "sickness",
+        "fr": "maladie"
+    },
+    {
+        "en": "sigh",
+        "fr": "soupir"
+    },
+    {
+        "en": "signal",
+        "fr": "signal"
+    },
+    {
+        "en": "significant",
+        "fr": "significatif"
+    },
+    {
+        "en": "significantly",
+        "fr": "de manière significative"
+    },
+    {
+        "en": "silently",
+        "fr": "silencieusement"
+    },
+    {
+        "en": "similarity",
+        "fr": "similarité"
+    },
+    {
+        "en": "simply",
+        "fr": "simplement"
+    },
+    {
+        "en": "simultaneously",
+        "fr": "simultanément"
+    },
+    {
+        "en": "skeleton",
+        "fr": "squelette"
+    },
+    {
+        "en": "skilful",
+        "fr": "habile"
+    },
+    {
+        "en": "skilled",
+        "fr": "qualifié"
+    },
+    {
+        "en": "skip",
+        "fr": "sauter"
+    },
+    {
+        "en": "slam",
+        "fr": "claquer"
+    },
+    {
+        "en": "slap",
+        "fr": "gifler"
+    },
+    {
+        "en": "slash",
+        "fr": "sabrer"
+    },
+    {
+        "en": "slave",
+        "fr": "esclave"
+    },
+    {
+        "en": "slide",
+        "fr": "glisser"
+    },
+    {
+        "en": "slight",
+        "fr": "léger"
+    },
+    {
+        "en": "slightly",
+        "fr": "légèrement"
+    },
+    {
+        "en": "slope",
+        "fr": "pente"
+    },
+    {
+        "en": "smash",
+        "fr": "fracasser"
+    },
+    {
+        "en": "smoker",
+        "fr": "fumeur"
+    },
+    {
+        "en": "smoothly",
+        "fr": "doucement"
+    },
+    {
+        "en": "sneeze",
+        "fr": "éternuer"
+    },
+    {
+        "en": "snore",
+        "fr": "ronfler"
+    },
+    {
+        "en": "soak",
+        "fr": "tremper"
+    },
+    {
+        "en": "soaked",
+        "fr": "trempé"
+    },
+    {
+        "en": "soaking",
+        "fr": "trempage"
+    },
+    {
+        "en": "sob",
+        "fr": "sanglot"
+    },
+    {
+        "en": "softness",
+        "fr": "douceur"
+    },
+    {
+        "en": "soil",
+        "fr": "sol"
+    },
+    {
+        "en": "solar",
+        "fr": "solaire"
+    },
+    {
+        "en": "solid",
+        "fr": "solide"
+    },
+    {
+        "en": "solo",
+        "fr": "solo"
+    },
+    {
+        "en": "sophisticated",
+        "fr": "sophistiqué"
+    },
+    {
+        "en": "soundtrack",
+        "fr": "bande originale"
+    },
+    {
+        "en": "source",
+        "fr": "source"
+    },
+    {
+        "en": "specialist",
+        "fr": "spécialiste"
+    },
+    {
+        "en": "species",
+        "fr": "espèces"
+    },
+    {
+        "en": "specific",
+        "fr": "spécifique"
+    },
+    {
+        "en": "specify",
+        "fr": "spécifier"
+    },
+    {
+        "en": "spectator",
+        "fr": "spectateur"
+    },
+    {
+        "en": "spirit",
+        "fr": "esprit"
+    },
+    {
+        "en": "spiritual",
+        "fr": "spirituel"
+    },
+    {
+        "en": "splash",
+        "fr": "éclabousser"
+    },
+    {
+        "en": "sponsor",
+        "fr": "parrainer"
+    },
+    {
+        "en": "spray",
+        "fr": "pulvérisation"
+    },
+    {
+        "en": "spread",
+        "fr": "propagé"
+    },
+    {
+        "en": "spreadsheet",
+        "fr": "tableur"
+    },
+    {
+        "en": "squeeze",
+        "fr": "presser"
+    },
+    {
+        "en": "stab",
+        "fr": "poignarder"
+    },
+    {
+        "en": "stain",
+        "fr": "tache"
+    },
+    {
+        "en": "standard",
+        "fr": "standard"
+    },
+    {
+        "en": "stare",
+        "fr": "regard"
+    },
+    {
+        "en": "starving",
+        "fr": "affamé"
+    },
+    {
+        "en": "state",
+        "fr": "�0tat"
+    },
+    {
+        "en": "statement",
+        "fr": "déclaration"
+    },
+    {
+        "en": "statistics",
+        "fr": "statistiques"
+    },
+    {
+        "en": "steadily",
+        "fr": "régulièrement"
+    },
+    {
+        "en": "steady",
+        "fr": "constant"
+    },
+    {
+        "en": "steam",
+        "fr": "vapeur"
+    },
+    {
+        "en": "steel",
+        "fr": "acier"
+    },
+    {
+        "en": "steer",
+        "fr": "diriger"
+    },
+    {
+        "en": "stepfather",
+        "fr": "beau-père"
+    },
+    {
+        "en": "stepmother",
+        "fr": "belle-mère"
+    },
+    {
+        "en": "stiff",
+        "fr": "rigide"
+    },
+    {
+        "en": "stimulate",
+        "fr": "stimuler"
+    },
+    {
+        "en": "stock",
+        "fr": "action"
+    },
+    {
+        "en": "stool",
+        "fr": "tabouret"
+    },
+    {
+        "en": "stopover",
+        "fr": "escale"
+    },
+    {
+        "en": "storage",
+        "fr": "stockage"
+    },
+    {
+        "en": "storey",
+        "fr": "étage"
+    },
+    {
+        "en": "stormy",
+        "fr": "orageux"
+    },
+    {
+        "en": "straightforward",
+        "fr": "direct"
+    },
+    {
+        "en": "strain",
+        "fr": "souche"
+    },
+    {
+        "en": "strangely",
+        "fr": "étrangement"
+    },
+    {
+        "en": "strategy",
+        "fr": "stratégie"
+    },
+    {
+        "en": "strength",
+        "fr": "force"
+    },
+    {
+        "en": "strengthen",
+        "fr": "renforcer"
+    },
+    {
+        "en": "stretch",
+        "fr": "extensible"
+    },
+    {
+        "en": "strictly",
+        "fr": "strictement"
+    },
+    {
+        "en": "striking",
+        "fr": "frappant"
+    },
+    {
+        "en": "string",
+        "fr": "chaîne"
+    },
+    {
+        "en": "stroke",
+        "fr": "accident vasculaire cérébral"
+    },
+    {
+        "en": "strongly",
+        "fr": "fortement"
+    },
+    {
+        "en": "structure",
+        "fr": "structure"
+    },
+    {
+        "en": "struggle",
+        "fr": "lutte"
+    },
+    {
+        "en": "stubborn",
+        "fr": "têtu"
+    },
+    {
+        "en": "stuck",
+        "fr": "bloqué"
+    },
+    {
+        "en": "stunning",
+        "fr": "superbe"
+    },
+    {
+        "en": "submit",
+        "fr": "soumettre"
+    },
+    {
+        "en": "substance",
+        "fr": "substance"
+    },
+    {
+        "en": "substantial",
+        "fr": "substantiel"
+    },
+    {
+        "en": "substitute",
+        "fr": "remplaçant"
+    },
+    {
+        "en": "suburb",
+        "fr": "banlieue"
+    },
+    {
+        "en": "subway",
+        "fr": "métro"
+    },
+    {
+        "en": "successfully",
+        "fr": "avec succès"
+    },
+    {
+        "en": "sudden",
+        "fr": "soudain"
+    },
+    {
+        "en": "suffering",
+        "fr": "souffrance"
+    },
+    {
+        "en": "sufficient",
+        "fr": "suffisant"
+    },
+    {
+        "en": "suffix",
+        "fr": "suffixe"
+    },
+    {
+        "en": "suicide",
+        "fr": "suicide"
+    },
+    {
+        "en": "suitably",
+        "fr": "convenablement"
+    },
+    {
+        "en": "summary",
+        "fr": "résumé"
+    },
+    {
+        "en": "sunlight",
+        "fr": "soleil"
+    },
+    {
+        "en": "superb",
+        "fr": "superbe"
+    },
+    {
+        "en": "supernatural",
+        "fr": "surnaturel"
+    },
+    {
+        "en": "supervise",
+        "fr": "superviser"
+    },
+    {
+        "en": "supplier",
+        "fr": "fournisseur"
+    },
+    {
+        "en": "supply",
+        "fr": "fournir"
+    },
+    {
+        "en": "surely",
+        "fr": "sûrement"
+    },
+    {
+        "en": "surface",
+        "fr": "surface"
+    },
+    {
+        "en": "surgery",
+        "fr": "chirurgie"
+    },
+    {
+        "en": "surrounding",
+        "fr": "environnant"
+    },
+    {
+        "en": "surroundings",
+        "fr": "alentours"
+    },
+    {
+        "en": "survey",
+        "fr": "enquête"
+    },
+    {
+        "en": "survival",
+        "fr": "survie"
+    },
+    {
+        "en": "survive",
+        "fr": "survivre"
+    },
+    {
+        "en": "survivor",
+        "fr": "survivant"
+    },
+    {
+        "en": "suspect",
+        "fr": "suspect"
+    },
+    {
+        "en": "suspend",
+        "fr": "suspendre"
+    },
+    {
+        "en": "suspicion",
+        "fr": "soupçon"
+    },
+    {
+        "en": "suspicious",
+        "fr": "suspect"
+    },
+    {
+        "en": "suspiciously",
+        "fr": "soupçonneusement"
+    },
+    {
+        "en": "swallow",
+        "fr": "avaler"
+    },
+    {
+        "en": "swan",
+        "fr": "cygne"
+    },
+    {
+        "en": "swear",
+        "fr": "jurer"
+    },
+    {
+        "en": "sweat",
+        "fr": "transpirer"
+    },
+    {
+        "en": "sweep",
+        "fr": "balayer"
+    },
+    {
+        "en": "swing",
+        "fr": "balançoire"
+    },
+    {
+        "en": "swollen",
+        "fr": "gonflé"
+    },
+    {
+        "en": "syllable",
+        "fr": "syllabe"
+    },
+    {
+        "en": "symbol",
+        "fr": "symbole"
+    },
+    {
+        "en": "sympathetic",
+        "fr": "sympathique"
+    },
+    {
+        "en": "sympathy",
+        "fr": "sympathie"
+    },
+    {
+        "en": "symptom",
+        "fr": "symptôme"
+    },
+    {
+        "en": "tabloid",
+        "fr": "tabloïde"
+    },
+    {
+        "en": "tackle",
+        "fr": "tacle"
+    },
+    {
+        "en": "tail",
+        "fr": "queue"
+    },
+    {
+        "en": "tale",
+        "fr": "conte"
+    },
+    {
+        "en": "tan",
+        "fr": "tanné"
+    },
+    {
+        "en": "target",
+        "fr": "cible"
+    },
+    {
+        "en": "task",
+        "fr": "tâche"
+    },
+    {
+        "en": "tease",
+        "fr": "taquiner"
+    },
+    {
+        "en": "teaspoon",
+        "fr": "cuillère à café"
+    },
+    {
+        "en": "technical",
+        "fr": "technique"
+    },
+    {
+        "en": "technological",
+        "fr": "technologique"
+    },
+    {
+        "en": "telecommunications",
+        "fr": "télécommunications"
+    },
+    {
+        "en": "telescope",
+        "fr": "télescope"
+    },
+    {
+        "en": "temper",
+        "fr": "caractère"
+    },
+    {
+        "en": "temporarily",
+        "fr": "temporairement"
+    },
+    {
+        "en": "tempt",
+        "fr": "tenter"
+    },
+    {
+        "en": "temptation",
+        "fr": "tentation"
+    },
+    {
+        "en": "tend",
+        "fr": "tendre"
+    },
+    {
+        "en": "tension",
+        "fr": "tension"
+    },
+    {
+        "en": "terminal",
+        "fr": "Terminal"
+    },
+    {
+        "en": "terms",
+        "fr": "termes"
+    },
+    {
+        "en": "terrace",
+        "fr": "terrasse"
+    },
+    {
+        "en": "terrify",
+        "fr": "terrifier"
+    },
+    {
+        "en": "terrifying",
+        "fr": "terrifiant"
+    },
+    {
+        "en": "territory",
+        "fr": "territoire"
+    },
+    {
+        "en": "terror",
+        "fr": "terreur"
+    },
+    {
+        "en": "terrorism",
+        "fr": "terrorisme"
+    },
+    {
+        "en": "terrorist",
+        "fr": "terroriste"
+    },
+    {
+        "en": "theft",
+        "fr": "vol"
+    },
+    {
+        "en": "theme",
+        "fr": "thème"
+    },
+    {
+        "en": "theory",
+        "fr": "théorie"
+    },
+    {
+        "en": "therapy",
+        "fr": "thérapie"
+    },
+    {
+        "en": "thermometer",
+        "fr": "thermomètre"
+    },
+    {
+        "en": "thesis",
+        "fr": "thèse"
+    },
+    {
+        "en": "thigh",
+        "fr": "cuisse"
+    },
+    {
+        "en": "thirst",
+        "fr": "soif"
+    },
+    {
+        "en": "thorough",
+        "fr": "complet"
+    },
+    {
+        "en": "thoroughly",
+        "fr": "soigneusement"
+    },
+    {
+        "en": "thoughtful",
+        "fr": "réfléchi"
+    },
+    {
+        "en": "threat",
+        "fr": "menace"
+    },
+    {
+        "en": "threaten",
+        "fr": "menacer"
+    },
+    {
+        "en": "thrilled",
+        "fr": "content"
+    },
+    {
+        "en": "thrilling",
+        "fr": "palpitant"
+    },
+    {
+        "en": "throughout",
+        "fr": "tout au long de"
+    },
+    {
+        "en": "thus",
+        "fr": "ainsi"
+    },
+    {
+        "en": "tide",
+        "fr": "marée"
+    },
+    {
+        "en": "tighten",
+        "fr": "serrer"
+    },
+    {
+        "en": "tightly",
+        "fr": "fermement"
+    },
+    {
+        "en": "times",
+        "fr": "fois"
+    },
+    {
+        "en": "timing",
+        "fr": "timing"
+    },
+    {
+        "en": "tiredness",
+        "fr": "fatigue"
+    },
+    {
+        "en": "toenail",
+        "fr": "ongle d'orteil"
+    },
+    {
+        "en": "tolerate",
+        "fr": "tolérer"
+    },
+    {
+        "en": "tomb",
+        "fr": "tombeau"
+    },
+    {
+        "en": "ton",
+        "fr": "tonne"
+    },
+    {
+        "en": "tone",
+        "fr": "tonifier"
+    },
+    {
+        "en": "tool",
+        "fr": "outil"
+    },
+    {
+        "en": "torch",
+        "fr": "torche"
+    },
+    {
+        "en": "tornado",
+        "fr": "tornade"
+    },
+    {
+        "en": "tough",
+        "fr": "difficile"
+    },
+    {
+        "en": "toxic",
+        "fr": "toxique"
+    },
+    {
+        "en": "trace",
+        "fr": "tracer"
+    },
+    {
+        "en": "tradition",
+        "fr": "tradition"
+    },
+    {
+        "en": "traditionally",
+        "fr": "traditionnellement"
+    },
+    {
+        "en": "tragedy",
+        "fr": "tragédie"
+    },
+    {
+        "en": "tragic",
+        "fr": "tragique"
+    },
+    {
+        "en": "trail",
+        "fr": "piste"
+    },
+    {
+        "en": "transform",
+        "fr": "transformer"
+    },
+    {
+        "en": "transitive",
+        "fr": "transitif"
+    },
+    {
+        "en": "transparent",
+        "fr": "transparent"
+    },
+    {
+        "en": "trap",
+        "fr": "piège"
+    },
+    {
+        "en": "tray",
+        "fr": "plateau"
+    },
+    {
+        "en": "treasure",
+        "fr": "trésor"
+    },
+    {
+        "en": "treat",
+        "fr": "traiter"
+    },
+    {
+        "en": "treatment",
+        "fr": "traitement"
+    },
+    {
+        "en": "trekking",
+        "fr": "randonnée"
+    },
+    {
+        "en": "tremble",
+        "fr": "trembler"
+    },
+    {
+        "en": "tremendous",
+        "fr": "formidable"
+    },
+    {
+        "en": "tremendously",
+        "fr": "formidable"
+    },
+    {
+        "en": "trial",
+        "fr": "procès"
+    },
+    {
+        "en": "triangle",
+        "fr": "triangle"
+    },
+    {
+        "en": "tribe",
+        "fr": "tribu"
+    },
+    {
+        "en": "tricky",
+        "fr": "difficile"
+    },
+    {
+        "en": "trivial",
+        "fr": "banal"
+    },
+    {
+        "en": "trolley",
+        "fr": "chariot"
+    },
+    {
+        "en": "trophy",
+        "fr": "trophée"
+    },
+    {
+        "en": "tropical",
+        "fr": "tropical"
+    },
+    {
+        "en": "trunk",
+        "fr": "tronc"
+    },
+    {
+        "en": "tutor",
+        "fr": "tuteur"
+    },
+    {
+        "en": "twisted",
+        "fr": "tordu"
+    },
+    {
+        "en": "ultimate",
+        "fr": "ultime"
+    },
+    {
+        "en": "unacceptable",
+        "fr": "inacceptable"
+    },
+    {
+        "en": "unattractive",
+        "fr": "peu attrayant"
+    },
+    {
+        "en": "unavailable",
+        "fr": "indisponible"
+    },
+    {
+        "en": "unaware",
+        "fr": "ignorant"
+    },
+    {
+        "en": "unbearable",
+        "fr": "insupportable"
+    },
+    {
+        "en": "uncertain",
+        "fr": "incertain"
+    },
+    {
+        "en": "unchanged",
+        "fr": "inchangé"
+    },
+    {
+        "en": "unclear",
+        "fr": "peu clair"
+    },
+    {
+        "en": "unconscious",
+        "fr": "inconscient"
+    },
+    {
+        "en": "underestimate",
+        "fr": "sous-estimer"
+    },
+    {
+        "en": "underground2",
+        "fr": "souterrain2"
+    },
+    {
+        "en": "understandable",
+        "fr": "compréhensible"
+    },
+    {
+        "en": "understanding",
+        "fr": "compréhension"
+    },
+    {
+        "en": "underwater",
+        "fr": "sous-marin"
+    },
+    {
+        "en": "undo",
+        "fr": "défaire"
+    },
+    {
+        "en": "undoubtedly",
+        "fr": "indubitablement"
+    },
+    {
+        "en": "undressed",
+        "fr": "déshabillé"
+    },
+    {
+        "en": "uneasy",
+        "fr": "inquiet"
+    },
+    {
+        "en": "unexpectedly",
+        "fr": "de manière inattendue"
+    },
+    {
+        "en": "unfairly",
+        "fr": "injustement"
+    },
+    {
+        "en": "unfamiliar",
+        "fr": "inconnu"
+    },
+    {
+        "en": "unfashionable",
+        "fr": "démodé"
+    },
+    {
+        "en": "unfortunate",
+        "fr": "malheureux"
+    },
+    {
+        "en": "unhappiness",
+        "fr": "tristesse"
+    },
+    {
+        "en": "unhelpful",
+        "fr": "peu serviable"
+    },
+    {
+        "en": "unique",
+        "fr": "unique"
+    },
+    {
+        "en": "united",
+        "fr": "uni"
+    },
+    {
+        "en": "universal",
+        "fr": "universel"
+    },
+    {
+        "en": "unlike",
+        "fr": "contrairement �"
+    },
+    {
+        "en": "unlimited",
+        "fr": "illimité"
+    },
+    {
+        "en": "unlock",
+        "fr": "ouvrir"
+    },
+    {
+        "en": "unnatural",
+        "fr": "non naturel"
+    },
+    {
+        "en": "unpopular",
+        "fr": "impopulaire"
+    },
+    {
+        "en": "unpredictable",
+        "fr": "imprévisible"
+    },
+    {
+        "en": "unrealistic",
+        "fr": "irréaliste"
+    },
+    {
+        "en": "unreasonable",
+        "fr": "déraisonnable"
+    },
+    {
+        "en": "unreliable",
+        "fr": "peu fiable"
+    },
+    {
+        "en": "unsatisfactory",
+        "fr": "insatisfaisant"
+    },
+    {
+        "en": "unsuccessful",
+        "fr": "infructueux"
+    },
+    {
+        "en": "unsuitable",
+        "fr": "inapproprié"
+    },
+    {
+        "en": "unsure",
+        "fr": "incertain"
+    },
+    {
+        "en": "untie",
+        "fr": "délier"
+    },
+    {
+        "en": "unusually",
+        "fr": "exceptionnellement"
+    },
+    {
+        "en": "unwilling",
+        "fr": "réticent"
+    },
+    {
+        "en": "upbringing",
+        "fr": "éducation"
+    },
+    {
+        "en": "upright",
+        "fr": "droit"
+    },
+    {
+        "en": "urban",
+        "fr": "urbain"
+    },
+    {
+        "en": "vacant",
+        "fr": "vacant"
+    },
+    {
+        "en": "valid",
+        "fr": "valide"
+    },
+    {
+        "en": "vanish",
+        "fr": "disparaître"
+    },
+    {
+        "en": "variation",
+        "fr": "variation"
+    },
+    {
+        "en": "varied",
+        "fr": "varié"
+    },
+    {
+        "en": "vary",
+        "fr": "varier"
+    },
+    {
+        "en": "vast",
+        "fr": "vaste"
+    },
+    {
+        "en": "venue",
+        "fr": "lieu"
+    },
+    {
+        "en": "verse",
+        "fr": "verset"
+    },
+    {
+        "en": "version",
+        "fr": "version"
+    },
+    {
+        "en": "victim",
+        "fr": "victime"
+    },
+    {
+        "en": "victory",
+        "fr": "victoire"
+    },
+    {
+        "en": "viewer",
+        "fr": "téléspectateur"
+    },
+    {
+        "en": "vinegar",
+        "fr": "vinaigre"
+    },
+    {
+        "en": "violence",
+        "fr": "violence"
+    },
+    {
+        "en": "violent",
+        "fr": "violent"
+    },
+    {
+        "en": "violently",
+        "fr": "violemment"
+    },
+    {
+        "en": "virtual",
+        "fr": "virtuel"
+    },
+    {
+        "en": "virtually",
+        "fr": "pratiquement"
+    },
+    {
+        "en": "visible",
+        "fr": "visible"
+    },
+    {
+        "en": "vision",
+        "fr": "vision"
+    },
+    {
+        "en": "visual",
+        "fr": "visuel"
+    },
+    {
+        "en": "vital",
+        "fr": "vital"
+    },
+    {
+        "en": "vitamin",
+        "fr": "vitamine"
+    },
+    {
+        "en": "vivid",
+        "fr": "vif"
+    },
+    {
+        "en": "vividly",
+        "fr": "vivement"
+    },
+    {
+        "en": "volcano",
+        "fr": "volcan"
+    },
+    {
+        "en": "volunteer",
+        "fr": "bénévole"
+    },
+    {
+        "en": "voyage",
+        "fr": "voyage"
+    },
+    {
+        "en": "waist",
+        "fr": "taille"
+    },
+    {
+        "en": "wander",
+        "fr": "errer"
+    },
+    {
+        "en": "ward",
+        "fr": "salle"
+    },
+    {
+        "en": "warmly",
+        "fr": "chaleureusement"
+    },
+    {
+        "en": "warmth",
+        "fr": "chaleur"
+    },
+    {
+        "en": "wasp",
+        "fr": "guêpe"
+    },
+    {
+        "en": "waterproof",
+        "fr": "étanche"
+    },
+    {
+        "en": "weakness",
+        "fr": "faiblesse"
+    },
+    {
+        "en": "wealth",
+        "fr": "richesse"
+    },
+    {
+        "en": "wealthy",
+        "fr": "riche"
+    },
+    {
+        "en": "weapon",
+        "fr": "arme"
+    },
+    {
+        "en": "weird",
+        "fr": "bizarre"
+    },
+    {
+        "en": "welfare",
+        "fr": "bien-être"
+    },
+    {
+        "en": "wheat",
+        "fr": "blé"
+    },
+    {
+        "en": "whereas",
+        "fr": "alors que"
+    },
+    {
+        "en": "whichever",
+        "fr": "quel que soit"
+    },
+    {
+        "en": "whisky",
+        "fr": "whisky"
+    },
+    {
+        "en": "whisper",
+        "fr": "chuchoter"
+    },
+    {
+        "en": "whistle",
+        "fr": "siffler"
+    },
+    {
+        "en": "whoever",
+        "fr": "quiconque"
+    },
+    {
+        "en": "whom",
+        "fr": "qui"
+    },
+    {
+        "en": "widely",
+        "fr": "largement"
+    },
+    {
+        "en": "widen",
+        "fr": "élargir"
+    },
+    {
+        "en": "widow",
+        "fr": "veuve"
+    },
+    {
+        "en": "width",
+        "fr": "largeur"
+    },
+    {
+        "en": "wildly",
+        "fr": "sauvagement"
+    },
+    {
+        "en": "willingly",
+        "fr": "volontiers"
+    },
+    {
+        "en": "willingness",
+        "fr": "volonté"
+    },
+    {
+        "en": "wind2",
+        "fr": "vent2"
+    },
+    {
+        "en": "winding",
+        "fr": "enroulement"
+    },
+    {
+        "en": "wipe",
+        "fr": "essuyer"
+    },
+    {
+        "en": "wire",
+        "fr": "fil"
+    },
+    {
+        "en": "wisdom",
+        "fr": "sagesse"
+    },
+    {
+        "en": "wise",
+        "fr": "sage"
+    },
+    {
+        "en": "witness",
+        "fr": "témoin"
+    },
+    {
+        "en": "witty",
+        "fr": "spirituel"
+    },
+    {
+        "en": "wolf",
+        "fr": "loup"
+    },
+    {
+        "en": "worldwide",
+        "fr": "mondial"
+    },
+    {
+        "en": "worm",
+        "fr": "ver"
+    },
+    {
+        "en": "worrying",
+        "fr": "inquiétant"
+    },
+    {
+        "en": "worthwhile",
+        "fr": "valable"
+    },
+    {
+        "en": "wound",
+        "fr": "blesser"
+    },
+    {
+        "en": "wrist",
+        "fr": "poignet"
+    },
+    {
+        "en": "wrongly",
+        "fr": "à tort"
+    },
+    {
+        "en": "yacht",
+        "fr": "yacht"
+    },
+    {
+        "en": "yawn",
+        "fr": "bâillement"
+    },
+    {
+        "en": "yell",
+        "fr": "crier"
+    },
+    {
+        "en": "zebra",
+        "fr": "zèbre"
+    },
+    {
+        "en": "zip",
+        "fr": "fermeture éclair"
+    }
+]
