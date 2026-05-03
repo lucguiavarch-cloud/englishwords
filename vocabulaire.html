@@ -261,10 +261,11 @@
         </p>
     </div>
 
-    <div id="wordModal" class="modal">
-        <div class="modal-content">
-            <h2>Ajouter de nouveaux mots</h2>
+    <div id="wordModal" class="modal modal--add-words">
+        <div class="modal-content modal-content--add-words">
+            <h2 class="modal-add-words-title">Ajouter de nouveaux mots</h2>
 
+            <div class="modal-add-words-scroll">
             <div class="presets-box presets-box--full">
                 <p class="presets-box-heading">📥 Packs complets (cumulatifs)</p>
                 <p class="presets-box-lead">Chaque niveau inclut <strong>tous</strong> les mots des niveaux précédents. Idéal pour repartir d’une liste complète ou découvrir un niveau de zéro.</p>
@@ -311,8 +312,9 @@
 
             <p class="modal-format-hint">Format : <b>Anglais, Français</b> — optionnel après la ligne : <b>|||</b> puis une précision (affichée sous le mot pendant le quiz).</p>
             <textarea id="bulk-input" placeholder="Exemple:&#10;Apple, Pomme&#10;House, Maison"></textarea>
+            </div>
 
-            <div class="modal-buttons modal-actions">
+            <div class="modal-buttons modal-actions modal-add-words-footer">
                 <button id="btn-modal-valid" class="bg-success">✅ Valider</button>
                 <button id="btn-modal-close" class="bg-danger">Annuler</button>
             </div>

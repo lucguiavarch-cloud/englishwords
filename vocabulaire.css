@@ -1228,6 +1228,55 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
 
 .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: var(--overlay-modal); }
 
+/* Modale « ajouter des mots » : centrée, scroll interne, boutons toujours visibles */
+.modal.modal--add-words {
+    align-items: safe center;
+    justify-content: safe center;
+    padding: 12px;
+    padding-bottom: max(12px, env(safe-area-inset-bottom, 0px));
+    box-sizing: border-box;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+}
+
+.modal-content.modal-content--add-words {
+    margin: 0;
+    width: min(500px, calc(100% - 8px));
+    max-height: min(92vh, calc(100dvh - 24px));
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.modal-add-words-title {
+    flex-shrink: 0;
+    margin: 0 0 12px;
+    font-size: 1.15rem;
+}
+
+.modal-add-words-scroll {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    text-align: center;
+    padding-right: 2px;
+}
+
+.modal-add-words-footer {
+    flex-shrink: 0;
+    margin-top: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-main);
+    background: var(--bg-card);
+    position: relative;
+    z-index: 2;
+}
+
 .modal-content { 
     background-color: var(--bg-card); color: var(--text-card);
     margin: 10% auto; padding: 20px; border-radius: var(--radius-container); width: 80%; 
@@ -1251,10 +1300,15 @@ button:hover { opacity: 0.8; transform: translateY(-1px); }
 .btn-preset:active { transform: translateY(0); }
 
 #bulk-input {
-    width: 100%; min-height: 120px; border-radius: var(--radius-btn);
+    width: 100%; min-height: 100px; border-radius: var(--radius-btn);
     background: var(--bg-card); color: var(--text-card);
     border: 1px solid var(--border-main); padding: 10px;
     font-family: monospace; resize: vertical;
+    box-sizing: border-box;
+}
+
+.modal-content--add-words #bulk-input {
+    max-height: min(200px, 30vh);
 }
 
 .modal-content--wide { max-width: 600px; }

@@ -1073,7 +1073,7 @@ function useHint() {
 function openModal() {
     const m = document.getElementById('wordModal');
     const area = document.getElementById('bulk-input');
-    if (m) m.style.display = "block";
+    if (m) m.style.display = "flex";
     if (area) area.focus();
 }
 function closeModal() {
