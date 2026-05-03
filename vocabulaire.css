@@ -18,6 +18,18 @@
     --objective-mint: #00ffc8;
     --objective-mint-soft: #2ee8a8;
     --objective-ring-track: color-mix(in srgb, var(--text-main) 22%, transparent);
+    /* Anneau + texte central « maîtrise » (lié au thème / skins) */
+    --mastery-ring-a: var(--accent);
+    --mastery-ring-b: var(--gold);
+    --mastery-ring-c: color-mix(in srgb, var(--gold) 50%, #ffffff);
+    /* Texte donut maîtrise : lisible sur --bg-card (thème clair) */
+    --mastery-center-num: color-mix(in srgb, var(--gold) 58%, var(--text-main) 42%);
+    --mastery-center-suffix: var(--mastery-center-num);
+    --mastery-label: color-mix(in srgb, var(--text-muted) 82%, var(--text-main) 18%);
+    --mastery-pct-text-shadow:
+        0 0 6px color-mix(in srgb, var(--gold) 22%, transparent),
+        0 1px 0 rgba(255, 255, 255, 0.92);
+    --mastery-delta-neutral: var(--text-muted);
 
     /* 🧱 Couleurs de fond (Thème Clair par défaut) */
     --bg-main: #f4f7f6;        /* Fond de la page (gris très clair) */
@@ -71,7 +83,16 @@ body.skin-dark {
     --glass-light: rgba(255, 255, 255, 0.05); 
     --glass-medium: rgba(0, 0, 0, 0.3);       
     --shadow-main: rgba(0, 0, 0, 0.4);        
-    --overlay-modal: rgba(0, 0, 0, 0.8);      
+    --overlay-modal: rgba(0, 0, 0, 0.8);
+
+    --mastery-ring-c: color-mix(in srgb, var(--gold) 55%, color-mix(in srgb, var(--primary) 40%, #ffffff));
+    --mastery-center-num: color-mix(in srgb, var(--gold) 82%, #ffffff 18%);
+    --mastery-center-suffix: var(--mastery-center-num);
+    --mastery-label: color-mix(in srgb, var(--text-muted) 55%, #e8eef8 45%);
+    --mastery-pct-text-shadow:
+        0 0 10px color-mix(in srgb, var(--gold) 40%, transparent),
+        0 1px 3px rgba(0, 0, 0, 0.82);
+    --mastery-delta-neutral: color-mix(in srgb, var(--text-muted) 72%, #ffffff 28%);
 }
 
 
@@ -275,90 +296,130 @@ body {
     }
 }
 
-/* Maîtrise : bandeau ultra-compact (clavier / colonne étroite) */
+/* Maîtrise : donut sur fond carte (pas de bandeau sombre), centré comme la grille des niveaux */
 .mastery-total-card {
     margin-top: 0;
-    padding: 4px 6px 5px;
-    border-radius: 12px;
-    background: var(--bg-dark);
-    border: 1px solid var(--glass-medium);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    padding: 6px 12px 8px;
+    border-radius: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
 }
 
 .mastery-total-strip {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 6px;
+    justify-content: center;
     flex-wrap: nowrap;
+    min-height: 38px;
+    box-sizing: border-box;
 }
 
-.mastery-total-kicker {
+.mastery-donut {
+    position: relative;
+    width: 32px;
+    height: 32px;
     flex: 0 0 auto;
-    font-size: 7px;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--text-light);
-    opacity: 0.85;
+}
+
+.mastery-donut-svg {
+    position: absolute;
+    inset: 0;
+    width: 32px;
+    height: 32px;
+    transform: rotate(-90deg);
+    filter: drop-shadow(0 0 3px color-mix(in srgb, var(--mastery-ring-b) 38%, transparent));
+}
+
+.mastery-ring-track {
+    fill: none;
+    stroke: var(--objective-ring-track);
+    stroke-width: 2.35;
+    opacity: 0.9;
+}
+
+.mastery-ring-fill {
+    transition: stroke-dashoffset 0.45s cubic-bezier(0.2, 0.85, 0.2, 1);
+}
+
+.mastery-donut-core {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    pointer-events: none;
+    z-index: 1;
+    font-family: var(--font-main);
+    text-align: center;
     line-height: 1;
-    max-width: 4.2em;
+    /* Centrage optique (anneau SVG légèrement désaxé par le stroke) */
+    transform: translateY(-0.5px);
 }
 
-.mastery-total-pct-wrap {
-    flex: 0 0 auto;
+/* Comme les objectifs : valeur forte au centre (équivalent « icône »), libellé dessous */
+.mastery-donut-pct {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0;
     line-height: 1;
     white-space: nowrap;
 }
 
-.mastery-total-number {
-    font-size: 17px;
-    font-weight: 800;
-    font-variant-numeric: tabular-nums;
-    color: var(--gold);
-    text-shadow: 0 0 8px color-mix(in srgb, var(--gold) 28%, transparent);
-}
-
-.mastery-total-suffix {
+.mastery-donut-pct-num {
     font-size: 11px;
     font-weight: 800;
-    color: var(--gold);
-    margin-left: 0;
-    opacity: 0.92;
+    font-variant-numeric: tabular-nums;
+    color: var(--mastery-center-num);
+    letter-spacing: -0.03em;
+    text-shadow: var(--mastery-pct-text-shadow);
 }
 
-.mastery-total-bar {
-    flex: 1 1 auto;
-    min-width: 28px;
-    height: 3px;
-    border-radius: 999px;
-    background: rgba(0, 0, 0, 0.35);
-    overflow: hidden;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.35);
+.mastery-donut-pct-suffix {
+    font-size: 8px;
+    font-weight: 800;
+    color: var(--mastery-center-suffix);
+    opacity: 0.95;
+    margin-left: 0.5px;
+    text-shadow: var(--mastery-pct-text-shadow);
 }
 
-.mastery-total-fill {
-    height: 100%;
-    width: 0%;
-    border-radius: 999px;
-    background: linear-gradient(90deg, var(--accent), var(--gold) 60%, #fff8dc);
-    box-shadow: 0 0 6px color-mix(in srgb, var(--gold) 35%, transparent);
-    transition: width 0.45s cubic-bezier(0.2, 0.85, 0.2, 1);
+.mastery-donut-label {
+    font-size: 5.5px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--mastery-label);
+    line-height: 1.05;
+    max-width: 94%;
+    text-align: center;
 }
 
 .mastery-total-delta {
-    flex: 0 0 auto;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
     margin: 0;
     padding: 0;
     font-size: 8px;
-    line-height: 1;
+    line-height: 1.1;
     font-weight: 700;
     font-variant-numeric: tabular-nums;
-    color: var(--text-light);
-    opacity: 0.8;
+    color: var(--mastery-delta-neutral, var(--text-muted));
+    opacity: 0.92;
     white-space: nowrap;
-    min-width: 1.5em;
+    min-width: 0;
     text-align: right;
+    max-width: 38%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .mastery-total-delta.is-up {
@@ -372,7 +433,8 @@ body {
 }
 
 .mastery-total-delta.is-neutral {
-    opacity: 0.55;
+    color: var(--mastery-delta-neutral, var(--text-muted));
+    opacity: 0.62;
     font-weight: 600;
 }
 
@@ -754,13 +816,17 @@ body {
 
 .levels-grid { 
     display: grid; grid-template-columns: repeat(4, 1fr); 
-    gap: 8px; background: var(--bg-dark); padding: 12px 12px 8px; border-radius: 15px 15px 0 0; 
+    gap: 8px; background: var(--bg-dark); padding: 12px; border-radius: 15px; 
+}
+
+.levels-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .levels-grid + .mastery-total-card {
-    margin-top: 0;
-    border-radius: 0 0 15px 15px;
-    border-top: 1px solid var(--glass-medium);
+    margin-top: 10px;
 }
 
 .level-box { 
@@ -1720,6 +1786,15 @@ body.skin-american {
     --shadow-main: rgba(0, 0, 0, 0.12);
 
     --font-main: 'Arial Rounded MT Bold', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    --mastery-ring-c: color-mix(in srgb, var(--gold) 48%, #ffffff);
+    --mastery-center-num: color-mix(in srgb, var(--gold) 52%, var(--text-main) 48%);
+    --mastery-center-suffix: var(--mastery-center-num);
+    --mastery-label: color-mix(in srgb, var(--text-muted) 68%, var(--text-main) 32%);
+    --mastery-pct-text-shadow:
+        0 0 5px color-mix(in srgb, var(--accent) 18%, transparent),
+        0 1px 0 rgba(255, 255, 255, 0.98);
+    --mastery-delta-neutral: color-mix(in srgb, var(--text-muted) 88%, var(--text-main) 12%);
 }
 
 /* 💅 BARBIECORE (Plastique & Rose) */
@@ -1751,6 +1826,14 @@ body.skin-barbie {
     --shadow-main: rgba(0, 0, 0, 0.14);
 
     --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    --mastery-center-num: color-mix(in srgb, var(--text-card) 48%, color-mix(in srgb, var(--gold) 62%, #7c2d12 38%));
+    --mastery-center-suffix: var(--mastery-center-num);
+    --mastery-label: color-mix(in srgb, var(--text-muted) 58%, var(--text-card) 42%);
+    --mastery-pct-text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.95),
+        0 1px 0 rgba(255, 255, 255, 0.98);
+    --mastery-delta-neutral: var(--text-muted);
 }
 
 /* 👾 RETRO ARCADE */
@@ -1782,7 +1865,32 @@ body.skin-arcade {
     --shadow-main: rgba(0, 0, 0, 0.55);
 
     --font-main: 'Press Start 2P', cursive;
-}/* =========================================
+
+    --mastery-ring-a: var(--accent);
+    --mastery-ring-b: var(--gold);
+    --mastery-ring-c: color-mix(in srgb, var(--success) 38%, var(--gold));
+    --mastery-center-num: #f4ff8a;
+    --mastery-center-suffix: var(--gold);
+    --mastery-label: rgba(235, 245, 255, 0.9);
+    --mastery-pct-text-shadow:
+        0 0 8px color-mix(in srgb, var(--accent) 55%, transparent),
+        0 0 3px rgba(0, 0, 0, 0.95),
+        2px 2px 0 rgba(0, 0, 0, 0.92);
+    --mastery-delta-neutral: rgba(220, 235, 255, 0.78);
+}
+
+/* Arcade : libellé lisible (pixel font trop large pour « Progression ») */
+body.skin-arcade .mastery-donut-label {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 5px;
+    letter-spacing: 0.05em;
+}
+
+body.skin-arcade .mastery-donut-pct-num {
+    letter-spacing: -0.06em;
+}
+
+/* =========================================
    📱 INTERFACE MOBILE : DOUBLE COLONNE
    ========================================= */
 @media (max-width: 600px) {
@@ -2104,50 +2212,44 @@ body.skin-arcade {
     .level-label { font-size: 9px; font-weight: bold; color: var(--text-muted); }
 
     .levels-grid + .mastery-total-card {
-        margin-top: 4px;
-        border-radius: 8px;
-        padding: 3px 4px 4px;
+        margin-top: 6px;
+        padding: 4px 8px 6px;
     }
 
-    /* Colonne ~55px : grille 2 lignes, hauteur minimale pour le clavier */
     .mastery-total-strip {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        grid-template-rows: auto auto auto;
-        gap: 2px 2px;
-        align-items: center;
+        min-height: 34px;
     }
 
-    .mastery-total-kicker {
-        grid-column: 1;
-        font-size: 6px;
-        max-width: none;
+    .mastery-donut {
+        width: 28px;
+        height: 28px;
     }
 
-    .mastery-total-pct-wrap {
-        grid-column: 2;
-        justify-self: end;
+    .mastery-donut-svg {
+        width: 28px;
+        height: 28px;
     }
 
-    .mastery-total-number {
-        font-size: 13px;
+    .mastery-donut-pct-num {
+        font-size: 10px;
     }
 
-    .mastery-total-suffix {
-        font-size: 9px;
+    .mastery-donut-pct-suffix {
+        font-size: 7px;
     }
 
-    .mastery-total-bar {
-        grid-column: 1 / -1;
-        min-width: 0;
-        height: 2px;
+    .mastery-donut-label {
+        font-size: 4.5px;
+        letter-spacing: 0.05em;
+    }
+
+    body.skin-arcade .mastery-donut-label {
+        font-size: 4px;
     }
 
     .mastery-total-delta {
-        grid-column: 1 / -1;
-        text-align: center;
         font-size: 7px;
-        min-width: 0;
+        line-height: 1.05;
     }
 
     /* 🛠️ ADMIN EN BAS */

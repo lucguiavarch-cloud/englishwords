@@ -534,8 +534,10 @@ function updateUI() {
 
     // ✅ Maîtrise totale (objectif ultime) + progression sur la journée
     const elMasteryPct = document.getElementById('elMasteryPct');
-    const elMasteryFill = document.getElementById('elMasteryFill');
+    const elMasteryRing = document.getElementById('mastery-ring-fill');
     const elMasteryDelta = document.getElementById('elMasteryDelta');
+    const MASTERY_RING_R = 12.75;
+    const MASTERY_RING_C = 2 * Math.PI * MASTERY_RING_R;
     const totalWords = dictionary.length;
     const weightedPercent = getWeightedMasteryPercent();
     const todayStr = new Date().toDateString();
@@ -552,7 +554,11 @@ function updateUI() {
     const dayDelta = weightedPercent - baseline;
 
     if (elMasteryPct) elMasteryPct.textContent = String(weightedPercent);
-    if (elMasteryFill) elMasteryFill.style.width = Math.min(100, Math.max(0, weightedPercent)) + '%';
+    if (elMasteryRing) {
+        const p = Math.min(1, Math.max(0, weightedPercent / 100));
+        elMasteryRing.style.strokeDasharray = String(MASTERY_RING_C);
+        elMasteryRing.style.strokeDashoffset = String(MASTERY_RING_C * (1 - p));
+    }
 
     if (elMasteryDelta) {
         elMasteryDelta.className = 'mastery-total-delta';
