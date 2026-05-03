@@ -124,13 +124,21 @@ const gameBadges = [
   { id: 'c5', type: 'combo', target: 5, icon: '🥈', name: 'Combo x5', desc: '5 mots de suite' },
   { id: 'c10', type: 'combo', target: 10, icon: '🥇️', name: 'Combo x10', desc: '10 mots de suite' },
   { id: 'c20', type: 'combo', target: 20, icon: '🏆', name: 'Combo x20', desc: '20 mots de suite' },
+  { id: 'c30', type: 'combo', target: 30, icon: '💎', name: 'Combo x30', desc: '30 mots de suite' },
+  { id: 'c50', type: 'combo', target: 50, icon: '👑', name: 'Combo x50', desc: '50 mots de suite' },
+  { id: 'c75', type: 'combo', target: 75, icon: '🌟', name: 'Combo x75', desc: '75 mots de suite' },
+  { id: 'c100', type: 'combo', target: 100, icon: '🚀', name: 'Combo x100', desc: '100 mots de suite' },
 
   // Catégorie : Total de mots justes
   { id: 'w5', type: 'words', target: 5, icon: '🥚', name: '5 mots justes', desc: '5 mots justes' },
   { id: 'w10', type: 'words', target: 10, icon: '🐣', name: '10 mots justes', desc: '10 mots justes' },
   { id: 'w30', type: 'words', target: 30, icon: '🐥', name: '30 mots justes', desc: '30 mots justes' },
   { id: 'w50', type: 'words', target: 50, icon: '🐓', name: '50 mots justes', desc: '50 mots justes' },
-  { id: 'w100', type: 'words', target: 100, icon: '🦖', name: '100 mots justes', desc: '100 mots justes' }
+  { id: 'w100', type: 'words', target: 100, icon: '🦖', name: '100 mots justes', desc: '100 mots justes' },
+  { id: 'w150', type: 'words', target: 150, icon: '🦅', name: '150 mots justes', desc: '150 mots justes' },
+  { id: 'w200', type: 'words', target: 200, icon: '🐉', name: '200 mots justes', desc: '200 mots justes' },
+  { id: 'w300', type: 'words', target: 300, icon: '🦄', name: '300 mots justes', desc: '300 mots justes' },
+  { id: 'w500', type: 'words', target: 500, icon: '🌋', name: '500 mots justes', desc: '500 mots justes' }
 ];
 
 /** Symboles + libellés des boîtes de niveau (grille + modale détail). */
