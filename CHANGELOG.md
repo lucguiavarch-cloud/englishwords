@@ -1,5 +1,29 @@
 # Changelog
 
+## v4.10 — 03/05/2026
+
+### Vocabulaire — packs CECRL cumulatifs vs nouveautés
+- **Données** : les JSON **`data/A1.json` … `C2.json`** restent **cumulatifs**. Nouveau jeu **`data/delta/`** : mots **exclusifs** au palier, dédoublonnés sur le couple **`en` + `fr`** (trim) par rapport au cumul **précédent** (A1 → A2 → B1 → B2 → C1 → C2).
+- **Régénération** : `node scripts/build-vocab-deltas.mjs`.
+- **Modale « Ajouter des mots »** : section **packs complets** + section **nouveautés seulement** (ex. déjà B1 → bouton **B2 · sans les mots B1** = `loadPreset('delta/B2')`). Onboarding vocabulaire : phrase d’aide alignée.
+
+### Objectifs / badges
+- Paliers combo **×30, ×50, ×75, ×100** et mots justes **150, 200, 300, 500**.
+- **Reload dans la journée** : plus de rafale de textes flottants (`floatUp`) pour les badges déjà débloqués — `lastUnlockedBadgeIds` initialisé via **`collectUnlockedBadgeIds(maxCombo, dailyTotal)`** après le reset journalier.
+
+### Maîtrise (colonne droite)
+- Jauge **donut SVG** (comme les objectifs) : **%** au centre + libellé **Progression**, delta du jour à côté. Plus de bandeau sombre sous la grille : le cercle se pose sur **`--bg-card`**.
+- Couleurs / ombres du texte via variables **`--mastery-*`** par skin (clair, Grimoire, Diner, Barbie, Arcade) pour rester lisible.
+
+### Indices
+- **Un indice par mot** : les clics suivants ne décrémentent plus le stock ; bouton désactivé jusqu’à la **prochaine question**.
+
+### Modale d’ajout (mobile / desktop)
+- Overlay **flex**, zone packs + textarea **défilante**, pied **Valider / Annuler** toujours visible (`display: flex` à l’ouverture).
+
+### Juron Box (suite v4.9)
+- TTS : **pitch / rate** aléatoires (`JURON_VOICE_PROFILES`) ; modale / grille plus compacte ; bouton Fermer ; **jeu de jurons élargi**.
+
 ## v4.9 — 02/05/2026
 
 ### Refactor & qualité — Vocabulaire (`vocabulaire.html` / `.css` / `.js`)
