@@ -896,7 +896,12 @@ function handleAnswer() {
         playSuccessSound(sessionCombo);
 
         const oldLevel = currentWord.level;
-        currentWord.level = Math.min(currentWord.level + 1, 7);
+        // Mot nouveau : 1re réussite parfaite → légendaire (5) ; « presque » → rare (3)
+        if (oldLevel === 0) {
+            currentWord.level = distance === 0 ? 5 : 3;
+        } else {
+            currentWord.level = Math.min(currentWord.level + 1, 7);
+        }
         currentWord.isFailed = false;
 		
 		if (oldLevel !== currentWord.level) {
