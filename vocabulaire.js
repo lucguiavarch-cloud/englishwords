@@ -45,7 +45,6 @@ const defaultStats = {
   owner: "Session Locale",
   xp: 0,
   playerLevel: 1,
-  shields: 3,
   hints: 5,
   currentTheme: 'skin-dark',
   streakDays: 1,
@@ -64,8 +63,7 @@ let stats = { ...defaultStats, ...savedStats };
 
 stats.xp = parseInt(stats.xp) || 0;
 stats.playerLevel = parseInt(stats.playerLevel) || 1;
-stats.shields = parseInt(stats.shields);
-if (isNaN(stats.shields)) stats.shields = 3;
+delete stats.shields;
 stats.hints = parseInt(stats.hints);
 if (isNaN(stats.hints)) stats.hints = 5;
 stats.streakDays = parseInt(stats.streakDays);
@@ -91,7 +89,6 @@ const JURON_MILESTONE = 50;
 
 let celebrationQueue = [];
 let isCelebrationRunning = false;
-let isShieldArmed = false;
 /** Un seul indice par mot : pas de double consommation avant la prochaine question. */
 let hintConsumedForCurrentWord = false;
 let currentWord = null;
@@ -303,9 +300,6 @@ document.addEventListener('DOMContentLoaded', () => {
       modalLevelDetails.style.display = 'none';
     });
   }
-
-  const btnShield = document.getElementById('btn-shield');
-  if (btnShield) btnShield.addEventListener('click', toggleShield);
 
   const btnHint = document.getElementById('btn-hint');
   if (btnHint) btnHint.addEventListener('click', useHint);
@@ -691,9 +685,22 @@ if (elXpText) {
 
     const elHint = document.getElementById('count-hint');
     if (elHint) elHint.innerText = stats.hints;
-    const elShield = document.getElementById('count-shield');
-    if (elShield) elShield.innerText = stats.shields;
     syncHintButton();
+}
+
+/** Ajoute n indices et affiche un +n flottant sur le bouton Indice. */
+function grantHints(n) {
+    const amount = parseInt(n, 10);
+    if (!amount || amount < 1) return;
+    stats.hints += amount;
+    const hintBtn = document.getElementById('btn-hint');
+    if (hintBtn) {
+        spawnFloatingTextFromElement(
+            hintBtn,
+            amount === 1 ? '+1' : `+${amount}`,
+            'var(--text-light)'
+        );
+    }
 }
 
 function syncHintButton() {
@@ -867,10 +874,8 @@ function handleAnswer() {
         stats.dailyGoalProgress++;
         if (stats.dailyGoalProgress === 20) {
             addXP(100);
-            stats.shields++;
-            triggerCelebration('focus', '⚡', 'OBJECTIF ATTEINT', 'Bilan du jour : +100 XP et +1 Bouclier !');
-            const shieldBtn = document.getElementById('btn-shield');
-            if (shieldBtn) spawnFloatingTextFromElement(shieldBtn, '+1', 'var(--text-light)');
+            grantHints(1);
+            triggerCelebration('focus', '⚡', 'OBJECTIF ATTEINT', 'Bilan du jour : +100 XP et +1 Indice !');
         }
         if (stats.dailyTotal % JURON_MILESTONE === 0 && stats.dailyTotal !== 0) {
             tryUnlockRandomJuron();
@@ -886,9 +891,8 @@ function handleAnswer() {
         
         if (sessionCombo % 10 === 0 && sessionCombo !== 0) { 
             addXP(25); 
-            stats.shields++; 
-            triggerCelebration('badge', '🛡️', `COMBO ${sessionCombo} : BOUCLIER !`);
-            spawnFloatingTextFromElement(document.getElementById('btn-shield'), '+1', 'var(--text-light)');
+            grantHints(1);
+            triggerCelebration('badge', '💡', `COMBO ${sessionCombo} : +1 INDICE !`);
         }
 
         if (sessionCombo > stats.maxCombo) stats.maxCombo = sessionCombo;
@@ -935,66 +939,33 @@ function handleAnswer() {
         currentWord.nextReview = d.toISOString();
         
     } else {
-        if (isShieldArmed && stats.shields > 0) {
-            stats.shields--;
-            isShieldArmed = false; 
-            
-            const btn = document.getElementById('btn-shield');
-            if(btn) {
-                btn.style.boxShadow = "none";
-                btn.style.border = "none";
-                btn.innerHTML = `🛡️ Bouclier (<span id="count-shield">${stats.shields}</span>)`;
-            }
-            
-            box.classList.add('shake');
-            playErrorSound();
-            const expectedShield = formatExpectedEnglishAnswers(dictionary, frKey).join(' · ');
-            speak(currentWord.en);
+        sessionCombo = 0;
+        playErrorSound();
 
-            fb.innerHTML = `
-                <div style="font-size: 11px; color: var(--primary); margin-bottom: 5px; font-weight: bold;">🛡️ BOUCLIER UTILISÉ</div>
-                <span style="color:var(--danger)">${expectedShield}</span>
-            `;
-            
-            const oldLevel = currentWord.level;
-            currentWord.level = Math.max(0, currentWord.level - 1);
-            currentWord.isFailed = true;
-            if (currentWord.level !== oldLevel) pendingLevelFlash = currentWord.level;
-            let d = new Date();
-            d.setDate(d.getDate() + 1); 
-            currentWord.nextReview = d.toISOString();
-
-            setTimeout(() => box.classList.remove('shake'), 400);
-
-        } else {
-            sessionCombo = 0;
-            playErrorSound();
-
-            updateBadgeSystem(sessionCombo, stats.maxCombo, stats.dailyTotal);
-            const comboCounter = document.querySelector('#objective-slots .objective-counter[data-objective-type="combo"]');
-            if (comboCounter) {
-                comboCounter.classList.remove('counter-reset-shake');
-                void comboCounter.offsetWidth;
-                comboCounter.classList.add('counter-reset-shake');
-                comboCounter.addEventListener('animationend', () => comboCounter.classList.remove('counter-reset-shake'), { once: true });
-            }
-
-            box.classList.add('shake');
-            const expectedWrong = formatExpectedEnglishAnswers(dictionary, frKey).join(' · ');
-            fb.innerHTML = `<span style="color:var(--danger)">${expectedWrong}</span>`;
-            speak(currentWord.en);
-
-            const oldLevel = currentWord.level;
-            currentWord.level = Math.max(0, currentWord.level - 1);
-            currentWord.isFailed = true;
-            if (currentWord.level !== oldLevel) pendingLevelFlash = currentWord.level;
-
-            let d = new Date();
-            d.setDate(d.getDate() + 1); 
-            currentWord.nextReview = d.toISOString();
-
-            setTimeout(() => box.classList.remove('shake'), 400);
+        updateBadgeSystem(sessionCombo, stats.maxCombo, stats.dailyTotal);
+        const comboCounter = document.querySelector('#objective-slots .objective-counter[data-objective-type="combo"]');
+        if (comboCounter) {
+            comboCounter.classList.remove('counter-reset-shake');
+            void comboCounter.offsetWidth;
+            comboCounter.classList.add('counter-reset-shake');
+            comboCounter.addEventListener('animationend', () => comboCounter.classList.remove('counter-reset-shake'), { once: true });
         }
+
+        box.classList.add('shake');
+        const expectedWrong = formatExpectedEnglishAnswers(dictionary, frKey).join(' · ');
+        fb.innerHTML = `<span style="color:var(--danger)">${expectedWrong}</span>`;
+        speak(currentWord.en);
+
+        const oldLevel = currentWord.level;
+        currentWord.level = Math.max(0, currentWord.level - 1);
+        currentWord.isFailed = true;
+        if (currentWord.level !== oldLevel) pendingLevelFlash = currentWord.level;
+
+        let d = new Date();
+        d.setDate(d.getDate() + 1); 
+        currentWord.nextReview = d.toISOString();
+
+        setTimeout(() => box.classList.remove('shake'), 400);
     }
 
     save();
@@ -1015,39 +986,11 @@ function addXP(amount) {
         stats.xp -= xpRequired;
         stats.playerLevel++;
         
-        stats.shields++;  
-        stats.hints += 3; 
+        grantHints(4);
 
         triggerCelebration('badge', '✨', `NIVEAU ${stats.playerLevel} !`);
-        setTimeout(() => triggerCelebration('badge', '🛡️', "BOUCLIER OBTENU !"), 3500); 
-        spawnFloatingTextFromElement(document.getElementById('btn-shield'), '+1', 'var(--text-light)');
     }
     save();
-}
-
-function toggleShield() {
-    const btn = document.getElementById('btn-shield');
-    const input = document.getElementById('user-input');
-    if (stats.shields > 0) {
-        isShieldArmed = !isShieldArmed;
-        
-        if (btn) {
-            if (isShieldArmed) {
-                btn.style.boxShadow = "0 0 15px var(--primary)";
-                btn.style.border = "2px solid white";
-                btn.innerHTML = `🛡️ ARMÉ ! (<span id="count-shield">${stats.shields}</span>)`;
-            } else {
-                btn.style.boxShadow = "none";
-                btn.style.border = "none";
-                btn.innerHTML = `🛡️ Bouclier (<span id="count-shield">${stats.shields}</span>)`;
-            }
-        }
-        updateUI();
-        if (input) input.focus();
-    } else {
-        alert("Vous n'avez plus de boucliers en réserve !");
-        if (input) input.focus();
-    }
 }
 
 function useHint() {
@@ -1133,7 +1076,6 @@ function exportJSON() {
         owner: stats.owner,
         xp: isNaN(parseInt(stats.xp)) ? 0 : parseInt(stats.xp),
         playerLevel: isNaN(parseInt(stats.playerLevel)) ? 1 : parseInt(stats.playerLevel),
-        shields: isNaN(parseInt(stats.shields)) ? 3 : parseInt(stats.shields),
         hints: isNaN(parseInt(stats.hints)) ? 5 : parseInt(stats.hints),
         currentTheme: stats.currentTheme || 'skin-dark',
         streakDays: isNaN(parseInt(stats.streakDays)) ? 1 : Math.max(1, parseInt(stats.streakDays)),
@@ -1186,8 +1128,7 @@ function importJSON(e) {
                 stats = { ...stats, ...(data.progression || {}) };
                 stats.xp = parseInt(stats.xp) || 0;
                 stats.playerLevel = parseInt(stats.playerLevel) || 1;
-                stats.shields = parseInt(stats.shields);
-                if (isNaN(stats.shields)) stats.shields = 3;
+                delete stats.shields;
                 stats.hints = parseInt(stats.hints);
                 if (isNaN(stats.hints)) stats.hints = 5;
                 stats.dailyGoalProgress = parseInt(stats.dailyGoalProgress, 10);
@@ -1246,7 +1187,7 @@ function resetAll() {
     const msg1 =
         "Réinitialisation complète\n\n" +
         "Seront effacés sur cet appareil : ton dictionnaire et les mots appris / maîtrisés, toute la progression " +
-        "(XP, niveau, flammes, combos, série), les badges et le Grimoire, les préférences (thème, chrono, indices, boucliers…), " +
+        "(XP, niveau, flammes, combos, série), les badges et le Grimoire, les préférences (thème, chrono, indices…), " +
         "ainsi que les autres données enregistrées pour ce site (par ex. les verbes irréguliers).\n\n" +
         "Il est fortement recommandé d’exporter ta session avec « Sauvegarder » avant de continuer.\n\n" +
         "Voulez-vous poursuivre ?";
@@ -1370,7 +1311,7 @@ function spawnFloatingTextFromElement(anchorEl, text, color) {
     if (!anchorEl) return;
     const rect = anchorEl.getBoundingClientRect();
     const floatEl = document.createElement('div');
-    floatEl.className = 'floating-text shield-plus';
+    floatEl.className = 'floating-text hint-plus';
     floatEl.innerText = text;
     floatEl.style.color = color || 'var(--gold)';
     floatEl.style.left = `${rect.left + rect.width / 2 + window.scrollX}px`;
