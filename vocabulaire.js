@@ -978,10 +978,6 @@ function handleAnswer() {
         
         // Mettre à jour les statistiques de succès
         currentWord.successCount = (currentWord.successCount || 0) + 1;
-        
-        // Mettre à jour l'intervalle personnalisé
-        const intervals = [0, 1, 3, 5, 7, 15, 30, 90];
-        currentWord.interval = intervals[currentWord.level];
 		
 		if (oldLevel !== currentWord.level) {
             if (currentWord.level === 7) {
