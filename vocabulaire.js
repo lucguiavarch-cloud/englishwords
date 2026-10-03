@@ -114,6 +114,56 @@ let pendingMasterFireworks = false;
 // (supprimé) flash dans la modale grimoire: on flashe seulement dans la badges-section
 
 /* =========================================================
+   PHASE 1 : COLLECTE DE DONNÉES (sans changer l'algorithme)
+   ========================================================= */
+
+/** Timestamp du début de la réponse pour mesurer le temps de réaction */
+let responseStartTime = null;
+
+/** Matrice de confusion pour détecter les mots confondus */
+const confusionMatrix = {};
+
+/** Initialiser les métadonnées de tracking pour un mot */
+function initWordTracking(word) {
+    if (!word.successCount) word.successCount = 0;
+    if (!word.failCount) word.failCount = 0;
+    if (!word.avgResponseTime) word.avgResponseTime = 0;
+    if (!word.totalResponseTime) word.totalResponseTime = 0;
+    if (!word.responseCount) word.responseCount = 0;
+    if (!word.difficulty) word.difficulty = 2.5; // Difficulté moyenne (0-5)
+    if (!word.interval) word.interval = 1;
+    return word;
+}
+
+/** Mettre à jour les statistiques de temps de réponse */
+function updateResponseTimeStats(word, responseTimeMs) {
+    word.responseCount = (word.responseCount || 0) + 1;
+    word.totalResponseTime = (word.totalResponseTime || 0) + responseTimeMs;
+    word.avgResponseTime = Math.round(word.totalResponseTime / word.responseCount);
+    
+    // Calculer la difficulté basée sur le temps (0-5)
+    // <3s = très facile (5), 3-8s = moyen (3), >8s = difficile (1)
+    let timeBasedDifficulty = 3;
+    if (responseTimeMs < 3000) timeBasedDifficulty = 5;
+    else if (responseTimeMs < 8000) timeBasedDifficulty = 3;
+    else timeBasedDifficulty = 1;
+    
+    // Lisser la difficulté avec la valeur existante (moyenne pondérée)
+    const currentDifficulty = word.difficulty || 2.5;
+    word.difficulty = Math.round((currentDifficulty * 0.7 + timeBasedDifficulty * 0.3) * 10) / 10;
+}
+
+/** Enregistrer une confusion entre deux mots */
+function recordConfusion(expectedWord, givenWord) {
+    const key = [expectedWord.en, givenWord.en].sort().join('/');
+    if (!confusionMatrix[key]) {
+        confusionMatrix[key] = { mistakes: 0, lastMistake: null };
+    }
+    confusionMatrix[key].mistakes++;
+    confusionMatrix[key].lastMistake = new Date().toISOString();
+}
+
+/* =========================================================
    JEU (badges)
    ========================================================= */
 const gameBadges = [
@@ -272,6 +322,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const btnReset = document.getElementById('btn-reset');
   if (btnReset) btnReset.addEventListener('click', resetAll);
+
+  const btnExportAnalytics = document.getElementById('btn-export-analytics');
+  if (btnExportAnalytics) btnExportAnalytics.addEventListener('click', exportAnalyticsData);
 
   const btnModalValid = document.getElementById('btn-modal-valid');
   if (btnModalValid) btnModalValid.addEventListener('click', importMassive);
@@ -728,6 +781,12 @@ function getNextWord() {
     const wordEl = document.getElementById('current-word');
     const inputEl = document.getElementById('user-input');
 
+    // Enregistrer le temps de début de réponse pour le tracking
+    responseStartTime = Date.now();
+
+    // Initialiser le tracking pour tous les mots (migration progressive)
+    dictionary = dictionary.map(initWordTracking);
+
 	// On ajoute "!w.isFailed" pour ne pas mélanger les révisions et la consolidation
 	let reviews = dictionary.filter(w => w.level >= 1 && w.level < 7 && new Date(w.nextReview) <= now && !w.isFailed);
 
@@ -761,6 +820,10 @@ function getNextWord() {
     if (modeTag) modeTag.style.display = "block";
     currentWord = pool[Math.floor(Math.random() * pool.length)];
     hintConsumedForCurrentWord = false;
+    
+    // Initialiser le tracking pour le mot courant
+    currentWord = initWordTracking(currentWord);
+    
     setText(wordEl, currentWord.fr);
     if (guideEl) {
         const g = currentWord.guide && String(currentWord.guide).trim();
@@ -900,6 +963,11 @@ function handleAnswer() {
         playSuccessSound(sessionCombo);
 
         const oldLevel = currentWord.level;
+        
+        // Calculer le temps de réponse et mettre à jour les stats
+        const responseTime = responseStartTime ? Date.now() - responseStartTime : 0;
+        updateResponseTimeStats(currentWord, responseTime);
+        
         // Mot nouveau : 1re réussite parfaite → légendaire (5) ; « presque » → rare (3)
         if (oldLevel === 0) {
             currentWord.level = distance === 0 ? 5 : 3;
@@ -907,6 +975,13 @@ function handleAnswer() {
             currentWord.level = Math.min(currentWord.level + 1, 7);
         }
         currentWord.isFailed = false;
+        
+        // Mettre à jour les statistiques de succès
+        currentWord.successCount = (currentWord.successCount || 0) + 1;
+        
+        // Mettre à jour l'intervalle personnalisé
+        const intervals = [0, 1, 3, 5, 7, 15, 30, 90];
+        currentWord.interval = intervals[currentWord.level];
 		
 		if (oldLevel !== currentWord.level) {
             if (currentWord.level === 7) {
@@ -957,8 +1032,25 @@ function handleAnswer() {
         speak(currentWord.en);
 
         const oldLevel = currentWord.level;
+        
+        // Calculer le temps de réponse et mettre à jour les stats
+        const responseTime = responseStartTime ? Date.now() - responseStartTime : 0;
+        updateResponseTimeStats(currentWord, responseTime);
+        
         currentWord.level = Math.max(0, currentWord.level - 1);
         currentWord.isFailed = true;
+        
+        // Mettre à jour les statistiques d'échec
+        currentWord.failCount = (currentWord.failCount || 0) + 1;
+        
+        // Enregistrer la confusion si l'utilisateur a donné une autre réponse valide
+        if (resolved.pool && resolved.pool.length > 1) {
+            const otherValidAnswers = resolved.pool.filter(ans => ans.toLowerCase() !== resolved.enLower);
+            if (otherValidAnswers.length > 0) {
+                recordConfusion(currentWord, { en: otherValidAnswers[0] });
+            }
+        }
+        
         if (currentWord.level !== oldLevel) pendingLevelFlash = currentWord.level;
 
         let d = new Date();
@@ -1740,5 +1832,50 @@ function openLevelModal(levelIndex) {
 // On rend la fonction accessible au clic HTML
 window.openLevelModal = openLevelModal;
 window.speakJuronFromId = speakJuronFromId;
+
+/* =========================================================
+   PHASE 1 : EXPORT ANALYTICS
+   ========================================================= */
+
+/** Exporter les données d'analyse pour Phase 1 */
+function exportAnalyticsData() {
+    const analyticsData = {
+        exportDate: new Date().toISOString(),
+        totalWords: dictionary.length,
+        wordsWithTracking: dictionary.filter(w => w.responseCount > 0).length,
+        averageDifficulty: dictionary.length > 0 
+            ? Math.round((dictionary.reduce((sum, w) => sum + (w.difficulty || 2.5), 0) / dictionary.length) * 10) / 10 
+            : 0,
+        averageResponseTime: dictionary.length > 0 
+            ? Math.round(dictionary.reduce((sum, w) => sum + (w.avgResponseTime || 0), 0) / dictionary.length) 
+            : 0,
+        confusionMatrix: confusionMatrix,
+        wordStats: dictionary.map(w => ({
+            en: w.en,
+            fr: w.fr,
+            level: w.level,
+            difficulty: w.difficulty,
+            avgResponseTime: w.avgResponseTime,
+            successCount: w.successCount,
+            failCount: w.failCount,
+            responseCount: w.responseCount
+        }))
+    };
+
+    const data = JSON.stringify(analyticsData, null, 2);
+    const blob = new Blob([data], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `analytics_${new Date().toISOString().split('T')[0]}.json`;
+    document.body.appendChild(a); 
+    a.click();
+    document.body.removeChild(a); 
+    URL.revokeObjectURL(url);
+}
+
+// Exposer la fonction globalement pour l'interface
+window.exportAnalyticsData = exportAnalyticsData;
 
 })(); // Fin de l'application
