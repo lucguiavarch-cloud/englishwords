@@ -153,6 +153,22 @@ function updateResponseTimeStats(word, responseTimeMs) {
     word.difficulty = Math.round((currentDifficulty * 0.7 + timeBasedDifficulty * 0.3) * 10) / 10;
 }
 
+function calculateAdaptiveInterval(word, baseInterval) {
+    const safeBaseInterval = Math.max(1, Math.min(90, Number(baseInterval) || 1));
+    if ((word.responseCount || 0) < 3) return safeBaseInterval;
+
+    const ease = Math.max(1, Math.min(5, Number(word.difficulty) || 2.5));
+    let factor = 1;
+
+    if (ease < 2) factor = 0.75;
+    else if (ease < 3) factor = 0.9;
+    else if (ease < 4) factor = 1;
+    else if (ease < 4.6) factor = 1.15;
+    else factor = 1.25;
+
+    return Math.max(1, Math.min(90, Math.round(safeBaseInterval * factor)));
+}
+
 /** Enregistrer une confusion entre deux mots */
 function recordConfusion(expectedWord, givenWord) {
     const key = [expectedWord.en, givenWord.en].sort().join('/');
@@ -1006,7 +1022,10 @@ function handleAnswer() {
 
         let d = new Date();
         const reviewIntervals = [0, 1, 3, 5, 7, 15, 30, 90];
-        d.setDate(d.getDate() + reviewIntervals[currentWord.level]);
+        const baseInterval = reviewIntervals[currentWord.level];
+        const adaptiveInterval = calculateAdaptiveInterval(currentWord, baseInterval);
+        currentWord.interval = adaptiveInterval;
+        d.setDate(d.getDate() + adaptiveInterval);
         currentWord.nextReview = d.toISOString();
         
     } else {
@@ -1050,7 +1069,8 @@ function handleAnswer() {
         if (currentWord.level !== oldLevel) pendingLevelFlash = currentWord.level;
 
         let d = new Date();
-        d.setDate(d.getDate() + 1); 
+        currentWord.interval = 1;
+        d.setDate(d.getDate() + currentWord.interval);
         currentWord.nextReview = d.toISOString();
 
         setTimeout(() => box.classList.remove('shake'), 400);
@@ -1850,6 +1870,8 @@ function exportAnalyticsData() {
             en: w.en,
             fr: w.fr,
             level: w.level,
+            interval: w.interval,
+            nextReview: w.nextReview,
             difficulty: w.difficulty,
             avgResponseTime: w.avgResponseTime,
             successCount: w.successCount,
