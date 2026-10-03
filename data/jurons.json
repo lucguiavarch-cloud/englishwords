@@ -113,7 +113,8 @@
   },
   {
     "en": "Chuffed!",
-    "fr": "Ravi (souvent ironique ici) !"
+    "fr": "Ravi !",
+    "guide": "souvent ironique ici"
   },
   {
     "en": "Naff!",
@@ -225,7 +226,8 @@
   },
   {
     "en": "Mince pies!",
-    "fr": "Tes yeux (argot rhyming) !"
+    "fr": "Tes yeux !",
+    "guide": "argot rhyming"
   },
   {
     "en": "Nincompoop!",
@@ -249,7 +251,8 @@
   },
   {
     "en": "Proper job!",
-    "fr": "Beau travail (ironique) !"
+    "fr": "Beau travail !",
+    "guide": "ironique"
   },
   {
     "en": "Quid!",
@@ -365,7 +368,8 @@
   },
   {
     "en": "Full of beans!",
-    "fr": "Plein de jus (ironique ici) !"
+    "fr": "Plein de jus !",
+    "guide": "ironique ici"
   },
   {
     "en": "Gobshite!",

@@ -1,5 +1,18 @@
 # Changelog
 
+## v4.12 — 03/10/2026
+
+### Désambiguïsation des traductions
+- **Guides de contexte** : Ajout du champ `guide` pour désambiguïser les traductions multiples
+- **Script `desambiguise_to_guide.py`** : Extraction des contextes entre parenthèses du fichier utilisateur
+- **Script `apply_desambiguisation.py`** : Application du dictionnaire de désambiguïsation aux fichiers JSON
+- **Fichiers traités** : Tous les fichiers CEFR (A1-C2) + fichiers delta + jurons + verbes
+- **Total** : 1,164 guides de désambiguïsation ajoutés
+- **Exemples** : 
+  - `un` → guide: "article" (différencie de "un" comme chiffre)
+  - `access` → guide: "accéder (verbe) / accès (nom)"
+  - `act` → guide: "acte (nom) / agir (verbe)"
+
 ## v4.11 — 03/10/2026
 
 ### Phase 1 : Collecte de données analytics
