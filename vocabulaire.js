@@ -1005,8 +1005,8 @@ function handleAnswer() {
         }
 
         let d = new Date();
-        const intervals = [0, 1, 3, 5, 7, 15, 30, 90];
-        d.setDate(d.getDate() + intervals[currentWord.level]);
+        const reviewIntervals = [0, 1, 3, 5, 7, 15, 30, 90];
+        d.setDate(d.getDate() + reviewIntervals[currentWord.level]);
         currentWord.nextReview = d.toISOString();
         
     } else {
