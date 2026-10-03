@@ -1,5 +1,19 @@
 # Changelog
 
+## v4.11 — 03/10/2026
+
+### Phase 1 : Collecte de données analytics
+- **Tracking du temps de réponse** : Mesure du temps pris par l'utilisateur pour répondre à chaque mot
+- **Calcul de difficulté automatique** : Score de difficulté (0-5) basé sur le temps de réponse (<3s = très facile, 3-8s = moyen, >8s = difficile)
+- **Matrice de confusion** : Détection automatique des mots confondus entre eux (ex: make/do, say/tell)
+- **Nouvelles métadonnées par mot** : interval, difficulty, successCount, failCount, avgResponseTime, totalResponseTime, responseCount
+- **Export Analytics** : Nouveau bouton "📊 Export Analytics" pour exporter les données collectées en JSON
+- **Migration progressive** : Les mots existants se voient automatiquement attribuer les nouveaux champs de tracking
+- **Aucun changement algorithmique** : L'algorithme de répétition espacée reste identique, seule la collecte de données est ajoutée
+
+### Objectif
+Cette phase collecte des données pendant 2-3 semaines pour permettre l'implémentation d'un algorithme adaptatif (type SM-2) dans les phases futures.
+
 ## v4.10 — 03/05/2026
 
 ### Vocabulaire — packs CECRL cumulatifs vs nouveautés
