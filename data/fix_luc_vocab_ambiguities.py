@@ -554,6 +554,37 @@ def normalized(value):
     return str(value or "").strip().casefold()
 
 
+def shortest_unique_prefix(value, alternatives):
+    lowered = normalized(value)
+    for length in range(1, len(lowered) + 1):
+        prefix = lowered[:length]
+        if all(not other.startswith(prefix) for other in alternatives if other != lowered):
+            return prefix
+    return lowered
+
+
+def add_strict_fallback_contexts(words):
+    groups = defaultdict(list)
+    for word in words:
+        groups[normalized(word.get("fr"))].append(word)
+
+    changed = 0
+    for french, group in groups.items():
+        english = {normalized(word.get("en")) for word in group}
+        if not french or len(english) < 2:
+            continue
+        for word in group:
+            answer = normalized(word.get("en"))
+            prefix = shortest_unique_prefix(answer, english)
+            word["fr"] = (
+                f"{str(word['fr']).strip()} "
+                f"(indice anglais : « {prefix}… », {len(answer)} lettres)"
+            )
+            word.pop("guide", None)
+            changed += 1
+    return changed
+
+
 def progression_score(word):
     return (
         int(word.get("level") or 0),
@@ -595,6 +626,8 @@ def main():
             word.pop("guide", None)
             changed += 1
 
+    fallback_changed = add_strict_fallback_contexts(words)
+
     unique = []
     positions = {}
     duplicates = 0
@@ -620,6 +653,7 @@ def main():
 
     print(f"Backup: {backup}")
     print(f"Contexts added: {changed}")
+    print(f"Strict fallback contexts added: {fallback_changed}")
     print(f"Exact duplicates merged: {duplicates}")
     print(f"Entries: {len(words)} -> {len(unique)}")
     print(f"Shared French labels remaining: {remaining}")

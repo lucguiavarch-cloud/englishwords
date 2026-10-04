@@ -23,7 +23,7 @@
     },
     {
       "en": "able",
-      "fr": "capable",
+      "fr": "capable (indice anglais : « a… », 4 lettres)",
       "level": 6,
       "nextReview": "2026-10-05T16:50:21.456Z",
       "isFailed": false
@@ -112,7 +112,7 @@
     },
     {
       "en": "accurate",
-      "fr": "précis",
+      "fr": "précis (indice anglais : « a… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -137,7 +137,7 @@
     },
     {
       "en": "acknowledge",
-      "fr": "reconnaître",
+      "fr": "reconnaître (indice anglais : « a… », 11 lettres)",
       "level": 6,
       "nextReview": "2026-10-23T19:24:41.691Z",
       "isFailed": false
@@ -151,7 +151,7 @@
     },
     {
       "en": "across",
-      "fr": "à travers",
+      "fr": "à travers (indice anglais : « a… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -194,7 +194,7 @@
     },
     {
       "en": "actual",
-      "fr": "réel",
+      "fr": "réel (indice anglais : « a… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.238Z"
@@ -232,7 +232,7 @@
     },
     {
       "en": "additional",
-      "fr": "supplémentaire",
+      "fr": "supplémentaire (indice anglais : « a… », 10 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.238Z"
@@ -288,7 +288,7 @@
     },
     {
       "en": "advantage",
-      "fr": "avantage",
+      "fr": "avantage (indice anglais : « a… », 9 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -351,7 +351,7 @@
     },
     {
       "en": "afraid",
-      "fr": "effrayé",
+      "fr": "effrayé (indice anglais : « a… », 6 lettres)",
       "level": 6,
       "nextReview": "2026-10-05T16:37:33.075Z",
       "isFailed": false
@@ -452,13 +452,13 @@
     },
     {
       "en": "aid",
-      "fr": "aide",
+      "fr": "aide (indice anglais : « a… », 3 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
     {
       "en": "aim",
-      "fr": "but",
+      "fr": "but (indice anglais : « a… », 3 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -533,7 +533,7 @@
     },
     {
       "en": "almost",
-      "fr": "presque",
+      "fr": "presque (indice anglais : « a… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -558,13 +558,13 @@
     },
     {
       "en": "also",
-      "fr": "aussi",
+      "fr": "aussi (indice anglais : « a… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
     {
       "en": "alter",
-      "fr": "modifier",
+      "fr": "modifier (indice anglais : « a… », 5 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.238Z"
@@ -596,7 +596,7 @@
     },
     {
       "en": "amazing",
-      "fr": "incroyable",
+      "fr": "incroyable (indice anglais : « a… », 7 lettres)",
       "level": 4,
       "nextReview": "2026-10-06T16:19:54.919Z",
       "isFailed": false
@@ -609,7 +609,7 @@
     },
     {
       "en": "among",
-      "fr": "parmi",
+      "fr": "parmi (indice anglais : « among… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -628,7 +628,7 @@
     },
     {
       "en": "analyze",
-      "fr": "analyser",
+      "fr": "analyser (indice anglais : « analyz… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -770,7 +770,7 @@
     },
     {
       "en": "anyway",
-      "fr": "de toute façon",
+      "fr": "de toute façon (indice anglais : « anyw… », 6 lettres)",
       "level": 5,
       "nextReview": "2026-10-05T07:25:18.688Z",
       "isFailed": false
@@ -867,7 +867,7 @@
     },
     {
       "en": "appreciate",
-      "fr": "apprécier",
+      "fr": "apprécier (indice anglais : « a… », 10 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.238Z"
@@ -880,7 +880,7 @@
     },
     {
       "en": "appropriate",
-      "fr": "approprié",
+      "fr": "approprié (indice anglais : « a… », 11 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.238Z"
@@ -924,7 +924,7 @@
     },
     {
       "en": "area",
-      "fr": "zone",
+      "fr": "zone (indice anglais : « a… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -981,7 +981,7 @@
     },
     {
       "en": "arrange",
-      "fr": "organiser",
+      "fr": "organiser (indice anglais : « a… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -1082,7 +1082,7 @@
     },
     {
       "en": "assess",
-      "fr": "évaluer",
+      "fr": "évaluer (indice anglais : « a… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.238Z"
@@ -1136,7 +1136,7 @@
     },
     {
       "en": "assume",
-      "fr": "supposer",
+      "fr": "supposer (indice anglais : « a… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.238Z"
@@ -1300,7 +1300,7 @@
     },
     {
       "en": "away",
-      "fr": "loin",
+      "fr": "loin (indice anglais : « a… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -1354,7 +1354,7 @@
     },
     {
       "en": "badly",
-      "fr": "gravement",
+      "fr": "gravement (indice anglais : « b… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -1449,7 +1449,7 @@
     },
     {
       "en": "basically",
-      "fr": "essentiellement",
+      "fr": "essentiellement (indice anglais : « b… », 9 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.238Z"
@@ -1593,7 +1593,7 @@
     },
     {
       "en": "begin",
-      "fr": "commencer",
+      "fr": "commencer (indice anglais : « b… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -1675,13 +1675,13 @@
     },
     {
       "en": "benefit",
-      "fr": "avantage",
+      "fr": "avantage (indice anglais : « b… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
     {
       "en": "bent",
-      "fr": "courbé",
+      "fr": "courbé (indice anglais : « b… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -1718,7 +1718,7 @@
     },
     {
       "en": "bicycle",
-      "fr": "vélo",
+      "fr": "vélo (indice anglais : « bic… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -1730,7 +1730,7 @@
     },
     {
       "en": "bike",
-      "fr": "vélo",
+      "fr": "vélo (indice anglais : « bik… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -1773,7 +1773,7 @@
     },
     {
       "en": "bit",
-      "fr": "peu",
+      "fr": "peu (indice anglais : « b… », 3 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -1954,7 +1954,7 @@
     },
     {
       "en": "bother",
-      "fr": "déranger",
+      "fr": "déranger (indice anglais : « b… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -2104,7 +2104,7 @@
     },
     {
       "en": "broad",
-      "fr": "large",
+      "fr": "large (indice anglais : « b… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -2249,13 +2249,13 @@
     },
     {
       "en": "by",
-      "fr": "par",
+      "fr": "par (indice anglais : « b… », 2 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
     {
       "en": "bye",
-      "fr": "au revoir",
+      "fr": "au revoir (indice anglais : « b… », 3 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -2373,7 +2373,7 @@
     },
     {
       "en": "capable",
-      "fr": "capable",
+      "fr": "capable (indice anglais : « c… », 7 lettres)",
       "level": 5,
       "nextReview": "2026-10-09T18:20:42.333Z",
       "isFailed": false
@@ -2431,13 +2431,13 @@
     },
     {
       "en": "careful",
-      "fr": "prudent",
+      "fr": "prudent (indice anglais : « car… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
     {
       "en": "carefully",
-      "fr": "soigneusement",
+      "fr": "soigneusement (indice anglais : « c… », 9 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -2592,7 +2592,7 @@
     },
     {
       "en": "certainly",
-      "fr": "certainement",
+      "fr": "certainement (indice anglais : « c… », 9 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -2610,7 +2610,7 @@
     },
     {
       "en": "chairman",
-      "fr": "président",
+      "fr": "président (indice anglais : « c… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -2839,7 +2839,7 @@
     },
     {
       "en": "city",
-      "fr": "ville",
+      "fr": "ville (indice anglais : « c… », 4 lettres)",
       "level": 4,
       "nextReview": "2026-10-06T16:21:27.264Z",
       "isFailed": false
@@ -2916,7 +2916,7 @@
     },
     {
       "en": "clever",
-      "fr": "intelligent",
+      "fr": "intelligent (indice anglais : « c… », 6 lettres)",
       "level": 5,
       "nextReview": "2026-10-12T07:36:18.220Z",
       "isFailed": false
@@ -2956,7 +2956,7 @@
     },
     {
       "en": "close",
-      "fr": "fermer",
+      "fr": "fermer (indice anglais : « c… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -2968,14 +2968,14 @@
     },
     {
       "en": "closely",
-      "fr": "étroitement",
+      "fr": "étroitement (indice anglais : « c… », 7 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.239Z"
     },
     {
       "en": "closet",
-      "fr": "placard",
+      "fr": "placard (indice anglais : « cl… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -2988,13 +2988,13 @@
     },
     {
       "en": "clothes",
-      "fr": "vêtements",
+      "fr": "vêtements (indice anglais : « clothe… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
     {
       "en": "clothing",
-      "fr": "vêtements",
+      "fr": "vêtements (indice anglais : « clothi… », 8 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.239Z"
@@ -3265,7 +3265,7 @@
     },
     {
       "en": "competition",
-      "fr": "concours",
+      "fr": "concours (indice anglais : « com… », 11 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -3337,7 +3337,7 @@
     },
     {
       "en": "concentrate",
-      "fr": "se concentrer",
+      "fr": "se concentrer (indice anglais : « c… », 11 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -3597,7 +3597,7 @@
     },
     {
       "en": "contest",
-      "fr": "concours",
+      "fr": "concours (indice anglais : « con… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -3756,7 +3756,7 @@
     },
     {
       "en": "correctly",
-      "fr": "correctement",
+      "fr": "correctement (indice anglais : « c… », 9 lettres)",
       "level": 6,
       "nextReview": "2026-10-22T19:42:14.056Z",
       "isFailed": false
@@ -3876,7 +3876,7 @@
     },
     {
       "en": "crazy",
-      "fr": "fou",
+      "fr": "fou (indice anglais : « c… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -4039,13 +4039,13 @@
     },
     {
       "en": "cupboard",
-      "fr": "placard",
+      "fr": "placard (indice anglais : « cu… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
     {
       "en": "cure",
-      "fr": "guérir",
+      "fr": "guérir (indice anglais : « c… », 4 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.239Z"
@@ -4091,7 +4091,7 @@
     },
     {
       "en": "curved",
-      "fr": "courbé",
+      "fr": "courbé (indice anglais : « c… », 6 lettres)",
       "level": 6,
       "nextReview": "2026-10-22T19:39:51.048Z",
       "isFailed": false
@@ -4346,14 +4346,14 @@
     },
     {
       "en": "definite",
-      "fr": "précis",
+      "fr": "précis (indice anglais : « d… », 8 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.239Z"
     },
     {
       "en": "definitely",
-      "fr": "certainement",
+      "fr": "certainement (indice anglais : « d… », 10 lettres)",
       "level": 5,
       "nextReview": "2026-10-14T16:35:44.240Z",
       "isFailed": false
@@ -4393,7 +4393,7 @@
     },
     {
       "en": "delicious",
-      "fr": "délicieux",
+      "fr": "délicieux (indice anglais : « delic… », 9 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -4431,7 +4431,7 @@
     },
     {
       "en": "deny",
-      "fr": "refuser",
+      "fr": "refuser (indice anglais : « d… », 4 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.240Z"
@@ -4594,7 +4594,7 @@
     },
     {
       "en": "develop",
-      "fr": "développer",
+      "fr": "développer (indice anglais : « d… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -4754,7 +4754,7 @@
     },
     {
       "en": "disappear",
-      "fr": "disparaître",
+      "fr": "disparaître (indice anglais : « d… », 9 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -4849,7 +4849,7 @@
     },
     {
       "en": "dismiss",
-      "fr": "rejeter",
+      "fr": "rejeter (indice anglais : « d… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -4886,7 +4886,7 @@
     },
     {
       "en": "divide",
-      "fr": "diviser",
+      "fr": "diviser (indice anglais : « d… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -4980,7 +4980,7 @@
     },
     {
       "en": "down",
-      "fr": "vers le bas",
+      "fr": "vers le bas (indice anglais : « down… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -5005,7 +5005,7 @@
     },
     {
       "en": "downward",
-      "fr": "vers le bas",
+      "fr": "vers le bas (indice anglais : « downw… », 8 lettres)",
       "level": 5,
       "nextReview": "2026-10-12T07:33:28.314Z",
       "isFailed": false
@@ -5165,7 +5165,7 @@
     },
     {
       "en": "each",
-      "fr": "chaque",
+      "fr": "chaque (indice anglais : « ea… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -5202,7 +5202,7 @@
     },
     {
       "en": "easily",
-      "fr": "facilement",
+      "fr": "facilement (indice anglais : « e… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -5253,7 +5253,7 @@
     },
     {
       "en": "edit",
-      "fr": "modifier",
+      "fr": "modifier (indice anglais : « e… », 4 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.240Z"
@@ -5288,7 +5288,7 @@
     },
     {
       "en": "education",
-      "fr": "éducation",
+      "fr": "éducation (indice anglais : « e… », 9 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -5314,7 +5314,7 @@
     },
     {
       "en": "effectively",
-      "fr": "efficacement",
+      "fr": "efficacement (indice anglais : « effe… », 11 lettres)",
       "level": 5,
       "isFailed": false,
       "nextReview": "2026-10-12T07:32:36.070Z"
@@ -5383,13 +5383,13 @@
     },
     {
       "en": "electric",
-      "fr": "électrique",
+      "fr": "électrique (indice anglais : « electric… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
     {
       "en": "electrical",
-      "fr": "électrique",
+      "fr": "électrique (indice anglais : « electrica… », 10 lettres)",
       "level": 6,
       "nextReview": "2026-10-22T19:46:00.241Z",
       "isFailed": false
@@ -5501,7 +5501,7 @@
     },
     {
       "en": "emphasize",
-      "fr": "souligner",
+      "fr": "souligner (indice anglais : « e… », 9 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -5595,7 +5595,7 @@
     },
     {
       "en": "engine",
-      "fr": "moteur",
+      "fr": "moteur (indice anglais : « e… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -5613,19 +5613,19 @@
     },
     {
       "en": "enhance",
-      "fr": "améliorer",
+      "fr": "améliorer (indice anglais : « e… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
     {
       "en": "enjoy",
-      "fr": "apprécier",
+      "fr": "apprécier (indice anglais : « e… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
     {
       "en": "enormous",
-      "fr": "énorme",
+      "fr": "énorme (indice anglais : « e… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -5677,7 +5677,7 @@
     },
     {
       "en": "entire",
-      "fr": "entier",
+      "fr": "entier (indice anglais : « e… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.240Z"
@@ -5742,7 +5742,7 @@
     },
     {
       "en": "error",
-      "fr": "erreur",
+      "fr": "erreur (indice anglais : « e… », 5 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.240Z"
@@ -5807,7 +5807,7 @@
     },
     {
       "en": "evaluate",
-      "fr": "évaluer",
+      "fr": "évaluer (indice anglais : « e… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -5846,14 +5846,14 @@
     },
     {
       "en": "every",
-      "fr": "chaque",
+      "fr": "chaque (indice anglais : « ev… », 5 lettres)",
       "level": 5,
       "nextReview": "2026-10-09T18:18:53.245Z",
       "isFailed": false
     },
     {
       "en": "everybody",
-      "fr": "tout le monde",
+      "fr": "tout le monde (indice anglais : « everyb… », 9 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -5865,7 +5865,7 @@
     },
     {
       "en": "everyone",
-      "fr": "tout le monde",
+      "fr": "tout le monde (indice anglais : « everyo… », 8 lettres)",
       "level": 5,
       "nextReview": "2026-10-12T07:32:06.137Z",
       "isFailed": false
@@ -5884,7 +5884,7 @@
     },
     {
       "en": "evidence",
-      "fr": "preuve",
+      "fr": "preuve (indice anglais : « e… », 8 lettres)",
       "level": 6,
       "nextReview": "2026-10-22T19:52:28.385Z",
       "isFailed": false
@@ -5910,13 +5910,13 @@
     },
     {
       "en": "exam",
-      "fr": "examen",
+      "fr": "examen (indice anglais : « exam… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
     {
       "en": "examination",
-      "fr": "examen",
+      "fr": "examen (indice anglais : « exami… », 11 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -5929,7 +5929,7 @@
     },
     {
       "en": "example",
-      "fr": "exemple",
+      "fr": "exemple (indice anglais : « e… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.723Z"
     },
@@ -6022,7 +6022,7 @@
     },
     {
       "en": "expand",
-      "fr": "développer",
+      "fr": "développer (indice anglais : « e… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.240Z"
@@ -6172,7 +6172,7 @@
     },
     {
       "en": "extra",
-      "fr": "supplémentaire",
+      "fr": "supplémentaire (indice anglais : « e… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -6319,7 +6319,7 @@
     },
     {
       "en": "far",
-      "fr": "loin",
+      "fr": "loin (indice anglais : « f… », 3 lettres)",
       "level": 5,
       "nextReview": "2026-10-09T18:15:57.090Z",
       "isFailed": false
@@ -6472,7 +6472,7 @@
     },
     {
       "en": "fellow",
-      "fr": "compagnon",
+      "fr": "compagnon (indice anglais : « f… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.240Z"
@@ -6504,7 +6504,7 @@
     },
     {
       "en": "few",
-      "fr": "peu",
+      "fr": "peu (indice anglais : « f… », 3 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -6542,14 +6542,14 @@
     },
     {
       "en": "fight",
-      "fr": "lutte",
+      "fr": "lutte (indice anglais : « fight… », 5 lettres)",
       "level": 7,
       "nextReview": "2026-12-04T17:30:05.453Z",
       "isFailed": false
     },
     {
       "en": "fighting",
-      "fr": "lutte",
+      "fr": "lutte (indice anglais : « fighti… », 8 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.240Z"
@@ -6792,7 +6792,7 @@
     },
     {
       "en": "focus",
-      "fr": "se concentrer",
+      "fr": "se concentrer (indice anglais : « f… », 5 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.240Z"
@@ -6824,7 +6824,7 @@
     },
     {
       "en": "following",
-      "fr": "suivant",
+      "fr": "suivant (indice anglais : « f… », 9 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -6905,7 +6905,7 @@
     },
     {
       "en": "formal",
-      "fr": "officiel",
+      "fr": "officiel (indice anglais : « f… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.240Z"
@@ -6982,7 +6982,7 @@
     },
     {
       "en": "freedom",
-      "fr": "liberté",
+      "fr": "liberté (indice anglais : « f… », 7 lettres)",
       "level": 5,
       "isFailed": false,
       "nextReview": "2026-10-09T18:19:18.235Z"
@@ -7044,13 +7044,13 @@
     },
     {
       "en": "frightened",
-      "fr": "effrayé",
+      "fr": "effrayé (indice anglais : « f… », 10 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
     {
       "en": "frightening",
-      "fr": "effrayant",
+      "fr": "effrayant (indice anglais : « f… », 11 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -7110,7 +7110,7 @@
     },
     {
       "en": "fun",
-      "fr": "amusant",
+      "fr": "amusant (indice anglais : « f… », 3 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -7306,7 +7306,7 @@
     },
     {
       "en": "get",
-      "fr": "obtenir",
+      "fr": "obtenir (indice anglais : « g… », 3 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -7360,7 +7360,7 @@
     },
     {
       "en": "global",
-      "fr": "mondial",
+      "fr": "mondial (indice anglais : « g… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.241Z"
@@ -7380,7 +7380,7 @@
     },
     {
       "en": "goal",
-      "fr": "but",
+      "fr": "but (indice anglais : « g… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -7411,7 +7411,7 @@
     },
     {
       "en": "goodbye",
-      "fr": "au revoir",
+      "fr": "au revoir (indice anglais : « g… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -7711,7 +7711,7 @@
     },
     {
       "en": "hardly",
-      "fr": "à peine",
+      "fr": "à peine (indice anglais : « h… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -7805,7 +7805,7 @@
     },
     {
       "en": "heat",
-      "fr": "chaleur",
+      "fr": "chaleur (indice anglais : « h… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -7824,7 +7824,7 @@
     },
     {
       "en": "heavily",
-      "fr": "fortement",
+      "fr": "fortement (indice anglais : « h… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -7867,13 +7867,13 @@
     },
     {
       "en": "help",
-      "fr": "aide",
+      "fr": "aide (indice anglais : « h… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
     {
       "en": "helpful",
-      "fr": "utile",
+      "fr": "utile (indice anglais : « h… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -7940,14 +7940,14 @@
     },
     {
       "en": "highlight",
-      "fr": "souligner",
+      "fr": "souligner (indice anglais : « h… », 9 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.241Z"
     },
     {
       "en": "highly",
-      "fr": "très",
+      "fr": "très (indice anglais : « h… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.241Z"
@@ -8041,7 +8041,7 @@
     },
     {
       "en": "holiday",
-      "fr": "vacances",
+      "fr": "vacances (indice anglais : « h… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -8079,7 +8079,7 @@
     },
     {
       "en": "honor",
-      "fr": "honneur",
+      "fr": "honneur (indice anglais : « honor… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -8166,13 +8166,13 @@
     },
     {
       "en": "however",
-      "fr": "cependant",
+      "fr": "cependant (indice anglais : « h… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
     {
       "en": "huge",
-      "fr": "énorme",
+      "fr": "énorme (indice anglais : « h… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -8203,7 +8203,7 @@
     },
     {
       "en": "hungry",
-      "fr": "affamé",
+      "fr": "affamé (indice anglais : « h… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -8234,7 +8234,7 @@
     },
     {
       "en": "hurt",
-      "fr": "blesser",
+      "fr": "blesser (indice anglais : « h… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -8363,7 +8363,7 @@
     },
     {
       "en": "immediately",
-      "fr": "immédiatement",
+      "fr": "immédiatement (indice anglais : « im… », 11 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -8454,7 +8454,7 @@
     },
     {
       "en": "improve",
-      "fr": "améliorer",
+      "fr": "améliorer (indice anglais : « i… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -8523,7 +8523,7 @@
     },
     {
       "en": "incredible",
-      "fr": "incroyable",
+      "fr": "incroyable (indice anglais : « i… », 10 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -8574,7 +8574,7 @@
     },
     {
       "en": "indoors",
-      "fr": "à l'intérieur",
+      "fr": "à l'intérieur (indice anglais : « ind… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -8640,7 +8640,7 @@
     },
     {
       "en": "initially",
-      "fr": "initialement",
+      "fr": "initialement (indice anglais : « i… », 9 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.241Z"
@@ -8653,7 +8653,7 @@
     },
     {
       "en": "injure",
-      "fr": "blesser",
+      "fr": "blesser (indice anglais : « i… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -8699,7 +8699,7 @@
     },
     {
       "en": "inside",
-      "fr": "à l'intérieur",
+      "fr": "à l'intérieur (indice anglais : « ins… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -8730,13 +8730,13 @@
     },
     {
       "en": "instance",
-      "fr": "exemple",
+      "fr": "exemple (indice anglais : « i… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
     {
       "en": "instead",
-      "fr": "plutôt",
+      "fr": "plutôt (indice anglais : « i… », 7 lettres)",
       "level": 4,
       "nextReview": "2026-10-09T20:02:16.359Z",
       "isFailed": false
@@ -8789,7 +8789,7 @@
     },
     {
       "en": "intelligent",
-      "fr": "intelligent",
+      "fr": "intelligent (indice anglais : « i… », 11 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -8977,7 +8977,7 @@
     },
     {
       "en": "issue",
-      "fr": "problème",
+      "fr": "problème (indice anglais : « i… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -9068,7 +9068,7 @@
     },
     {
       "en": "journalist",
-      "fr": "journaliste",
+      "fr": "journaliste (indice anglais : « j… », 10 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -9189,7 +9189,7 @@
     },
     {
       "en": "killing",
-      "fr": "meurtre",
+      "fr": "meurtre (indice anglais : « k… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -9256,7 +9256,7 @@
     },
     {
       "en": "lab",
-      "fr": "laboratoire",
+      "fr": "laboratoire (indice anglais : « lab… », 3 lettres)",
       "level": 5,
       "nextReview": "2026-10-15T14:29:26.491Z",
       "isFailed": false
@@ -9275,7 +9275,7 @@
     },
     {
       "en": "laboratory",
-      "fr": "laboratoire",
+      "fr": "laboratoire (indice anglais : « labo… », 10 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -9628,7 +9628,7 @@
     },
     {
       "en": "likely",
-      "fr": "probable",
+      "fr": "probable (indice anglais : « l… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -9702,7 +9702,7 @@
     },
     {
       "en": "little",
-      "fr": "petit",
+      "fr": "petit (indice anglais : « l… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -9837,7 +9837,7 @@
     },
     {
       "en": "lot",
-      "fr": "parcelle",
+      "fr": "parcelle (indice anglais : « l… », 3 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -9911,7 +9911,7 @@
     },
     {
       "en": "mad",
-      "fr": "fou",
+      "fr": "fou (indice anglais : « m… », 3 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -9935,13 +9935,13 @@
     },
     {
       "en": "main",
-      "fr": "principal",
+      "fr": "principal (indice anglais : « m… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
     {
       "en": "mainly",
-      "fr": "principalement",
+      "fr": "principalement (indice anglais : « m… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -10056,7 +10056,7 @@
     },
     {
       "en": "marriage",
-      "fr": "mariage",
+      "fr": "mariage (indice anglais : « m… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -10095,7 +10095,7 @@
     },
     {
       "en": "match",
-      "fr": "correspondre",
+      "fr": "correspondre (indice anglais : « m… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -10113,14 +10113,14 @@
     },
     {
       "en": "math",
-      "fr": "mathématiques",
+      "fr": "mathématiques (indice anglais : « math… », 4 lettres)",
       "level": 6,
       "nextReview": "2026-10-22T19:37:07.109Z",
       "isFailed": false
     },
     {
       "en": "mathematics",
-      "fr": "mathématiques",
+      "fr": "mathématiques (indice anglais : « mathe… », 11 lettres)",
       "level": 5,
       "nextReview": "2026-10-15T14:23:33.432Z",
       "isFailed": false
@@ -10190,7 +10190,7 @@
     },
     {
       "en": "meanwhile",
-      "fr": "entre-temps",
+      "fr": "entre-temps (indice anglais : « meanw… », 9 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -10450,7 +10450,7 @@
     },
     {
       "en": "mistake",
-      "fr": "erreur",
+      "fr": "erreur (indice anglais : « m… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -10475,7 +10475,7 @@
     },
     {
       "en": "model",
-      "fr": "modèle",
+      "fr": "modèle (indice anglais : « m… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -10488,7 +10488,7 @@
     },
     {
       "en": "modify",
-      "fr": "modifier",
+      "fr": "modifier (indice anglais : « m… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -10588,7 +10588,7 @@
     },
     {
       "en": "motor",
-      "fr": "moteur",
+      "fr": "moteur (indice anglais : « m… », 5 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.241Z"
@@ -10671,7 +10671,7 @@
     },
     {
       "en": "murder",
-      "fr": "meurtre",
+      "fr": "meurtre (indice anglais : « m… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -10812,7 +10812,7 @@
     },
     {
       "en": "nearly",
-      "fr": "presque",
+      "fr": "presque (indice anglais : « n… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -10863,7 +10863,7 @@
     },
     {
       "en": "neighbor",
-      "fr": "voisin",
+      "fr": "voisin (indice anglais : « neighbor… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -10939,7 +10939,7 @@
     },
     {
       "en": "next",
-      "fr": "suivant",
+      "fr": "suivant (indice anglais : « n… », 4 lettres)",
       "level": 5,
       "nextReview": "2026-10-10T18:30:13.155Z",
       "isFailed": false
@@ -11177,21 +11177,21 @@
     },
     {
       "en": "obtain",
-      "fr": "obtenir",
+      "fr": "obtenir (indice anglais : « o… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.242Z"
     },
     {
       "en": "obvious",
-      "fr": "évident",
+      "fr": "évident (indice anglais : « o… », 7 lettres)",
       "level": 6,
       "nextReview": "2026-10-22T19:50:05.616Z",
       "isFailed": false
     },
     {
       "en": "obviously",
-      "fr": "évidemment",
+      "fr": "évidemment (indice anglais : « o… », 9 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -11262,7 +11262,7 @@
     },
     {
       "en": "offense",
-      "fr": "infraction",
+      "fr": "infraction (indice anglais : « offens… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -11293,7 +11293,7 @@
     },
     {
       "en": "official",
-      "fr": "officiel",
+      "fr": "officiel (indice anglais : « o… », 8 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.242Z"
@@ -11432,14 +11432,14 @@
     },
     {
       "en": "opposed",
-      "fr": "opposé",
+      "fr": "opposé (indice anglais : « oppose… », 7 lettres)",
       "level": 6,
       "nextReview": "2026-10-05T16:48:44.600Z",
       "isFailed": false
     },
     {
       "en": "opposite",
-      "fr": "opposé",
+      "fr": "opposé (indice anglais : « opposi… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -11494,7 +11494,7 @@
     },
     {
       "en": "organize",
-      "fr": "organiser",
+      "fr": "organiser (indice anglais : « o… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -11525,7 +11525,7 @@
     },
     {
       "en": "originally",
-      "fr": "initialement",
+      "fr": "initialement (indice anglais : « o… », 10 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.242Z"
@@ -11544,7 +11544,7 @@
     },
     {
       "en": "ought",
-      "fr": "devrait",
+      "fr": "devrait (indice anglais : « o… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -11568,7 +11568,7 @@
     },
     {
       "en": "out",
-      "fr": "dehors",
+      "fr": "dehors (indice anglais : « out… », 3 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -11607,7 +11607,7 @@
     },
     {
       "en": "outside",
-      "fr": "dehors",
+      "fr": "dehors (indice anglais : « outs… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -11658,7 +11658,7 @@
     },
     {
       "en": "pace",
-      "fr": "rythme",
+      "fr": "rythme (indice anglais : « p… », 4 lettres)",
       "level": 6,
       "nextReview": "2026-10-22T19:43:58.252Z",
       "isFailed": false
@@ -11697,7 +11697,7 @@
     },
     {
       "en": "paint",
-      "fr": "peinture",
+      "fr": "peinture (indice anglais : « paint… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -11709,7 +11709,7 @@
     },
     {
       "en": "painting",
-      "fr": "peinture",
+      "fr": "peinture (indice anglais : « painti… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -11802,7 +11802,7 @@
     },
     {
       "en": "particular",
-      "fr": "particulier",
+      "fr": "particulier (indice anglais : « pa… », 10 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -11870,7 +11870,7 @@
     },
     {
       "en": "path",
-      "fr": "chemin",
+      "fr": "chemin (indice anglais : « p… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -11882,7 +11882,7 @@
     },
     {
       "en": "pattern",
-      "fr": "modèle",
+      "fr": "modèle (indice anglais : « p… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -11946,7 +11946,7 @@
     },
     {
       "en": "per",
-      "fr": "par",
+      "fr": "par (indice anglais : « p… », 3 lettres)",
       "level": 4,
       "nextReview": "2026-10-06T16:22:55.743Z",
       "isFailed": false
@@ -11990,7 +11990,7 @@
     },
     {
       "en": "perhaps",
-      "fr": "peut-être",
+      "fr": "peut-être (indice anglais : « pe… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -12046,7 +12046,7 @@
     },
     {
       "en": "perspective",
-      "fr": "perspective",
+      "fr": "perspective (indice anglais : « pe… », 11 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -12085,7 +12085,7 @@
     },
     {
       "en": "phone",
-      "fr": "téléphone",
+      "fr": "téléphone (indice anglais : « p… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -12201,7 +12201,7 @@
     },
     {
       "en": "place",
-      "fr": "lieu",
+      "fr": "lieu (indice anglais : « p… », 5 lettres)",
       "level": 5,
       "nextReview": "2026-10-15T14:25:14.788Z",
       "isFailed": false
@@ -12296,7 +12296,7 @@
     },
     {
       "en": "pleasure",
-      "fr": "plaisir",
+      "fr": "plaisir (indice anglais : « p… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -12308,7 +12308,7 @@
     },
     {
       "en": "plot",
-      "fr": "parcelle",
+      "fr": "parcelle (indice anglais : « p… », 4 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.243Z"
@@ -12351,7 +12351,7 @@
     },
     {
       "en": "pointed",
-      "fr": "pointu",
+      "fr": "pointu (indice anglais : « p… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -12364,7 +12364,7 @@
     },
     {
       "en": "poisonous",
-      "fr": "toxique",
+      "fr": "toxique (indice anglais : « p… », 9 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.243Z"
@@ -12514,7 +12514,7 @@
     },
     {
       "en": "possibly",
-      "fr": "peut-être",
+      "fr": "peut-être (indice anglais : « po… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -12692,7 +12692,7 @@
     },
     {
       "en": "president",
-      "fr": "président",
+      "fr": "président (indice anglais : « p… », 9 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -12779,7 +12779,7 @@
     },
     {
       "en": "principal",
-      "fr": "principal",
+      "fr": "principal (indice anglais : « p… », 9 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -12848,13 +12848,13 @@
     },
     {
       "en": "probably",
-      "fr": "probablement",
+      "fr": "probablement (indice anglais : « pro… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
     {
       "en": "problem",
-      "fr": "problème",
+      "fr": "problème (indice anglais : « p… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -12971,20 +12971,20 @@
     },
     {
       "en": "proof",
-      "fr": "preuve",
+      "fr": "preuve (indice anglais : « p… », 5 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.244Z"
     },
     {
       "en": "proper",
-      "fr": "approprié",
+      "fr": "approprié (indice anglais : « p… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
     {
       "en": "properly",
-      "fr": "correctement",
+      "fr": "correctement (indice anglais : « p… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -13011,7 +13011,7 @@
     },
     {
       "en": "prospect",
-      "fr": "perspective",
+      "fr": "perspective (indice anglais : « pr… », 8 lettres)",
       "level": 5,
       "nextReview": "2026-10-15T14:32:41.132Z",
       "isFailed": false
@@ -13051,7 +13051,7 @@
     },
     {
       "en": "provide",
-      "fr": "fournir",
+      "fr": "fournir (indice anglais : « p… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -13129,7 +13129,7 @@
     },
     {
       "en": "purpose",
-      "fr": "but",
+      "fr": "but (indice anglais : « p… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -13160,7 +13160,7 @@
     },
     {
       "en": "qualified",
-      "fr": "qualifié",
+      "fr": "qualifié (indice anglais : « q… », 9 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -13209,7 +13209,7 @@
     },
     {
       "en": "quickly",
-      "fr": "rapidement",
+      "fr": "rapidement (indice anglais : « q… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -13308,7 +13308,7 @@
     },
     {
       "en": "rapidly",
-      "fr": "rapidement",
+      "fr": "rapidement (indice anglais : « r… », 7 lettres)",
       "level": 4,
       "nextReview": "2026-10-06T16:31:43.054Z",
       "isFailed": false
@@ -13321,7 +13321,7 @@
     },
     {
       "en": "rarely",
-      "fr": "rarement",
+      "fr": "rarement (indice anglais : « r… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -13334,7 +13334,7 @@
     },
     {
       "en": "rather",
-      "fr": "plutôt",
+      "fr": "plutôt (indice anglais : « r… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -13390,7 +13390,7 @@
     },
     {
       "en": "real",
-      "fr": "réel",
+      "fr": "réel (indice anglais : « r… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -13415,7 +13415,7 @@
     },
     {
       "en": "really",
-      "fr": "vraiment",
+      "fr": "vraiment (indice anglais : « r… », 6 lettres)",
       "level": 6,
       "nextReview": "2026-10-29T17:23:30.273Z",
       "isFailed": false
@@ -13478,7 +13478,7 @@
     },
     {
       "en": "recognize",
-      "fr": "reconnaître",
+      "fr": "reconnaître (indice anglais : « r… », 9 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -13567,7 +13567,7 @@
     },
     {
       "en": "refuse",
-      "fr": "refuser",
+      "fr": "refuser (indice anglais : « r… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -13613,7 +13613,7 @@
     },
     {
       "en": "regularly",
-      "fr": "régulièrement",
+      "fr": "régulièrement (indice anglais : « r… », 9 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -13626,7 +13626,7 @@
     },
     {
       "en": "reject",
-      "fr": "rejeter",
+      "fr": "rejeter (indice anglais : « r… », 6 lettres)",
       "level": 3,
       "nextReview": "2026-10-04T16:32:38.077Z",
       "isFailed": false
@@ -13646,13 +13646,13 @@
     },
     {
       "en": "relation",
-      "fr": "relation",
+      "fr": "relation (indice anglais : « relation… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
     {
       "en": "relationship",
-      "fr": "relation",
+      "fr": "relation (indice anglais : « relations… », 12 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -13818,7 +13818,7 @@
     },
     {
       "en": "reporter",
-      "fr": "journaliste",
+      "fr": "journaliste (indice anglais : « r… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -13909,7 +13909,7 @@
     },
     {
       "en": "resolve",
-      "fr": "résoudre",
+      "fr": "résoudre (indice anglais : « r… », 7 lettres)",
       "level": 5,
       "nextReview": "2026-10-09T18:12:52.755Z",
       "isFailed": false
@@ -14039,7 +14039,7 @@
     },
     {
       "en": "rhythm",
-      "fr": "rythme",
+      "fr": "rythme (indice anglais : « r… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.244Z"
@@ -14052,7 +14052,7 @@
     },
     {
       "en": "rich",
-      "fr": "riche",
+      "fr": "riche (indice anglais : « r… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -14264,7 +14264,7 @@
     },
     {
       "en": "sadly",
-      "fr": "malheureusement",
+      "fr": "malheureusement (indice anglais : « s… », 5 lettres)",
       "level": 5,
       "isFailed": false,
       "nextReview": "2026-10-09T18:11:58.965Z"
@@ -14277,7 +14277,7 @@
     },
     {
       "en": "safety",
-      "fr": "sécurité",
+      "fr": "sécurité (indice anglais : « sa… », 6 lettres)",
       "level": 5,
       "nextReview": "2026-10-10T18:33:47.213Z",
       "isFailed": false
@@ -14309,7 +14309,7 @@
     },
     {
       "en": "salary",
-      "fr": "salaire",
+      "fr": "salaire (indice anglais : « s… », 6 lettres)",
       "level": 5,
       "nextReview": "2026-10-14T16:38:47.763Z",
       "isFailed": false
@@ -14417,13 +14417,13 @@
     },
     {
       "en": "scared",
-      "fr": "effrayé",
+      "fr": "effrayé (indice anglais : « s… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
     {
       "en": "scary",
-      "fr": "effrayant",
+      "fr": "effrayant (indice anglais : « s… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -14472,7 +14472,7 @@
     },
     {
       "en": "scream",
-      "fr": "crier",
+      "fr": "crier (indice anglais : « sc… », 6 lettres)",
       "level": 5,
       "nextReview": "2026-10-08T19:33:41.953Z",
       "isFailed": false
@@ -14568,7 +14568,7 @@
     },
     {
       "en": "security",
-      "fr": "sécurité",
+      "fr": "sécurité (indice anglais : « se… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -14853,7 +14853,7 @@
     },
     {
       "en": "sharp",
-      "fr": "pointu",
+      "fr": "pointu (indice anglais : « s… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -14986,7 +14986,7 @@
     },
     {
       "en": "should",
-      "fr": "devrait",
+      "fr": "devrait (indice anglais : « s… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -14998,7 +14998,7 @@
     },
     {
       "en": "shout",
-      "fr": "crier",
+      "fr": "crier (indice anglais : « sh… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -15016,7 +15016,7 @@
     },
     {
       "en": "shut",
-      "fr": "fermer",
+      "fr": "fermer (indice anglais : « s… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -15061,7 +15061,7 @@
     },
     {
       "en": "significant",
-      "fr": "significatif",
+      "fr": "significatif (indice anglais : « s… », 11 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.244Z"
@@ -15126,13 +15126,13 @@
     },
     {
       "en": "simple",
-      "fr": "simple",
+      "fr": "simple (indice anglais : « s… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
     {
       "en": "simply",
-      "fr": "simplement",
+      "fr": "simplement (indice anglais : « s… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.244Z"
@@ -15296,7 +15296,7 @@
     },
     {
       "en": "slide",
-      "fr": "glisser",
+      "fr": "glisser (indice anglais : « slid… », 5 lettres)",
       "level": 5,
       "nextReview": "2026-10-12T07:33:41.949Z",
       "isFailed": false
@@ -15317,7 +15317,7 @@
     },
     {
       "en": "slip",
-      "fr": "glisser",
+      "fr": "glisser (indice anglais : « slip… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -15343,13 +15343,13 @@
     },
     {
       "en": "small",
-      "fr": "petit",
+      "fr": "petit (indice anglais : « s… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
     {
       "en": "smart",
-      "fr": "intelligent",
+      "fr": "intelligent (indice anglais : « s… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -15411,7 +15411,7 @@
     },
     {
       "en": "so",
-      "fr": "donc",
+      "fr": "donc (indice anglais : « s… », 2 lettres)",
       "level": 4,
       "nextReview": "2026-10-06T16:32:45.261Z",
       "isFailed": false
@@ -15494,7 +15494,7 @@
     },
     {
       "en": "solve",
-      "fr": "résoudre",
+      "fr": "résoudre (indice anglais : « s… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -15506,13 +15506,13 @@
     },
     {
       "en": "somebody",
-      "fr": "quelqu'un",
+      "fr": "quelqu'un (indice anglais : « someb… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
     {
       "en": "someone",
-      "fr": "quelqu'un",
+      "fr": "quelqu'un (indice anglais : « someo… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -15616,7 +15616,7 @@
     },
     {
       "en": "speak",
-      "fr": "parler",
+      "fr": "parler (indice anglais : « s… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -15726,7 +15726,7 @@
     },
     {
       "en": "split",
-      "fr": "diviser",
+      "fr": "diviser (indice anglais : « s… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -15841,14 +15841,14 @@
     },
     {
       "en": "stare",
-      "fr": "regard",
+      "fr": "regard (indice anglais : « s… », 5 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.244Z"
     },
     {
       "en": "start",
-      "fr": "commencer",
+      "fr": "commencer (indice anglais : « s… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -16091,7 +16091,7 @@
     },
     {
       "en": "strongly",
-      "fr": "fortement",
+      "fr": "fortement (indice anglais : « s… », 8 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.245Z"
@@ -16105,7 +16105,7 @@
     },
     {
       "en": "struggle",
-      "fr": "lutte",
+      "fr": "lutte (indice anglais : « s… », 8 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.245Z"
@@ -16252,7 +16252,7 @@
     },
     {
       "en": "suitable",
-      "fr": "approprié",
+      "fr": "approprié (indice anglais : « s… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -16301,7 +16301,7 @@
     },
     {
       "en": "supply",
-      "fr": "fournir",
+      "fr": "fournir (indice anglais : « s… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.245Z"
@@ -16321,7 +16321,7 @@
     },
     {
       "en": "suppose",
-      "fr": "supposer",
+      "fr": "supposer (indice anglais : « s… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -16522,7 +16522,7 @@
     },
     {
       "en": "talk",
-      "fr": "parler",
+      "fr": "parler (indice anglais : « t… », 4 lettres)",
       "level": 6,
       "nextReview": "2026-10-05T16:49:40.529Z",
       "isFailed": false
@@ -16649,7 +16649,7 @@
     },
     {
       "en": "telephone",
-      "fr": "téléphone",
+      "fr": "téléphone (indice anglais : « t… », 9 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -16713,7 +16713,7 @@
     },
     {
       "en": "terrible",
-      "fr": "terrible",
+      "fr": "terrible (indice anglais : « t… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -16826,7 +16826,7 @@
     },
     {
       "en": "therefore",
-      "fr": "donc",
+      "fr": "donc (indice anglais : « t… », 9 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -16868,7 +16868,7 @@
     },
     {
       "en": "thinking",
-      "fr": "pensée",
+      "fr": "pensée (indice anglais : « thi… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -16906,13 +16906,13 @@
     },
     {
       "en": "though",
-      "fr": "cependant",
+      "fr": "cependant (indice anglais : « t… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
     {
       "en": "thought",
-      "fr": "pensée",
+      "fr": "pensée (indice anglais : « tho… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -16951,7 +16951,7 @@
     },
     {
       "en": "through",
-      "fr": "à travers",
+      "fr": "à travers (indice anglais : « t… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -17001,7 +17001,7 @@
     },
     {
       "en": "till",
-      "fr": "jusqu'à",
+      "fr": "jusqu'à (indice anglais : « t… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -17117,7 +17117,7 @@
     },
     {
       "en": "too",
-      "fr": "aussi",
+      "fr": "aussi (indice anglais : « t… », 3 lettres)",
       "level": 6,
       "nextReview": "2026-10-29T17:23:53.331Z",
       "isFailed": false
@@ -17212,7 +17212,7 @@
     },
     {
       "en": "town",
-      "fr": "ville",
+      "fr": "ville (indice anglais : « t… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -17224,13 +17224,13 @@
     },
     {
       "en": "track",
-      "fr": "piste",
+      "fr": "piste (indice anglais : « trac… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
     {
       "en": "trade",
-      "fr": "commerce",
+      "fr": "commerce (indice anglais : « t… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -17305,13 +17305,13 @@
     },
     {
       "en": "transport",
-      "fr": "transport",
+      "fr": "transport (indice anglais : « transport… », 9 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
     {
       "en": "transportation",
-      "fr": "transport",
+      "fr": "transport (indice anglais : « transporta… », 14 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -17405,7 +17405,7 @@
     },
     {
       "en": "truly",
-      "fr": "vraiment",
+      "fr": "vraiment (indice anglais : « t… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.724Z"
     },
@@ -17564,7 +17564,7 @@
     },
     {
       "en": "under",
-      "fr": "sous",
+      "fr": "sous (indice anglais : « u… », 5 lettres)",
       "level": 5,
       "nextReview": "2026-10-09T18:12:24.435Z",
       "isFailed": false
@@ -17622,7 +17622,7 @@
     },
     {
       "en": "unfortunately",
-      "fr": "malheureusement",
+      "fr": "malheureusement (indice anglais : « u… », 13 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.725Z"
     },
@@ -17714,7 +17714,7 @@
     },
     {
       "en": "until",
-      "fr": "jusqu'à",
+      "fr": "jusqu'à (indice anglais : « u… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.725Z"
     },
@@ -17800,7 +17800,7 @@
     },
     {
       "en": "useful",
-      "fr": "utile",
+      "fr": "utile (indice anglais : « u… », 6 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.725Z"
     },
@@ -17825,7 +17825,7 @@
     },
     {
       "en": "vacation",
-      "fr": "vacances",
+      "fr": "vacances (indice anglais : « v… », 8 lettres)",
       "level": 4,
       "nextReview": "2026-10-07T14:24:48.523Z",
       "isFailed": false
@@ -17838,7 +17838,7 @@
     },
     {
       "en": "valuable",
-      "fr": "précieux",
+      "fr": "précieux (indice anglais : « v… », 8 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.725Z"
     },
@@ -17862,7 +17862,7 @@
     },
     {
       "en": "various",
-      "fr": "divers",
+      "fr": "divers (indice anglais : « v… », 7 lettres)",
       "level": 5,
       "nextReview": "2026-10-17T19:55:20.030Z",
       "isFailed": false
@@ -17895,7 +17895,7 @@
     },
     {
       "en": "venue",
-      "fr": "lieu",
+      "fr": "lieu (indice anglais : « v… », 5 lettres)",
       "level": 5,
       "isFailed": false,
       "nextReview": "2026-10-08T19:30:10.838Z"
@@ -17909,7 +17909,7 @@
     },
     {
       "en": "very",
-      "fr": "très",
+      "fr": "très (indice anglais : « v… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.725Z"
     },
@@ -18053,7 +18053,7 @@
     },
     {
       "en": "wage",
-      "fr": "salaire",
+      "fr": "salaire (indice anglais : « w… », 4 lettres)",
       "level": 5,
       "nextReview": "2026-10-12T07:33:59.612Z",
       "isFailed": false
@@ -18160,7 +18160,7 @@
     },
     {
       "en": "way",
-      "fr": "chemin",
+      "fr": "chemin (indice anglais : « w… », 3 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.725Z"
     },
@@ -18192,7 +18192,7 @@
     },
     {
       "en": "wealthy",
-      "fr": "riche",
+      "fr": "riche (indice anglais : « w… », 7 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.245Z"
@@ -18231,7 +18231,7 @@
     },
     {
       "en": "wedding",
-      "fr": "mariage",
+      "fr": "mariage (indice anglais : « w… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.725Z"
     },
@@ -18336,7 +18336,7 @@
     },
     {
       "en": "whereas",
-      "fr": "alors que",
+      "fr": "alors que (indice anglais : « whe… », 7 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.245Z"
@@ -18362,7 +18362,7 @@
     },
     {
       "en": "while",
-      "fr": "alors que",
+      "fr": "alors que (indice anglais : « whi… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.725Z"
     },
@@ -18388,7 +18388,7 @@
     },
     {
       "en": "whole",
-      "fr": "entier",
+      "fr": "entier (indice anglais : « w… », 5 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.725Z"
     },
@@ -18415,7 +18415,7 @@
     },
     {
       "en": "wide",
-      "fr": "large",
+      "fr": "large (indice anglais : « w… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.725Z"
     },
@@ -18447,7 +18447,7 @@
     },
     {
       "en": "will",
-      "fr": "volonté",
+      "fr": "volonté (indice anglais : « will… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.725Z"
     },
@@ -18615,14 +18615,14 @@
     },
     {
       "en": "worldwide",
-      "fr": "mondial",
+      "fr": "mondial (indice anglais : « w… », 9 lettres)",
       "level": 5,
       "nextReview": "2026-10-09T18:17:17.578Z",
       "isFailed": false
     },
     {
       "en": "worried",
-      "fr": "inquiet",
+      "fr": "inquiet (indice anglais : « w… », 7 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.725Z"
     },
@@ -18658,7 +18658,7 @@
     },
     {
       "en": "wound",
-      "fr": "blesser",
+      "fr": "blesser (indice anglais : « w… », 5 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.245Z"
@@ -18795,7 +18795,7 @@
     },
     {
       "en": "zone",
-      "fr": "zone",
+      "fr": "zone (indice anglais : « z… », 4 lettres)",
       "level": 0,
       "nextReview": "2026-04-13T19:39:53.725Z"
     },
@@ -19046,7 +19046,7 @@
     },
     {
       "en": "amongst",
-      "fr": "parmi",
+      "fr": "parmi (indice anglais : « amongs… », 7 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.238Z"
@@ -19074,7 +19074,7 @@
     },
     {
       "en": "analyse",
-      "fr": "analyser",
+      "fr": "analyser (indice anglais : « analys… », 7 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.238Z"
@@ -19116,7 +19116,7 @@
     },
     {
       "en": "anyhow",
-      "fr": "de toute façon",
+      "fr": "de toute façon (indice anglais : « anyh… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.238Z"
@@ -19256,7 +19256,7 @@
     },
     {
       "en": "awkward",
-      "fr": "maladroit",
+      "fr": "maladroit (indice anglais : « a… », 7 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.238Z"
@@ -19312,7 +19312,7 @@
     },
     {
       "en": "barely",
-      "fr": "à peine",
+      "fr": "à peine (indice anglais : « b… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.238Z"
@@ -19375,7 +19375,7 @@
     },
     {
       "en": "beneath",
-      "fr": "sous",
+      "fr": "sous (indice anglais : « b… », 7 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.239Z"
@@ -19431,7 +19431,7 @@
     },
     {
       "en": "bizarre",
-      "fr": "bizarre",
+      "fr": "bizarre (indice anglais : « b… », 7 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.239Z"
@@ -19508,7 +19508,7 @@
     },
     {
       "en": "booklet",
-      "fr": "brochure",
+      "fr": "brochure (indice anglais : « b… », 7 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.239Z"
@@ -19627,14 +19627,14 @@
     },
     {
       "en": "brightly",
-      "fr": "brillamment",
+      "fr": "brillamment (indice anglais : « brig… », 8 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.239Z"
     },
     {
       "en": "brilliantly",
-      "fr": "brillamment",
+      "fr": "brillamment (indice anglais : « bril… », 11 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.239Z"
@@ -19823,7 +19823,7 @@
     },
     {
       "en": "cautious",
-      "fr": "prudent",
+      "fr": "prudent (indice anglais : « cau… », 8 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.239Z"
@@ -19970,7 +19970,7 @@
     },
     {
       "en": "clumsy",
-      "fr": "maladroit",
+      "fr": "maladroit (indice anglais : « c… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.239Z"
@@ -20033,7 +20033,7 @@
     },
     {
       "en": "commerce",
-      "fr": "commerce",
+      "fr": "commerce (indice anglais : « c… », 8 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.239Z"
@@ -20047,7 +20047,7 @@
     },
     {
       "en": "companion",
-      "fr": "compagnon",
+      "fr": "compagnon (indice anglais : « c… », 9 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.239Z"
@@ -20180,7 +20180,7 @@
     },
     {
       "en": "considerably",
-      "fr": "considérablement",
+      "fr": "considérablement (indice anglais : « c… », 12 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.239Z"
@@ -20271,7 +20271,7 @@
     },
     {
       "en": "correspond",
-      "fr": "correspondre",
+      "fr": "correspondre (indice anglais : « c… », 10 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.239Z"
@@ -20565,14 +20565,14 @@
     },
     {
       "en": "delight",
-      "fr": "plaisir",
+      "fr": "plaisir (indice anglais : « d… », 7 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.240Z"
     },
     {
       "en": "delightful",
-      "fr": "délicieux",
+      "fr": "délicieux (indice anglais : « delig… », 10 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.240Z"
@@ -20775,7 +20775,7 @@
     },
     {
       "en": "dip",
-      "fr": "tremper",
+      "fr": "tremper (indice anglais : « d… », 3 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.240Z"
@@ -20873,7 +20873,7 @@
     },
     {
       "en": "distant",
-      "fr": "loin",
+      "fr": "loin (indice anglais : « d… », 7 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.240Z"
@@ -20915,14 +20915,14 @@
     },
     {
       "en": "disturb",
-      "fr": "déranger",
+      "fr": "déranger (indice anglais : « d… », 7 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.240Z"
     },
     {
       "en": "diverse",
-      "fr": "divers",
+      "fr": "divers (indice anglais : « d… », 7 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.240Z"
@@ -20971,7 +20971,7 @@
     },
     {
       "en": "dreadful",
-      "fr": "terrible",
+      "fr": "terrible (indice anglais : « d… », 8 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.240Z"
@@ -21069,7 +21069,7 @@
     },
     {
       "en": "efficiently",
-      "fr": "efficacement",
+      "fr": "efficacement (indice anglais : « effi… », 11 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.240Z"
@@ -21188,7 +21188,7 @@
     },
     {
       "en": "entertaining",
-      "fr": "amusant",
+      "fr": "amusant (indice anglais : « e… », 12 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.240Z"
@@ -21251,7 +21251,7 @@
     },
     {
       "en": "essentially",
-      "fr": "essentiellement",
+      "fr": "essentiellement (indice anglais : « e… », 11 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.240Z"
@@ -21265,14 +21265,14 @@
     },
     {
       "en": "evident",
-      "fr": "évident",
+      "fr": "évident (indice anglais : « e… », 7 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.240Z"
     },
     {
       "en": "evidently",
-      "fr": "évidemment",
+      "fr": "évidemment (indice anglais : « e… », 9 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.240Z"
@@ -21398,7 +21398,7 @@
     },
     {
       "en": "fade",
-      "fr": "disparaître",
+      "fr": "disparaître (indice anglais : « f… », 4 lettres)",
       "level": 4,
       "isFailed": false,
       "nextReview": "2026-10-04T07:31:08.853Z"
@@ -21510,7 +21510,7 @@
     },
     {
       "en": "firmly",
-      "fr": "fermement",
+      "fr": "fermement (indice anglais : « f… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.240Z"
@@ -21692,7 +21692,7 @@
     },
     {
       "en": "gaze",
-      "fr": "regard",
+      "fr": "regard (indice anglais : « g… », 4 lettres)",
       "level": 5,
       "isFailed": false,
       "nextReview": "2026-10-09T18:19:29.793Z"
@@ -21734,7 +21734,7 @@
     },
     {
       "en": "gently",
-      "fr": "doucement",
+      "fr": "doucement (indice anglais : « g… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.241Z"
@@ -21797,7 +21797,7 @@
     },
     {
       "en": "greatly",
-      "fr": "considérablement",
+      "fr": "considérablement (indice anglais : « g… », 7 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.241Z"
@@ -21930,7 +21930,7 @@
     },
     {
       "en": "heal",
-      "fr": "guérir",
+      "fr": "guérir (indice anglais : « h… », 4 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.241Z"
@@ -21979,7 +21979,7 @@
     },
     {
       "en": "honour",
-      "fr": "honneur",
+      "fr": "honneur (indice anglais : « honou… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.241Z"
@@ -22196,7 +22196,7 @@
     },
     {
       "en": "instantly",
-      "fr": "immédiatement",
+      "fr": "immédiatement (indice anglais : « in… », 9 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.241Z"
@@ -22469,7 +22469,7 @@
     },
     {
       "en": "leaflet",
-      "fr": "brochure",
+      "fr": "brochure (indice anglais : « l… », 7 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.241Z"
@@ -22532,7 +22532,7 @@
     },
     {
       "en": "liberty",
-      "fr": "liberté",
+      "fr": "liberté (indice anglais : « l… », 7 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.241Z"
@@ -22651,7 +22651,7 @@
     },
     {
       "en": "maker",
-      "fr": "fabricant",
+      "fr": "fabricant (indice anglais : « mak… », 5 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.241Z"
@@ -22672,21 +22672,21 @@
     },
     {
       "en": "manufacture",
-      "fr": "fabrication",
+      "fr": "fabrication (indice anglais : « manufacture… », 11 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.241Z"
     },
     {
       "en": "manufacturer",
-      "fr": "fabricant",
+      "fr": "fabricant (indice anglais : « man… », 12 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.241Z"
     },
     {
       "en": "manufacturing",
-      "fr": "fabrication",
+      "fr": "fabrication (indice anglais : « manufacturi… », 13 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.241Z"
@@ -22721,14 +22721,14 @@
     },
     {
       "en": "meaningful",
-      "fr": "significatif",
+      "fr": "significatif (indice anglais : « m… », 10 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.241Z"
     },
     {
       "en": "meantime",
-      "fr": "entre-temps",
+      "fr": "entre-temps (indice anglais : « meant… », 8 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.241Z"
@@ -22763,14 +22763,14 @@
     },
     {
       "en": "mere",
-      "fr": "simple",
+      "fr": "simple (indice anglais : « m… », 4 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.241Z"
     },
     {
       "en": "merely",
-      "fr": "simplement",
+      "fr": "simplement (indice anglais : « m… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.241Z"
@@ -22938,7 +22938,7 @@
     },
     {
       "en": "narrowly",
-      "fr": "étroitement",
+      "fr": "étroitement (indice anglais : « n… », 8 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.242Z"
@@ -22973,7 +22973,7 @@
     },
     {
       "en": "neighbouring",
-      "fr": "voisin",
+      "fr": "voisin (indice anglais : « neighbou… », 12 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.242Z"
@@ -23085,7 +23085,7 @@
     },
     {
       "en": "offence",
-      "fr": "infraction",
+      "fr": "infraction (indice anglais : « offenc… », 7 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.242Z"
@@ -23155,7 +23155,7 @@
     },
     {
       "en": "outstanding",
-      "fr": "remarquable",
+      "fr": "remarquable (indice anglais : « o… », 11 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.242Z"
@@ -23323,7 +23323,7 @@
     },
     {
       "en": "peculiar",
-      "fr": "particulier",
+      "fr": "particulier (indice anglais : « pe… », 8 lettres)",
       "level": 4,
       "isFailed": false,
       "nextReview": "2026-10-07T14:22:58.220Z"
@@ -23491,7 +23491,7 @@
     },
     {
       "en": "practically",
-      "fr": "pratiquement",
+      "fr": "pratiquement (indice anglais : « p… », 11 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.243Z"
@@ -23505,14 +23505,14 @@
     },
     {
       "en": "precious",
-      "fr": "précieux",
+      "fr": "précieux (indice anglais : « p… », 8 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.244Z"
     },
     {
       "en": "precise",
-      "fr": "précis",
+      "fr": "précis (indice anglais : « p… », 7 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.244Z"
@@ -23589,7 +23589,7 @@
     },
     {
       "en": "presumably",
-      "fr": "probablement",
+      "fr": "probablement (indice anglais : « pre… », 10 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.244Z"
@@ -23617,7 +23617,7 @@
     },
     {
       "en": "primarily",
-      "fr": "principalement",
+      "fr": "principalement (indice anglais : « p… », 9 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.244Z"
@@ -23638,7 +23638,7 @@
     },
     {
       "en": "probable",
-      "fr": "probable",
+      "fr": "probable (indice anglais : « p… », 8 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.244Z"
@@ -23694,7 +23694,7 @@
     },
     {
       "en": "promptly",
-      "fr": "rapidement",
+      "fr": "rapidement (indice anglais : « p… », 8 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.244Z"
@@ -23841,7 +23841,7 @@
     },
     {
       "en": "readily",
-      "fr": "facilement",
+      "fr": "facilement (indice anglais : « r… », 7 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.244Z"
@@ -23960,7 +23960,7 @@
     },
     {
       "en": "remarkable",
-      "fr": "remarquable",
+      "fr": "remarquable (indice anglais : « r… », 10 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.244Z"
@@ -24170,7 +24170,7 @@
     },
     {
       "en": "sadness",
-      "fr": "tristesse",
+      "fr": "tristesse (indice anglais : « s… », 7 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.244Z"
@@ -24296,7 +24296,7 @@
     },
     {
       "en": "seldom",
-      "fr": "rarement",
+      "fr": "rarement (indice anglais : « s… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.244Z"
@@ -24345,7 +24345,7 @@
     },
     {
       "en": "severely",
-      "fr": "gravement",
+      "fr": "gravement (indice anglais : « s… », 8 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.244Z"
@@ -24443,7 +24443,7 @@
     },
     {
       "en": "skilled",
-      "fr": "qualifié",
+      "fr": "qualifié (indice anglais : « s… », 7 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.244Z"
@@ -24492,7 +24492,7 @@
     },
     {
       "en": "smoothly",
-      "fr": "doucement",
+      "fr": "doucement (indice anglais : « s… », 8 lettres)",
       "level": 3,
       "isFailed": false,
       "nextReview": "2026-10-07T20:04:04.306Z"
@@ -24513,7 +24513,7 @@
     },
     {
       "en": "soak",
-      "fr": "tremper",
+      "fr": "tremper (indice anglais : « s… », 4 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.244Z"
@@ -24625,7 +24625,7 @@
     },
     {
       "en": "starving",
-      "fr": "affamé",
+      "fr": "affamé (indice anglais : « s… », 8 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.244Z"
@@ -24646,7 +24646,7 @@
     },
     {
       "en": "steadily",
-      "fr": "régulièrement",
+      "fr": "régulièrement (indice anglais : « s… », 8 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.245Z"
@@ -24786,7 +24786,7 @@
     },
     {
       "en": "stunning",
-      "fr": "superbe",
+      "fr": "superbe (indice anglais : « st… », 8 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.245Z"
@@ -24856,7 +24856,7 @@
     },
     {
       "en": "superb",
-      "fr": "superbe",
+      "fr": "superbe (indice anglais : « su… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.245Z"
@@ -25178,7 +25178,7 @@
     },
     {
       "en": "thoroughly",
-      "fr": "soigneusement",
+      "fr": "soigneusement (indice anglais : « t… », 10 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.245Z"
@@ -25220,7 +25220,7 @@
     },
     {
       "en": "tightly",
-      "fr": "fermement",
+      "fr": "fermement (indice anglais : « t… », 7 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.245Z"
@@ -25283,7 +25283,7 @@
     },
     {
       "en": "toxic",
-      "fr": "toxique",
+      "fr": "toxique (indice anglais : « t… », 5 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.245Z"
@@ -25318,7 +25318,7 @@
     },
     {
       "en": "trail",
-      "fr": "piste",
+      "fr": "piste (indice anglais : « trai… », 5 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.245Z"
@@ -25493,7 +25493,7 @@
     },
     {
       "en": "uncertain",
-      "fr": "incertain",
+      "fr": "incertain (indice anglais : « unc… », 9 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.245Z"
@@ -25563,7 +25563,7 @@
     },
     {
       "en": "uneasy",
-      "fr": "inquiet",
+      "fr": "inquiet (indice anglais : « u… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.245Z"
@@ -25605,7 +25605,7 @@
     },
     {
       "en": "unhappiness",
-      "fr": "tristesse",
+      "fr": "tristesse (indice anglais : « u… », 11 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.245Z"
@@ -25710,7 +25710,7 @@
     },
     {
       "en": "unsure",
-      "fr": "incertain",
+      "fr": "incertain (indice anglais : « uns… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.245Z"
@@ -25738,7 +25738,7 @@
     },
     {
       "en": "upbringing",
-      "fr": "éducation",
+      "fr": "éducation (indice anglais : « u… », 10 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.245Z"
@@ -25766,7 +25766,7 @@
     },
     {
       "en": "vanish",
-      "fr": "disparaître",
+      "fr": "disparaître (indice anglais : « v… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.245Z"
@@ -25808,7 +25808,7 @@
     },
     {
       "en": "virtually",
-      "fr": "pratiquement",
+      "fr": "pratiquement (indice anglais : « v… », 9 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.245Z"
@@ -25878,7 +25878,7 @@
     },
     {
       "en": "warmth",
-      "fr": "chaleur",
+      "fr": "chaleur (indice anglais : « w… », 6 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.245Z"
@@ -25899,7 +25899,7 @@
     },
     {
       "en": "weird",
-      "fr": "bizarre",
+      "fr": "bizarre (indice anglais : « w… », 5 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.245Z"
@@ -25983,7 +25983,7 @@
     },
     {
       "en": "willingness",
-      "fr": "volonté",
+      "fr": "volonté (indice anglais : « willi… », 11 lettres)",
       "level": 0,
       "isFailed": false,
       "nextReview": "2026-05-03T14:57:03.245Z"
@@ -26081,7 +26081,7 @@
     },
     {
       "en": "yell",
-      "fr": "crier",
+      "fr": "crier (indice anglais : « y… », 4 lettres)",
       "level": 4,
       "isFailed": false,
       "nextReview": "2026-10-06T16:23:47.166Z"
