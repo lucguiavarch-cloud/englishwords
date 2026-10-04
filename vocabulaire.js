@@ -842,7 +842,8 @@ function getNextWord() {
     
     setText(wordEl, currentWord.fr);
     if (guideEl) {
-        const g = currentWord.guide && String(currentWord.guide).trim();
+        const g = (currentWord.guide || currentWord.context) &&
+                  String(currentWord.guide || currentWord.context).trim();
         if (g) {
             guideEl.textContent = g;
             guideEl.hidden = false;
@@ -1273,8 +1274,9 @@ async function loadPreset(fileName) {
         const formattedLines = data
             .map((item) => {
                 let line = `${item.en}, ${item.fr}`;
-                if (item.guide && String(item.guide).trim()) {
-                    line += GUIDE_SEP + String(item.guide).trim().replace(/\s*\|\|\|\s*/g, " ");
+                const hint = item.guide || item.context;
+                if (hint && String(hint).trim()) {
+                    line += GUIDE_SEP + String(hint).trim().replace(/\s*\|\|\|\s*/g, " ");
                 }
                 return line;
             })
