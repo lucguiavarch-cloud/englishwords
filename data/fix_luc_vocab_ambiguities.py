@@ -1,4 +1,5 @@
 import json
+import re
 import shutil
 from collections import defaultdict
 from datetime import datetime
@@ -545,6 +546,8 @@ CONTEXTS = {
     ("électronique", "electronics"): "nom, domaine technique",
     ("étranger", "foreign"): "adjectif, d'un autre pays",
     ("étranger", "stranger"): "nom, personne inconnue",
+    ("fou", "crazy"): "irrationnel, extravagant ou insensé",
+    ("fou", "mad"): "fou en anglais britannique, en colère en anglais américain",
     ("être", "be"): "verbe à l'infinitif",
     ("être", "being"): "fait d'être ou être vivant",
 }
@@ -554,35 +557,12 @@ def normalized(value):
     return str(value or "").strip().casefold()
 
 
-def shortest_unique_prefix(value, alternatives):
-    lowered = normalized(value)
-    for length in range(1, len(lowered) + 1):
-        prefix = lowered[:length]
-        if all(not other.startswith(prefix) for other in alternatives if other != lowered):
-            return prefix
-    return lowered
-
-
-def add_strict_fallback_contexts(words):
-    groups = defaultdict(list)
-    for word in words:
-        groups[normalized(word.get("fr"))].append(word)
-
-    changed = 0
-    for french, group in groups.items():
-        english = {normalized(word.get("en")) for word in group}
-        if not french or len(english) < 2:
-            continue
-        for word in group:
-            answer = normalized(word.get("en"))
-            prefix = shortest_unique_prefix(answer, english)
-            word["fr"] = (
-                f"{str(word['fr']).strip()} "
-                f"(indice anglais : « {prefix}… », {len(answer)} lettres)"
-            )
-            word.pop("guide", None)
-            changed += 1
-    return changed
+def remove_artificial_hint(french):
+    return re.sub(
+        r"\s*\(indice anglais\s*:\s*«.*?…\s*»,\s*\d+\s+lettres\)\s*$",
+        "",
+        str(french or ""),
+    ).strip()
 
 
 def progression_score(word):
@@ -617,6 +597,13 @@ def main():
     )
     shutil.copy2(DATA_FILE, backup)
 
+    hints_removed = 0
+    for word in words:
+        clean_french = remove_artificial_hint(word.get("fr"))
+        if clean_french != word.get("fr"):
+            word["fr"] = clean_french
+            hints_removed += 1
+
     changed = 0
     for word in words:
         key = (normalized(word.get("fr")), normalized(word.get("en")))
@@ -625,8 +612,6 @@ def main():
             word["fr"] = f"{str(word['fr']).strip()} ({context})"
             word.pop("guide", None)
             changed += 1
-
-    fallback_changed = add_strict_fallback_contexts(words)
 
     unique = []
     positions = {}
@@ -652,8 +637,8 @@ def main():
     remaining = sum(1 for values in groups.values() if len(values) > 1)
 
     print(f"Backup: {backup}")
+    print(f"Artificial hints removed: {hints_removed}")
     print(f"Contexts added: {changed}")
-    print(f"Strict fallback contexts added: {fallback_changed}")
     print(f"Exact duplicates merged: {duplicates}")
     print(f"Entries: {len(words)} -> {len(unique)}")
     print(f"Shared French labels remaining: {remaining}")
