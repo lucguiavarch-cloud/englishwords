@@ -1,5 +1,15 @@
 # Changelog
 
+## v4.13 — 18/10/2026
+
+### Vocabulaire — session du jour
+- **Quota quotidien** : `DAILY_WORD_LIMIT` = 60 mots/jour (~10 min). Compteur « Session du jour : x / 60 » sous le mode ; au quota, écran « Session du jour terminée » + bouton **Continuer quand même (bonus)**.
+- **Révisions par urgence** : les mots dus les plus en retard (retard / intervalle) passent en premier ; le surplus est reporté aux jours suivants.
+- **Réservoir intercalé** : un mot raté tous les `RESERVOIR_EVERY` = 3 mots, même s'il reste des révisions (avant : réservoir seulement après toutes les révisions).
+- **Nouveaux mots limités** : `DAILY_NEW_WORD_LIMIT` = 10/jour, seulement si le réservoir contient 20 mots ou moins.
+- Nouveaux compteurs `dailyAnswered` / `dailyNew` dans les stats (reset journalier, export/import).
+- Inchangé : 1re bonne réponse d'un nouveau mot → niveau 5 (15 jours), descente d'un niveau en cas d'erreur.
+
 ## v4.12 — 03/10/2026
 
 ### Désambiguïsation des traductions

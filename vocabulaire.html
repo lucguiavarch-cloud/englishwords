@@ -232,6 +232,7 @@
 
     <div class="quiz-section" id="quiz-box">
         <div id="mode-tag" class="mode-indicator">MODE</div>
+        <p id="daily-session-counter" class="daily-session-counter" role="status" aria-live="polite"></p>
         <div class="word-to-translate" id="current-word">---</div>
         <p id="word-guide" class="word-guide" hidden></p>
         <input type="text" id="user-input" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false">
@@ -239,6 +240,7 @@
         <div class="action-controls-container">
             <button id="btn-hint" class="bg-violet">💡 Indice (<span id="count-hint">0</span>)</button>
         </div>
+        <button id="btn-continue-session" type="button" class="bg-primary btn-continue-session" hidden>Continuer quand même (bonus)</button>
 
         <div id="feedback"></div>
     </div>
@@ -259,7 +261,7 @@
         <p class="vocab-onboarding-replay-wrap">
             <button type="button" id="replay-vocab-onboarding" class="vocab-onboarding-replay-btn">Revoir l’intro vocabulaire</button>
         </p>
-        <p class="footer-version" style="text-align: center; margin-top: 10px; font-size: 0.7rem; color: #bdc3c7; opacity: 0.6;">v4.11</p>
+        <p class="footer-version" style="text-align: center; margin-top: 10px; font-size: 0.7rem; color: #bdc3c7; opacity: 0.6;">v4.13</p>
     </div>
 
     <div id="wordModal" class="modal modal--add-words">

@@ -51,6 +51,8 @@ const defaultStats = {
   dailyGoalProgress: 0,
   maxCombo: 0,
   dailyTotal: 0,
+  dailyAnswered: 0,
+  dailyNew: 0,
   masteryBaselineDate: null,
   masteryBaselinePercent: null,
   masterySnapshotEod: null,
@@ -74,6 +76,7 @@ stats.maxCombo = parseInt(stats.maxCombo, 10);
 if (isNaN(stats.maxCombo) || stats.maxCombo < 0) stats.maxCombo = 0;
 stats.dailyTotal = parseInt(stats.dailyTotal, 10);
 if (isNaN(stats.dailyTotal) || stats.dailyTotal < 0) stats.dailyTotal = 0;
+normalizeDailySessionStats(stats);
 stats.unlockedJurons = Array.isArray(stats.unlockedJurons)
   ? [...new Set(stats.unlockedJurons.map((id) => parseInt(id, 10)).filter((n) => !isNaN(n) && n >= 0))]
   : [];
@@ -120,6 +123,15 @@ let pendingMasterFireworks = false;
 /** Timestamp du début de la réponse pour mesurer le temps de réaction */
 let responseStartTime = null;
 
+/* Session quotidienne : quota de mots, réservoir intercalé, nouveaux mots limités */
+const DAILY_WORD_LIMIT = 60;
+const DAILY_NEW_WORD_LIMIT = 10;
+const RESERVOIR_EVERY = 3;
+const RESERVOIR_MAX_FOR_NEW = 20;
+const URGENT_PICK_WINDOW = 5;
+let dailyBonusUnlocked = false;
+let currentWordIsNew = false;
+
 /** Matrice de confusion pour détecter les mots confondus */
 const confusionMatrix = {};
 
@@ -151,6 +163,13 @@ function updateResponseTimeStats(word, responseTimeMs) {
     // Lisser la difficulté avec la valeur existante (moyenne pondérée)
     const currentDifficulty = word.difficulty || 2.5;
     word.difficulty = Math.round((currentDifficulty * 0.7 + timeBasedDifficulty * 0.3) * 10) / 10;
+}
+
+function normalizeDailySessionStats(target) {
+    for (const k of ['dailyAnswered', 'dailyNew']) {
+        const n = parseInt(target[k], 10);
+        target[k] = isNaN(n) || n < 0 ? 0 : n;
+    }
 }
 
 function calculateAdaptiveInterval(word, baseInterval) {
@@ -274,6 +293,8 @@ if (stats.lastDate !== today) {
 
   stats.dailyTotal = 0;
   stats.dailyGoalProgress = 0;
+  stats.dailyAnswered = 0;
+  stats.dailyNew = 0;
   stats.lastDate = today;
   save();
 }
@@ -372,6 +393,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const btnHint = document.getElementById('btn-hint');
   if (btnHint) btnHint.addEventListener('click', useHint);
+
+  const btnContinueSession = document.getElementById('btn-continue-session');
+  if (btnContinueSession) btnContinueSession.addEventListener('click', continueAfterDailySession);
 
   const userInput = document.getElementById('user-input');
   if (userInput) {
@@ -803,27 +827,17 @@ function getNextWord() {
     // Initialiser le tracking pour tous les mots (migration progressive)
     dictionary = dictionary.map(initWordTracking);
 
-	// On ajoute "!w.isFailed" pour ne pas mélanger les révisions et la consolidation
-	let reviews = dictionary.filter(w => w.level >= 1 && w.level < 7 && new Date(w.nextReview) <= now && !w.isFailed);
-
-	// La consolidation aspire TOUS les mots échoués, peu importe le niveau
-	let consolidation = dictionary.filter(w => w.isFailed);
-    let discovery = dictionary.filter(w => w.level === 0 && !w.isFailed);
-
-    let pool = [];
-    if (reviews.length) {
-        pool = reviews;
-        setMode("🔄 RÉVISION", "var(--accent)");
-    } else if (consolidation.length) {
-        pool = consolidation;
-        setMode("🛠️ CONSO", "var(--pink)");
-    } else if (discovery.length) {
-        pool = discovery;
-        setMode("✨ NOUVEAU", "var(--primary)");
+    updateDailySessionCounter();
+    if (stats.dailyAnswered >= DAILY_WORD_LIMIT && !dailyBonusUnlocked) {
+        showDailySessionDone();
+        return;
     }
+    setDailySessionDoneUI(false);
 
+    const pick = pickNextWord(now);
     const guideEl = document.getElementById('word-guide');
-    if (!pool.length) {
+    if (!pick) {
+        currentWord = null;
         setText(wordEl, "Bravo !");
         if (guideEl) {
             guideEl.textContent = "";
@@ -832,9 +846,11 @@ function getNextWord() {
         if (modeTag) modeTag.style.display = "none";
         return;
     }
+    setMode(pick.label, pick.color);
 
     if (modeTag) modeTag.style.display = "block";
-    currentWord = pool[Math.floor(Math.random() * pool.length)];
+    currentWord = pick.word;
+    currentWordIsNew = pick.isNew;
     hintConsumedForCurrentWord = false;
     
     // Initialiser le tracking pour le mot courant
@@ -857,6 +873,81 @@ function getNextWord() {
         inputEl.focus();
     }
     syncHintButton();
+}
+
+/** Les mots les plus en retard (rapporté à leur intervalle) passent en premier. */
+function reviewUrgency(w, now) {
+    const overdueDays = (now - new Date(w.nextReview)) / 86400000;
+    return overdueDays / Math.max(1, Number(w.interval) || 1);
+}
+
+/** Tirage au hasard parmi les plus urgents, en évitant de reposer le mot qui vient de passer. */
+function pickUrgent(list, urgency) {
+    const candidates = list.length > 1 ? list.filter((w) => w !== currentWord) : list;
+    const sorted = candidates.slice().sort((a, b) => urgency(b) - urgency(a));
+    const top = sorted.slice(0, URGENT_PICK_WINDOW);
+    return top[Math.floor(Math.random() * top.length)];
+}
+
+/**
+ * Ordre : révisions dues (les plus urgentes d'abord), un mot du réservoir tous les
+ * RESERVOIR_EVERY mots, puis nouveaux mots (limités par jour, seulement si le réservoir est petit).
+ */
+function pickNextWord(now) {
+    const reviews = dictionary.filter(w => w.level >= 1 && w.level < 7 && new Date(w.nextReview) <= now && !w.isFailed);
+    const consolidation = dictionary.filter(w => w.isFailed);
+    const newAllowed = stats.dailyNew < DAILY_NEW_WORD_LIMIT && consolidation.length <= RESERVOIR_MAX_FOR_NEW;
+    const discovery = newAllowed ? dictionary.filter(w => w.level === 0 && !w.isFailed) : [];
+
+    const reservoirTurn = (stats.dailyAnswered + 1) % RESERVOIR_EVERY === 0;
+    const conso = () => ({
+        word: pickUrgent(consolidation, (w) => -new Date(w.nextReview).getTime()),
+        label: "🛠️ CONSO", color: "var(--pink)", isNew: false
+    });
+
+    if (consolidation.length && (reservoirTurn || (!reviews.length && !discovery.length))) return conso();
+    if (reviews.length) {
+        return { word: pickUrgent(reviews, (w) => reviewUrgency(w, now)), label: "🔄 RÉVISION", color: "var(--accent)", isNew: false };
+    }
+    if (discovery.length) {
+        return { word: discovery[Math.floor(Math.random() * discovery.length)], label: "✨ NOUVEAU", color: "var(--primary)", isNew: true };
+    }
+    if (consolidation.length) return conso();
+    return null;
+}
+
+function updateDailySessionCounter() {
+    const el = document.getElementById('daily-session-counter');
+    if (!el) return;
+    const done = stats.dailyAnswered;
+    el.textContent = done > DAILY_WORD_LIMIT
+        ? `Session du jour : ${DAILY_WORD_LIMIT} / ${DAILY_WORD_LIMIT} · bonus +${done - DAILY_WORD_LIMIT}`
+        : `Session du jour : ${done} / ${DAILY_WORD_LIMIT}`;
+}
+
+function setDailySessionDoneUI(isDone) {
+    const box = document.getElementById('quiz-box');
+    const btnContinue = document.getElementById('btn-continue-session');
+    if (box) box.classList.toggle('daily-session-done', isDone);
+    if (btnContinue) btnContinue.hidden = !isDone;
+}
+
+function showDailySessionDone() {
+    currentWord = null;
+    const modeTag = document.getElementById('mode-tag');
+    const guideEl = document.getElementById('word-guide');
+    if (modeTag) modeTag.style.display = "none";
+    setText(document.getElementById('current-word'), "Session du jour terminée 🎉");
+    if (guideEl) {
+        guideEl.textContent = `${DAILY_WORD_LIMIT} mots aujourd'hui. Les mots restants sont reportés aux prochains jours, les plus urgents en premier.`;
+        guideEl.hidden = false;
+    }
+    setDailySessionDoneUI(true);
+}
+
+function continueAfterDailySession() {
+    dailyBonusUnlocked = true;
+    getNextWord();
 }
 
 function setMode(text, color) {
@@ -937,7 +1028,15 @@ function resolveEnglishQuizAnswer(inputRaw, cw, dict) {
 }
 
 function handleAnswer() {
+    if (!currentWord) return;
     if (!timerActive && timeLeft > 0) timerActive = true;
+
+    stats.dailyAnswered++;
+    if (currentWordIsNew) {
+        stats.dailyNew++;
+        currentWordIsNew = false;
+    }
+    updateDailySessionCounter();
 
     const userInputEl = document.getElementById('user-input');
     const input = userInputEl ? userInputEl.value.trim().toLowerCase() : '';
@@ -1192,6 +1291,8 @@ function exportJSON() {
         /* Badges / objectifs (sinon export → stats = cleanStats les efface et les donuts se dérèglent) */
         maxCombo: isNaN(parseInt(stats.maxCombo, 10)) ? 0 : Math.max(0, parseInt(stats.maxCombo, 10)),
         dailyTotal: isNaN(parseInt(stats.dailyTotal, 10)) ? 0 : Math.max(0, parseInt(stats.dailyTotal, 10)),
+        dailyAnswered: isNaN(parseInt(stats.dailyAnswered, 10)) ? 0 : Math.max(0, parseInt(stats.dailyAnswered, 10)),
+        dailyNew: isNaN(parseInt(stats.dailyNew, 10)) ? 0 : Math.max(0, parseInt(stats.dailyNew, 10)),
         masteryBaselineDate: stats.masteryBaselineDate != null ? stats.masteryBaselineDate : null,
         masteryBaselinePercent: typeof stats.masteryBaselinePercent === 'number' && !isNaN(stats.masteryBaselinePercent)
             ? stats.masteryBaselinePercent
@@ -1246,6 +1347,7 @@ function importJSON(e) {
                 if (isNaN(stats.maxCombo) || stats.maxCombo < 0) stats.maxCombo = 0;
                 stats.dailyTotal = parseInt(stats.dailyTotal, 10);
                 if (isNaN(stats.dailyTotal) || stats.dailyTotal < 0) stats.dailyTotal = 0;
+                normalizeDailySessionStats(stats);
                 stats.unlockedJurons = Array.isArray(stats.unlockedJurons)
                     ? [...new Set(stats.unlockedJurons.map((id) => parseInt(id, 10)).filter((n) => !isNaN(n) && n >= 0))]
                     : [];
