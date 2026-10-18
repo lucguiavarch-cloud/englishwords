@@ -1942,6 +1942,27 @@ body.skin-arcade .mastery-donut-pct-num {
 /* =========================================
    📱 INTERFACE MOBILE : DOUBLE COLONNE
    ========================================= */
+/* Session du jour (quota quotidien) */
+.daily-session-counter {
+    margin: 0 0 10px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--text-muted);
+}
+
+.btn-continue-session {
+    display: block;
+    margin: 14px auto 0;
+}
+
+.btn-continue-session[hidden],
+.quiz-section.daily-session-done input[type="text"],
+.quiz-section.daily-session-done .action-controls-container {
+    display: none !important;
+}
+
 @media (max-width: 600px) {
     .top-nav-links {
         position: static !important;
