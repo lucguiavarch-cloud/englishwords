@@ -292,6 +292,18 @@ function redirectUrl() {
     return location.origin + location.pathname;
 }
 
+const AUTH_ERRORS_FR = [
+    [/expired|invalid/i, 'code ou lien invalide ou expiré, redemande un e-mail'],
+    [/rate limit|security purposes|too many/i, 'trop de demandes, patiente une minute avant de réessayer'],
+    [/signups? not allowed|disabled/i, 'inscription désactivée dans Supabase (Authentication → Providers → Email)'],
+    [/fetch|network/i, 'réseau indisponible']
+];
+function frError(e) {
+    const m = String((e && e.message) || e || '');
+    const hit = AUTH_ERRORS_FR.find(([re]) => re.test(m));
+    return hit ? hit[1] : m;
+}
+
 const NO_CLIENT_MSG = 'service cloud injoignable (hors-ligne ?), réessaie plus tard';
 
 async function sendMagicLink(email) {
@@ -556,7 +568,7 @@ function openPanel() {
             codeBox.hidden = false;
             showMsg('Lien envoyé à ' + value + '.', 'ok');
         } catch (e) {
-            showMsg('Échec de l’envoi : ' + (e.message || e), 'err');
+            showMsg('Échec de l’envoi : ' + frError(e), 'err');
         } finally { busy(btnSend, false); }
     });
     email.addEventListener('keydown', (e) => { if (e.key === 'Enter') btnSend.click(); });
@@ -569,7 +581,7 @@ function openPanel() {
             await verifyCode(email.value.trim(), value);
             showMsg('Connecté !', 'ok');
         } catch (e) {
-            showMsg('Code refusé : ' + (e.message || e), 'err');
+            showMsg('Code refusé : ' + frError(e), 'err');
         } finally { busy(btnCode, false); }
     });
     code.addEventListener('keydown', (e) => { if (e.key === 'Enter') btnCode.click(); });
