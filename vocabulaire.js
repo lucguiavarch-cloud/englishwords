@@ -573,10 +573,15 @@ function getWeightedMasteryPercent() {
     return Math.round((totalPoints / maxPossiblePoints) * 100);
 }
 
+function notifyCloudSync() {
+    if (window.EMSync) window.EMSync.notifySaved();
+}
+
 function persistStatsOnly() {
     try {
         localStorage.setItem(KEY + '_STATS', JSON.stringify(stats));
     } catch (e) { /* quota / private mode */ }
+    notifyCloudSync();
 }
 
 function save() {
@@ -586,6 +591,7 @@ function save() {
     } catch (e) {
         /* quota / private mode */
     }
+    notifyCloudSync();
     updateUI();
 }
 
