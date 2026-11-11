@@ -295,7 +295,7 @@ function redirectUrl() {
 const AUTH_ERRORS_FR = [
     [/expired|invalid/i, 'code ou lien invalide ou expiré, redemande un e-mail'],
     [/rate limit|security purposes|too many/i, 'trop de demandes, patiente une minute avant de réessayer'],
-    [/signups? not allowed|disabled/i, 'inscription désactivée dans Supabase (Authentication → Providers → Email)'],
+    [/signups? not allowed|user not found|disabled/i, 'cette adresse n’est pas autorisée pour la synchro cloud'],
     [/fetch|network/i, 'réseau indisponible']
 ];
 function frError(e) {
@@ -310,7 +310,7 @@ async function sendMagicLink(email) {
     if (!client) throw new Error(NO_CLIENT_MSG);
     const { error } = await client.auth.signInWithOtp({
         email,
-        options: { emailRedirectTo: redirectUrl(), shouldCreateUser: true }
+        options: { emailRedirectTo: redirectUrl(), shouldCreateUser: false }
     });
     if (error) throw error;
 }

@@ -34,7 +34,12 @@ sur un autre appareil. Sans configuration, le bouton n'apparaît pas et l'appli 
 2. **SQL Editor** → coller le contenu de [`supabase/schema.sql`](supabase/schema.sql) → **Run**.
    Cela crée la table `user_data` (`user_id`, `kind`, `payload jsonb`, `updated_at`) avec la
    **Row Level Security** : chaque utilisateur ne peut lire / écrire que ses propres lignes.
-3. **Authentication → Sign In / Providers** : vérifier que **Email** est activé.
+3. **Réserver la synchro à vos comptes** (l'appli ne crée jamais de compte, même si l'appli est publique) :
+   - **Authentication → Sign In / Providers** : vérifier que **Email** est activé et **décocher
+     « Allow new users to sign up »** ;
+   - **Authentication → Users → Add user → Create new user** : créer votre compte avec votre e-mail
+     (cocher « Auto Confirm User »). Seules les adresses créées ici peuvent se connecter ; les autres
+     visiteurs voient « adresse non autorisée ».
 4. **Authentication → URL Configuration** :
    - *Site URL* : l'adresse où l'appli est publiée (ex. `https://<compte>.github.io/englishwords/`) ;
    - *Redirect URLs* : ajouter `https://<compte>.github.io/englishwords/**`

@@ -1,5 +1,11 @@
 # Changelog
 
+## v4.14 — 11/11/2026
+
+### Synchro cloud réservée au propriétaire
+- La connexion ne crée plus de compte (`shouldCreateUser: false`) : seules les adresses créées dans Supabase (Authentication → Users) peuvent se connecter ; message « adresse non autorisée » pour les autres.
+- README : étapes pour désactiver les inscriptions (« Allow new users to sign up ») et créer son compte.
+
 ## v4.13 — 11/11/2026
 
 ### Synchro cloud optionnelle (Supabase)
