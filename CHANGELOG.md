@@ -1,5 +1,15 @@
 # Changelog
 
+## v4.13 — 11/11/2026
+
+### Synchro cloud optionnelle (Supabase)
+- **`sync.js`** (chargé par `vocabulaire.html` et `verbes.html`) : connexion par e-mail (lien magique, ou code à 6 chiffres), déconnexion, push / pull vers la table Supabase **`user_data`** (`user_id`, `kind`, `payload jsonb`, `updated_at`).
+- **Push automatique** (debouncé ~8 s, max 30 s) après chaque `save()` si connecté ; synchro au chargement, au retour du réseau et à la réouverture de l'appli. Seuls les types modifiés sont envoyés.
+- **Fusion** : listes de mots / verbes fusionnées mot par mot (niveau max) ; stats : version du cloud au premier branchement d'un appareil, puis niveau joueur / XP max. Rechargement auto de la page si le cloud a apporté des changements.
+- **UI** : bouton « ☁️ Synchro cloud » avec pastille d'état (Synchronisé, En attente, Synchro…, Hors-ligne, Erreur) dans la barre du haut.
+- **localStorage reste la source locale** et le fallback hors-ligne ; sans `config.js`, rien ne change.
+- **Configuration** : `supabase/schema.sql` (table + Row Level Security), `config.example.js` → `config.js` (non commité). Étapes détaillées dans le **README**.
+
 ## v4.12 — 03/10/2026
 
 ### Désambiguïsation des traductions

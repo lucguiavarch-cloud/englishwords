@@ -396,6 +396,7 @@
     <header class="page-top-bar">
         <a href="index.html" class="btn-index">🏠 Hub</a>
         <span class="page-brand">ENGLISH LEARNING HUB</span>
+        <span id="sync-slot" class="sync-slot"></span>
     </header>
     <div class="verbs-xp-card" id="verbs-xp-card" title="Gagne de l’XP à chaque bonne réponse et quand un verbe passe « Acquis ».">
         <div class="verbs-xp-level">Niveau<br><span id="verbs-player-lvl">1</span></div>
@@ -501,6 +502,7 @@
     </div>
 </div>
 
+<script src="sync.js" data-kinds="verbs_dict,verbs_stats"></script>
 <script>
     const KEY = 'EM_VERBS_V17';
     const VOL_GOAL = 5;
@@ -609,6 +611,7 @@
     function save() {
         localStorage.setItem(KEY, JSON.stringify(dictionary));
         localStorage.setItem(KEY+'_STATS', JSON.stringify(stats));
+        if (window.EMSync) window.EMSync.notifySaved();
         updateUI();
     }
 

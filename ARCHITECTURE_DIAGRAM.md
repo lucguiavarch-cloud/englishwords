@@ -10,6 +10,7 @@ learnenglish/
 ├── vocabulaire.html        # Vocabulary learning interface
 ├── vocabulaire.css         # Vocabulary styling
 ├── vocabulaire.js          # Vocabulary game logic
+├── sync.js                 # Optional Supabase cloud sync (see README)
 ├── verbes.html             # Irregular verbs interface
 ├── tuto-anglais.html       # Tutorial/help page
 ├── manifest.json           # PWA manifest
