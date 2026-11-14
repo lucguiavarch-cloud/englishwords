@@ -1,4 +1,4 @@
-// Copier ce fichier en `config.js` (non commité, voir .gitignore) puis renseigner
+// Copier ce fichier en `config.js` puis renseigner
 // les valeurs de Supabase : Dashboard > Project Settings > API.
 // La clé « anon » / « publishable » est publique par conception : la sécurité
 // repose sur la Row Level Security (supabase/schema.sql).
