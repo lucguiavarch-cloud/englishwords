@@ -43,7 +43,7 @@ sur un autre appareil. Sans configuration, le bouton n'apparaît pas et l'appli 
    `{{ .Token }}` dans le modèle d'e-mail pour recevoir aussi un **code à 6 chiffres**, à saisir dans l'appli
    si le lien s'ouvre dans un autre navigateur.
 6. **Project Settings → API** : copier l'*URL du projet* et la clé *anon* (ou *publishable*).
-7. Copier `config.example.js` en `config.js` à la racine et y coller ces deux valeurs :
+7. Copier `config.example.js` en `config.js` à la racine (déjà fait pour ce dépôt) et y coller ces deux valeurs :
    ```js
    window.EM_SYNC_CONFIG = {
        supabaseUrl: 'https://abcd1234.supabase.co',
@@ -51,9 +51,9 @@ sur un autre appareil. Sans configuration, le bouton n'apparaît pas et l'appli 
    };
    ```
 
-`config.js` est ignoré par git (`.gitignore`). La clé *anon* est publique par conception (la sécurité repose
-sur la RLS) : pour un site publié via GitHub Pages, on peut donc commiter `config.js` (retirer la ligne du
-`.gitignore`), sinon le site en ligne n'aura pas la synchro.
+`config.js` est commité pour que le site publié (GitHub Pages) ait la synchro : l'URL et la clé
+*anon* / *publishable* sont publiques par conception (la sécurité repose sur la RLS). Ne jamais y mettre la
+clé *service_role* ni le mot de passe de la base. Pour un fork sans synchro, supprimer `config.js`.
 
 La bibliothèque `@supabase/supabase-js` est chargée depuis le CDN jsDelivr (version figée + contrôle
 d'intégrité SRI) uniquement si `config.js` est présent. Code : [`sync.js`](sync.js).
